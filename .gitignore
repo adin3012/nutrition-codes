@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Source/raw asset folders — large files, keep locally only
+PHOTOS & MEDIA/
+BRAND ASSETS/
+Testimonial images/
+NC Testimonials.pdf
+
+# Videos are too large for GitHub (100 MB+ each) — host on CDN for production
+assets/videos/
+
+# Auto-generated graph files
+graphify-out/
+js/graphify-out/

@@ -1,0 +1,150 @@
+/* =============================================
+   ABOUT PAGE — nutrition-codes
+   ============================================= */
+
+.about-intro {
+  padding: 120px 24px;
+  background: var(--bg-surface);
+}
+.about-intro-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.about-intro-inner h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+.about-intro-inner p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* ── Values Grid ── */
+.values-section {
+  padding: 100px 24px;
+  background: var(--bg-main);
+  border-top: 1px solid var(--border);
+}
+.values-grid {
+  max-width: var(--max-width);
+  margin: 64px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.value-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  text-align: center;
+  transition: all var(--transition);
+}
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--border-light);
+}
+.value-icon-wrap {
+  width: 56px; height: 56px;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 24px;
+}
+.value-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+.value-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ── Faculty Bios ── */
+.faculty-bios {
+  padding: 120px 24px;
+  background: var(--bg-surface);
+}
+.bios-grid {
+  max-width: var(--max-width);
+  margin: 64px auto 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+}
+.bio-row {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 48px;
+  align-items: center;
+  background: var(--bg-main);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.bio-row:nth-child(even) {
+  direction: rtl;
+}
+.bio-row:nth-child(even) > * {
+  direction: ltr;
+}
+.bio-photo {
+  width: 350px;
+  height: 460px;
+  object-fit: cover;
+  object-position: top center;
+  border-right: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.bio-row:nth-child(even) .bio-photo {
+  border-right: none;
+  border-left: 1px solid var(--border);
+}
+.bio-info {
+  padding: 48px 48px 48px 0;
+}
+.bio-row:nth-child(even) .bio-info {
+  padding: 48px 0 48px 48px;
+}
+.bio-info h3 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+.bio-info .role {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.bio-info p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .bio-row { grid-template-columns: 1fr !important; direction: ltr !important; }
+  .bio-row:nth-child(even) { direction: ltr; }
+  .bio-row > * { direction: ltr !important; }
+  .bio-photo { min-height: 280px; border: none !important; border-bottom: 1px solid var(--border) !important; }
+  .bio-info { padding: 32px !important; }
+  .bio-row:nth-child(even) .bio-info { padding: 32px !important; }
+}
+@media (max-width: 900px) {
+  .about-intro { padding: 60px 20px; }
+  .about-intro-inner { padding: 40px 24px !important; }
+  .values-section { padding: 60px 20px; }
+  .values-grid { grid-template-columns: 1fr; gap: 20px; }
+  .faculty-bios { padding: 60px 20px; }
+  .bios-grid { gap: 32px; margin-top: 40px; }
+}
