@@ -76,43 +76,42 @@
 <body class="bg-background text-on-surface">
 
   <!-- NAV -->
-  <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-[0_2px_20px_rgba(16,47,101,0.08)]">
-    <div class="flex justify-between items-center h-20 md:h-24 px-4 md:px-10 max-w-7xl mx-auto">
+  <nav class="fixed top-0 w-full z-50 border-b border-white/10" style="background: linear-gradient(135deg, #05101f 0%, #0d2147 100%);">
+    <div class="flex justify-between items-center h-14 md:h-16 px-4 md:px-10 max-w-7xl mx-auto">
       <!-- Logo + name stacked -->
       <a href="index.html" class="flex flex-col items-start gap-0.5 group">
-        <img src="assets/logos/primary01.svg" alt="Nutrition Codes" class="h-9 md:h-10">
-        <span class="text-[10px] md:text-[11px] font-extrabold text-primary font-display tracking-[0.12em] uppercase leading-none group-hover:text-secondary transition-colors">Nutrition Codes Academy</span>
+        <img src="assets/logos/primary01.svg" alt="Nutrition Codes" class="h-7 md:h-8 brightness-0 invert">
+        <span class="text-[9px] md:text-[10px] font-extrabold text-white/70 font-display tracking-[0.14em] uppercase leading-none group-hover:text-accent transition-colors">Nutrition Codes Academy</span>
       </a>
       <!-- Desktop links -->
       <div class="hidden md:flex items-center gap-10 font-body">
-        <a href="about.html" class="text-slate-600 text-sm font-semibold hover:text-secondary transition-colors">About Us</a>
-        <a href="testimonials.html" class="text-secondary border-b-2 border-secondary pb-0.5 text-sm font-semibold hover:text-secondary transition-colors">Testimonials</a>
-        <a href="blog.html" class="text-slate-600 text-sm font-semibold hover:text-secondary transition-colors">Blogs</a>
-        <a href="contact.html" class="text-slate-600 text-sm font-semibold hover:text-secondary transition-colors">Contact Us</a>
+        <a href="about.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">About Us</a>
+        <a href="testimonials.html" class="text-accent border-b-2 border-accent pb-0.5 text-[15px] font-semibold hover:text-white transition-colors">Testimonials</a>
+        <a href="blog.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Blogs</a>
+        <a href="contact.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Contact Us</a>
       </div>
-      <!-- Right: Instagram + hamburger -->
+      <!-- Right: transparent Instagram + hamburger -->
       <div class="flex items-center gap-3">
         <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener" aria-label="Instagram"
-           class="w-10 h-10 rounded-full flex items-center justify-center text-white shadow-md hover:scale-110 transition-transform"
-           style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)">
-          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+           class="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center text-white hover:border-accent hover:text-accent hover:bg-white/5 transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
           </svg>
         </a>
-        <button id="menu-btn" class="md:hidden p-2 rounded-lg text-primary hover:bg-surface-low transition-colors">
+        <button id="menu-btn" class="md:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
           <span class="material-symbols-outlined">menu</span>
         </button>
       </div>
     </div>
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg font-body">
-      <div class="px-5 py-4 space-y-0.5">
-        <a href="about.html" class="block text-slate-700 font-semibold hover:text-secondary py-3 border-b border-slate-50 text-sm">About Us</a>
-        <a href="testimonials.html" class="block text-slate-700 font-semibold hover:text-secondary py-3 border-b border-slate-50 text-sm">Testimonials</a>
-        <a href="blog.html" class="block text-slate-700 font-semibold hover:text-secondary py-3 border-b border-slate-50 text-sm">Blogs</a>
-        <a href="contact.html" class="block text-slate-700 font-semibold hover:text-secondary py-3 text-sm">Contact Us</a>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 font-body" style="background:#05101f;">
+      <div class="px-5 py-3 space-y-0.5">
+        <a href="about.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">About Us</a>
+        <a href="testimonials.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">Testimonials</a>
+        <a href="blog.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">Blogs</a>
+        <a href="contact.html" class="block text-white/75 font-semibold hover:text-white py-3 text-[15px]">Contact Us</a>
       </div>
     </div>
   </nav>
