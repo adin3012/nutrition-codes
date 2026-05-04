@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script>
     tailwind.config = {
       theme: {
@@ -101,7 +102,7 @@
   <!-- HERO -->
   <section class="min-h-[70vh] flex items-end pt-20 relative overflow-hidden bg-primary">
     <div class="absolute inset-0">
-      <img src="assets/images/hero-main.png" alt="Fitness coach" class="w-full h-full object-cover object-center">
+      <img src="assets/images/Course_page_Background_img.png" alt="Curriculum Background" class="w-full h-full object-cover object-center">
       <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/20"></div>
     </div>
     <div class="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 pb-16 md:pb-24 space-y-6">
@@ -127,147 +128,206 @@
     </div>
   </section>
 
-  <!-- 5 PILLARS GRID -->
-  <section class="py-20">
+  <!-- 5 PILLARS 3D SWIPER -->
+  <section class="py-20 bg-background overflow-hidden relative">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
-      <div class="text-center mb-14">
+      <div class="text-center mb-10">
         <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">The Five Pillars</p>
         <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface">What You'll Master</h2>
+        <p class="text-on-surface-variant mt-4 font-body max-w-2xl mx-auto">Swipe or scroll horizontally to explore our science-first curriculum, guided by industry-leading mentors.</p>
       </div>
-      <div class="grid grid-cols-12 gap-5">
-
-        <!-- Pillar 1: Large (col-span-8) -->
-        <div class="col-span-12 md:col-span-8 bg-white rounded-3xl p-8 md:p-10 border border-outline-variant/40 shadow-sm hover:shadow-lg transition-shadow space-y-6">
-          <div class="flex items-start gap-5">
-            <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
-              <span class="material-symbols-outlined text-secondary text-3xl">nutrition</span>
+      
+      <!-- Swiper -->
+      <div class="swiper pillars-swiper pb-16 pt-8">
+        <div class="swiper-wrapper">
+          
+          <!-- Pillar 1 -->
+          <div class="swiper-slide w-[320px] md:w-[420px]">
+            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/30 h-[580px] flex flex-col relative group">
+              <div class="h-[240px] relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Precision Nutrition">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20"></div>
+                <div class="absolute bottom-4 left-6 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-white overflow-hidden border-2 border-secondary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-secondary text-sm">person</span>
+                  </div>
+                  <div>
+                    <p class="text-white font-bold font-display leading-tight">Siddhant</p>
+                    <p class="text-accent text-xs font-body font-semibold">Head of Nutrition Science</p>
+                  </div>
+                </div>
+                <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider border border-white/20">
+                  Pillar 1
+                </div>
+              </div>
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-secondary">nutrition</span>
+                  </div>
+                  <h3 class="font-display text-2xl font-extrabold text-on-surface">Precision Bio-Nutrition</h3>
+                </div>
+                <p class="text-on-surface-variant leading-relaxed font-body text-sm flex-1">
+                  Move beyond calorie counting into the cellular mechanisms of nutrition. Decode macronutrient partitioning, metabolic flexibility, insulin signaling, and micronutrient synergy to build individualized protocols.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="bg-secondary/10 text-secondary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-secondary/20">Metabolic Flexibility</span>
+                  <span class="bg-secondary/10 text-secondary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-secondary/20">Gut Microbiome</span>
+                </div>
+              </div>
             </div>
-            <div>
-              <div class="text-xs font-bold text-secondary uppercase tracking-widest font-body mb-1">Pillar 1</div>
-              <h3 class="font-display text-2xl md:text-3xl font-extrabold text-on-surface">Precision Bio-Nutrition</h3>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="swiper-slide w-[320px] md:w-[420px]">
+            <div class="bg-primary rounded-3xl overflow-hidden shadow-2xl border border-primary-container h-[580px] flex flex-col relative group text-white">
+              <div class="h-[240px] relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" alt="Exercise Physiology">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent"></div>
+                <div class="absolute bottom-4 left-6 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-primary-container overflow-hidden border-2 border-accent flex items-center justify-center">
+                    <span class="material-symbols-outlined text-accent text-sm">person</span>
+                  </div>
+                  <div>
+                    <p class="text-white font-bold font-display leading-tight">Rishabh</p>
+                    <p class="text-accent text-xs font-body font-semibold">Head of Biomechanics</p>
+                  </div>
+                </div>
+                <div class="absolute top-4 right-4 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full text-accent text-xs font-bold uppercase tracking-wider border border-accent/30">
+                  Pillar 2
+                </div>
+              </div>
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-accent">fitness_center</span>
+                  </div>
+                  <h3 class="font-display text-2xl font-extrabold text-white">Exercise Physiology</h3>
+                </div>
+                <p class="text-white/70 leading-relaxed font-body text-sm flex-1">
+                  Biomechanics, muscle fiber recruitment, VO2 max, lactate threshold, and progressive overload science. Design evidence-based training programs for hypertrophy, fat loss, and endurance.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="bg-white/10 text-white text-[11px] font-bold font-body px-3 py-1 rounded-full border border-white/20">Biomechanics</span>
+                  <span class="bg-white/10 text-white text-[11px] font-bold font-body px-3 py-1 rounded-full border border-white/20">Periodization</span>
+                </div>
+              </div>
             </div>
           </div>
-          <p class="text-on-surface-variant leading-relaxed font-body">
-            Move beyond calorie counting into the cellular mechanisms of nutrition. This pillar decodes macronutrient partitioning, metabolic flexibility, insulin signaling, endocrine health, and micronutrient synergy. You'll learn to build individualized nutrition protocols that work with each client's unique physiology — not against it.
-          </p>
-          <p class="text-on-surface-variant leading-relaxed font-body">
-            Core topics include: nutrient timing relative to training, carbohydrate periodization, fat adaptation, gut microbiome optimization, biomarker interpretation, and food-as-medicine frameworks for hormonal health.
-          </p>
-          <div class="flex flex-wrap gap-2 pt-2">
-            <span class="bg-secondary/10 text-secondary text-xs font-bold font-body px-3 py-1.5 rounded-full border border-secondary/20">Metabolic Flexibility</span>
-            <span class="bg-secondary/10 text-secondary text-xs font-bold font-body px-3 py-1.5 rounded-full border border-secondary/20">Endocrine Health</span>
-            <span class="bg-secondary/10 text-secondary text-xs font-bold font-body px-3 py-1.5 rounded-full border border-secondary/20">Micronutrient Synergy</span>
-            <span class="bg-secondary/10 text-secondary text-xs font-bold font-body px-3 py-1.5 rounded-full border border-secondary/20">Gut Microbiome</span>
-            <span class="bg-secondary/10 text-secondary text-xs font-bold font-body px-3 py-1.5 rounded-full border border-secondary/20">Biomarker Analysis</span>
-          </div>
-          <a href="contact.html" class="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body hover:gap-3 transition-all">
-            Enroll to Access Full Syllabus <span class="material-symbols-outlined text-base">arrow_forward</span>
-          </a>
-        </div>
 
-        <!-- Pillar 2 (col-span-4, dark navy) -->
-        <div class="col-span-12 md:col-span-4 bg-primary rounded-3xl p-8 text-white space-y-5 hover:shadow-lg transition-shadow">
-          <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center">
-            <span class="material-symbols-outlined text-accent text-3xl">fitness_center</span>
+          <!-- Pillar 3 -->
+          <div class="swiper-slide w-[320px] md:w-[420px]">
+            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/30 h-[580px] flex flex-col relative group">
+              <div class="h-[240px] relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1511295742362-92c96b5adec3?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Neural Restoration">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20"></div>
+                <div class="absolute bottom-4 left-6 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-white overflow-hidden border-2 border-secondary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-secondary text-sm">person</span>
+                  </div>
+                  <div>
+                    <p class="text-white font-bold font-display leading-tight">Amandeep</p>
+                    <p class="text-accent text-xs font-body font-semibold">Head of Recovery Protocols</p>
+                  </div>
+                </div>
+                <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider border border-white/20">
+                  Pillar 3
+                </div>
+              </div>
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-accent">bedtime</span>
+                  </div>
+                  <h3 class="font-display text-2xl font-extrabold text-on-surface">Neural Restoration</h3>
+                </div>
+                <p class="text-on-surface-variant leading-relaxed font-body text-sm flex-1">
+                  Sleep architecture, HRV biofeedback, cortisol rhythms and parasympathetic recovery protocols. Teach clients to optimize the 8 hours that make or break every training adaptation.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="bg-accent/10 text-primary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-accent/30">Sleep Optimization</span>
+                  <span class="bg-accent/10 text-primary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-accent/30">HRV Tracking</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <div class="text-xs font-bold text-accent/80 uppercase tracking-widest font-body mb-1">Pillar 2</div>
-            <h3 class="font-display text-xl font-extrabold">Advanced Exercise Physiology</h3>
-          </div>
-          <p class="text-white/75 leading-relaxed font-body text-sm">
-            Biomechanics, muscle fiber recruitment, VO2 max, lactate threshold, and progressive overload science. Learn to design evidence-based training programs for any goal — hypertrophy, fat loss, endurance, or rehab.
-          </p>
-          <ul class="space-y-2">
-            <li class="flex items-center gap-2 text-white/80 text-sm font-body">
-              <span class="material-symbols-outlined text-accent text-sm">check_circle</span> Biomechanics &amp; kinesiology
-            </li>
-            <li class="flex items-center gap-2 text-white/80 text-sm font-body">
-              <span class="material-symbols-outlined text-accent text-sm">check_circle</span> Periodization systems
-            </li>
-            <li class="flex items-center gap-2 text-white/80 text-sm font-body">
-              <span class="material-symbols-outlined text-accent text-sm">check_circle</span> Energy system training
-            </li>
-          </ul>
-          <a href="contact.html" class="inline-flex items-center gap-2 text-accent font-bold text-sm font-body hover:gap-3 transition-all">
-            Explore Module <span class="material-symbols-outlined text-base">arrow_forward</span>
-          </a>
-        </div>
 
-        <!-- Pillar 3 (col-span-4, white) -->
-        <div class="col-span-12 md:col-span-4 bg-white rounded-3xl p-8 border border-outline-variant/40 shadow-sm hover:shadow-lg transition-shadow space-y-4">
-          <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center">
-            <span class="material-symbols-outlined text-accent text-3xl">bedtime</span>
+          <!-- Pillar 4 -->
+          <div class="swiper-slide w-[320px] md:w-[420px]">
+            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/30 h-[580px] flex flex-col relative group">
+              <div class="h-[240px] relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Ergogenic Aids">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20"></div>
+                <div class="absolute bottom-4 left-6 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-white overflow-hidden border-2 border-secondary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-secondary text-sm">person</span>
+                  </div>
+                  <div>
+                    <p class="text-white font-bold font-display leading-tight">Siddhant</p>
+                    <p class="text-accent text-xs font-body font-semibold">Head of Nutrition Science</p>
+                  </div>
+                </div>
+                <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider border border-white/20">
+                  Pillar 4
+                </div>
+              </div>
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-secondary">pill</span>
+                  </div>
+                  <h3 class="font-display text-2xl font-extrabold text-on-surface">Ergogenic Aids</h3>
+                </div>
+                <p class="text-on-surface-variant leading-relaxed font-body text-sm flex-1">
+                  The evidence-based guide to supplements, adaptogens, and performance compounds. Cut through the marketing noise with actual research on what works, what doesn't, and for whom.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="bg-secondary/10 text-secondary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-secondary/20">Supplement Review</span>
+                  <span class="bg-secondary/10 text-secondary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-secondary/20">Dosing Protocols</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <div class="text-xs font-bold text-on-surface-variant uppercase tracking-widest font-body mb-1">Pillar 3</div>
-            <h3 class="font-display text-xl font-extrabold text-on-surface">Neural Restoration &amp; Recovery</h3>
-          </div>
-          <p class="text-on-surface-variant leading-relaxed font-body text-sm">
-            Sleep architecture, HRV biofeedback, cortisol rhythms and parasympathetic recovery protocols. Teach clients to optimize the 8 hours that make or break every training adaptation.
-          </p>
-          <ul class="space-y-2">
-            <li class="flex items-center gap-2 text-on-surface-variant text-sm font-body">
-              <span class="material-symbols-outlined text-accent text-sm">check_circle</span> Sleep stage optimization
-            </li>
-            <li class="flex items-center gap-2 text-on-surface-variant text-sm font-body">
-              <span class="material-symbols-outlined text-accent text-sm">check_circle</span> HRV tracking &amp; interpretation
-            </li>
-            <li class="flex items-center gap-2 text-on-surface-variant text-sm font-body">
-              <span class="material-symbols-outlined text-accent text-sm">check_circle</span> Circadian rhythm alignment
-            </li>
-          </ul>
-        </div>
 
-        <!-- Pillar 4 (col-span-4, white) -->
-        <div class="col-span-12 md:col-span-4 bg-white rounded-3xl p-8 border border-outline-variant/40 shadow-sm hover:shadow-lg transition-shadow space-y-4">
-          <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center">
-            <span class="material-symbols-outlined text-secondary text-3xl">pill</span>
+          <!-- Pillar 5 -->
+          <div class="swiper-slide w-[320px] md:w-[420px]">
+            <div class="bg-[#003a1f] text-white rounded-3xl overflow-hidden shadow-2xl border border-white/10 h-[580px] flex flex-col relative group">
+              <div class="h-[240px] relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" alt="Mindset Pivot">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#003a1f] to-transparent"></div>
+                <div class="absolute bottom-4 left-6 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-white overflow-hidden border-2 border-accent flex items-center justify-center">
+                    <span class="material-symbols-outlined text-accent text-sm">person</span>
+                  </div>
+                  <div>
+                    <p class="text-white font-bold font-display leading-tight">Ashley</p>
+                    <p class="text-accent text-xs font-body font-semibold">Head of Coaching Psychology</p>
+                  </div>
+                </div>
+                <div class="absolute top-4 right-4 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full text-accent text-xs font-bold uppercase tracking-wider border border-accent/30">
+                  Pillar 5
+                </div>
+              </div>
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-accent">psychology</span>
+                  </div>
+                  <h3 class="font-display text-2xl font-extrabold text-white">The Mindset Pivot</h3>
+                </div>
+                <p class="text-white/80 leading-relaxed font-body text-sm flex-1">
+                  Behavioral psychology, habit architecture, motivational interviewing, and client communication science. Because the best protocol in the world is worthless if the client doesn't follow it.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="bg-white/10 text-white text-[11px] font-bold font-body px-3 py-1 rounded-full border border-white/20">Behavioral Change</span>
+                  <span class="bg-white/10 text-white text-[11px] font-bold font-body px-3 py-1 rounded-full border border-white/20">Habit Architecture</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <div class="text-xs font-bold text-on-surface-variant uppercase tracking-widest font-body mb-1">Pillar 4</div>
-            <h3 class="font-display text-xl font-extrabold text-on-surface">Ergogenic Aids</h3>
-          </div>
-          <p class="text-on-surface-variant leading-relaxed font-body text-sm">
-            The evidence-based guide to supplements, adaptogens, and performance compounds. Cut through the marketing noise with actual research on what works, what doesn't, and for whom.
-          </p>
-          <ul class="space-y-2">
-            <li class="flex items-center gap-2 text-on-surface-variant text-sm font-body">
-              <span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Evidence-graded supplement review
-            </li>
-            <li class="flex items-center gap-2 text-on-surface-variant text-sm font-body">
-              <span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Dosing &amp; timing protocols
-            </li>
-            <li class="flex items-center gap-2 text-on-surface-variant text-sm font-body">
-              <span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Safety &amp; contraindications
-            </li>
-          </ul>
-        </div>
 
-        <!-- Pillar 5 (col-span-4, dark green) -->
-        <div class="col-span-12 md:col-span-4 rounded-3xl p-8 text-white space-y-4 hover:shadow-lg transition-shadow" style="background-color: #003a1f;">
-          <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center">
-            <span class="material-symbols-outlined text-accent text-3xl">psychology</span>
-          </div>
-          <div>
-            <div class="text-xs font-bold text-accent/80 uppercase tracking-widest font-body mb-1">Pillar 5</div>
-            <h3 class="font-display text-xl font-extrabold">The Mindset Pivot</h3>
-          </div>
-          <p class="text-white/75 leading-relaxed font-body text-sm">
-            Behavioral psychology, habit architecture, motivational interviewing, and client communication science. Because the best protocol in the world is worthless if the client doesn't follow it.
-          </p>
-          <ul class="space-y-2">
-            <li class="flex items-center gap-2 text-white/80 text-sm font-body">
-              <span class="material-symbols-outlined text-accent text-sm">check_circle</span> Behavioral change science
-            </li>
-            <li class="flex items-center gap-2 text-white/80 text-sm font-body">
-              <span class="material-symbols-outlined text-accent text-sm">check_circle</span> Motivational interviewing
-            </li>
-            <li class="flex items-center gap-2 text-white/80 text-sm font-body">
-              <span class="material-symbols-outlined text-accent text-sm">check_circle</span> Habit loop engineering
-            </li>
-          </ul>
         </div>
-
+        <div class="swiper-pagination mt-8 relative"></div>
       </div>
     </div>
   </section>
@@ -449,5 +509,32 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const swiper = new Swiper('.pillars-swiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        mousewheel: {
+          forceToAxis: true,
+          sensitivity: 1,
+        },
+        coverflowEffect: {
+          rotate: 20,
+          stretch: 0,
+          depth: 350,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          dynamicBullets: true,
+        },
+      });
+    });
+  </script>
 </body>
 </html>
