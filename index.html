@@ -1,322 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nutrition Codes — Elite Coaching Certification</title>
-  <meta name="description" content="Become a certified health coach with Nutrition Codes. Science-backed curriculum, expert mentorship, and real-world application to master nutrition, training, and coaching." />
-  <link rel="icon" href="assets/icons/favicon.png" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/home.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrition Codes Academy | Science-Backed Coaching</title>
+  <meta name="description" content="India's most rigorous nutrition and fitness education platform. Join 300+ scholars mastering science-backed coaching with Nutrition Codes Academy.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#102f65',
+            'primary-container': '#2b467d',
+            'on-primary': '#ffffff',
+            'on-primary-container': '#9cb5f4',
+            secondary: '#4173F4',
+            'on-secondary': '#ffffff',
+            accent: '#40F39A',
+            'on-surface': '#0b1b36',
+            'on-surface-variant': '#444650',
+            'surface-low': '#f1f3ff',
+            'surface-mid': '#e8eeff',
+            'surface-high': '#e0e8ff',
+            'surface-highest': '#d7e2ff',
+            'outline-variant': '#c4c6d1',
+            background: '#f9f9ff',
+          },
+          fontFamily: {
+            display: ['Manrope', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .dna-pattern {
+      background-image: radial-gradient(#2b467d 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+    .glass-card {
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(43,70,125,0.1);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
-<body>
+<body class="bg-background text-on-surface">
 
-  <!-- Liquid Mesh Background -->
-  <div class="mesh-bg"></div>
-
-  
-  <!-- NAVBAR -->
-  <nav class="navbar glass">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <img src="assets/logos/primary01.svg" alt="Nutrition Codes Logo" style="height: 36px; width: auto;" />
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/60 shadow-[0_4px_20px_-5px_rgba(43,70,125,0.08)]">
+    <div class="flex justify-between items-center h-16 md:h-20 px-4 md:px-8 max-w-7xl mx-auto">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/logos/primary01.svg" alt="Nutrition Codes" class="h-8 md:h-9">
+        <span class="text-lg font-extrabold tracking-tight text-[#102f65] font-display hidden sm:block">Nutrition Codes Academy</span>
       </a>
-      <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+      <div class="hidden md:flex items-center gap-8 font-body">
+        <a href="curriculum.html" class="text-[#4173F4] font-bold border-b-2 border-[#4173F4] pb-0.5 transition-colors">Courses</a>
+        <a href="about.html" class="text-slate-600 font-medium hover:text-[#4173F4] transition-colors">About</a>
+        <a href="testimonials.html" class="text-slate-600 font-medium hover:text-[#4173F4] transition-colors">Results</a>
+        <a href="contact.html" class="text-slate-600 font-medium hover:text-[#4173F4] transition-colors">Contact</a>
       </div>
-      <a href="#enroll" class="btn btn-accent nav-cta">Enroll Now</a>
-      <div class="nav-toggle" aria-expanded="false">
-        <span></span><span></span><span></span>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="bg-[#4173F4] text-white px-5 py-2.5 rounded-lg font-bold text-sm hover:-translate-y-0.5 transition-all hidden sm:block">Enroll Now</a>
+        <button id="menu-btn" class="md:hidden p-2 text-primary">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 font-body">
+      <div class="px-4 py-4 space-y-1">
+        <a href="curriculum.html" class="block text-slate-700 hover:text-[#4173F4] py-2.5 border-b border-slate-100">Courses</a>
+        <a href="about.html" class="block text-slate-700 hover:text-[#4173F4] py-2.5 border-b border-slate-100">About</a>
+        <a href="testimonials.html" class="block text-slate-700 hover:text-[#4173F4] py-2.5 border-b border-slate-100">Results</a>
+        <a href="contact.html" class="block text-slate-700 hover:text-[#4173F4] py-2.5 border-b border-slate-100">Contact</a>
+        <a href="contact.html" class="block bg-[#4173F4] text-white text-center py-3 rounded-lg font-bold mt-3">Enroll Now</a>
       </div>
     </div>
   </nav>
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      btn.querySelector('.material-symbols-outlined').textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
+    });
+  </script>
 
   <!-- HERO -->
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="section-label">Enrollment Open for 2026</div>
-      <h1 class="hero-title split-text">Become a Certified <br/><span class="highlight">Health Coach</span></h1>
-      <p class="hero-subtitle">
-        Expert mentorship, science-backed curriculum, and real-world application—master nutrition, training, and coaching to elevate your career.
-      </p>
-      <div class="hero-actions">
-        <a href="#programs" class="btn btn-accent">Explore Curriculum</a>
-        <a href="about.html" class="btn btn-outline">Meet the Faculty</a>
+  <section class="min-h-screen flex items-center pt-20 bg-background relative overflow-hidden">
+    <div class="absolute inset-0 dna-pattern"></div>
+    <!-- Decorative blobs -->
+    <div class="absolute top-1/4 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full relative z-10">
+      <!-- Left -->
+      <div class="space-y-7">
+        <div class="inline-flex items-center gap-2 bg-accent/15 border border-accent/35 text-on-surface px-4 py-2 rounded-full text-sm font-bold font-body tracking-wide">
+          <span class="w-2 h-2 rounded-full bg-accent inline-block animate-pulse"></span>
+          SCIENCE FIRST EDUCATION
+        </div>
+        <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight text-on-surface">
+          Science-Backed<br>
+          <span class="text-secondary">Vitality</span>
+        </h1>
+        <p class="text-on-surface-variant text-lg md:text-xl leading-relaxed max-w-lg font-body">
+          India's most rigorous nutrition and fitness education platform. We don't teach trends — we decode the science behind lasting human performance.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="contact.html" class="bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/30 transition-all font-body">
+            Enroll Now
+          </a>
+          <a href="curriculum.html" class="border-2 border-primary text-primary px-8 py-3.5 rounded-xl font-bold text-base hover:bg-primary hover:text-white transition-all font-body">
+            View Courses
+          </a>
+        </div>
+        <div class="flex items-center gap-6 pt-2">
+          <div class="flex -space-x-3">
+            <img src="assets/images/testimonials/mahesh-giri.png" alt="" class="w-9 h-9 rounded-full border-2 border-white object-cover">
+            <img src="assets/images/testimonials/karthik-nagarajan.png" alt="" class="w-9 h-9 rounded-full border-2 border-white object-cover">
+            <img src="assets/images/testimonials/siddharth-rana.png" alt="" class="w-9 h-9 rounded-full border-2 border-white object-cover">
+            <div class="w-9 h-9 rounded-full border-2 border-white bg-secondary flex items-center justify-center text-white text-xs font-bold font-body">+</div>
+          </div>
+          <p class="text-sm text-on-surface-variant font-body"><span class="font-bold text-on-surface">300+ scholars</span> transforming their careers</p>
+        </div>
+      </div>
+      <!-- Right: 2x2 faculty grid -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="relative rounded-2xl overflow-hidden shadow-lg group">
+          <img src="assets/images/Amandeep.png" alt="Amandeep Singh Bindra" class="w-full aspect-square object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-3">
+            <p class="text-white font-display font-bold text-sm leading-tight">Amandeep</p>
+            <p class="text-accent text-xs font-body">Coaching &amp; Business</p>
+          </div>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden shadow-lg group mt-6">
+          <img src="assets/images/Ashley.png" alt="Ashley Johnathan D'cruz" class="w-full aspect-square object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-3">
+            <p class="text-white font-display font-bold text-sm leading-tight">Ashley</p>
+            <p class="text-accent text-xs font-body">Exercise Science</p>
+          </div>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden shadow-lg group -mt-6">
+          <img src="assets/images/Rishabh.png" alt="Rishabh Verma" class="w-full aspect-square object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-3">
+            <p class="text-white font-display font-bold text-sm leading-tight">Rishabh</p>
+            <p class="text-accent text-xs font-body">Nutrition Science</p>
+          </div>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden shadow-lg group">
+          <img src="assets/images/Siddhant.png" alt="Siddhant Prasad" class="w-full aspect-square object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-3">
+            <p class="text-white font-display font-bold text-sm leading-tight">Siddhant</p>
+            <p class="text-accent text-xs font-body">Fitness Research</p>
+          </div>
+        </div>
       </div>
     </div>
-  </header>
+  </section>
 
   <!-- STATS BAR -->
-  <section class="stats-bar">
-    <div class="stats-inner glass">
-      <div class="stat-item">
-        <div class="stat-number" data-target="100">0</div>
-        <div class="stat-label">Hours of LIVE Lectures</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number" data-target="300">0</div>
-        <div class="stat-label">Active Scholars</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number" data-target="50">0</div>
-        <div class="stat-label">Study Materials</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COURSE MODULES -->
-  <section id="programs" class="modules-section">
-    <div class="container">
-      <div class="text-center">
-        <span class="section-label">Curriculum</span>
-        <h2 class="section-title split-text">Comprehensive Modules</h2>
-        <p class="section-subtitle">A multidisciplinary approach to build elite coaches.</p>
-      </div>
-      <div class="modules-grid">
-        <div class="module-card glass">
-          <div class="module-icon-wrap">
-            <svg class="icon-svg" viewBox="0 0 24 24">
-              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-            </svg>
-          </div>
-          <h3>Nutrition Science</h3>
-          <p>Deep dive into macronutrients, micronutrients, digestion, and metabolic pathways to build precise dietary protocols.</p>
+  <section class="bg-primary text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 md:divide-x md:divide-white/10 text-center">
+        <div class="px-8">
+          <div class="text-5xl font-extrabold font-display text-accent mb-2">100+</div>
+          <div class="text-base font-semibold text-white/90 font-body">Hours of Science</div>
+          <div class="text-sm text-white/50 mt-1 font-body">Expert-led, evidence-based lectures</div>
         </div>
-        <div class="module-card glass">
-          <div class="module-icon-wrap">
-            <svg class="icon-svg" viewBox="0 0 24 24">
-              <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-            </svg>
-          </div>
-          <h3>Exercise Science</h3>
-          <p>Understand biomechanics, hypertrophy, and programming to maximize performance and prevent injuries.</p>
+        <div class="px-8">
+          <div class="text-5xl font-extrabold font-display text-accent mb-2">300+</div>
+          <div class="text-base font-semibold text-white/90 font-body">Scholars</div>
+          <div class="text-sm text-white/50 mt-1 font-body">Coaches trained across the globe</div>
         </div>
-        <div class="module-card glass">
-          <div class="module-icon-wrap">
-            <svg class="icon-svg" viewBox="0 0 24 24">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
-          </div>
-          <h3>Coaching Psychology</h3>
-          <p>Learn behavior change frameworks and motivational interviewing to ensure client compliance and long-term success.</p>
-        </div>
-        <div class="module-card glass">
-          <div class="module-icon-wrap">
-            <svg class="icon-svg" viewBox="0 0 24 24">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-          </div>
-          <h3>Social Media Marketing</h3>
-          <p>Master organic growth, content creation, and personal branding to attract high-ticket clients globally.</p>
-        </div>
-        <div class="module-card glass">
-          <div class="module-icon-wrap">
-            <svg class="icon-svg" viewBox="0 0 24 24">
-              <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path>
-            </svg>
-          </div>
-          <h3>Research Analysis</h3>
-          <p>Develop the ability to read, interpret, and apply the latest scientific literature in your coaching practice.</p>
+        <div class="px-8">
+          <div class="text-5xl font-extrabold font-display text-accent mb-2">Global</div>
+          <div class="text-base font-semibold text-white/90 font-body">Community</div>
+          <div class="text-sm text-white/50 mt-1 font-body">India, UAE, USA, Canada, UK &amp; beyond</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHY CHOOSE US -->
-  <section class="modules-section">
-    <div class="container">
-      <div class="text-center">
-        <span class="section-label">Our Advantage</span>
-        <h1 class="hero-title split-text">Become a Certified Health Coach & <span>Elevate Your Career</span></h1>
-      <p class="hero-subtitle">Expert mentorship, science-backed curriculum, and real-world application—master nutrition, training, and coaching to elevate your career.</p>
+  <!-- CORE PILLARS -->
+  <section class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-16">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">What We Teach</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">Core Pillars of Excellence</h2>
+        <div class="w-16 h-1 bg-secondary rounded-full mx-auto"></div>
       </div>
-      <div class="modules-grid">
-        <div class="module-card glass">
-          <h3 style="font-size: 1.6rem; color: var(--accent); margin-bottom: 16px;">01. In-Depth Learning & Critical Thinking</h3>
-          <p>We go beyond basics, ensuring deep understanding through interactive quizzes and discussions that sharpen critical thinking for real-world application.</p>
+      <!-- Bento Grid -->
+      <div class="grid grid-cols-12 gap-5">
+        <!-- Pillar 1 large -->
+        <div class="col-span-12 md:col-span-8 rounded-3xl bg-surface-low p-8 md:p-10 flex flex-col sm:flex-row gap-8 items-center border border-outline-variant/40 hover:shadow-lg transition-shadow">
+          <div class="flex-1 space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center">
+              <span class="material-symbols-outlined text-secondary text-3xl">nutrition</span>
+            </div>
+            <h3 class="font-display text-2xl md:text-3xl font-extrabold text-on-surface">Metabolic Nutrition</h3>
+            <p class="text-on-surface-variant leading-relaxed font-body">Understand how every macronutrient interacts with your body at a cellular level. From nutrient timing to hormonal signaling, this pillar transforms how you think about food as medicine.</p>
+            <a href="curriculum.html" class="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body hover:gap-3 transition-all">
+              Explore Module <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+          <div class="w-full sm:w-48 h-48 rounded-2xl bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-7xl text-secondary/40">science</span>
+          </div>
         </div>
-        <div class="module-card glass">
-          <h3 style="font-size: 1.6rem; color: var(--accent); margin-bottom: 16px;">02. Personalised Mentorship & Support</h3>
-          <p>We offer direct mentorship and a supportive community, with faculty engagement and one-on-one guidance to keep you on track.</p>
+        <!-- Pillar 2 -->
+        <div class="col-span-12 md:col-span-4 rounded-3xl bg-primary text-white p-8 space-y-4 hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-accent text-3xl">fitness_center</span>
+          </div>
+          <h3 class="font-display text-2xl font-extrabold">Exercise Physiology</h3>
+          <p class="text-white/70 leading-relaxed font-body text-sm">Evidence-based training science — from biomechanics to periodization — that builds performance and prevents injury.</p>
+          <a href="curriculum.html" class="inline-flex items-center gap-2 text-accent font-bold text-sm font-body hover:gap-3 transition-all">
+            Explore Module <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
         </div>
-        <div class="module-card glass">
-          <h3 style="font-size: 1.6rem; color: var(--accent); margin-bottom: 16px;">03. Lifetime Access & Continuous Updates</h3>
-          <p>Learning continues beyond the course with lifetime mentorship and updated content, keeping you ahead in the evolving fitness industry.</p>
+        <!-- Pillar 3 -->
+        <div class="col-span-12 md:col-span-4 rounded-3xl bg-surface-low p-8 space-y-4 border border-outline-variant/40 hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-accent text-3xl">bedtime</span>
+          </div>
+          <h3 class="font-display text-xl font-extrabold text-on-surface">Lifestyle Bio-Design</h3>
+          <p class="text-on-surface-variant leading-relaxed font-body text-sm">Sleep, HRV, circadian rhythm and recovery science — holistic protocols that optimize every dimension of human vitality.</p>
+        </div>
+        <!-- Pillar 4 -->
+        <div class="col-span-12 md:col-span-4 rounded-3xl bg-primary-container text-white p-8 space-y-4 hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-accent text-3xl">groups</span>
+          </div>
+          <h3 class="font-display text-xl font-extrabold">Elite Coaching</h3>
+          <p class="text-white/70 leading-relaxed font-body text-sm">Client management, communication mastery, business development and sales systems to build a thriving coaching practice.</p>
+        </div>
+        <!-- Pillar 5 -->
+        <div class="col-span-12 md:col-span-4 rounded-3xl bg-surface-low p-8 space-y-4 border border-outline-variant/40 hover:shadow-lg transition-shadow">
+          <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-secondary text-3xl">biotech</span>
+          </div>
+          <h3 class="font-display text-xl font-extrabold text-on-surface">Rigorous Science</h3>
+          <p class="text-on-surface-variant leading-relaxed font-body text-sm">Critical analysis of research literature. Learn to separate signal from noise and build protocols grounded in the best available evidence.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS SNIPPET -->
-  <section class="testimonials-section">
-    <div class="container">
-      <div class="text-center">
-        <span class="section-label">Success Stories</span>
-        <h2 class="section-title split-text">Built for Results</h2>
-        <p class="section-subtitle">Hear from scholars who have transformed their careers.</p>
+  <!-- SOCIAL PROOF -->
+  <section class="bg-surface-low py-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-14">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Scholar Stories</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface">Global Impact &amp; Recognition</h2>
       </div>
-      <div class="testimonials-grid">
-        <div class="testi-card glass">
-          <p class="testi-quote">"The knowledge, clarity, and mentorship here are unmatched. Aman Sir’s no-nonsense teaching style makes even complex concepts easy."</p>
-          <div class="testi-author">
-            <div class="testi-author-info">
-              <strong>Mahesh Giri</strong>
-              <span>Scholar</span>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all">
+          <div class="text-accent text-xl tracking-wide">★★★★★</div>
+          <p class="text-on-surface leading-relaxed font-body italic">
+            "Being part of NC Academy has been one of the best decisions of my life. The knowledge, clarity, and mentorship here are unmatched. Aman Sir's no-nonsense teaching style makes even complex concepts easy, while Rishabh Sir's depth of knowledge and patience ensure complete understanding."
+          </p>
+          <div class="flex items-center gap-4 pt-2">
+            <img src="assets/images/testimonials/mahesh-giri.png" alt="Mahesh Giri" class="w-12 h-12 rounded-full object-cover border-2 border-accent/30">
+            <div>
+              <p class="font-display font-bold text-on-surface">Mahesh Giri</p>
+              <p class="text-sm text-on-surface-variant font-body">Scholar · NCA</p>
             </div>
           </div>
         </div>
-        <div class="testi-card glass">
-          <p class="testi-quote">"It not only deepened my knowledge and understanding of nutrition and exercise but also taught me how to coach people more effectively and scale my fitness business."</p>
-          <div class="testi-author">
-            <div class="testi-author-info">
-              <strong>Pavitra Gandharv</strong>
-              <span>Scholar</span>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card glass">
-          <p class="testi-quote">"The course provides in-depth insights on business growth, social media, and mindset development, which are rare to find elsewhere."</p>
-          <div class="testi-author">
-            <div class="testi-author-info">
-              <strong>Siddharth Rana</strong>
-              <span>Scholar</span>
+        <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all">
+          <div class="text-accent text-xl tracking-wide">★★★★★</div>
+          <p class="text-on-surface leading-relaxed font-body italic">
+            "The coaching industry can be a lonely place. NCA is here to change that. Nutrition, exercise science, coaching best practices, mindset, business growth — pick any area of coaching and NCA has it covered. Join NCA. It's your path to lifelong learning and growth."
+          </p>
+          <div class="flex items-center gap-4 pt-2">
+            <img src="assets/images/testimonials/karthik-nagarajan.png" alt="Karthik Nagarajan" class="w-12 h-12 rounded-full object-cover border-2 border-accent/30">
+            <div>
+              <p class="font-display font-bold text-on-surface">Karthik Nagarajan</p>
+              <p class="text-sm text-on-surface-variant font-body">Scholar · NCA</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="text-center" style="margin-top: 64px;">
-        <a href="testimonials.html" class="btn btn-outline">View All Testimonials</a>
+      <div class="text-center mt-10">
+        <a href="testimonials.html" class="inline-flex items-center gap-2 text-secondary font-bold font-body hover:gap-3 transition-all">
+          Read All Success Stories <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- FACULTY PREVIEW -->
-  <section class="faculty-section">
-    <div class="container">
-      <div class="text-center">
-        <span class="section-label">The Experts</span>
-        <h2 class="section-title split-text">World-Class Faculty</h2>
-        <p class="section-subtitle">Learn directly from industry leaders.</p>
+  <!-- FACULTY TEASER -->
+  <section class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-14">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">World-Class Educators</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface">Meet Your Mentors</h2>
       </div>
-      <div class="faculty-grid">
-        <div class="faculty-card glass">
-          <img src="assets/images/Amandeep.png" alt="Amandeep" class="faculty-photo" />
-          <div class="faculty-info">
-            <h4>Amandeep Singh Bindra</h4>
-            <p>Coaching & Business Development</p>
-            <a href="https://www.instagram.com/aman_bindra" target="_blank" rel="noopener" class="faculty-ig" aria-label="Amandeep on Instagram">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              @aman_bindra
-            </a>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="text-center group">
+          <div class="rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
+            <img src="assets/images/Amandeep.png" alt="Amandeep Singh Bindra" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           </div>
+          <h3 class="font-display font-bold text-on-surface text-sm md:text-base">Amandeep Singh Bindra</h3>
+          <p class="text-secondary text-xs md:text-sm font-body mt-1">Coaching &amp; Business</p>
         </div>
-        <div class="faculty-card glass">
-          <img src="assets/images/Ashley.png" alt="Ashley" class="faculty-photo" />
-          <div class="faculty-info">
-            <h4>Ashley Johnathan D’cruz</h4>
-            <p>Exercise Science</p>
-            <a href="https://www.instagram.com/getfitwithjonathan" target="_blank" rel="noopener" class="faculty-ig" aria-label="Ashley on Instagram">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              @getfitwithjonathan
-            </a>
+        <div class="text-center group">
+          <div class="rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
+            <img src="assets/images/Ashley.png" alt="Ashley Johnathan D'cruz" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           </div>
+          <h3 class="font-display font-bold text-on-surface text-sm md:text-base">Ashley Johnathan D'cruz</h3>
+          <p class="text-secondary text-xs md:text-sm font-body mt-1">Exercise Science</p>
         </div>
-        <div class="faculty-card glass">
-          <img src="assets/images/Rishabh.png" alt="Rishabh" class="faculty-photo" />
-          <div class="faculty-info">
-            <h4>Rishabh Verma</h4>
-            <p>Nutrition Science</p>
-            <a href="https://www.instagram.com/rishabhvermafitness?igsh=ZTk3Zjk3a281Nnh1" target="_blank" rel="noopener" class="faculty-ig" aria-label="Rishabh on Instagram">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              @rishabhvermafitness
-            </a>
+        <div class="text-center group">
+          <div class="rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
+            <img src="assets/images/Rishabh.png" alt="Rishabh Verma" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           </div>
+          <h3 class="font-display font-bold text-on-surface text-sm md:text-base">Rishabh Verma</h3>
+          <p class="text-secondary text-xs md:text-sm font-body mt-1">Nutrition Science</p>
         </div>
-        <div class="faculty-card glass">
-          <img src="assets/images/Siddhant.png" alt="Siddhant" class="faculty-photo" />
-          <div class="faculty-info">
-            <h4>Siddhant Prasad</h4>
-            <p>Fitness Research</p>
-            <a href="https://www.instagram.com/sid.eats.and.moves?igsh=MWtmbGhrcHM0aGZ0MA==" target="_blank" rel="noopener" class="faculty-ig" aria-label="Siddhant on Instagram">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              @sid.eats.and.moves
-            </a>
+        <div class="text-center group">
+          <div class="rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
+            <img src="assets/images/Siddhant.png" alt="Siddhant Prasad" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           </div>
+          <h3 class="font-display font-bold text-on-surface text-sm md:text-base">Siddhant Prasad</h3>
+          <p class="text-secondary text-xs md:text-sm font-body mt-1">Fitness Research</p>
         </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="about.html" class="inline-flex items-center gap-2 border-2 border-primary text-primary px-8 py-3 rounded-xl font-bold font-body hover:bg-primary hover:text-white transition-all">
+          About Our Faculty <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
-  <section id="enroll" class="cta-section">
-    <div class="cta-inner glass" style="padding: 100px 40px; border-radius: var(--radius-lg);">
-      <h2 class="section-title split-text">Ready to become an elite coach?</h2>
-      <p class="section-subtitle" style="margin-bottom: 48px;">
-        Take the leap. Equip yourself with the knowledge and tools to transform lives and build a thriving business.
+  <!-- CTA -->
+  <section class="bg-surface-mid py-24 relative overflow-hidden">
+    <div class="absolute inset-0 dna-pattern"></div>
+    <div class="max-w-4xl mx-auto px-4 md:px-8 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 bg-secondary/10 border border-secondary/20 text-secondary px-4 py-2 rounded-full text-sm font-bold font-body tracking-wide mb-6">
+        <span class="material-symbols-outlined text-base">rocket_launch</span>
+        LIMITED COHORTS
+      </div>
+      <h2 class="font-display text-4xl md:text-6xl font-extrabold text-on-surface mb-6 leading-tight">
+        Ready to Lead the Revolution?
+      </h2>
+      <p class="text-on-surface-variant text-lg md:text-xl leading-relaxed mb-10 font-body max-w-2xl mx-auto">
+        Join the growing community of evidence-based coaches who are transforming the health industry with real science, not guesswork.
       </p>
-      <a href="contact.html" class="btn btn-accent">Start Your Application</a>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="contact.html" class="bg-secondary text-white px-10 py-4 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-xl hover:shadow-secondary/30 transition-all font-body">
+          Apply Now
+        </a>
+        <a href="curriculum.html" class="border-2 border-primary text-primary px-10 py-4 rounded-xl font-bold text-base hover:bg-primary hover:text-white transition-all font-body">
+          View Curriculum
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer glass" style="margin: 40px; border-radius: var(--radius-lg);">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="assets/logos/primary01.svg" alt="Nutrition Codes Logo" style="height: 48px; margin-bottom: 24px;" />
-        <p class="footer-tagline">Empowering the next generation of evidence-based health and fitness professionals in India and globally.</p>
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener" class="magnetic" aria-label="Instagram">
-            <svg class="icon-svg" style="width:18px;height:18px" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-          </a>
-          <a href="#" class="magnetic" aria-label="YouTube">
-            <svg class="icon-svg" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-          </a>
-          <a href="#" class="magnetic" aria-label="LinkedIn">
-            <svg class="icon-svg" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          </a>
-        </div>
+  <footer class="bg-[#2B467D] text-white font-body">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <div class="sm:col-span-2 md:col-span-1">
+        <div class="text-lg font-bold text-[#40F39A] mb-4 font-display">Nutrition Codes Academy</div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">Empowering the next generation of evidence-based health and fitness professionals in India and globally.</p>
+        <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-[#40F39A] hover:text-white transition-colors text-sm">
+          <span class="material-symbols-outlined text-lg">photo_camera</span> @nutritioncodes
+        </a>
       </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="blog.html">Blog</a></li>
+      <div>
+        <h4 class="font-bold text-white mb-5 text-sm uppercase tracking-wider">Navigate</h4>
+        <ul class="space-y-3">
+          <li><a href="index.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Home</a></li>
+          <li><a href="curriculum.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Courses</a></li>
+          <li><a href="about.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">About</a></li>
+          <li><a href="testimonials.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Results</a></li>
+          <li><a href="blog.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Blog</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Programs</h4>
-        <ul>
-          <li><a href="#">Nutrition Science</a></li>
-          <li><a href="#">Exercise Mechanics</a></li>
-          <li><a href="#">Business Mentorship</a></li>
+      <div>
+        <h4 class="font-bold text-white mb-5 text-sm uppercase tracking-wider">Programs</h4>
+        <ul class="space-y-3">
+          <li><a href="curriculum.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Nutrition Science</a></li>
+          <li><a href="curriculum.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Exercise Physiology</a></li>
+          <li><a href="curriculum.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Business Mentorship</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:nutritioncodes0@gmail.com">nutritioncodes0@gmail.com</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+      <div>
+        <h4 class="font-bold text-white mb-5 text-sm uppercase tracking-wider">Contact</h4>
+        <ul class="space-y-3">
+          <li><a href="mailto:nutritioncodes0@gmail.com" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm break-all">nutritioncodes0@gmail.com</a></li>
+          <li><a href="contact.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Contact Form</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Nutrition Codes. All rights reserved.</p>
-      <p>Designed for Elite Performance.</p>
+    <div class="border-t border-white/10 py-6 px-8 text-center text-slate-400 text-xs">
+      © 2026 Nutrition Codes Academy. Rigorous science for human energy.
     </div>
   </footer>
 
-  <!-- GSAP & Lenis CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/split-type"></script>
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
-  
-  <script src="js/main.js"></script>
 </body>
 </html>

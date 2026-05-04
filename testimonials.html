@@ -1,206 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nutrition Codes — Testimonials</title>
-  <meta name="description" content="Hear from certified coaches who transformed their careers with Nutrition Codes. Real results from real people across the world." />
-  <link rel="icon" href="assets/icons/favicon.png" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/testimonials.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results &amp; Testimonials | Nutrition Codes Academy</title>
+  <meta name="description" content="Hear directly from 300+ NCA scholars worldwide. Real results, real transformations, real science-backed coaching success stories.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#102f65',
+            'primary-container': '#2b467d',
+            'on-primary': '#ffffff',
+            'on-primary-container': '#9cb5f4',
+            secondary: '#4173F4',
+            'on-secondary': '#ffffff',
+            accent: '#40F39A',
+            'on-surface': '#0b1b36',
+            'on-surface-variant': '#444650',
+            'surface-low': '#f1f3ff',
+            'surface-mid': '#e8eeff',
+            'surface-high': '#e0e8ff',
+            'surface-highest': '#d7e2ff',
+            'outline-variant': '#c4c6d1',
+            background: '#f9f9ff',
+          },
+          fontFamily: {
+            display: ['Manrope', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .dna-pattern {
+      background-image: radial-gradient(#2b467d 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+    .glass-card {
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(43,70,125,0.1);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body { font-family: 'Inter', sans-serif; }
+
+    /* Video card styles */
+    .vt-video-wrap { position: relative; background: #0B1310; border-radius: 1rem; overflow: hidden; cursor: pointer; }
+    .vt-video-wrap::before { content:''; position:absolute; bottom:0; left:0; right:0; height:40%; background:linear-gradient(to top,rgba(5,15,12,0.9) 0%,transparent 100%); pointer-events:none; z-index:1; }
+    .vt-play-btn { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; background:rgba(255,255,255,0.92); border-radius:50%; pointer-events:none; z-index:3; box-shadow:0 8px 32px rgba(0,0,0,0.4); transition:opacity 0.25s,transform 0.25s; }
+    .vt-play-btn::after { content:''; position:absolute; top:50%; left:54%; transform:translate(-50%,-50%); width:0; height:0; border-style:solid; border-width:9px 0 9px 16px; border-color:transparent transparent transparent #0B1310; }
+    .vt-video-wrap.playing .vt-play-btn { opacity:0; transform:translate(-50%,-50%) scale(0.7); }
+    .vt-info { position:absolute; bottom:0; left:0; right:0; display:flex; align-items:center; justify-content:space-between; padding:14px 16px; z-index:2; }
+    .vt-name { font-family:'Manrope',sans-serif; font-size:0.85rem; font-weight:700; color:#fff; }
+    .vt-badge { font-size:0.65rem; font-weight:700; text-transform:uppercase; color:#40F39A; background:rgba(64,243,154,0.15); border:1px solid rgba(64,243,154,0.35); padding:3px 8px; border-radius:999px; }
+
+    /* Masonry columns fix */
+    .masonry-col { column-count: 1; }
+    @media (min-width: 768px) { .masonry-col { column-count: 2; } }
+    @media (min-width: 1024px) { .masonry-col { column-count: 3; } }
+    .masonry-item { break-inside: avoid; margin-bottom: 1.5rem; display: inline-block; width: 100%; }
+  </style>
 </head>
-<body>
+<body class="bg-background text-on-surface">
 
-  <div class="mesh-bg"></div>
-
-  <!-- NAVBAR -->
-  <nav class="navbar glass">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <img src="assets/logos/primary01.svg" alt="Nutrition Codes Logo" style="height: 36px; width: auto;" />
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/60 shadow-[0_4px_20px_-5px_rgba(43,70,125,0.08)]">
+    <div class="flex justify-between items-center h-16 md:h-20 px-4 md:px-8 max-w-7xl mx-auto">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/logos/primary01.svg" alt="Nutrition Codes" class="h-8 md:h-9">
+        <span class="text-lg font-extrabold tracking-tight text-[#102f65] font-display hidden sm:block">Nutrition Codes Academy</span>
       </a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="testimonials.html" class="active">Testimonials</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+      <div class="hidden md:flex items-center gap-8 font-body">
+        <a href="curriculum.html" class="text-slate-600 font-medium hover:text-[#4173F4] transition-colors">Courses</a>
+        <a href="about.html" class="text-slate-600 font-medium hover:text-[#4173F4] transition-colors">About</a>
+        <a href="testimonials.html" class="text-[#4173F4] font-bold border-b-2 border-[#4173F4] pb-0.5 transition-colors">Results</a>
+        <a href="contact.html" class="text-slate-600 font-medium hover:text-[#4173F4] transition-colors">Contact</a>
       </div>
-      <a href="contact.html" class="btn btn-accent nav-cta">Enroll Now</a>
-      <div class="nav-toggle" aria-expanded="false">
-        <span></span><span></span><span></span>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="bg-[#4173F4] text-white px-5 py-2.5 rounded-lg font-bold text-sm hover:-translate-y-0.5 transition-all hidden sm:block">Enroll Now</a>
+        <button id="menu-btn" class="md:hidden p-2 text-primary">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 font-body">
+      <div class="px-4 py-4 space-y-1">
+        <a href="curriculum.html" class="block text-slate-700 hover:text-[#4173F4] py-2.5 border-b border-slate-100">Courses</a>
+        <a href="about.html" class="block text-slate-700 hover:text-[#4173F4] py-2.5 border-b border-slate-100">About</a>
+        <a href="testimonials.html" class="block text-slate-700 hover:text-[#4173F4] py-2.5 border-b border-slate-100">Results</a>
+        <a href="contact.html" class="block text-slate-700 hover:text-[#4173F4] py-2.5 border-b border-slate-100">Contact</a>
+        <a href="contact.html" class="block bg-[#4173F4] text-white text-center py-3 rounded-lg font-bold mt-3">Enroll Now</a>
       </div>
     </div>
   </nav>
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      btn.querySelector('.material-symbols-outlined').textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
+    });
+  </script>
 
-  <!-- HERO -->
-  <header class="testi-hero">
-    <div class="container text-center">
-      <span class="section-label">Success Stories</span>
-      <h1 class="section-title split-text">300+ Scholars.<br/>One Community.</h1>
-      <p class="section-subtitle">Real coaches. Real growth. Hear directly from the people who transformed their careers with Nutrition Codes Academy.</p>
+  <!-- HERO HEADER -->
+  <section class="bg-surface-low pt-32 pb-20 text-center relative overflow-hidden">
+    <div class="absolute inset-0 dna-pattern"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 md:px-8 space-y-6">
+      <div class="inline-flex items-center gap-2 bg-accent/15 border border-accent/35 text-on-surface px-4 py-2 rounded-full text-sm font-bold font-body tracking-wide">
+        <span class="w-2 h-2 rounded-full bg-accent inline-block"></span>
+        REAL SUCCESS STORIES
+      </div>
+      <h1 class="font-display text-4xl md:text-6xl font-extrabold text-on-surface leading-tight">
+        Scientific Mastery.<br>Human Transformation.
+      </h1>
+      <p class="text-on-surface-variant text-lg md:text-xl leading-relaxed font-body max-w-2xl mx-auto">
+        300+ scholars. Dozens of countries. One thing in common — real knowledge that produces real results.
+      </p>
+      <!-- Stats strip -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 max-w-3xl mx-auto">
+        <div class="glass-card rounded-2xl px-4 py-5 text-center">
+          <div class="font-display text-3xl font-extrabold text-secondary">300+</div>
+          <div class="text-xs text-on-surface-variant font-body mt-1">Active Scholars</div>
+        </div>
+        <div class="glass-card rounded-2xl px-4 py-5 text-center">
+          <div class="font-display text-3xl font-extrabold text-secondary">100+</div>
+          <div class="text-xs text-on-surface-variant font-body mt-1">Hours of Lectures</div>
+        </div>
+        <div class="glass-card rounded-2xl px-4 py-5 text-center">
+          <div class="font-display text-3xl font-extrabold text-secondary">50+</div>
+          <div class="text-xs text-on-surface-variant font-body mt-1">Study Materials</div>
+        </div>
+        <div class="glass-card rounded-2xl px-4 py-5 text-center">
+          <div class="font-display text-3xl font-extrabold text-secondary">5★</div>
+          <div class="text-xs text-on-surface-variant font-body mt-1">Average Rating</div>
+        </div>
+      </div>
     </div>
-    <!-- Floating stat strip -->
-    <div class="testi-stats glass">
-      <div class="testi-stat">
-        <span class="tstat-num">300+</span>
-        <span class="tstat-label">Active Scholars</span>
-      </div>
-      <div class="tstat-divider"></div>
-      <div class="testi-stat">
-        <span class="tstat-num">100+</span>
-        <span class="tstat-label">Hours of Live Lectures</span>
-      </div>
-      <div class="tstat-divider"></div>
-      <div class="testi-stat">
-        <span class="tstat-num">50+</span>
-        <span class="tstat-label">Study Materials</span>
-      </div>
-      <div class="tstat-divider"></div>
-      <div class="testi-stat">
-        <span class="tstat-num">5★</span>
-        <span class="tstat-label">Average Rating</span>
-      </div>
-    </div>
-  </header>
+  </section>
 
-  <!-- ── VIDEO TESTIMONIALS ── -->
-  <section class="section vt-section">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: 64px;">
-        <span class="section-label">In Their Own Words</span>
-        <h2 class="section-title split-text">Video Testimonials</h2>
-        <p class="section-subtitle">Watch scholars speak about their journey at NCA.</p>
+  <!-- VIDEO TESTIMONIALS -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-14">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Video Stories</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-3">In Their Own Words</h2>
+        <div class="w-16 h-1 bg-secondary rounded-full mx-auto"></div>
       </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
-      <div class="vt-grid">
-
-        <div class="vt-card glass">
-          <div class="vt-video-wrap">
-            <video controls preload="none">
-              <source src="assets/videos/Aman Chauhan.mp4" type="video/mp4">
-            </video>
-          </div>
+        <!-- Video: Aman Chauhan -->
+        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+          <video src="assets/videos/Aman Chauhan.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Aman Chauhan</span>
             <span class="vt-badge">Scholar</span>
           </div>
         </div>
 
-        <div class="vt-card glass">
-          <div class="vt-video-wrap">
-            <video controls preload="none">
-              <source src="assets/videos/Jimmy Khatter.mp4" type="video/mp4">
-            </video>
-          </div>
+        <!-- Video: Jimmy Khatter -->
+        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+          <video src="assets/videos/Jimmy Khatter.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Jimmy Khatter</span>
             <span class="vt-badge">Scholar</span>
           </div>
         </div>
 
-        <div class="vt-card glass">
-          <div class="vt-video-wrap">
-            <video controls preload="none">
-              <source src="assets/videos/Ritu Vijay_.mp4" type="video/mp4">
-            </video>
-          </div>
+        <!-- Video: Ritu Vijay -->
+        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+          <video src="assets/videos/Ritu Vijay_.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Ritu Vijay</span>
             <span class="vt-badge">Scholar</span>
           </div>
         </div>
 
-        <div class="vt-card glass">
-          <div class="vt-video-wrap">
-            <video controls preload="none">
-              <source src="assets/videos/Siddharth Rana.mp4" type="video/mp4">
-            </video>
-          </div>
+        <!-- Video: Siddharth Rana -->
+        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+          <video src="assets/videos/Siddharth Rana.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Siddharth Rana</span>
             <span class="vt-badge">Scholar</span>
           </div>
         </div>
 
-        <div class="vt-card glass">
-          <div class="vt-video-wrap">
-            <video controls preload="none">
-              <source src="assets/videos/Shivam Sharma.mp4" type="video/mp4">
-            </video>
-          </div>
+        <!-- Video: Shivam Sharma -->
+        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+          <video src="assets/videos/Shivam Sharma.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Shivam Sharma</span>
             <span class="vt-badge">Scholar</span>
           </div>
         </div>
 
-        <div class="vt-card glass">
-          <div class="vt-video-wrap">
-            <video controls preload="none">
-              <source src="assets/videos/Mazhar Shaikh.mp4" type="video/mp4">
-            </video>
-          </div>
+        <!-- Video: Mazhar Shaikh -->
+        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+          <video src="assets/videos/Mazhar Shaikh.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Mazhar Shaikh</span>
             <span class="vt-badge">Scholar</span>
           </div>
         </div>
 
-        <div class="vt-card glass">
-          <div class="vt-video-wrap">
-            <video controls preload="none">
-              <source src="assets/videos/Meeth Jarecha.mp4" type="video/mp4">
-            </video>
-          </div>
+        <!-- Video: Meeth Jarecha -->
+        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+          <video src="assets/videos/Meeth Jarecha.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Meeth Jarecha</span>
             <span class="vt-badge">Scholar</span>
           </div>
         </div>
 
-        <div class="vt-card glass">
-          <div class="vt-video-wrap">
-            <video controls preload="none">
-              <source src="assets/videos/Nazeer.mp4" type="video/mp4">
-            </video>
-          </div>
+        <!-- Video: Nazeer -->
+        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+          <video src="assets/videos/Nazeer.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Nazeer</span>
             <span class="vt-badge">Scholar</span>
           </div>
         </div>
 
-        <div class="vt-card glass">
-          <div class="vt-video-wrap">
-            <video controls preload="none">
-              <source src="assets/videos/Shivam Mahajan.mp4" type="video/mp4">
-            </video>
-          </div>
+        <!-- Video: Shivam Mahajan -->
+        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+          <video src="assets/videos/Shivam Mahajan.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Shivam Mahajan</span>
             <span class="vt-badge">Scholar</span>
           </div>
         </div>
 
-        <div class="vt-card glass">
-          <div class="vt-video-wrap">
-            <video controls preload="none">
-              <source src="assets/videos/Himanshu Sharma Part 1.mp4" type="video/mp4">
-            </video>
-          </div>
+        <!-- Video: Himanshu Sharma Part 1 -->
+        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+          <video src="assets/videos/Himanshu Sharma Part 1.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Himanshu Sharma</span>
             <span class="vt-badge">Part 1</span>
           </div>
         </div>
 
-        <div class="vt-card glass">
-          <div class="vt-video-wrap">
-            <video controls preload="none">
-              <source src="assets/videos/Himanshu Sharma Part 2.mp4" type="video/mp4">
-            </video>
-          </div>
+        <!-- Video: Himanshu Sharma Part 2 -->
+        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+          <video src="assets/videos/Himanshu Sharma Part 2.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Himanshu Sharma</span>
             <span class="vt-badge">Part 2</span>
@@ -211,208 +263,206 @@
     </div>
   </section>
 
-  <!-- ── WRITTEN TESTIMONIALS ── -->
-  <section class="section wt-section">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: 64px;">
-        <span class="section-label">Written Reviews</span>
-        <h2 class="section-title split-text">What Scholars Say</h2>
-        <p class="section-subtitle">Honest experiences from the NCA community.</p>
+  <!-- WALL OF LOVE -->
+  <section class="bg-surface-mid py-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-14">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Written Reviews</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface">Wall of Love</h2>
       </div>
+      <div class="masonry-col gap-6">
 
-      <div class="reviews-grid">
-
-        <div class="review-card glass">
-          <div class="review-top">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-quote-mark">"</div>
-          </div>
-          <p class="review-text">Being part of NC Academy has been one of the best decisions of my life. The knowledge, clarity, and mentorship here are unmatched. Aman Sir's no-nonsense teaching style makes even complex concepts easy, while Rishabh Sir's depth of knowledge and patience ensure complete understanding.</p>
-          <div class="review-author">
-            <img src="assets/images/testimonials/mahesh-giri.png" alt="Mahesh Giri" class="review-avatar" />
-            <div class="review-author-info">
-              <strong>Mahesh Giri</strong>
-              <span>Scholar · NCA</span>
+        <!-- 1: Mahesh Giri -->
+        <div class="masonry-item glass-card p-6 rounded-2xl hover:-translate-y-1 transition-all">
+          <div class="text-accent text-lg mb-3">★★★★★</div>
+          <p class="text-on-surface leading-relaxed font-body text-sm italic mb-5">
+            "Being part of NC Academy has been one of the best decisions of my life. The knowledge, clarity, and mentorship here are unmatched. Aman Sir's no-nonsense teaching style makes even complex concepts easy, while Rishabh Sir's depth of knowledge and patience ensure complete understanding."
+          </p>
+          <div class="flex items-center gap-3">
+            <img src="assets/images/testimonials/mahesh-giri.png" alt="Mahesh Giri" class="w-10 h-10 rounded-full object-cover border-2 border-accent/20">
+            <div>
+              <p class="font-display font-bold text-on-surface text-sm">Mahesh Giri</p>
+              <p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p>
             </div>
           </div>
         </div>
 
-        <div class="review-card glass">
-          <div class="review-top">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-quote-mark">"</div>
-          </div>
-          <p class="review-text">Joining Nutrition Codes was one of the best decisions I've made in my fitness career. It not only deepened my knowledge and understanding of nutrition and exercise but also taught me how to coach people more effectively and scale my fitness business. There was not even a single minute thing that I didn't like. It is THE BEST!</p>
-          <div class="review-author">
-            <img src="assets/images/testimonials/pavitra-gandharv.png" alt="Pavitra Gandharv" class="review-avatar" />
-            <div class="review-author-info">
-              <strong>Pavitra Gandharv</strong>
-              <span>Scholar · NCA</span>
+        <!-- 2: Pavitra Gandharv (navy) -->
+        <div class="masonry-item bg-primary-container text-white p-6 rounded-2xl hover:-translate-y-1 transition-all">
+          <div class="text-accent text-lg mb-3">★★★★★</div>
+          <p class="text-white/85 leading-relaxed font-body text-sm italic mb-5">
+            "Joining Nutrition Codes was one of the best decisions I've made in my fitness career. It not only deepened my knowledge and understanding of nutrition and exercise but also taught me how to coach people more effectively and scale my fitness business. There was not even a single minute thing that I didn't like. It is THE BEST!"
+          </p>
+          <div class="flex items-center gap-3">
+            <img src="assets/images/testimonials/pavitra-gandharv.png" alt="Pavitra Gandharv" class="w-10 h-10 rounded-full object-cover border-2 border-accent/30">
+            <div>
+              <p class="font-display font-bold text-white text-sm">Pavitra Gandharv</p>
+              <p class="text-xs text-white/60 font-body">Scholar · NCA</p>
             </div>
           </div>
         </div>
 
-        <div class="review-card glass">
-          <div class="review-top">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-quote-mark">"</div>
-          </div>
-          <p class="review-text">I had been following Aman Bindra, Ashley, and Rishabh on IG long before joining NCA, and their high-quality content convinced me to enroll. Beyond technical knowledge, the course provides in-depth insights on business growth, social media, and mindset development, which are rare to find elsewhere. NCA is a no-brainer!</p>
-          <div class="review-author">
-            <img src="assets/images/testimonials/siddharth-rana.png" alt="Siddharth Rana" class="review-avatar" />
-            <div class="review-author-info">
-              <strong>Siddharth Rana</strong>
-              <span>Scholar · NCA</span>
+        <!-- 3: Siddharth Rana -->
+        <div class="masonry-item glass-card p-6 rounded-2xl hover:-translate-y-1 transition-all">
+          <div class="text-accent text-lg mb-3">★★★★★</div>
+          <p class="text-on-surface leading-relaxed font-body text-sm italic mb-5">
+            "I had been following Aman Bindra, Ashley, and Rishabh on IG long before joining NCA, and their high-quality content convinced me to enroll. Beyond technical knowledge, the course provides in-depth insights on business growth, social media, and mindset development, which are rare to find elsewhere. NCA is a no-brainer!"
+          </p>
+          <div class="flex items-center gap-3">
+            <img src="assets/images/testimonials/siddharth-rana.png" alt="Siddharth Rana" class="w-10 h-10 rounded-full object-cover border-2 border-accent/20">
+            <div>
+              <p class="font-display font-bold text-on-surface text-sm">Siddharth Rana</p>
+              <p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p>
             </div>
           </div>
         </div>
 
-        <div class="review-card glass">
-          <div class="review-top">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-quote-mark">"</div>
-          </div>
-          <p class="review-text">The coaching industry can be a lonely place. NCA is here to change that. Nutrition, exercise science, coaching best practices, mindset, business growth — pick any area of coaching and NCA has it covered. Join NCA. It's your path to lifelong learning and growth.</p>
-          <div class="review-author">
-            <img src="assets/images/testimonials/karthik-nagarajan.png" alt="Karthik Nagarajan" class="review-avatar" />
-            <div class="review-author-info">
-              <strong>Karthik Nagarajan</strong>
-              <span>Scholar · NCA</span>
+        <!-- 4: Karthik Nagarajan -->
+        <div class="masonry-item glass-card p-6 rounded-2xl hover:-translate-y-1 transition-all">
+          <div class="text-accent text-lg mb-3">★★★★★</div>
+          <p class="text-on-surface leading-relaxed font-body text-sm italic mb-5">
+            "The coaching industry can be a lonely place. NCA is here to change that. Nutrition, exercise science, coaching best practices, mindset, business growth — pick any area of coaching and NCA has it covered. Join NCA. It's your path to lifelong learning and growth."
+          </p>
+          <div class="flex items-center gap-3">
+            <img src="assets/images/testimonials/karthik-nagarajan.png" alt="Karthik Nagarajan" class="w-10 h-10 rounded-full object-cover border-2 border-accent/20">
+            <div>
+              <p class="font-display font-bold text-on-surface text-sm">Karthik Nagarajan</p>
+              <p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p>
             </div>
           </div>
         </div>
 
-        <div class="review-card glass">
-          <div class="review-top">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-quote-mark">"</div>
-          </div>
-          <p class="review-text">Being a scholar at Nutrition Codes has been an incredibly enriching experience. The well-structured courses and expert instructors provide science-based, real-life insights that have transformed my approach to health. The emphasis on holistic well-being has empowered me to make informed decisions and help others do the same.</p>
-          <div class="review-author">
-            <img src="assets/images/testimonials/satya-muddena.png" alt="Satya Muddena" class="review-avatar" />
-            <div class="review-author-info">
-              <strong>Satya Muddena</strong>
-              <span>Scholar · NCA</span>
+        <!-- 5: Satya Muddena -->
+        <div class="masonry-item glass-card p-6 rounded-2xl hover:-translate-y-1 transition-all">
+          <div class="text-accent text-lg mb-3">★★★★★</div>
+          <p class="text-on-surface leading-relaxed font-body text-sm italic mb-5">
+            "Being a scholar at Nutrition Codes has been an incredibly enriching experience. The well-structured courses and expert instructors provide science-based, real-life insights that have transformed my approach to health. The emphasis on holistic well-being has empowered me to make informed decisions and help others do the same."
+          </p>
+          <div class="flex items-center gap-3">
+            <img src="assets/images/testimonials/satya-muddena.png" alt="Satya Muddena" class="w-10 h-10 rounded-full object-cover border-2 border-accent/20">
+            <div>
+              <p class="font-display font-bold text-on-surface text-sm">Satya Muddena</p>
+              <p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p>
             </div>
           </div>
         </div>
 
-        <div class="review-card glass">
-          <div class="review-top">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-quote-mark">"</div>
-          </div>
-          <p class="review-text">Being a medical doctor, NCA has given me a perspective of health from a different angle than what I studied in medical school. With a very dedicated and well-read team of professionals, NCA has been a treasure of knowledge. You can get a certificate by writing an exam in a course — but NCA is an experience.</p>
-          <div class="review-author">
-            <img src="assets/images/testimonials/sai-kiran.png" alt="Dr. Sai Kiran" class="review-avatar" />
-            <div class="review-author-info">
-              <strong>Dr. Sai Kiran</strong>
-              <span>Scholar · NCA</span>
+        <!-- 6: Dr. Sai Kiran (navy) -->
+        <div class="masonry-item bg-primary-container text-white p-6 rounded-2xl hover:-translate-y-1 transition-all">
+          <div class="text-accent text-lg mb-3">★★★★★</div>
+          <p class="text-white/85 leading-relaxed font-body text-sm italic mb-5">
+            "Being a medical doctor, NCA has given me a perspective of health from a different angle than what I studied in medical school. With a very dedicated and well-read team of professionals, NCA has been a treasure of knowledge. You can get a certificate by writing an exam in a course — but NCA is an experience."
+          </p>
+          <div class="flex items-center gap-3">
+            <img src="assets/images/testimonials/sai-kiran.png" alt="Dr. Sai Kiran" class="w-10 h-10 rounded-full object-cover border-2 border-accent/30">
+            <div>
+              <p class="font-display font-bold text-white text-sm">Dr. Sai Kiran</p>
+              <p class="text-xs text-white/60 font-body">Scholar · NCA</p>
             </div>
           </div>
         </div>
 
-        <div class="review-card glass">
-          <div class="review-top">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-quote-mark">"</div>
-          </div>
-          <p class="review-text">More than just fitness, Aman's lectures on business, mindset, transformation, and communication have been truly transformative. They've not only helped me become more confident but also equipped me with the skills to set clear goals for myself and my clients. This course dives into personal and professional growth.</p>
-          <div class="review-author">
-            <img src="assets/images/testimonials/rishita-gada.png" alt="Rishita Gada" class="review-avatar" />
-            <div class="review-author-info">
-              <strong>Rishita Gada</strong>
-              <span>Scholar · NCA</span>
+        <!-- 7: Rishita Gada -->
+        <div class="masonry-item glass-card p-6 rounded-2xl hover:-translate-y-1 transition-all">
+          <div class="text-accent text-lg mb-3">★★★★★</div>
+          <p class="text-on-surface leading-relaxed font-body text-sm italic mb-5">
+            "More than just fitness, Aman's lectures on business, mindset, transformation, and communication have been truly transformative. They've not only helped me become more confident but also equipped me with the skills to set clear goals for myself and my clients. This course dives into personal and professional growth."
+          </p>
+          <div class="flex items-center gap-3">
+            <img src="assets/images/testimonials/rishita-gada.png" alt="Rishita Gada" class="w-10 h-10 rounded-full object-cover border-2 border-accent/20">
+            <div>
+              <p class="font-display font-bold text-on-surface text-sm">Rishita Gada</p>
+              <p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p>
             </div>
           </div>
         </div>
 
-        <div class="review-card glass">
-          <div class="review-top">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-quote-mark">"</div>
-          </div>
-          <p class="review-text">Nutrition Codes is a platform that every emerging coach needs. Becoming a successful coach requires more than just knowledge — you must excel in client management, fitness services, and after-sales too. That's what I learned at NCA, and I'm truly grateful. This has been a worthwhile investment that will yield lifelong returns.</p>
-          <div class="review-author">
-            <img src="assets/images/testimonials/ritu-vijay.png" alt="Ritu Vijay" class="review-avatar" />
-            <div class="review-author-info">
-              <strong>Ritu Vijay</strong>
-              <span>Scholar · NCA</span>
+        <!-- 8: Ritu Vijay -->
+        <div class="masonry-item glass-card p-6 rounded-2xl hover:-translate-y-1 transition-all">
+          <div class="text-accent text-lg mb-3">★★★★★</div>
+          <p class="text-on-surface leading-relaxed font-body text-sm italic mb-5">
+            "Nutrition Codes is a platform that every emerging coach needs. Becoming a successful coach requires more than just knowledge — you must excel in client management, fitness services, and after-sales too. That's what I learned at NCA, and I'm truly grateful. This has been a worthwhile investment that will yield lifelong returns."
+          </p>
+          <div class="flex items-center gap-3">
+            <img src="assets/images/testimonials/ritu-vijay.png" alt="Ritu Vijay" class="w-10 h-10 rounded-full object-cover border-2 border-accent/20">
+            <div>
+              <p class="font-display font-bold text-on-surface text-sm">Ritu Vijay</p>
+              <p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p>
             </div>
           </div>
         </div>
 
-        <div class="review-card glass">
-          <div class="review-top">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-quote-mark">"</div>
-          </div>
-          <p class="review-text">The curriculum of NCA is so well set up that even an absolute beginner will have no problem understanding it. It's a comprehensive lifestyle course where, apart from nutrition and exercise, you will also learn about coaching, business, social media, and everything else. Maa kasam, very honest review!</p>
-          <div class="review-author">
-            <img src="assets/images/testimonials/sagar-singh.png" alt="Sagar Singh" class="review-avatar" />
-            <div class="review-author-info">
-              <strong>Sagar Singh</strong>
-              <span>Scholar · NCA</span>
+        <!-- 9: Sagar Singh -->
+        <div class="masonry-item glass-card p-6 rounded-2xl hover:-translate-y-1 transition-all">
+          <div class="text-accent text-lg mb-3">★★★★★</div>
+          <p class="text-on-surface leading-relaxed font-body text-sm italic mb-5">
+            "The curriculum of NCA is so well set up that even an absolute beginner will have no problem understanding it. It's a comprehensive lifestyle course where, apart from nutrition and exercise, you will also learn about coaching, business, social media, and everything else. Maa kasam, very honest review!"
+          </p>
+          <div class="flex items-center gap-3">
+            <img src="assets/images/testimonials/sagar-singh.png" alt="Sagar Singh" class="w-10 h-10 rounded-full object-cover border-2 border-accent/20">
+            <div>
+              <p class="font-display font-bold text-on-surface text-sm">Sagar Singh</p>
+              <p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p>
             </div>
           </div>
         </div>
 
-        <div class="review-card glass">
-          <div class="review-top">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-quote-mark">"</div>
-          </div>
-          <p class="review-text">Joining Nutrition Codes Academy has been a game-changer for me. I wanted to go beyond calorie counting to create personalized plans that truly impact my clients. NCA gave me exactly that — and much more. I highly recommend it to anyone looking to grow as a coach.</p>
-          <div class="review-author">
-            <img src="assets/images/testimonials/akshmeet-singh.png" alt="Akshmeet Singh" class="review-avatar" />
-            <div class="review-author-info">
-              <strong>Akshmeet Singh</strong>
-              <span>Scholar · NCA</span>
+        <!-- 10: Akshmeet Singh (navy) -->
+        <div class="masonry-item bg-primary-container text-white p-6 rounded-2xl hover:-translate-y-1 transition-all">
+          <div class="text-accent text-lg mb-3">★★★★★</div>
+          <p class="text-white/85 leading-relaxed font-body text-sm italic mb-5">
+            "Joining Nutrition Codes Academy has been a game-changer for me. I wanted to go beyond calorie counting to create personalized plans that truly impact my clients. NCA gave me exactly that — and much more. I highly recommend it to anyone looking to grow as a coach."
+          </p>
+          <div class="flex items-center gap-3">
+            <img src="assets/images/testimonials/akshmeet-singh.png" alt="Akshmeet Singh" class="w-10 h-10 rounded-full object-cover border-2 border-accent/30">
+            <div>
+              <p class="font-display font-bold text-white text-sm">Akshmeet Singh</p>
+              <p class="text-xs text-white/60 font-body">Scholar · NCA</p>
             </div>
           </div>
         </div>
 
-        <div class="review-card glass">
-          <div class="review-top">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-quote-mark">"</div>
-          </div>
-          <p class="review-text">Impressed by how the mentors approached doubts in a Facebook group, I joined NCA in 2022. Only after joining did I realize how much more there was to learn — nutrition, fitness, psychology, research, and social media, all covered. Our mentors are non-judgmental and put in a hundred percent effort. NC Academy keeps us updated with relevant, factual information.</p>
-          <div class="review-author">
-            <img src="assets/images/testimonials/inamul-hasan.png" alt="Inamul Hasan" class="review-avatar" />
-            <div class="review-author-info">
-              <strong>Inamul Hasan</strong>
-              <span>Scholar · NCA</span>
+        <!-- 11: Inamul Hasan -->
+        <div class="masonry-item glass-card p-6 rounded-2xl hover:-translate-y-1 transition-all">
+          <div class="text-accent text-lg mb-3">★★★★★</div>
+          <p class="text-on-surface leading-relaxed font-body text-sm italic mb-5">
+            "Impressed by how the mentors approached doubts in a Facebook group, I joined NCA in 2022. Only after joining did I realize how much more there was to learn — nutrition, fitness, psychology, research, and social media, all covered. Our mentors are non-judgmental and put in a hundred percent effort. NC Academy keeps us updated with relevant, factual information."
+          </p>
+          <div class="flex items-center gap-3">
+            <img src="assets/images/testimonials/inamul-hasan.png" alt="Inamul Hasan" class="w-10 h-10 rounded-full object-cover border-2 border-accent/20">
+            <div>
+              <p class="font-display font-bold text-on-surface text-sm">Inamul Hasan</p>
+              <p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p>
             </div>
           </div>
         </div>
 
-        <div class="review-card glass">
-          <div class="review-top">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-quote-mark">"</div>
-          </div>
-          <p class="review-text">Joining NCA has been one of the best investments I've made. What sets this course apart is the one-on-one mentorship — coaches are always approachable, whether through calls or live sessions. Each mentor brings unique expertise: Aman Bindra's practical approach to business, Rishabh Verma's precise nutrition knowledge, Siddhant's research-driven critical thinking, and Ashley's clear breakdown of exercise science. This course isn't just theoretical — it provides a strong foundation with actionable insights. Being part of NCA has been a true privilege!</p>
-          <div class="review-author">
-            <img src="assets/images/testimonials/rachel-anthony.png" alt="Rachel Anthony" class="review-avatar" />
-            <div class="review-author-info">
-              <strong>Rachel Anthony</strong>
-              <span>Scholar · NCA</span>
+        <!-- 12: Rachel Anthony -->
+        <div class="masonry-item glass-card p-6 rounded-2xl hover:-translate-y-1 transition-all">
+          <div class="text-accent text-lg mb-3">★★★★★</div>
+          <p class="text-on-surface leading-relaxed font-body text-sm italic mb-5">
+            "Joining NCA has been one of the best investments I've made. What sets this course apart is the one-on-one mentorship — coaches are always approachable, whether through calls or live sessions. Each mentor brings unique expertise: Aman Bindra's practical approach to business, Rishabh Verma's precise nutrition knowledge, Siddhant's research-driven critical thinking, and Ashley's clear breakdown of exercise science. This course isn't just theoretical — it provides a strong foundation with actionable insights. Being part of NCA has been a true privilege!"
+          </p>
+          <div class="flex items-center gap-3">
+            <img src="assets/images/testimonials/rachel-anthony.png" alt="Rachel Anthony" class="w-10 h-10 rounded-full object-cover border-2 border-accent/20">
+            <div>
+              <p class="font-display font-bold text-on-surface text-sm">Rachel Anthony</p>
+              <p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p>
             </div>
           </div>
         </div>
 
-        <div class="review-card glass">
-          <div class="review-top">
-            <div class="review-stars">★★★★★</div>
-            <div class="review-quote-mark">"</div>
-          </div>
-          <p class="review-text">Joining NCA has been one of the best decisions of my career. My goal was to become a full-time nutrition and fitness coach, and I'm proud to have achieved it. The curriculum provided practical, evidence-based knowledge that gets real results for clients. Beyond nutrition and exercise, the course covers sales, consultations, social media, and communication — all essential for a successful coaching business. The mentors — Aman Sir, Rishabh Sir, Ashley Sir, and Siddharth Sir — have been incredibly supportive throughout. I'm truly grateful for the skills and mentorship I've gained.</p>
-          <div class="review-author">
-            <img src="assets/images/testimonials/hyder-ali.png" alt="Hyder Ali" class="review-avatar" />
-            <div class="review-author-info">
-              <strong>Hyder Ali</strong>
-              <span>Scholar · NCA</span>
+        <!-- 13: Hyder Ali -->
+        <div class="masonry-item glass-card p-6 rounded-2xl hover:-translate-y-1 transition-all">
+          <div class="text-accent text-lg mb-3">★★★★★</div>
+          <p class="text-on-surface leading-relaxed font-body text-sm italic mb-5">
+            "Joining NCA has been one of the best decisions of my career. My goal was to become a full-time nutrition and fitness coach, and I'm proud to have achieved it. The curriculum provided practical, evidence-based knowledge that gets real results for clients. Beyond nutrition and exercise, the course covers sales, consultations, social media, and communication — all essential for a successful coaching business. The mentors — Aman Sir, Rishabh Sir, Ashley Sir, and Siddharth Sir — have been incredibly supportive throughout. I'm truly grateful for the skills and mentorship I've gained."
+          </p>
+          <div class="flex items-center gap-3">
+            <img src="assets/images/testimonials/hyder-ali.png" alt="Hyder Ali" class="w-10 h-10 rounded-full object-cover border-2 border-accent/20">
+            <div>
+              <p class="font-display font-bold text-on-surface text-sm">Hyder Ali</p>
+              <p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p>
             </div>
           </div>
         </div>
@@ -422,65 +472,90 @@
   </section>
 
   <!-- CTA STRIP -->
-  <section class="testi-cta-strip">
-    <div class="container">
-      <div class="testi-cta-inner glass">
-        <div>
-          <h3>Ready to write your own success story?</h3>
-          <p>Join 300+ scholars already transforming their careers.</p>
-        </div>
-        <a href="contact.html" class="btn btn-accent">Start Your Application</a>
+  <section class="bg-primary py-20">
+    <div class="max-w-4xl mx-auto px-4 md:px-8 text-center space-y-6">
+      <h2 class="font-display text-4xl md:text-5xl font-extrabold text-white">Be Our Next Success Story</h2>
+      <p class="text-white/70 text-lg font-body max-w-xl mx-auto">Join the most rigorous nutrition and fitness education community and transform your coaching career.</p>
+      <div class="flex flex-wrap gap-4 justify-center pt-2">
+        <a href="curriculum.html" class="bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg transition-all font-body">
+          Explore Courses
+        </a>
+        <a href="contact.html" class="border-2 border-white text-white px-8 py-3.5 rounded-xl font-bold text-base hover:bg-white hover:text-primary transition-all font-body">
+          Apply Now
+        </a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer glass" style="margin: 40px; border-radius: var(--radius-lg);">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="assets/logos/primary01.svg" alt="Nutrition Codes Logo" style="height: 48px; margin-bottom: 24px;" />
-        <p class="footer-tagline">Empowering the next generation of evidence-based health and fitness professionals in India and globally.</p>
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg class="icon-svg" style="width:18px;height:18px" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-          </a>
-        </div>
+  <footer class="bg-[#2B467D] text-white font-body">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <div class="sm:col-span-2 md:col-span-1">
+        <div class="text-lg font-bold text-[#40F39A] mb-4 font-display">Nutrition Codes Academy</div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">Empowering the next generation of evidence-based health and fitness professionals in India and globally.</p>
+        <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-[#40F39A] hover:text-white transition-colors text-sm">
+          <span class="material-symbols-outlined text-lg">photo_camera</span> @nutritioncodes
+        </a>
       </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="blog.html">Blog</a></li>
+      <div>
+        <h4 class="font-bold text-white mb-5 text-sm uppercase tracking-wider">Navigate</h4>
+        <ul class="space-y-3">
+          <li><a href="index.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Home</a></li>
+          <li><a href="curriculum.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Courses</a></li>
+          <li><a href="about.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">About</a></li>
+          <li><a href="testimonials.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Results</a></li>
+          <li><a href="blog.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Blog</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Programs</h4>
-        <ul>
-          <li><a href="#">Nutrition Science</a></li>
-          <li><a href="#">Exercise Mechanics</a></li>
-          <li><a href="#">Business Mentorship</a></li>
+      <div>
+        <h4 class="font-bold text-white mb-5 text-sm uppercase tracking-wider">Programs</h4>
+        <ul class="space-y-3">
+          <li><a href="curriculum.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Nutrition Science</a></li>
+          <li><a href="curriculum.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Exercise Physiology</a></li>
+          <li><a href="curriculum.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Business Mentorship</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:nutritioncodes0@gmail.com">nutritioncodes0@gmail.com</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+      <div>
+        <h4 class="font-bold text-white mb-5 text-sm uppercase tracking-wider">Contact</h4>
+        <ul class="space-y-3">
+          <li><a href="mailto:nutritioncodes0@gmail.com" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm break-all">nutritioncodes0@gmail.com</a></li>
+          <li><a href="contact.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Contact Form</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Nutrition Codes. All rights reserved.</p>
-      <p>Designed for Elite Performance.</p>
+    <div class="border-t border-white/10 py-6 px-8 text-center text-slate-400 text-xs">
+      © 2026 Nutrition Codes Academy. Rigorous science for human energy.
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/split-type"></script>
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
-  <script src="js/main.js"></script>
+  <!-- Play button script -->
+  <script>
+    document.querySelectorAll('.vt-video-wrap').forEach(wrap => {
+      const btn = document.createElement('div');
+      btn.className = 'vt-play-btn';
+      wrap.appendChild(btn);
+      const video = wrap.querySelector('video');
+      if (video) {
+        wrap.addEventListener('click', () => {
+          if (video.paused) {
+            // Pause all other videos first
+            document.querySelectorAll('.vt-video-wrap video').forEach(v => {
+              if (v !== video && !v.paused) {
+                v.pause();
+                v.closest('.vt-video-wrap').classList.remove('playing');
+              }
+            });
+            video.play();
+          } else {
+            video.pause();
+          }
+        });
+        video.addEventListener('play', () => wrap.classList.add('playing'));
+        video.addEventListener('pause', () => wrap.classList.remove('playing'));
+        video.addEventListener('ended', () => wrap.classList.remove('playing'));
+      }
+    });
+  </script>
+
 </body>
 </html>
