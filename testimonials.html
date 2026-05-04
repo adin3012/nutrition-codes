@@ -178,162 +178,145 @@
     </div>
   </section>
 
-  <!-- TESTIMONIAL CAROUSEL -->
+  <!-- RESULTS SECTION: Left text + Right YouTube, then carousel below -->
   <section class="py-16 md:py-24" style="background:#f8f9fb;">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
 
-      <!-- Heading -->
-      <div class="text-center mb-12">
-        <span class="text-secondary font-bold text-xs uppercase tracking-[0.2em] font-body">Voices from the Community</span>
-        <h2 class="font-display text-3xl md:text-4xl font-extrabold text-on-surface mt-3">In Their Own Words</h2>
-        <div class="w-14 h-1 bg-secondary rounded-full mx-auto mt-4"></div>
+      <!-- ── Row 1: Text left | YouTube right ── -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16 md:mb-20">
+
+        <!-- Left: heading + CTA -->
+        <div class="space-y-5 text-center lg:text-left">
+          <span class="text-secondary font-bold text-xs uppercase tracking-[0.2em] font-body">Scholar Testimonials</span>
+          <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface leading-tight">
+            Real Results,<br>Real Stories
+          </h2>
+          <p class="text-on-surface-variant font-body text-lg leading-relaxed">
+            See what's possible with us.
+          </p>
+          <div class="pt-2 flex justify-center lg:justify-start">
+            <a href="contact.html"
+               class="inline-block bg-secondary text-white px-9 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/30 transition-all font-body">
+              Enroll Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: YouTube video -->
+        <div class="w-full">
+          <div class="rounded-2xl overflow-hidden shadow-2xl" style="aspect-ratio:16/9;position:relative;background:#000;">
+            <div class="yt-thumb-wrap" data-yt="HDKWAIgmtxc" style="width:100%;height:100%;cursor:pointer;position:relative;">
+              <img src="https://img.youtube.com/vi/HDKWAIgmtxc/maxresdefault.jpg"
+                   onerror="this.src='https://img.youtube.com/vi/HDKWAIgmtxc/hqdefault.jpg'"
+                   alt="NCA Scholar Story"
+                   style="width:100%;height:100%;object-fit:cover;display:block;">
+              <div style="position:absolute;inset:0;background:rgba(10,20,40,0.30);"></div>
+              <!-- Play button -->
+              <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;background:rgba(255,255,255,0.95);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 40px rgba(0,0,0,0.35);transition:transform 0.2s;">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="#102f65"><polygon points="5,3 19,12 5,21"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Swiper Carousel -->
+      <!-- ── Row 2: Testimonial carousel ── -->
       <div class="swiper ts-swiper" style="padding-bottom:56px;">
         <div class="swiper-wrapper items-stretch">
 
-          <!-- ── Card 1: YouTube Featured ── -->
           <div class="swiper-slide" style="height:auto;">
-            <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-100 bg-[#102f65] h-full flex flex-col" style="min-height:380px;">
-              <div class="yt-thumb-wrap flex-1 relative" data-yt="HDKWAIgmtxc" style="min-height:240px;">
-                <img src="https://img.youtube.com/vi/HDKWAIgmtxc/maxresdefault.jpg"
-                     onerror="this.src='https://img.youtube.com/vi/HDKWAIgmtxc/hqdefault.jpg'"
-                     alt="NCA Scholar Story"
-                     style="width:100%;height:100%;object-fit:cover;display:block;">
-                <div style="position:absolute;inset:0;background:rgba(16,47,101,0.35);"></div>
-                <!-- Play button -->
-                <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;background:rgba(255,255,255,0.95);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(0,0,0,0.3);">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="#102f65"><polygon points="5,3 19,12 5,21"/></svg>
-                </div>
-              </div>
-              <div class="px-6 py-5">
-                <p class="text-white/60 text-xs font-body uppercase tracking-widest mb-1">Featured Story</p>
-                <p class="text-white font-display font-bold text-base">NCA Scholar Journey</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- ── Written Testimonial Cards ── -->
-
-          <div class="swiper-slide" style="height:auto;">
-            <div class="bg-white rounded-3xl p-7 shadow-sm border border-slate-100 h-full flex flex-col gap-5" style="min-height:380px;">
-              <div class="flex gap-1 text-yellow-400 text-sm">★★★★★</div>
-              <p class="text-on-surface-variant font-body text-sm leading-relaxed flex-1">"Being part of NC Academy has been one of the best decisions of my life. The knowledge, clarity, and mentorship here are unmatched. Aman Sir's no-nonsense teaching style makes even complex concepts easy."</p>
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 h-full flex flex-col gap-4" style="min-height:280px;">
+              <div class="text-yellow-400 text-sm tracking-wide">★★★★★</div>
+              <p class="text-on-surface-variant font-body text-sm leading-relaxed flex-1">"Being part of NC Academy has been one of the best decisions of my life. The knowledge, clarity, and mentorship here are unmatched."</p>
               <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
-                <img src="assets/images/testimonials/mahesh-giri.png" alt="Mahesh Giri" class="w-10 h-10 rounded-full object-cover border-2 border-secondary/20">
-                <div>
-                  <p class="font-display font-bold text-sm text-on-surface">Mahesh Giri</p>
-                  <p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p>
-                </div>
+                <img src="assets/images/testimonials/mahesh-giri.png" alt="Mahesh Giri" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+                <div><p class="font-display font-bold text-sm text-on-surface">Mahesh Giri</p><p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p></div>
               </div>
             </div>
           </div>
 
           <div class="swiper-slide" style="height:auto;">
-            <div class="bg-white rounded-3xl p-7 shadow-sm border border-slate-100 h-full flex flex-col gap-5" style="min-height:380px;">
-              <div class="flex gap-1 text-yellow-400 text-sm">★★★★★</div>
-              <p class="text-on-surface-variant font-body text-sm leading-relaxed flex-1">"Joining Nutrition Codes was one of the best decisions I've made in my fitness career. It not only deepened my knowledge but also taught me how to coach people more effectively and scale my fitness business."</p>
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 h-full flex flex-col gap-4" style="min-height:280px;">
+              <div class="text-yellow-400 text-sm tracking-wide">★★★★★</div>
+              <p class="text-on-surface-variant font-body text-sm leading-relaxed flex-1">"Joining Nutrition Codes deepened my knowledge and taught me how to coach people more effectively and scale my fitness business. It is THE BEST!"</p>
               <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
-                <img src="assets/images/testimonials/pavitra-gandharv.png" alt="Pavitra Gandharv" class="w-10 h-10 rounded-full object-cover border-2 border-secondary/20">
-                <div>
-                  <p class="font-display font-bold text-sm text-on-surface">Pavitra Gandharv</p>
-                  <p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p>
-                </div>
+                <img src="assets/images/testimonials/pavitra-gandharv.png" alt="Pavitra Gandharv" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+                <div><p class="font-display font-bold text-sm text-on-surface">Pavitra Gandharv</p><p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p></div>
               </div>
             </div>
           </div>
 
           <div class="swiper-slide" style="height:auto;">
-            <div class="bg-[#102f65] rounded-3xl p-7 shadow-sm h-full flex flex-col gap-5" style="min-height:380px;">
-              <div class="flex gap-1 text-yellow-400 text-sm">★★★★★</div>
-              <p class="text-white/80 font-body text-sm leading-relaxed flex-1">"Being a medical doctor, NCA has given me a perspective of health from a different angle. With a very dedicated and well-read team of professionals, NCA has been a treasure of knowledge."</p>
+            <div class="bg-[#102f65] rounded-2xl p-6 shadow-sm h-full flex flex-col gap-4" style="min-height:280px;">
+              <div class="text-yellow-400 text-sm tracking-wide">★★★★★</div>
+              <p class="text-white/80 font-body text-sm leading-relaxed flex-1">"Being a medical doctor, NCA has given me a perspective of health from a completely different angle. NCA is not just a course — it's an experience."</p>
               <div class="flex items-center gap-3 pt-3 border-t border-white/10">
-                <img src="assets/images/testimonials/sai-kiran.png" alt="Dr. Sai Kiran" class="w-10 h-10 rounded-full object-cover border-2 border-accent/40">
-                <div>
-                  <p class="font-display font-bold text-sm text-white">Dr. Sai Kiran</p>
-                  <p class="text-xs text-accent font-body">Scholar · NCA</p>
-                </div>
+                <img src="assets/images/testimonials/sai-kiran.png" alt="Dr. Sai Kiran" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+                <div><p class="font-display font-bold text-sm text-white">Dr. Sai Kiran</p><p class="text-xs text-accent font-body">Scholar · NCA</p></div>
               </div>
             </div>
           </div>
 
           <div class="swiper-slide" style="height:auto;">
-            <div class="bg-white rounded-3xl p-7 shadow-sm border border-slate-100 h-full flex flex-col gap-5" style="min-height:380px;">
-              <div class="flex gap-1 text-yellow-400 text-sm">★★★★★</div>
-              <p class="text-on-surface-variant font-body text-sm leading-relaxed flex-1">"I had been following Aman Bindra, Ashley, and Rishabh on IG long before joining NCA. Beyond technical knowledge, the course provides in-depth insights on business growth, social media, and mindset development."</p>
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 h-full flex flex-col gap-4" style="min-height:280px;">
+              <div class="text-yellow-400 text-sm tracking-wide">★★★★★</div>
+              <p class="text-on-surface-variant font-body text-sm leading-relaxed flex-1">"Beyond technical knowledge, NCA provides in-depth insights on business growth, social media, and mindset development, which are rare to find elsewhere."</p>
               <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
-                <img src="assets/images/testimonials/siddharth-rana.png" alt="Siddharth Rana" class="w-10 h-10 rounded-full object-cover border-2 border-secondary/20">
-                <div>
-                  <p class="font-display font-bold text-sm text-on-surface">Siddharth Rana</p>
-                  <p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p>
-                </div>
+                <img src="assets/images/testimonials/siddharth-rana.png" alt="Siddharth Rana" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+                <div><p class="font-display font-bold text-sm text-on-surface">Siddharth Rana</p><p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p></div>
               </div>
             </div>
           </div>
 
           <div class="swiper-slide" style="height:auto;">
-            <div class="bg-white rounded-3xl p-7 shadow-sm border border-slate-100 h-full flex flex-col gap-5" style="min-height:380px;">
-              <div class="flex gap-1 text-yellow-400 text-sm">★★★★★</div>
-              <p class="text-on-surface-variant font-body text-sm leading-relaxed flex-1">"The coaching industry can be a lonely place. NCA is here to change that. Nutrition, exercise science, coaching best practices, mindset, business growth — pick any area and NCA has it covered."</p>
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 h-full flex flex-col gap-4" style="min-height:280px;">
+              <div class="text-yellow-400 text-sm tracking-wide">★★★★★</div>
+              <p class="text-on-surface-variant font-body text-sm leading-relaxed flex-1">"Nutrition, exercise science, coaching best practices, mindset, business growth — pick any area of coaching and NCA has it covered."</p>
               <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
-                <img src="assets/images/testimonials/karthik-nagarajan.png" alt="Karthik Nagarajan" class="w-10 h-10 rounded-full object-cover border-2 border-secondary/20">
-                <div>
-                  <p class="font-display font-bold text-sm text-on-surface">Karthik Nagarajan</p>
-                  <p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p>
-                </div>
+                <img src="assets/images/testimonials/karthik-nagarajan.png" alt="Karthik Nagarajan" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+                <div><p class="font-display font-bold text-sm text-on-surface">Karthik Nagarajan</p><p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p></div>
               </div>
             </div>
           </div>
 
           <div class="swiper-slide" style="height:auto;">
-            <div class="bg-[#102f65] rounded-3xl p-7 shadow-sm h-full flex flex-col gap-5" style="min-height:380px;">
-              <div class="flex gap-1 text-yellow-400 text-sm">★★★★★</div>
-              <p class="text-white/80 font-body text-sm leading-relaxed flex-1">"Joining NCA has been one of the best investments I've made. One-on-one mentorship, approachable coaches, and a strong foundation with actionable insights. Being part of NCA has been a true privilege!"</p>
+            <div class="bg-[#102f65] rounded-2xl p-6 shadow-sm h-full flex flex-col gap-4" style="min-height:280px;">
+              <div class="text-yellow-400 text-sm tracking-wide">★★★★★</div>
+              <p class="text-white/80 font-body text-sm leading-relaxed flex-1">"One-on-one mentorship, approachable coaches, a strong foundation with actionable insights. Being part of NCA has been a true privilege!"</p>
               <div class="flex items-center gap-3 pt-3 border-t border-white/10">
-                <img src="assets/images/testimonials/rachel-anthony.png" alt="Rachel Anthony" class="w-10 h-10 rounded-full object-cover border-2 border-accent/40">
-                <div>
-                  <p class="font-display font-bold text-sm text-white">Rachel Anthony</p>
-                  <p class="text-xs text-accent font-body">Scholar · NCA</p>
-                </div>
+                <img src="assets/images/testimonials/rachel-anthony.png" alt="Rachel Anthony" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+                <div><p class="font-display font-bold text-sm text-white">Rachel Anthony</p><p class="text-xs text-accent font-body">Scholar · NCA</p></div>
               </div>
             </div>
           </div>
 
           <div class="swiper-slide" style="height:auto;">
-            <div class="bg-white rounded-3xl p-7 shadow-sm border border-slate-100 h-full flex flex-col gap-5" style="min-height:380px;">
-              <div class="flex gap-1 text-yellow-400 text-sm">★★★★★</div>
-              <p class="text-on-surface-variant font-body text-sm leading-relaxed flex-1">"Joining NCA has been one of the best decisions of my career. The curriculum provided practical, evidence-based knowledge. Beyond nutrition, the course covers sales, social media, and communication."</p>
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 h-full flex flex-col gap-4" style="min-height:280px;">
+              <div class="text-yellow-400 text-sm tracking-wide">★★★★★</div>
+              <p class="text-on-surface-variant font-body text-sm leading-relaxed flex-1">"The curriculum covers not just nutrition and exercise, but also coaching, business, and social media. An absolute beginner will have no problem understanding it."</p>
               <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
-                <img src="assets/images/testimonials/hyder-ali.png" alt="Hyder Ali" class="w-10 h-10 rounded-full object-cover border-2 border-secondary/20">
-                <div>
-                  <p class="font-display font-bold text-sm text-on-surface">Hyder Ali</p>
-                  <p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p>
-                </div>
+                <img src="assets/images/testimonials/sagar-singh.png" alt="Sagar Singh" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+                <div><p class="font-display font-bold text-sm text-on-surface">Sagar Singh</p><p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p></div>
               </div>
             </div>
           </div>
 
           <div class="swiper-slide" style="height:auto;">
-            <div class="bg-white rounded-3xl p-7 shadow-sm border border-slate-100 h-full flex flex-col gap-5" style="min-height:380px;">
-              <div class="flex gap-1 text-yellow-400 text-sm">★★★★★</div>
-              <p class="text-on-surface-variant font-body text-sm leading-relaxed flex-1">"The curriculum of NCA is so well set up that even an absolute beginner will have no problem understanding it. Apart from nutrition and exercise, you also learn coaching, business, social media, and everything else."</p>
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 h-full flex flex-col gap-4" style="min-height:280px;">
+              <div class="text-yellow-400 text-sm tracking-wide">★★★★★</div>
+              <p class="text-on-surface-variant font-body text-sm leading-relaxed flex-1">"Joining NCA gave me everything I needed — practical nutrition knowledge, sales skills, social media strategy, and the confidence to build a full-time coaching career."</p>
               <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
-                <img src="assets/images/testimonials/sagar-singh.png" alt="Sagar Singh" class="w-10 h-10 rounded-full object-cover border-2 border-secondary/20">
-                <div>
-                  <p class="font-display font-bold text-sm text-on-surface">Sagar Singh</p>
-                  <p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p>
-                </div>
+                <img src="assets/images/testimonials/hyder-ali.png" alt="Hyder Ali" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+                <div><p class="font-display font-bold text-sm text-on-surface">Hyder Ali</p><p class="text-xs text-on-surface-variant font-body">Scholar · NCA</p></div>
               </div>
             </div>
           </div>
 
         </div>
-
-        <!-- Pagination & Navigation -->
         <div class="swiper-pagination" style="bottom:8px;"></div>
-        <div class="swiper-button-prev" style="left:0;"></div>
-        <div class="swiper-button-next" style="right:0;"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
 
     </div>
