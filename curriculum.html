@@ -107,26 +107,29 @@
   </script>
 
   <!-- HERO -->
-  <section class="relative flex items-end" style="min-height:80vh;">
-    <img src="assets/images/course-bg.jpg" alt="" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;">
-    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to top,#05101f 0%,rgba(5,16,31,0.65) 50%,rgba(5,16,31,0.15) 100%);z-index:1;"></div>
-    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 pt-20 pb-14 md:pb-24 space-y-6">
+  <section class="relative flex flex-col justify-end" style="min-height:85vh;">
+    <picture>
+      <source media="(max-width:767px)" srcset="assets/images/course-bg-mobile.jpg">
+      <img src="assets/images/course-bg.jpg" alt="" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;">
+    </picture>
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to top,#05101f 30%,rgba(5,16,31,0.75) 60%,rgba(5,16,31,0.25) 100%);z-index:1;"></div>
+    <div class="relative w-full max-w-7xl mx-auto px-5 md:px-8 pb-10 md:pb-24 pt-24 md:pt-0 space-y-5 md:space-y-6 text-center md:text-left" style="z-index:2;">
       <div class="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 text-white px-4 py-2 rounded-full text-sm font-bold font-body tracking-wide">
         <span class="material-symbols-outlined text-base">school</span>
         ADVANCED CURRICULUM
       </div>
-      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight max-w-2xl">
+      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mx-auto md:mx-0 max-w-2xl">
         The Curriculum:<br>
         <span class="text-accent">A Science-First Approach</span>
       </h1>
-      <p class="text-white/75 text-lg leading-relaxed font-body max-w-xl">
+      <p class="text-white/80 text-base md:text-lg leading-relaxed font-body mx-auto md:mx-0 max-w-sm md:max-w-xl">
         Five interconnected pillars of knowledge — each grounded in peer-reviewed science, taught by active practitioners who apply it every day.
       </p>
-      <div class="flex flex-wrap gap-4 pt-2">
-        <a href="contact.html" class="bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/40 transition-all font-body">
+      <div class="flex flex-col sm:flex-row gap-3 md:gap-4 pt-1 items-center md:items-start">
+        <a href="contact.html" class="w-full sm:w-auto bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/40 transition-all font-body text-center">
           Enroll Now
         </a>
-        <a href="about.html" class="border-2 border-white text-white px-8 py-3.5 rounded-xl font-bold text-base hover:bg-white hover:text-primary transition-all font-body">
+        <a href="about.html" class="w-full sm:w-auto border-2 border-white text-white px-8 py-3.5 rounded-xl font-bold text-base hover:bg-white hover:text-primary transition-all font-body text-center">
           Meet the Faculty
         </a>
       </div>
