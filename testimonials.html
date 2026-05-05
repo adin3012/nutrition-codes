@@ -18,6 +18,35 @@
   <link rel="icon" type="image/svg+xml" href="assets/logos/primary01.svg">
   <meta name="description" content="Hear directly from 300+ NCA scholars worldwide. Real results, real transformations, real science-backed coaching success stories.">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#102f65',
+            'primary-container': '#2b467d',
+            'on-primary': '#ffffff',
+            'on-primary-container': '#9cb5f4',
+            secondary: '#4173F4',
+            'on-secondary': '#ffffff',
+            accent: '#40F39A',
+            'on-surface': '#0b1b36',
+            'on-surface-variant': '#444650',
+            'surface-low': '#f1f3ff',
+            'surface-mid': '#e8eeff',
+            'surface-high': '#e0e8ff',
+            'surface-highest': '#d7e2ff',
+            'outline-variant': '#c4c6d1',
+            background: '#f9f9ff',
+          },
+          fontFamily: {
+            display: ['Manrope', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -71,35 +100,6 @@
       }
     }
   </style>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#102f65',
-            'primary-container': '#2b467d',
-            'on-primary': '#ffffff',
-            'on-primary-container': '#9cb5f4',
-            secondary: '#4173F4',
-            'on-secondary': '#ffffff',
-            accent: '#40F39A',
-            'on-surface': '#0b1b36',
-            'on-surface-variant': '#444650',
-            'surface-low': '#f1f3ff',
-            'surface-mid': '#e8eeff',
-            'surface-high': '#e0e8ff',
-            'surface-highest': '#d7e2ff',
-            'outline-variant': '#c4c6d1',
-            background: '#f9f9ff',
-          },
-          fontFamily: {
-            display: ['Manrope', 'sans-serif'],
-            body: ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
   <style>
     .dna-pattern {
       background-image: radial-gradient(#2b467d 0.5px, transparent 0.5px);
@@ -191,7 +191,7 @@
   <section id="main" class="relative flex flex-col justify-end" style="min-height:85vh;">
     <picture>
       <source media="(max-width:767px)" srcset="assets/images/hero-testimonials-mobile.jpg">
-      <img loading="lazy" decoding="async" src="assets/images/hero-testimonials.jpg" alt="" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;z-index:0;">
+      <img decoding="async" src="assets/images/hero-testimonials.jpg" alt="" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;z-index:0;">
     </picture>
     <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to top,#05101f 30%,rgba(5,16,31,0.75) 60%,rgba(5,16,31,0.25) 100%);z-index:1;"></div>
     <div class="relative w-full max-w-7xl mx-auto px-5 md:px-8 pb-10 md:pb-24 pt-24 md:pt-0 space-y-5 md:space-y-6 text-center md:text-left" style="z-index:2;">
