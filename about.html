@@ -72,6 +72,34 @@
         text-shadow: 0 2px 10px rgba(0,0,0,0.60), 0 4px 20px rgba(0,0,0,0.40);
       }
     }
+
+    /* Timeline animations */
+    .timeline-card {
+      opacity: 0;
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+    .timeline-card.from-left {
+      transform: translateX(-80px);
+    }
+    .timeline-card.from-right {
+      transform: translateX(80px);
+    }
+    .timeline-card.in-view {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Arrow bounce animation */
+    .timeline-arrow {
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(10px); }
+      60% { transform: translateY(5px); }
+    }
+
+    /* Faculty slide */
     .faculty-slide {
       opacity: 0;
       transform: translateY(40px);
@@ -81,7 +109,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-
   </style>
 </head>
 <body class="bg-background text-on-surface">
@@ -89,16 +116,13 @@
   <!-- NAV -->
   <nav class="fixed top-0 w-full z-50 border-b border-white/10" style="background: linear-gradient(135deg, #05101f 0%, #0d2147 100%);">
     <div class="flex justify-between items-center h-14 md:h-16 px-4 md:px-10 max-w-7xl mx-auto">
-      <!-- Logo + name stacked -->
       <a href="index.html"><img src="assets/logos/primary01.svg" alt="Nutrition Codes" class="h-8 md:h-9 brightness-0 invert"></a>
-      <!-- Desktop links -->
       <div class="hidden md:flex items-center gap-10 font-body">
         <a href="about.html" class="text-accent border-b-2 border-accent pb-0.5 text-[15px] font-semibold hover:text-white transition-colors">About Us</a>
         <a href="testimonials.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Testimonials</a>
         <a href="curriculum.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">Courses</a>
         <a href="contact.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Contact Us</a>
       </div>
-      <!-- Right: transparent Instagram + hamburger -->
       <div class="flex items-center gap-3">
         <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener" aria-label="Instagram"
            class="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center text-white hover:border-accent hover:text-accent hover:bg-white/5 transition-all">
@@ -113,7 +137,6 @@
         </button>
       </div>
     </div>
-    <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 font-body" style="background:#05101f;">
       <div class="px-5 py-3 space-y-0.5">
         <a href="about.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">About Us</a>
@@ -139,15 +162,14 @@
       <img src="assets/images/hero-about.jpg" alt="" class="hero-bg-img" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
     </picture>
     <div class="hero-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;"></div>
-    <div class="relative w-full max-w-7xl mx-auto px-5 md:px-8 pb-10 md:pb-24 pt-24 md:pt-0 space-y-5 md:space-y-6 text-left" style="z-index:2;">
-      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mx-0 max-w-2xl hero-text-shadow">
-        Rigorous science for<br>
-        <span class="text-accent">human energy.</span>
+    <div class="relative w-full max-w-7xl mx-auto px-5 md:px-8 pb-10 md:pb-24 pt-24 md:pt-0 space-y-5 md:space-y-6 text-center md:text-left" style="z-index:2;">
+      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mx-auto md:mx-0 max-w-2xl">
+        Rigorous science for<br><span class="text-accent">human energy.</span>
       </h1>
-      <p class="text-white/90 text-base md:text-lg leading-relaxed font-body mx-0 max-w-sm md:max-w-xl hero-text-shadow">
+      <p class="text-white/80 text-base md:text-lg leading-relaxed font-body mx-auto md:mx-0 max-w-sm md:max-w-xl">
         Nutrition Codes Academy was built to create a new standard of mastery in health and fitness coaching — grounded not in trends, but in the rigor of real science.
       </p>
-      <div class="flex flex-col sm:flex-row gap-3 md:gap-4 pt-1 items-start">
+      <div class="flex flex-col sm:flex-row gap-3 md:gap-4 pt-1 items-center md:items-start">
         <a href="curriculum.html" class="w-full sm:w-auto bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/40 transition-all font-body text-center">
           Explore Courses
         </a>
@@ -158,11 +180,12 @@
     </div>
   </section>
 
-  <!-- WHY TRUST US — ORIGIN STORY -->
-  <section class="bg-surface-low py-24">
-    <div class="max-w-7xl mx-auto px-4 md:px-8">
-      <!-- Section Header -->
-      <div class="text-center mb-20">
+
+  <!-- TIMELINE STORY -->
+  <section class="bg-surface-low py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+      <!-- Header -->
+      <div class="text-center mb-16 md:mb-24">
         <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-4">Our Story</p>
         <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-on-surface leading-tight mb-6">
           Why Should You Trust Us?
@@ -172,78 +195,119 @@
         </p>
       </div>
 
-      <!-- Story Grid -->
-      <div class="space-y-6">
-        <!-- Sections 1–4 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- 01 -->
-          <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-outline-variant/40 hover:-translate-y-1 transition-all">
-            <span class="text-accent font-display font-extrabold text-5xl opacity-30 leading-none block mb-4">01</span>
-            <h3 class="font-display font-bold text-xl text-on-surface mb-3">Where We Started</h3>
-            <p class="text-on-surface-variant leading-relaxed font-body">
-              We started where most people in this industry start. Working hard. Following what we were taught. Trying to do right by the people we coached. But over time, a pattern became clear. People were putting in effort, yet progress was inconsistent. Coaches were following systems, but struggling to adapt. There was information everywhere, but very little clarity.
-            </p>
-          </div>
-
-          <!-- 02 -->
-          <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-outline-variant/40 hover:-translate-y-1 transition-all">
-            <span class="text-accent font-display font-extrabold text-5xl opacity-30 leading-none block mb-4">02</span>
-            <h3 class="font-display font-bold text-xl text-on-surface mb-3">The Real Problem</h3>
-            <p class="text-on-surface-variant leading-relaxed font-body">
-              The problem was not effort. It was understanding. Most of what we saw being taught was surface-level. Enough to begin, but not enough to sustain. So we stepped back and rebuilt how we approached everything — nutrition, training, and human physiology. Not to collect more information, but to understand it properly.
-            </p>
-          </div>
-
-          <!-- 03 -->
-          <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-outline-variant/40 hover:-translate-y-1 transition-all">
-            <span class="text-accent font-display font-extrabold text-5xl opacity-30 leading-none block mb-4">03</span>
-            <h3 class="font-display font-bold text-xl text-on-surface mb-3">The Shift</h3>
-            <p class="text-on-surface-variant leading-relaxed font-body">
-              That shift changed how we worked. Decisions became clearer. Adjustments became more precise. Results became more consistent. And more importantly, we were no longer guessing.
-            </p>
-          </div>
-
-          <!-- 04 (highlighted) -->
-          <div class="bg-primary rounded-3xl p-8 md:p-10 text-white hover:-translate-y-1 transition-all">
-            <span class="text-accent font-display font-extrabold text-5xl opacity-40 leading-none block mb-4">04</span>
-            <h3 class="font-display font-bold text-xl text-white mb-3">Why We Built NCA</h3>
-            <p class="text-white/80 leading-relaxed font-body">
-              Nutrition Codes was built from that experience. We are coaches and trainers who wanted a better standard of education — for ourselves first, and then for others. Not driven by volume. Not built around trends. But focused on clarity, depth, and application.
-            </p>
-          </div>
+      <!-- Card 1: Image Left, Text Right -->
+      <div class="timeline-card from-left grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="rounded-3xl overflow-hidden shadow-xl">
+          <img src="assets/images/about/story-1.jpg" alt="Where We Started" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
         </div>
+        <div class="space-y-4 md:space-y-6">
+          <div class="flex items-center gap-4">
+            <span class="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary font-display font-extrabold text-xl">01</span>
+            <h3 class="font-display text-2xl md:text-3xl font-bold text-on-surface">Where We Started</h3>
+          </div>
+          <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
+            We started where most people in this industry start. Working hard. Following what we were taught. Trying to do right by the people we coached. But over time, a pattern became clear. People were putting in effort, yet progress was inconsistent. Coaches were following systems, but struggling to adapt. There was information everywhere, but very little clarity.
+          </p>
+        </div>
+      </div>
 
-        <!-- Section 5 + Founder Quote -->
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
-          <div class="lg:col-span-3 bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-outline-variant/40">
-            <span class="text-secondary font-display font-extrabold text-5xl opacity-30 leading-none block mb-4">05</span>
-            <h3 class="font-display font-bold text-2xl text-on-surface mb-4">Our Vision</h3>
-            <p class="text-on-surface-variant leading-relaxed font-body text-lg mb-8">
-              Our vision is simple. To help people understand what they are doing, so they can make better decisions — independently. Whether you are a coach, an aspiring coach, or someone trying to take control of your health, this is built for you.
-            </p>
-            <a href="contact.html" class="inline-flex items-center gap-2 bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/40 transition-all font-body">
-              Apply for Mentorship <span class="material-symbols-outlined text-base">arrow_forward</span>
-            </a>
+      <!-- Arrow -->
+      <div class="flex justify-center py-8 md:py-12">
+        <svg class="timeline-arrow w-8 h-8 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </div>
+
+      <!-- Card 2: Text Left, Image Right -->
+      <div class="timeline-card from-right grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="space-y-4 md:space-y-6 md:order-1 order-2">
+          <div class="flex items-center gap-4">
+            <span class="w-12 h-12 rounded-2xl bg-accent/20 flex items-center justify-center text-accent font-display font-extrabold text-xl">02</span>
+            <h3 class="font-display text-2xl md:text-3xl font-bold text-on-surface">The Real Problem</h3>
           </div>
-          <div class="lg:col-span-2 bg-primary rounded-3xl p-8 md:p-10 text-white relative overflow-hidden flex flex-col justify-center">
-            <div class="absolute top-6 left-8 text-8xl text-white/10 font-display font-extrabold leading-none select-none">"</div>
-            <div class="relative z-10">
-              <p class="text-white text-xl font-display font-semibold leading-relaxed mb-8 italic">
-                "We didn't want to create another certification. We wanted to create a new standard of mastery that actually changes lives through the lens of pure science."
-              </p>
-              <div class="flex items-center gap-4">
-                <img src="assets/images/Amandeep.png" alt="Amandeep Singh Bindra" class="w-14 h-14 rounded-full object-cover object-top border-2 border-accent/40">
-                <div>
-                  <p class="font-display font-bold text-white">Amandeep Singh Bindra</p>
-                  <p class="text-accent text-sm font-body">Founder, Nutrition Codes Academy</p>
-                </div>
-              </div>
-            </div>
+          <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
+            The problem was not effort. It was understanding. Most of what we saw being taught was surface-level. Enough to begin, but not enough to sustain. So we stepped back and rebuilt how we approached everything — nutrition, training, and human physiology. Not to collect more information, but to understand it properly.
+          </p>
+        </div>
+        <div class="rounded-3xl overflow-hidden shadow-xl md:order-2 order-1">
+          <img src="assets/images/about/story-2.jpg" alt="The Real Problem" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
+        </div>
+      </div>
+
+      <!-- Arrow -->
+      <div class="flex justify-center py-8 md:py-12">
+        <svg class="timeline-arrow w-8 h-8 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </div>
+
+      <!-- Card 3: Image Left, Text Right -->
+      <div class="timeline-card from-left grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="rounded-3xl overflow-hidden shadow-xl">
+          <img src="assets/images/about/story-3.jpg" alt="The Shift" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
+        </div>
+        <div class="space-y-4 md:space-y-6">
+          <div class="flex items-center gap-4">
+            <span class="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary font-display font-extrabold text-xl">03</span>
+            <h3 class="font-display text-2xl md:text-3xl font-bold text-on-surface">The Shift</h3>
           </div>
+          <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
+            That shift changed how we worked. Decisions became clearer. Adjustments became more precise. Results became more consistent. And more importantly, we were no longer guessing. Every protocol, every recommendation, every coaching decision was grounded in understanding — not trends, not shortcuts.
+          </p>
+        </div>
+      </div>
+
+      <!-- Arrow -->
+      <div class="flex justify-center py-8 md:py-12">
+        <svg class="timeline-arrow w-8 h-8 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </div>
+
+      <!-- Card 4: Text Left, Image Right -->
+      <div class="timeline-card from-right grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="space-y-4 md:space-y-6 md:order-1 order-2">
+          <div class="flex items-center gap-4">
+            <span class="w-12 h-12 rounded-2xl bg-accent/20 flex items-center justify-center text-accent font-display font-extrabold text-xl">04</span>
+            <h3 class="font-display text-2xl md:text-3xl font-bold text-on-surface">Why We Built NCA</h3>
+          </div>
+          <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
+            Nutrition Codes was built from that experience. We are coaches and trainers who wanted a better standard of education — for ourselves first, and then for others. Not driven by volume. Not built around trends. But focused on clarity, depth, and application. We wanted to create the kind of program we wish existed when we were starting out.
+          </p>
+        </div>
+        <div class="rounded-3xl overflow-hidden shadow-xl md:order-2 order-1">
+          <img src="assets/images/about/story-4.jpg" alt="Why We Built NCA" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
+        </div>
+      </div>
+
+      <!-- Arrow -->
+      <div class="flex justify-center py-8 md:py-12">
+        <svg class="timeline-arrow w-8 h-8 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </div>
+
+      <!-- Card 5: Image Left, Text Right -->
+      <div class="timeline-card from-left grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="rounded-3xl overflow-hidden shadow-xl">
+          <img src="assets/images/about/story-5.jpg" alt="Our Vision" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
+        </div>
+        <div class="space-y-4 md:space-y-6">
+          <div class="flex items-center gap-4">
+            <span class="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary font-display font-extrabold text-xl">05</span>
+            <h3 class="font-display text-2xl md:text-3xl font-bold text-on-surface">Our Vision</h3>
+          </div>
+          <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
+            Our vision is simple. To help people understand what they are doing, so they can make better decisions — independently. Whether you are a coach, an aspiring coach, or someone trying to take control of your health, this is built for you. If you value understanding over shortcuts, you will feel at home here.
+          </p>
+          <a href="contact.html" class="inline-flex items-center gap-2 bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/40 transition-all font-body">
+            Apply for Mentorship <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- CLOSING STATEMENT -->
   <section class="py-20 bg-white">
@@ -263,7 +327,6 @@
         <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface">Mission &amp; Vision</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Mission -->
         <div class="bg-primary rounded-3xl p-8 md:p-10 text-white space-y-5">
           <div class="w-14 h-14 rounded-2xl bg-accent/20 flex items-center justify-center">
             <span class="material-symbols-outlined text-accent text-3xl">rocket_launch</span>
@@ -287,7 +350,6 @@
             </li>
           </ul>
         </div>
-        <!-- Vision -->
         <div class="bg-white rounded-3xl p-8 md:p-10 space-y-5 shadow-sm border border-outline-variant/40">
           <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center">
             <span class="material-symbols-outlined text-secondary text-3xl">visibility</span>
@@ -323,13 +385,11 @@
         <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface">The NCA Difference</h2>
       </div>
       <div class="rounded-3xl overflow-hidden border border-outline-variant/40 shadow-sm bg-white">
-        <!-- Header row -->
         <div class="grid grid-cols-3 bg-primary text-white">
           <div class="col-span-1 px-6 py-4 text-sm font-bold font-body uppercase tracking-wider text-white/70">Category</div>
           <div class="col-span-1 px-6 py-4 text-sm font-bold font-body uppercase tracking-wider text-center">Traditional Certs</div>
           <div class="col-span-1 px-6 py-4 text-sm font-bold font-body uppercase tracking-wider text-center text-accent">NCA Mastership</div>
         </div>
-        <!-- Row 1 -->
         <div class="grid grid-cols-3 border-b border-outline-variant/40 hover:bg-surface-low transition-colors">
           <div class="col-span-1 px-6 py-5 text-sm font-semibold text-on-surface font-body">Nutrition Approach</div>
           <div class="col-span-1 px-6 py-5 text-sm text-on-surface-variant font-body text-center flex items-center justify-center gap-2">
@@ -339,7 +399,6 @@
             <span class="material-symbols-outlined text-accent text-base">check</span> Personalized metabolic coding
           </div>
         </div>
-        <!-- Row 2 -->
         <div class="grid grid-cols-3 border-b border-outline-variant/40 hover:bg-surface-low transition-colors">
           <div class="col-span-1 px-6 py-5 text-sm font-semibold text-on-surface font-body">Learning Materials</div>
           <div class="col-span-1 px-6 py-5 text-sm text-on-surface-variant font-body text-center flex items-center justify-center gap-2">
@@ -349,7 +408,6 @@
             <span class="material-symbols-outlined text-accent text-base">check</span> Real-time clinical research
           </div>
         </div>
-        <!-- Row 3 -->
         <div class="grid grid-cols-3 border-b border-outline-variant/40 hover:bg-surface-low transition-colors">
           <div class="col-span-1 px-6 py-5 text-sm font-semibold text-on-surface font-body">Assessment</div>
           <div class="col-span-1 px-6 py-5 text-sm text-on-surface-variant font-body text-center flex items-center justify-center gap-2">
@@ -359,7 +417,6 @@
             <span class="material-symbols-outlined text-accent text-base">check</span> Live case-study defense
           </div>
         </div>
-        <!-- Row 4 -->
         <div class="grid grid-cols-3 hover:bg-surface-low transition-colors">
           <div class="col-span-1 px-6 py-5 text-sm font-semibold text-on-surface font-body">Support</div>
           <div class="col-span-1 px-6 py-5 text-sm text-on-surface-variant font-body text-center flex items-center justify-center gap-2">
@@ -373,16 +430,27 @@
     </div>
   </section>
 
+
+  <!-- COMMUNITY PHOTO -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 text-center">
+      <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-4">The People Behind It</p>
+      <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-10">Meet Your Mentors</h2>
+      <div class="rounded-3xl overflow-hidden shadow-2xl mb-12">
+        <img src="assets/images/about/story-7.jpg" alt="NCA Faculty and Students" class="w-full h-64 md:h-[500px] object-cover object-center">
+      </div>
+    </div>
+  </section>
+
   <!-- FACULTY -->
-  <section class="py-20">
+  <section class="py-20 bg-surface-low">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
       <div class="text-center mb-14">
         <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Your Educators</p>
-        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface">Meet Your Mentors</h2>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface">The Team</h2>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="faculty-grid">
 
-        <!-- Amandeep -->
         <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg faculty-slide">
           <div class="aspect-square overflow-hidden">
             <img src="assets/images/Amandeep.png" alt="Amandeep Singh Bindra" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
@@ -393,7 +461,7 @@
               <p class="text-secondary text-xs font-bold font-body uppercase tracking-wider mt-1">Coaching &amp; Business Development</p>
             </div>
             <p class="text-on-surface-variant text-sm leading-relaxed font-body">
-              With over a decade of experience consulting professional athletes, Amandeep has refined the art of metabolic optimization. His approach strips away the noise, focusing purely on individualized, sustainable nutritional frameworks. He leads the coaching and business development arm of NCA, equipping scholars with the skills to build thriving coaching careers.
+              With over a decade of experience consulting professional athletes, Amandeep has refined the art of metabolic optimization. He leads the coaching and business development arm of NCA.
             </p>
             <a href="https://www.instagram.com/aman_bindra" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-secondary text-sm font-bold font-body hover:gap-3 transition-all">
               <span class="material-symbols-outlined text-base">photo_camera</span> @aman_bindra
@@ -401,7 +469,6 @@
           </div>
         </div>
 
-        <!-- Ashley -->
         <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg faculty-slide">
           <div class="aspect-square overflow-hidden">
             <img src="assets/images/Ashley.png" alt="Ashley Johnathan D'cruz" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
@@ -412,7 +479,7 @@
               <p class="text-secondary text-xs font-bold font-body uppercase tracking-wider mt-1">Exercise Science</p>
             </div>
             <p class="text-on-surface-variant text-sm leading-relaxed font-body">
-              Holding a Master's in Kinesiology, Ashley ensures that every programming decision is grounded in biomechanics. He bridges the gap between rehab and elite performance, teaching scholars how to build bulletproof bodies through evidence-based exercise science.
+              Holding a Master's in Kinesiology, Ashley ensures that every programming decision is grounded in biomechanics. He bridges the gap between rehab and elite performance.
             </p>
             <a href="https://www.instagram.com/getfitwithjonathan" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-secondary text-sm font-bold font-body hover:gap-3 transition-all">
               <span class="material-symbols-outlined text-base">photo_camera</span> @getfitwithjonathan
@@ -420,7 +487,6 @@
           </div>
         </div>
 
-        <!-- Rishabh -->
         <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg faculty-slide">
           <div class="aspect-square overflow-hidden">
             <img src="assets/images/Rishabh.png" alt="Rishabh Verma" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
@@ -431,7 +497,7 @@
               <p class="text-secondary text-xs font-bold font-body uppercase tracking-wider mt-1">Nutrition Science</p>
             </div>
             <p class="text-on-surface-variant text-sm leading-relaxed font-body">
-              Rishabh brings deep expertise in nutrition science and metabolic health to the NCA faculty. He equips scholars with the practical tools to understand the science of nutrition at a cellular level, translating complex research into actionable coaching protocols.
+              Rishabh brings deep expertise in nutrition science and metabolic health to the NCA faculty. He equips scholars with the practical tools to understand the science of nutrition at a cellular level.
             </p>
             <a href="https://www.instagram.com/rishabhvermafitness" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-secondary text-sm font-bold font-body hover:gap-3 transition-all">
               <span class="material-symbols-outlined text-base">photo_camera</span> @rishabhvermafitness
@@ -439,7 +505,6 @@
           </div>
         </div>
 
-        <!-- Siddhant -->
         <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg faculty-slide">
           <div class="aspect-square overflow-hidden">
             <img src="assets/images/Siddhant.png" alt="Siddhant Prasad" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
@@ -450,7 +515,7 @@
               <p class="text-secondary text-xs font-bold font-body uppercase tracking-wider mt-1">Fitness Research</p>
             </div>
             <p class="text-on-surface-variant text-sm leading-relaxed font-body">
-              Siddhant leads the research arm of NCA, translating the latest scientific literature into actionable coaching strategies. His analytical approach ensures scholars stay ahead of the curve in an ever-evolving fitness industry.
+              Siddhant leads the research arm of NCA, translating the latest scientific literature into actionable coaching strategies. His analytical approach ensures scholars stay ahead of the curve.
             </p>
             <a href="https://www.instagram.com/sid.eats.and.moves" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-secondary text-sm font-bold font-body hover:gap-3 transition-all">
               <span class="material-symbols-outlined text-base">photo_camera</span> @sid.eats.and.moves
@@ -524,23 +589,37 @@
     </div>
   </footer>
 
+  <!-- Timeline scroll animation -->
+  <script>
+    const timelineCards = document.querySelectorAll('.timeline-card');
+    const timelineObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          timelineObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    timelineCards.forEach(card => timelineObserver.observe(card));
+
+    // Faculty cards slide up
+    const facultyCards = document.querySelectorAll('.faculty-slide');
+    const facultyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const cards = entry.target.parentElement.querySelectorAll('.faculty-slide');
+          cards.forEach((card, i) => {
+            setTimeout(() => {
+              card.classList.add('in-view');
+            }, i * 150);
+          });
+          facultyObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    const facultyGrid = document.getElementById('faculty-grid');
+    if (facultyGrid) facultyObserver.observe(facultyGrid);
+  </script>
+
 </body>
 </html>
-
-<script>
-  const facultyObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const cards = entry.target.querySelectorAll('.faculty-slide');
-        cards.forEach((card, i) => {
-          setTimeout(() => {
-            card.classList.add('in-view');
-          }, i * 150);
-        });
-        facultyObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-  const facultyGrid = document.getElementById('faculty-grid');
-  if (facultyGrid) facultyObserver.observe(facultyGrid);
-</script>
