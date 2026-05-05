@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <style>
     .ts-swiper .swiper-button-next,
-    .ts-swiper .swiper-button-prev {
+    .ts-swiper .swiper-button-prev,
+    .vt-swiper .swiper-button-next,
+    .vt-swiper .swiper-button-prev {
       width: 44px; height: 44px;
       background: white;
       border-radius: 50%;
@@ -21,9 +23,13 @@
       color: #102f65;
     }
     .ts-swiper .swiper-button-next::after,
-    .ts-swiper .swiper-button-prev::after { font-size: 16px; font-weight: 800; }
-    .ts-swiper .swiper-pagination-bullet { background: #c4c6d1; opacity: 1; }
-    .ts-swiper .swiper-pagination-bullet-active { background: #4173F4; }
+    .ts-swiper .swiper-button-prev::after,
+    .vt-swiper .swiper-button-next::after,
+    .vt-swiper .swiper-button-prev::after { font-size: 16px; font-weight: 800; }
+    .ts-swiper .swiper-pagination-bullet,
+    .vt-swiper .swiper-pagination-bullet { background: #c4c6d1; opacity: 1; }
+    .ts-swiper .swiper-pagination-bullet-active,
+    .vt-swiper .swiper-pagination-bullet-active { background: #4173F4; }
     .yt-thumb-wrap { cursor: pointer; position: relative; }
     .yt-thumb-wrap iframe { width: 100%; height: 100%; border: none; }
   </style>
@@ -89,16 +95,6 @@
     @media (min-width: 1024px) { .masonry-col { column-count: 3; } }
     .masonry-item { break-inside: avoid; margin-bottom: 1.5rem; display: inline-block; width: 100%; }
 
-    /* Scroll reveal animation */
-    .scroll-reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .scroll-reveal.revealed {
-      opacity: 1;
-      transform: translateY(0);
-    }
   </style>
 </head>
 <body class="bg-background text-on-surface">
@@ -341,107 +337,134 @@
         <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-3">In Their Own Words</h2>
         <div class="w-16 h-1 bg-secondary rounded-full mx-auto"></div>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="swiper vt-swiper" style="padding-bottom:56px;">
+        <div class="swiper-wrapper items-stretch">
 
-        <!-- Video: Aman Chauhan -->
-        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-          <video src="assets/videos/Aman Chauhan.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
-          <div class="vt-info">
-            <span class="vt-name">Aman Chauhan</span>
-            <span class="vt-badge">Scholar</span>
+          <!-- Video: Aman Chauhan -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+              <video src="assets/videos/Aman Chauhan.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
+              <div class="vt-info">
+                <span class="vt-name">Aman Chauhan</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- Video: Jimmy Khatter -->
-        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-          <video src="assets/videos/Jimmy Khatter.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
-          <div class="vt-info">
-            <span class="vt-name">Jimmy Khatter</span>
-            <span class="vt-badge">Scholar</span>
+          <!-- Video: Jimmy Khatter -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+              <video src="assets/videos/Jimmy Khatter.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
+              <div class="vt-info">
+                <span class="vt-name">Jimmy Khatter</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- Video: Ritu Vijay -->
-        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-          <video src="assets/videos/Ritu Vijay_.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
-          <div class="vt-info">
-            <span class="vt-name">Ritu Vijay</span>
-            <span class="vt-badge">Scholar</span>
+          <!-- Video: Ritu Vijay -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+              <video src="assets/videos/Ritu Vijay_.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
+              <div class="vt-info">
+                <span class="vt-name">Ritu Vijay</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- Video: Siddharth Rana -->
-        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-          <video src="assets/videos/Siddharth Rana.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
-          <div class="vt-info">
-            <span class="vt-name">Siddharth Rana</span>
-            <span class="vt-badge">Scholar</span>
+          <!-- Video: Siddharth Rana -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+              <video src="assets/videos/Siddharth Rana.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
+              <div class="vt-info">
+                <span class="vt-name">Siddharth Rana</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- Video: Shivam Sharma -->
-        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-          <video src="assets/videos/Shivam Sharma.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
-          <div class="vt-info">
-            <span class="vt-name">Shivam Sharma</span>
-            <span class="vt-badge">Scholar</span>
+          <!-- Video: Shivam Sharma -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+              <video src="assets/videos/Shivam Sharma.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
+              <div class="vt-info">
+                <span class="vt-name">Shivam Sharma</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- Video: Mazhar Shaikh -->
-        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-          <video src="assets/videos/Mazhar Shaikh.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
-          <div class="vt-info">
-            <span class="vt-name">Mazhar Shaikh</span>
-            <span class="vt-badge">Scholar</span>
+          <!-- Video: Mazhar Shaikh -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+              <video src="assets/videos/Mazhar Shaikh.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
+              <div class="vt-info">
+                <span class="vt-name">Mazhar Shaikh</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- Video: Meeth Jarecha -->
-        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-          <video src="assets/videos/Meeth Jarecha.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
-          <div class="vt-info">
-            <span class="vt-name">Meeth Jarecha</span>
-            <span class="vt-badge">Scholar</span>
+          <!-- Video: Meeth Jarecha -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+              <video src="assets/videos/Meeth Jarecha.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
+              <div class="vt-info">
+                <span class="vt-name">Meeth Jarecha</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- Video: Nazeer -->
-        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-          <video src="assets/videos/Nazeer.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
-          <div class="vt-info">
-            <span class="vt-name">Nazeer</span>
-            <span class="vt-badge">Scholar</span>
+          <!-- Video: Nazeer -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+              <video src="assets/videos/Nazeer.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
+              <div class="vt-info">
+                <span class="vt-name">Nazeer</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- Video: Shivam Mahajan -->
-        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-          <video src="assets/videos/Shivam Mahajan.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
-          <div class="vt-info">
-            <span class="vt-name">Shivam Mahajan</span>
-            <span class="vt-badge">Scholar</span>
+          <!-- Video: Shivam Mahajan -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+              <video src="assets/videos/Shivam Mahajan.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
+              <div class="vt-info">
+                <span class="vt-name">Shivam Mahajan</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- Video: Himanshu Sharma Part 1 -->
-        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-          <video src="assets/videos/Himanshu Sharma Part 1.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
-          <div class="vt-info">
-            <span class="vt-name">Himanshu Sharma</span>
-            <span class="vt-badge">Part 1</span>
+          <!-- Video: Himanshu Sharma Part 1 -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+              <video src="assets/videos/Himanshu Sharma Part 1.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
+              <div class="vt-info">
+                <span class="vt-name">Himanshu Sharma</span>
+                <span class="vt-badge">Part 1</span>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- Video: Himanshu Sharma Part 2 -->
-        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-          <video src="assets/videos/Himanshu Sharma Part 2.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
-          <div class="vt-info">
-            <span class="vt-name">Himanshu Sharma</span>
-            <span class="vt-badge">Part 2</span>
+          <!-- Video: Himanshu Sharma Part 2 -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+              <video src="assets/videos/Himanshu Sharma Part 2.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
+              <div class="vt-info">
+                <span class="vt-name">Himanshu Sharma</span>
+                <span class="vt-badge">Part 2</span>
+              </div>
+            </div>
           </div>
-        </div>
 
+        </div>
+        <div class="swiper-pagination" style="bottom:8px;"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
   </section>
@@ -535,7 +558,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    // Testimonial carousel
+    // Text testimonial carousel
     new Swiper('.ts-swiper', {
       slidesPerView: 1,
       spaceBetween: 20,
@@ -547,6 +570,21 @@
       breakpoints: {
         640:  { slidesPerView: 2, spaceBetween: 20 },
         1024: { slidesPerView: 3, spaceBetween: 24 },
+      }
+    });
+
+    // Video testimonial carousel
+    new Swiper('.vt-swiper', {
+      slidesPerView: 2,
+      spaceBetween: 16,
+      loop: true,
+      centeredSlides: false,
+      autoplay: { delay: 4000, disableOnInteraction: true, pauseOnMouseEnter: true },
+      pagination: { el: '.vt-swiper .swiper-pagination', clickable: true },
+      navigation: { nextEl: '.vt-swiper .swiper-button-next', prevEl: '.vt-swiper .swiper-button-prev' },
+      breakpoints: {
+        640:  { slidesPerView: 3, spaceBetween: 16 },
+        1024: { slidesPerView: 4, spaceBetween: 20 },
       }
     });
 
@@ -586,20 +624,4 @@
   }, { threshold: 0.5 });
   document.querySelectorAll('.count-up').forEach(el => countObserver.observe(el));
 
-  /* Scroll reveal for video cards with stagger */
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const cards = entry.target.parentElement.querySelectorAll('.scroll-reveal');
-        cards.forEach((card, i) => {
-          setTimeout(() => {
-            card.classList.add('revealed');
-          }, i * 100);
-        });
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  const videoGrid = document.querySelector('.grid.grid-cols-2.md\\:grid-cols-3.lg\\:grid-cols-4');
-  if (videoGrid) revealObserver.observe(videoGrid);
 </script>
