@@ -155,11 +155,11 @@
       <!-- Stats strip -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 md:gap-3 pt-1 mx-auto md:mx-0 max-w-xs sm:max-w-lg md:max-w-2xl">
         <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-4 py-4 text-center">
-          <div class="font-display text-2xl font-extrabold text-accent">300+</div>
+          <div class="font-display text-2xl font-extrabold text-accent"><span class="count-up" data-target="300">0</span>+</div>
           <div class="text-xs text-white/70 font-body mt-1">Active Scholars</div>
         </div>
         <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-4 py-4 text-center">
-          <div class="font-display text-2xl font-extrabold text-accent">100+</div>
+          <div class="font-display text-2xl font-extrabold text-accent"><span class="count-up" data-target="100">0</span>+</div>
           <div class="text-xs text-white/70 font-body mt-1">Hours of Lectures</div>
         </div>
         <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-4 py-4 text-center">
@@ -551,3 +551,27 @@
 
 </body>
 </html>
+
+<script>
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target, 10);
+        let current = 0;
+        const duration = 2000;
+        const step = target / (duration / 16);
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          el.textContent = Math.floor(current).toLocaleString('en-IN');
+        }, 16);
+        countObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.count-up').forEach(el => countObserver.observe(el));
+</script>

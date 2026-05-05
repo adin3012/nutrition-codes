@@ -153,7 +153,7 @@
           <img src="assets/images/testimonials/siddharth-rana.png" alt="" class="w-8 h-8 rounded-full border-2 border-white object-cover">
           <div class="w-8 h-8 rounded-full border-2 border-white bg-secondary flex items-center justify-center text-white text-xs font-bold font-body">+</div>
         </div>
-        <p class="text-xs md:text-sm text-white/70 font-body"><span class="font-bold text-white">300+ scholars</span> transforming their careers</p>
+        <p class="text-xs md:text-sm text-white/70 font-body"><span class="font-bold text-white"><span class="count-up" data-target="300">0</span>+ scholars</span> transforming their careers</p>
       </div>
     </div>
   </section>
@@ -163,12 +163,12 @@
     <div class="max-w-7xl mx-auto px-4 md:px-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 md:divide-x md:divide-white/10 text-center">
         <div class="px-8">
-          <div class="text-5xl font-extrabold font-display text-accent mb-2">100+</div>
+          <div class="text-5xl font-extrabold font-display text-accent mb-2"><span class="count-up" data-target="100">0</span>+</div>
           <div class="text-base font-semibold text-white/90 font-body">Hours of Science</div>
           <div class="text-sm text-white/50 mt-1 font-body">Expert-led, evidence-based lectures</div>
         </div>
         <div class="px-8">
-          <div class="text-5xl font-extrabold font-display text-accent mb-2">300+</div>
+          <div class="text-5xl font-extrabold font-display text-accent mb-2"><span class="count-up" data-target="300">0</span>+</div>
           <div class="text-base font-semibold text-white/90 font-body">Scholars</div>
           <div class="text-sm text-white/50 mt-1 font-body">Coaches trained across the globe</div>
         </div>
@@ -402,3 +402,27 @@
 
 </body>
 </html>
+
+<script>
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target, 10);
+        let current = 0;
+        const duration = 2000;
+        const step = target / (duration / 16);
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          el.textContent = Math.floor(current).toLocaleString('en-IN');
+        }, 16);
+        countObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.count-up').forEach(el => countObserver.observe(el));
+</script>

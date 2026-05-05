@@ -221,7 +221,7 @@
           </p>
           <div class="grid grid-cols-2 gap-4 pt-2">
             <div class="bg-surface-low rounded-2xl p-4 text-center border border-outline-variant/30">
-              <div class="font-display text-3xl font-extrabold text-secondary">300+</div>
+              <div class="font-display text-3xl font-extrabold text-secondary"><span class="count-up" data-target="300">0</span>+</div>
               <div class="text-xs text-on-surface-variant font-body mt-1">Active Scholars</div>
             </div>
             <div class="bg-surface-low rounded-2xl p-4 text-center border border-outline-variant/30">
@@ -381,3 +381,27 @@
 
 </body>
 </html>
+
+<script>
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target, 10);
+        let current = 0;
+        const duration = 2000;
+        const step = target / (duration / 16);
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          el.textContent = Math.floor(current).toLocaleString('en-IN');
+        }, 16);
+        countObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.count-up').forEach(el => countObserver.observe(el));
+</script>
