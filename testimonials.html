@@ -88,6 +88,17 @@
     @media (min-width: 768px) { .masonry-col { column-count: 2; } }
     @media (min-width: 1024px) { .masonry-col { column-count: 3; } }
     .masonry-item { break-inside: avoid; margin-bottom: 1.5rem; display: inline-block; width: 100%; }
+
+    /* Scroll reveal animation */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .scroll-reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body class="bg-background text-on-surface">
@@ -163,7 +174,7 @@
           <div class="text-xs text-white/70 font-body mt-1">Hours of Lectures</div>
         </div>
         <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-4 py-4 text-center">
-          <div class="font-display text-2xl font-extrabold text-accent">50+</div>
+          <div class="font-display text-2xl font-extrabold text-accent"><span class="count-up" data-target="50">0</span>+</div>
           <div class="text-xs text-white/70 font-body mt-1">Study Materials</div>
         </div>
         <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-4 py-4 text-center">
@@ -333,7 +344,7 @@
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
         <!-- Video: Aman Chauhan -->
-        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
           <video src="assets/videos/Aman Chauhan.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Aman Chauhan</span>
@@ -342,7 +353,7 @@
         </div>
 
         <!-- Video: Jimmy Khatter -->
-        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
           <video src="assets/videos/Jimmy Khatter.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Jimmy Khatter</span>
@@ -351,7 +362,7 @@
         </div>
 
         <!-- Video: Ritu Vijay -->
-        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
           <video src="assets/videos/Ritu Vijay_.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Ritu Vijay</span>
@@ -360,7 +371,7 @@
         </div>
 
         <!-- Video: Siddharth Rana -->
-        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
           <video src="assets/videos/Siddharth Rana.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Siddharth Rana</span>
@@ -369,7 +380,7 @@
         </div>
 
         <!-- Video: Shivam Sharma -->
-        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
           <video src="assets/videos/Shivam Sharma.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Shivam Sharma</span>
@@ -378,7 +389,7 @@
         </div>
 
         <!-- Video: Mazhar Shaikh -->
-        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
           <video src="assets/videos/Mazhar Shaikh.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Mazhar Shaikh</span>
@@ -387,7 +398,7 @@
         </div>
 
         <!-- Video: Meeth Jarecha -->
-        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
           <video src="assets/videos/Meeth Jarecha.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Meeth Jarecha</span>
@@ -396,7 +407,7 @@
         </div>
 
         <!-- Video: Nazeer -->
-        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
           <video src="assets/videos/Nazeer.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Nazeer</span>
@@ -405,7 +416,7 @@
         </div>
 
         <!-- Video: Shivam Mahajan -->
-        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
           <video src="assets/videos/Shivam Mahajan.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Shivam Mahajan</span>
@@ -414,7 +425,7 @@
         </div>
 
         <!-- Video: Himanshu Sharma Part 1 -->
-        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
           <video src="assets/videos/Himanshu Sharma Part 1.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Himanshu Sharma</span>
@@ -423,7 +434,7 @@
         </div>
 
         <!-- Video: Himanshu Sharma Part 2 -->
-        <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
+        <div class="vt-video-wrap scroll-reveal hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
           <video src="assets/videos/Himanshu Sharma Part 2.mp4" style="width:100%;aspect-ratio:9/16;object-fit:contain;background:#0B1310;display:block;" preload="metadata" playsinline></video>
           <div class="vt-info">
             <span class="vt-name">Himanshu Sharma</span>
@@ -574,4 +585,21 @@
     });
   }, { threshold: 0.5 });
   document.querySelectorAll('.count-up').forEach(el => countObserver.observe(el));
+
+  /* Scroll reveal for video cards with stagger */
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const cards = entry.target.parentElement.querySelectorAll('.scroll-reveal');
+        cards.forEach((card, i) => {
+          setTimeout(() => {
+            card.classList.add('revealed');
+          }, i * 100);
+        });
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  const videoGrid = document.querySelector('.grid.grid-cols-2.md\\:grid-cols-3.lg\\:grid-cols-4');
+  if (videoGrid) revealObserver.observe(videoGrid);
 </script>
