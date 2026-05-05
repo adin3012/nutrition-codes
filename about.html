@@ -89,7 +89,7 @@
       transform: translateX(0);
     }
 
-    /* Arrow bounce animation */
+    /* Zig-zag arrows */
     .timeline-arrow {
       animation: bounce 2s infinite;
     }
@@ -97,6 +97,56 @@
       0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
       40% { transform: translateY(10px); }
       60% { transform: translateY(5px); }
+    }
+
+    .zigzag-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 0;
+      position: relative;
+    }
+    .zigzag-arrow svg {
+      width: 200px;
+      height: 60px;
+    }
+    .zigzag-arrow path {
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+      animation: drawArrow 1.2s ease forwards;
+    }
+    .zigzag-arrow.in-view path {
+      animation: drawArrow 1.2s ease forwards;
+    }
+    @keyframes drawArrow {
+      to { stroke-dashoffset: 0; }
+    }
+    .zigzag-arrow svg path.mobile-down {
+      display: none;
+    }
+    @media (max-width: 767px) {
+      .zigzag-arrow svg {
+        width: 40px;
+        height: 40px;
+      }
+      .zigzag-arrow svg path:not(.mobile-down) {
+        display: none;
+      }
+      .zigzag-arrow svg path.mobile-down {
+        display: block;
+      }
+    }
+
+    /* Section connector arrows */
+    .section-connector {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
+    .section-connector svg {
+      width: 40px;
+      height: 40px;
+      animation: bounce 2s infinite;
     }
 
     /* Faculty slide */
@@ -206,15 +256,21 @@
             <h3 class="font-display text-2xl md:text-3xl font-bold text-on-surface">Where We Started</h3>
           </div>
           <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
-            We started where most people in this industry start. Working hard. Following what we were taught. Trying to do right by the people we coached. But over time, a pattern became clear. People were putting in effort, yet progress was inconsistent. Coaches were following systems, but struggling to adapt. There was information everywhere, but very little clarity.
+            We started where most people in this industry start — working hard, following what we were taught, and trying to do right by the people we coached. But over time, a pattern became clear. People were putting in effort, yet progress was inconsistent. Coaches were following systems but struggling to adapt when things did not go as planned. There was information everywhere, but very little clarity on how to actually apply it.
+          </p>
+          <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
+            We watched clients follow generic meal plans and see no results. We watched trainers recycle the same advice without understanding why it worked for some and failed for others. The industry was loud, but it was not deep. That gap between effort and understanding is exactly where Nutrition Codes Academy was born.
           </p>
         </div>
       </div>
 
-      <!-- Arrow -->
-      <div class="flex justify-center py-8 md:py-12">
-        <svg class="timeline-arrow w-8 h-8 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      <!-- Zig-zag Arrow 1 (right to left) -->
+      <div class="zigzag-arrow" data-arrow>
+        <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="mobile-down" d="M100 8 L100 52" stroke="#4173F4" stroke-width="2.5" stroke-linecap="round"/>
+          <path class="mobile-down" d="M92 44 L100 52 L108 44" stroke="#4173F4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M180 8 C140 8, 120 30, 100 30 C80 30, 60 52, 20 52" stroke="#4173F4" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M28 44 L20 52 L28 60" stroke="#4173F4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
 
@@ -226,7 +282,10 @@
             <h3 class="font-display text-2xl md:text-3xl font-bold text-on-surface">The Real Problem</h3>
           </div>
           <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
-            The problem was not effort. It was understanding. Most of what we saw being taught was surface-level. Enough to begin, but not enough to sustain. So we stepped back and rebuilt how we approached everything — nutrition, training, and human physiology. Not to collect more information, but to understand it properly.
+            The problem was never effort. It was understanding. Most of what we saw being taught was surface-level — enough to begin, but not enough to sustain real, long-term results. We stepped back and rebuilt how we approached everything: nutrition science, resistance training principles, and human physiology. Not to collect more information, but to understand the mechanisms properly.
+          </p>
+          <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
+            We spent years studying research papers, attending seminars, and testing protocols on real clients. We learned that the difference between a good coach and a great one is not how much they know — it is how well they understand what they know. That realization changed everything for us.
           </p>
         </div>
         <div class="rounded-3xl overflow-hidden shadow-xl md:order-2 order-1">
@@ -234,10 +293,13 @@
         </div>
       </div>
 
-      <!-- Arrow -->
-      <div class="flex justify-center py-8 md:py-12">
-        <svg class="timeline-arrow w-8 h-8 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      <!-- Zig-zag Arrow 2 (left to right) -->
+      <div class="zigzag-arrow" data-arrow>
+        <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="mobile-down" d="M100 8 L100 52" stroke="#40F39A" stroke-width="2.5" stroke-linecap="round"/>
+          <path class="mobile-down" d="M92 44 L100 52 L108 44" stroke="#40F39A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M20 8 C60 8, 80 30, 100 30 C120 30, 140 52, 180 52" stroke="#40F39A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M172 44 L180 52 L172 60" stroke="#40F39A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
 
@@ -252,15 +314,21 @@
             <h3 class="font-display text-2xl md:text-3xl font-bold text-on-surface">The Shift</h3>
           </div>
           <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
-            That shift changed how we worked. Decisions became clearer. Adjustments became more precise. Results became more consistent. And more importantly, we were no longer guessing. Every protocol, every recommendation, every coaching decision was grounded in understanding — not trends, not shortcuts.
+            That shift changed how we worked entirely. Decisions became clearer because we understood the "why" behind every protocol. Adjustments became more precise because we could read the signals the body was giving us. Results became more consistent because we were no longer throwing things at the wall and hoping something stuck.
+          </p>
+          <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
+            Most importantly, we were no longer guessing. Every recommendation, every coaching decision was grounded in understanding — not trends, not shortcuts, and not what was popular on social media that week. We developed a framework that worked across different body types, lifestyles, and goals because it was built on principles, not templates.
           </p>
         </div>
       </div>
 
-      <!-- Arrow -->
-      <div class="flex justify-center py-8 md:py-12">
-        <svg class="timeline-arrow w-8 h-8 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      <!-- Zig-zag Arrow 3 (right to left) -->
+      <div class="zigzag-arrow" data-arrow>
+        <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="mobile-down" d="M100 8 L100 52" stroke="#4173F4" stroke-width="2.5" stroke-linecap="round"/>
+          <path class="mobile-down" d="M92 44 L100 52 L108 44" stroke="#4173F4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M180 8 C140 8, 120 30, 100 30 C80 30, 60 52, 20 52" stroke="#4173F4" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M28 44 L20 52 L28 60" stroke="#4173F4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
 
@@ -272,7 +340,10 @@
             <h3 class="font-display text-2xl md:text-3xl font-bold text-on-surface">Why We Built NCA</h3>
           </div>
           <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
-            Nutrition Codes was built from that experience. We are coaches and trainers who wanted a better standard of education — for ourselves first, and then for others. Not driven by volume. Not built around trends. But focused on clarity, depth, and application. We wanted to create the kind of program we wish existed when we were starting out.
+            Nutrition Codes Academy was built from that exact experience. We are coaches and trainers who wanted a better standard of education — for ourselves first, and then for others who were walking the same path we once did. We did not want to create another course that simply dumps information on you. We wanted to build something that teaches you how to think.
+          </p>
+          <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
+            Not driven by volume. Not built around trends. But focused on clarity, depth, and real-world application. We wanted to create the kind of program we wish existed when we were starting out — one that does not just tell you what to do, but explains why it works so you can adapt it to any client, any goal, any situation.
           </p>
         </div>
         <div class="rounded-3xl overflow-hidden shadow-xl md:order-2 order-1">
@@ -280,10 +351,13 @@
         </div>
       </div>
 
-      <!-- Arrow -->
-      <div class="flex justify-center py-8 md:py-12">
-        <svg class="timeline-arrow w-8 h-8 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      <!-- Zig-zag Arrow 4 (left to right) -->
+      <div class="zigzag-arrow" data-arrow>
+        <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="mobile-down" d="M100 8 L100 52" stroke="#40F39A" stroke-width="2.5" stroke-linecap="round"/>
+          <path class="mobile-down" d="M92 44 L100 52 L108 44" stroke="#40F39A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M20 8 C60 8, 80 30, 100 30 C120 30, 140 52, 180 52" stroke="#40F39A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M172 44 L180 52 L172 60" stroke="#40F39A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
 
@@ -298,16 +372,54 @@
             <h3 class="font-display text-2xl md:text-3xl font-bold text-on-surface">Our Vision</h3>
           </div>
           <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
-            Our vision is simple. To help people understand what they are doing, so they can make better decisions — independently. Whether you are a coach, an aspiring coach, or someone trying to take control of your health, this is built for you. If you value understanding over shortcuts, you will feel at home here.
+            Our vision is simple yet ambitious — to help people understand what they are doing so they can make better decisions independently. Whether you are a practicing coach looking to level up, an aspiring trainer taking your first steps, or someone trying to take control of your own health, this academy was built for you.
+          </p>
+          <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
+            We believe the fitness industry needs fewer influencers and more educators. Fewer templates and more thinkers. If you value understanding over shortcuts, if you want to know the "why" behind every "what," you will feel at home here. Our graduates do not just follow protocols — they design them.
+          </p>
+        </div>
+      </div>
+
+      <!-- Zig-zag Arrow 5 (right to left) -->
+      <div class="zigzag-arrow" data-arrow>
+        <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="mobile-down" d="M100 8 L100 52" stroke="#4173F4" stroke-width="2.5" stroke-linecap="round"/>
+          <path class="mobile-down" d="M92 44 L100 52 L108 44" stroke="#4173F4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M180 8 C140 8, 120 30, 100 30 C80 30, 60 52, 20 52" stroke="#4173F4" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M28 44 L20 52 L28 60" stroke="#4173F4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <!-- Card 6: Text Left, Image Right -->
+      <div class="timeline-card from-right grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="space-y-4 md:space-y-6 md:order-1 order-2">
+          <div class="flex items-center gap-4">
+            <span class="w-12 h-12 rounded-2xl bg-accent/20 flex items-center justify-center text-accent font-display font-extrabold text-xl">06</span>
+            <h3 class="font-display text-2xl md:text-3xl font-bold text-on-surface">The Community</h3>
+          </div>
+          <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
+            What makes NCA different is not just what we teach — it is who we attract. Our community is made up of serious learners who ask hard questions, challenge assumptions, and support each other's growth. From our private study groups to our live Q&A sessions, you are never learning alone.
+          </p>
+          <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">
+            We have built a network of coaches across India who share research, discuss cases, and hold each other accountable. When you join NCA, you are not just enrolling in a course. You are joining a tribe of professionals committed to raising the standard of coaching in this country.
           </p>
           <a href="contact.html" class="inline-flex items-center gap-2 bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/40 transition-all font-body">
             Apply for Mentorship <span class="material-symbols-outlined text-base">arrow_forward</span>
           </a>
         </div>
+        <div class="rounded-3xl overflow-hidden shadow-xl md:order-2 order-1">
+          <img src="assets/images/about/story-6.jpg" alt="The Community" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Section Connector -->
+  <div class="section-connector bg-white">
+    <svg fill="none" stroke="#4173F4" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+    </svg>
+  </div>
 
   <!-- CLOSING STATEMENT -->
   <section class="py-20 bg-white">
@@ -318,6 +430,13 @@
       </p>
     </div>
   </section>
+
+  <!-- Section Connector -->
+  <div class="section-connector bg-surface-low">
+    <svg fill="none" stroke="#40F39A" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+    </svg>
+  </div>
 
   <!-- MISSION & VISION -->
   <section class="py-20">
@@ -377,6 +496,13 @@
     </div>
   </section>
 
+  <!-- Section Connector -->
+  <div class="section-connector" style="background: linear-gradient(180deg, #f1f3ff 0%, #e8eeff 100%);">
+    <svg fill="none" stroke="#4173F4" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+    </svg>
+  </div>
+
   <!-- NCA DIFFERENCE -->
   <section class="bg-surface-mid py-20">
     <div class="max-w-5xl mx-auto px-4 md:px-8">
@@ -431,6 +557,13 @@
   </section>
 
 
+  <!-- Section Connector -->
+  <div class="section-connector bg-surface-mid">
+    <svg fill="none" stroke="#40F39A" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+    </svg>
+  </div>
+
   <!-- COMMUNITY PHOTO -->
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 md:px-8 text-center">
@@ -439,6 +572,13 @@
 
     </div>
   </section>
+
+  <!-- Section Connector -->
+  <div class="section-connector bg-white">
+    <svg fill="none" stroke="#4173F4" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+    </svg>
+  </div>
 
   <!-- FACULTY -->
   <section class="py-20 bg-surface-low">
@@ -525,6 +665,13 @@
     </div>
   </section>
 
+  <!-- Section Connector -->
+  <div class="section-connector bg-surface-low">
+    <svg fill="none" stroke="#40F39A" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+    </svg>
+  </div>
+
   <!-- CTA -->
   <section class="py-16 px-4 md:px-8 max-w-7xl mx-auto pb-24">
     <div class="bg-secondary rounded-3xl p-10 md:p-16 text-center text-white relative overflow-hidden">
@@ -587,8 +734,9 @@
     </div>
   </footer>
 
-  <!-- Timeline scroll animation -->
+  <!-- Scroll animations -->
   <script>
+    // Timeline cards
     const timelineCards = document.querySelectorAll('.timeline-card');
     const timelineObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -599,6 +747,18 @@
       });
     }, { threshold: 0.2 });
     timelineCards.forEach(card => timelineObserver.observe(card));
+
+    // Zig-zag arrows draw animation
+    const zigzagArrows = document.querySelectorAll('[data-arrow]');
+    const arrowObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          arrowObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    zigzagArrows.forEach(arrow => arrowObserver.observe(arrow));
 
     // Faculty cards slide up
     const facultyCards = document.querySelectorAll('.faculty-slide');
