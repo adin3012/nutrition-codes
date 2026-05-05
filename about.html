@@ -58,11 +58,15 @@
     .hero-overlay {
       background: linear-gradient(to top, #05101f 30%, rgba(5,16,31,0.75) 60%, rgba(5,16,31,0.25) 100%);
     }
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
       .hero-overlay {
-        background: linear-gradient(to top, #05101f 50%, rgba(5,16,31,0.50) 78%, rgba(5,16,31,0.15) 100%) !important;
+        background: linear-gradient(to top, rgba(5,16,31,0.55) 0%, transparent 30%) !important;
+      }
+      .hero-text-shadow {
+        text-shadow: 0 2px 10px rgba(0,0,0,0.55), 0 4px 20px rgba(0,0,0,0.35);
       }
     }
+
   </style>
 </head>
 <body class="bg-background text-on-surface">
@@ -114,21 +118,21 @@
   </script>
 
   <!-- HERO -->
-  <section class="relative flex flex-col justify-end" style="min-height:85vh;">
+  <section class="relative flex flex-col justify-center md:justify-end" style="min-height:85vh;">
     <picture>
-      <source media="(max-width:767px)" srcset="assets/images/hero-about-mobile.jpg">
+      <source media="(max-width:1023px)" srcset="assets/images/hero-about-mobile.jpg">
       <img src="assets/images/hero-about.jpg" alt="" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;z-index:0;">
     </picture>
     <div class="hero-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;"></div>
-    <div class="relative w-full max-w-7xl mx-auto px-5 md:px-8 pb-10 md:pb-24 pt-24 md:pt-0 space-y-5 md:space-y-6 text-center md:text-left" style="z-index:2;">
-      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mx-auto md:mx-0 max-w-2xl">
+    <div class="relative w-full max-w-7xl mx-auto px-5 md:px-8 pb-10 md:pb-24 pt-24 md:pt-0 space-y-5 md:space-y-6 text-left" style="z-index:2;">
+      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mx-0 max-w-2xl hero-text-shadow">
         Rigorous science for<br>
         <span class="text-accent">human energy.</span>
       </h1>
-      <p class="text-white/80 text-base md:text-lg leading-relaxed font-body mx-auto md:mx-0 max-w-sm md:max-w-xl">
+      <p class="text-white/90 text-base md:text-lg leading-relaxed font-body mx-0 max-w-sm md:max-w-xl hero-text-shadow">
         Nutrition Codes Academy was built to create a new standard of mastery in health and fitness coaching — grounded not in trends, but in the rigor of real science.
       </p>
-      <div class="flex flex-col sm:flex-row gap-3 md:gap-4 pt-1 items-center md:items-start">
+      <div class="flex flex-col sm:flex-row gap-3 md:gap-4 pt-1 items-start">
         <a href="curriculum.html" class="w-full sm:w-auto bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/40 transition-all font-body text-center">
           Explore Courses
         </a>
