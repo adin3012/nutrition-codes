@@ -55,6 +55,14 @@
       font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     }
     body { font-family: 'Inter', sans-serif; }
+    .hero-overlay {
+      background: linear-gradient(to top, #05101f 30%, rgba(5,16,31,0.75) 60%, rgba(5,16,31,0.25) 100%);
+    }
+    @media (max-width: 767px) {
+      .hero-overlay {
+        background: linear-gradient(to top, #05101f 50%, rgba(5,16,31,0.50) 78%, rgba(5,16,31,0.15) 100%) !important;
+      }
+    }
   </style>
 </head>
 <body class="bg-background text-on-surface">
@@ -111,7 +119,7 @@
       <source media="(max-width:767px)" srcset="assets/images/hero-about-mobile.jpg">
       <img src="assets/images/hero-about.jpg" alt="" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;z-index:0;">
     </picture>
-    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to top,#05101f 30%,rgba(5,16,31,0.75) 60%,rgba(5,16,31,0.25) 100%);z-index:1;"></div>
+    <div class="hero-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;"></div>
     <div class="relative w-full max-w-7xl mx-auto px-5 md:px-8 pb-10 md:pb-24 pt-24 md:pt-0 space-y-5 md:space-y-6 text-center md:text-left" style="z-index:2;">
       <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mx-auto md:mx-0 max-w-2xl">
         Rigorous science for<br>
@@ -131,27 +139,77 @@
     </div>
   </section>
 
-  <!-- ORIGIN STORY -->
-  <section class="bg-surface-low py-20">
+  <!-- WHY TRUST US — ORIGIN STORY -->
+  <section class="bg-surface-low py-24">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <!-- Left 5/12 -->
-        <div class="lg:col-span-5 space-y-6">
-          <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body">How It All Started</p>
-          <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface leading-tight">Our Origin Story</h2>
-          <p class="text-on-surface-variant leading-relaxed font-body">
-            Nutrition Codes Academy was born from a simple but powerful frustration: the fitness industry was overrun with misinformation, pseudoscience, and surface-level certifications that left coaches ill-equipped to genuinely help their clients.
-          </p>
-          <p class="text-on-surface-variant leading-relaxed font-body">
-            Amandeep Singh Bindra, with over a decade of experience consulting professional athletes, united a team of subject-matter experts — each with deep, specialized knowledge — to build something different. NCA was designed from the ground up as a mastership program, not a certification. Every module, every lecture, every case study is rooted in peer-reviewed science and real-world application.
-          </p>
+      <!-- Section Header -->
+      <div class="text-center mb-20">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-4">Our Story</p>
+        <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-on-surface leading-tight mb-6">
+          Why Should You Trust Us?
+        </h2>
+        <p class="text-on-surface-variant text-lg md:text-xl font-body max-w-2xl mx-auto leading-relaxed">
+          Built by Coaches Who Chose Understanding Over Noise
+        </p>
+      </div>
+
+      <!-- Story Grid -->
+      <div class="space-y-6">
+        <!-- Sections 1–4 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- 01 -->
+          <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-outline-variant/40 hover:-translate-y-1 transition-all">
+            <span class="text-accent font-display font-extrabold text-5xl opacity-30 leading-none block mb-4">01</span>
+            <h3 class="font-display font-bold text-xl text-on-surface mb-3">Where We Started</h3>
+            <p class="text-on-surface-variant leading-relaxed font-body">
+              We started where most people in this industry start. Working hard. Following what we were taught. Trying to do right by the people we coached. But over time, a pattern became clear. People were putting in effort, yet progress was inconsistent. Coaches were following systems, but struggling to adapt. There was information everywhere, but very little clarity.
+            </p>
+          </div>
+
+          <!-- 02 -->
+          <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-outline-variant/40 hover:-translate-y-1 transition-all">
+            <span class="text-accent font-display font-extrabold text-5xl opacity-30 leading-none block mb-4">02</span>
+            <h3 class="font-display font-bold text-xl text-on-surface mb-3">The Real Problem</h3>
+            <p class="text-on-surface-variant leading-relaxed font-body">
+              The problem was not effort. It was understanding. Most of what we saw being taught was surface-level. Enough to begin, but not enough to sustain. So we stepped back and rebuilt how we approached everything — nutrition, training, and human physiology. Not to collect more information, but to understand it properly.
+            </p>
+          </div>
+
+          <!-- 03 -->
+          <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-outline-variant/40 hover:-translate-y-1 transition-all">
+            <span class="text-accent font-display font-extrabold text-5xl opacity-30 leading-none block mb-4">03</span>
+            <h3 class="font-display font-bold text-xl text-on-surface mb-3">The Shift</h3>
+            <p class="text-on-surface-variant leading-relaxed font-body">
+              That shift changed how we worked. Decisions became clearer. Adjustments became more precise. Results became more consistent. And more importantly, we were no longer guessing.
+            </p>
+          </div>
+
+          <!-- 04 (highlighted) -->
+          <div class="bg-primary rounded-3xl p-8 md:p-10 text-white hover:-translate-y-1 transition-all">
+            <span class="text-accent font-display font-extrabold text-5xl opacity-40 leading-none block mb-4">04</span>
+            <h3 class="font-display font-bold text-xl text-white mb-3">Why We Built NCA</h3>
+            <p class="text-white/80 leading-relaxed font-body">
+              Nutrition Codes was built from that experience. We are coaches and trainers who wanted a better standard of education — for ourselves first, and then for others. Not driven by volume. Not built around trends. But focused on clarity, depth, and application.
+            </p>
+          </div>
         </div>
-        <!-- Right 7/12: quote card -->
-        <div class="lg:col-span-7">
-          <div class="bg-primary rounded-3xl p-8 md:p-12 relative overflow-hidden">
+
+        <!-- Section 5 + Founder Quote -->
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+          <div class="lg:col-span-3 bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-outline-variant/40">
+            <span class="text-secondary font-display font-extrabold text-5xl opacity-30 leading-none block mb-4">05</span>
+            <h3 class="font-display font-bold text-2xl text-on-surface mb-4">Our Vision</h3>
+            <p class="text-on-surface-variant leading-relaxed font-body text-lg mb-8">
+              Our vision is simple. To help people understand what they are doing, so they can make better decisions — independently. Whether you are a coach, an aspiring coach, or someone trying to take control of your health, this is built for you.
+            </p>
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/40 transition-all font-body">
+              Apply for Mentorship <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
+          </div>
+          <div class="lg:col-span-2 bg-primary rounded-3xl p-8 md:p-10 text-white relative overflow-hidden flex flex-col justify-center">
             <div class="absolute top-6 left-8 text-8xl text-white/10 font-display font-extrabold leading-none select-none">"</div>
             <div class="relative z-10">
-              <p class="text-white text-xl md:text-2xl font-display font-semibold leading-relaxed mb-8 italic">
+              <p class="text-white text-xl font-display font-semibold leading-relaxed mb-8 italic">
                 "We didn't want to create another certification. We wanted to create a new standard of mastery that actually changes lives through the lens of pure science."
               </p>
               <div class="flex items-center gap-4">
@@ -165,6 +223,16 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- CLOSING STATEMENT -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 md:px-8 text-center">
+      <p class="font-display text-2xl md:text-4xl font-extrabold text-on-surface leading-tight">
+        If you value understanding over shortcuts,<br>
+        <span class="text-secondary">you will feel at home here.</span>
+      </p>
     </div>
   </section>
 
@@ -389,7 +457,7 @@
             Explore Courses
           </a>
           <a href="contact.html" class="bg-primary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg transition-all font-body">
-            Enroll Now
+            Apply for Mentorship
           </a>
         </div>
       </div>
