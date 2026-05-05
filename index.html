@@ -66,11 +66,20 @@
         object-position: 70% top;
       }
       .hero-overlay {
-        background: linear-gradient(to top, rgba(5,16,31,0.50) 0%, transparent 25%) !important;
+        background: linear-gradient(to top, rgba(5,16,31,0.85) 0%, rgba(5,16,31,0.55) 50%, rgba(5,16,31,0.20) 100%) !important;
       }
       .hero-text-shadow {
         text-shadow: 0 2px 10px rgba(0,0,0,0.60), 0 4px 20px rgba(0,0,0,0.40);
       }
+    }
+    .faculty-slide {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .faculty-slide.in-view {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -135,7 +144,7 @@
         Science-Backed<br>
         <span class="text-accent">Vitality</span>
       </h1>
-      <p class="text-white/90 text-base md:text-xl leading-relaxed font-body mx-0 max-w-sm md:max-w-xl hero-text-shadow">
+      <p class="text-white/90 text-base md:text-xl leading-relaxed font-body mx-auto md:mx-0 max-w-sm md:max-w-xl hero-text-shadow">
         India's most rigorous nutrition and fitness education platform. We don't teach trends — we decode the science behind lasting human performance.
       </p>
       <div class="flex flex-col sm:flex-row gap-3 md:gap-4 pt-1 items-center md:items-start">
@@ -296,29 +305,29 @@
         <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">World-Class Educators</p>
         <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface">Meet Your Mentors</h2>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="text-center group">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="faculty-grid">
+        <div class="text-center group faculty-slide">
           <div class="rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
             <img src="assets/images/Amandeep.png" alt="Amandeep Singh Bindra" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           </div>
           <h3 class="font-display font-bold text-on-surface text-sm md:text-base">Amandeep Singh Bindra</h3>
           <p class="text-secondary text-xs md:text-sm font-body mt-1">Coaching &amp; Business</p>
         </div>
-        <div class="text-center group">
+        <div class="text-center group faculty-slide">
           <div class="rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
             <img src="assets/images/Ashley.png" alt="Ashley Johnathan D'cruz" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           </div>
           <h3 class="font-display font-bold text-on-surface text-sm md:text-base">Ashley Johnathan D'cruz</h3>
           <p class="text-secondary text-xs md:text-sm font-body mt-1">Exercise Science</p>
         </div>
-        <div class="text-center group">
+        <div class="text-center group faculty-slide">
           <div class="rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
             <img src="assets/images/Rishabh.png" alt="Rishabh Verma" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           </div>
           <h3 class="font-display font-bold text-on-surface text-sm md:text-base">Rishabh Verma</h3>
           <p class="text-secondary text-xs md:text-sm font-body mt-1">Nutrition Science</p>
         </div>
-        <div class="text-center group">
+        <div class="text-center group faculty-slide">
           <div class="rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
             <img src="assets/images/Siddhant.png" alt="Siddhant Prasad" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           </div>
@@ -425,4 +434,22 @@
     });
   }, { threshold: 0.5 });
   document.querySelectorAll('.count-up').forEach(el => countObserver.observe(el));
+</script>
+
+<script>
+  const facultyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const cards = entry.target.querySelectorAll('.faculty-slide');
+        cards.forEach((card, i) => {
+          setTimeout(() => {
+            card.classList.add('in-view');
+          }, i * 150);
+        });
+        facultyObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  const facultyGrid = document.getElementById('faculty-grid');
+  if (facultyGrid) facultyObserver.observe(facultyGrid);
 </script>
