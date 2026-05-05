@@ -52,6 +52,18 @@
       border: 1px solid rgba(43,70,125,0.1);
     }
     .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined' !important;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      -webkit-font-feature-settings: 'liga';
+      font-feature-settings: 'liga';
       font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     }
     body { font-family: 'Inter', sans-serif; }
@@ -85,6 +97,24 @@
     .faculty-slide.in-view {
       opacity: 1;
       transform: translateX(0);
+    }
+    /* Scroll reveal animations */
+    .scroll-reveal {
+      opacity: 0;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .scroll-reveal.from-left {
+      transform: translateX(-60px);
+    }
+    .scroll-reveal.from-right {
+      transform: translateX(60px);
+    }
+    .scroll-reveal.from-bottom {
+      transform: translateY(40px);
+    }
+    .scroll-reveal.in-view {
+      opacity: 1;
+      transform: translateX(0) translateY(0);
     }
   </style>
 </head>
@@ -176,17 +206,17 @@
   <section class="bg-primary text-white py-16">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 md:divide-x md:divide-white/10 text-center">
-        <div class="px-8">
+        <div class="px-8 scroll-reveal from-left" style="transition-delay:0ms">
           <div class="text-5xl font-extrabold font-display text-accent mb-2"><span class="count-up" data-target="100">0</span>+</div>
           <div class="text-base font-semibold text-white/90 font-body">Hours of Science</div>
           <div class="text-sm text-white/50 mt-1 font-body">Expert-led, evidence-based lectures</div>
         </div>
-        <div class="px-8">
+        <div class="px-8 scroll-reveal from-left" style="transition-delay:150ms">
           <div class="text-5xl font-extrabold font-display text-accent mb-2"><span class="count-up" data-target="300">0</span>+</div>
           <div class="text-base font-semibold text-white/90 font-body">Scholars</div>
           <div class="text-sm text-white/50 mt-1 font-body">Coaches trained across the globe</div>
         </div>
-        <div class="px-8">
+        <div class="px-8 scroll-reveal from-left" style="transition-delay:300ms">
           <div class="text-5xl font-extrabold font-display text-accent mb-2">Global</div>
           <div class="text-base font-semibold text-white/90 font-body">Community</div>
           <div class="text-sm text-white/50 mt-1 font-body">India, UAE, USA, Canada, UK &amp; beyond</div>
@@ -198,77 +228,175 @@
   <!-- CORE PILLARS -->
   <section class="bg-white py-24">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
-      <div class="text-center mb-16">
+      <div class="text-center mb-16 scroll-reveal from-bottom">
         <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">What We Teach</p>
         <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">Core Pillars of Excellence</h2>
-        <div class="w-16 h-1 bg-secondary rounded-full mx-auto"></div>
+        <p class="text-on-surface-variant text-lg font-body max-w-2xl mx-auto mt-3">Five evidence-based domains that transform how you understand and apply nutrition, exercise, and coaching science.</p>
+        <div class="w-16 h-1 bg-secondary rounded-full mx-auto mt-5"></div>
       </div>
       <!-- Bento Grid -->
       <div class="grid grid-cols-12 gap-5">
         <!-- Pillar 1 large -->
-        <div class="col-span-12 md:col-span-8 rounded-3xl bg-surface-low p-8 md:p-10 flex flex-col sm:flex-row gap-8 items-center border border-outline-variant/40 hover:shadow-lg transition-shadow">
+        <div class="col-span-12 md:col-span-8 rounded-3xl bg-surface-low p-8 md:p-10 flex flex-col sm:flex-row gap-8 items-center border border-outline-variant/40 hover:shadow-lg transition-shadow scroll-reveal from-left" style="transition-delay:0ms">
           <div class="flex-1 space-y-4">
             <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center">
               <span class="material-symbols-outlined text-secondary text-3xl">nutrition</span>
             </div>
             <h3 class="font-display text-2xl md:text-3xl font-extrabold text-on-surface">Metabolic Nutrition</h3>
             <p class="text-on-surface-variant leading-relaxed font-body">Understand how every macronutrient interacts with your body at a cellular level. From nutrient timing to hormonal signaling, this pillar transforms how you think about food as medicine.</p>
+            <ul class="space-y-2 text-sm font-body text-on-surface-variant">
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-base">check_circle</span>Macronutrient biochemistry &amp; metabolic pathways</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-base">check_circle</span>Nutrient timing, hormonal signaling &amp; gut health</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-base">check_circle</span>Evidence-based supplementation protocols</li>
+            </ul>
             <a href="curriculum.html" class="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body hover:gap-3 transition-all">
               Explore Module <span class="material-symbols-outlined text-base">arrow_forward</span>
             </a>
           </div>
-          <div class="w-full sm:w-48 h-48 rounded-2xl bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
-            <span class="material-symbols-outlined text-7xl text-secondary/40">science</span>
-          </div>
         </div>
         <!-- Pillar 2 -->
-        <div class="col-span-12 md:col-span-4 rounded-3xl bg-primary text-white p-8 space-y-4 hover:shadow-lg transition-shadow">
+        <div class="col-span-12 md:col-span-4 rounded-3xl bg-primary text-white p-8 space-y-4 hover:shadow-lg transition-shadow scroll-reveal from-right" style="transition-delay:150ms">
           <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center">
             <span class="material-symbols-outlined text-accent text-3xl">fitness_center</span>
           </div>
           <h3 class="font-display text-2xl font-extrabold">Exercise Physiology</h3>
           <p class="text-white/70 leading-relaxed font-body text-sm">Evidence-based training science — from biomechanics to periodization — that builds performance and prevents injury.</p>
+          <ul class="space-y-2 text-xs font-body text-white/60">
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-sm">check_circle</span>Biomechanics &amp; movement analysis</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-sm">check_circle</span>Hypertrophy &amp; periodization science</li>
+          </ul>
           <a href="curriculum.html" class="inline-flex items-center gap-2 text-accent font-bold text-sm font-body hover:gap-3 transition-all">
             Explore Module <span class="material-symbols-outlined text-base">arrow_forward</span>
           </a>
         </div>
         <!-- Pillar 3 -->
-        <div class="col-span-12 md:col-span-4 rounded-3xl bg-surface-low p-8 space-y-4 border border-outline-variant/40 hover:shadow-lg transition-shadow">
+        <div class="col-span-12 md:col-span-4 rounded-3xl bg-surface-low p-8 space-y-4 border border-outline-variant/40 hover:shadow-lg transition-shadow scroll-reveal from-left" style="transition-delay:300ms">
           <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center">
             <span class="material-symbols-outlined text-accent text-3xl">bedtime</span>
           </div>
           <h3 class="font-display text-xl font-extrabold text-on-surface">Lifestyle Bio-Design</h3>
           <p class="text-on-surface-variant leading-relaxed font-body text-sm">Sleep, HRV, circadian rhythm and recovery science — holistic protocols that optimize every dimension of human vitality.</p>
+          <ul class="space-y-2 text-xs font-body text-on-surface-variant">
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-sm">check_circle</span>Sleep architecture &amp; HRV monitoring</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-sm">check_circle</span>Circadian biology &amp; stress resilience</li>
+          </ul>
+          <a href="curriculum.html" class="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body hover:gap-3 transition-all">
+            Explore Module <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
         </div>
         <!-- Pillar 4 -->
-        <div class="col-span-12 md:col-span-4 rounded-3xl bg-primary-container text-white p-8 space-y-4 hover:shadow-lg transition-shadow">
+        <div class="col-span-12 md:col-span-4 rounded-3xl bg-primary-container text-white p-8 space-y-4 hover:shadow-lg transition-shadow scroll-reveal from-right" style="transition-delay:450ms">
           <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center">
             <span class="material-symbols-outlined text-accent text-3xl">groups</span>
           </div>
           <h3 class="font-display text-xl font-extrabold">Elite Coaching</h3>
           <p class="text-white/70 leading-relaxed font-body text-sm">Client management, communication mastery, business development and sales systems to build a thriving coaching practice.</p>
+          <ul class="space-y-2 text-xs font-body text-white/60">
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-sm">check_circle</span>Client retention &amp; sales systems</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-sm">check_circle</span>Brand building &amp; digital presence</li>
+          </ul>
+          <a href="curriculum.html" class="inline-flex items-center gap-2 text-accent font-bold text-sm font-body hover:gap-3 transition-all">
+            Explore Module <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
         </div>
         <!-- Pillar 5 -->
-        <div class="col-span-12 md:col-span-4 rounded-3xl bg-surface-low p-8 space-y-4 border border-outline-variant/40 hover:shadow-lg transition-shadow">
+        <div class="col-span-12 md:col-span-4 rounded-3xl bg-surface-low p-8 space-y-4 border border-outline-variant/40 hover:shadow-lg transition-shadow scroll-reveal from-left" style="transition-delay:600ms">
           <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center">
             <span class="material-symbols-outlined text-secondary text-3xl">biotech</span>
           </div>
           <h3 class="font-display text-xl font-extrabold text-on-surface">Rigorous Science</h3>
           <p class="text-on-surface-variant leading-relaxed font-body text-sm">Critical analysis of research literature. Learn to separate signal from noise and build protocols grounded in the best available evidence.</p>
+          <ul class="space-y-2 text-xs font-body text-on-surface-variant">
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span>Research paper literacy &amp; bias detection</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span>Evidence hierarchies &amp; meta-analysis</li>
+          </ul>
+          <a href="curriculum.html" class="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body hover:gap-3 transition-all">
+            Explore Module <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NCA METHOD -->
+  <section class="bg-surface-low py-24">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-16 scroll-reveal from-bottom">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">How We Teach</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">The NCA Method</h2>
+        <p class="text-on-surface-variant text-lg font-body max-w-xl mx-auto">Three stages that take you from raw information to confident mastery — and a thriving practice.</p>
+        <div class="w-16 h-1 bg-accent rounded-full mx-auto mt-5"></div>
+      </div>
+      <!-- Row 1: Image Left, Text Right -->
+      <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-center mb-16 md:mb-24 scroll-reveal from-left">
+        <div class="w-full md:w-1/2 rounded-3xl overflow-hidden shadow-xl flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=800&auto=format&fit=crop&q=80" alt="Science Before System" class="w-full h-64 md:h-[400px] object-cover hover:scale-105 transition-transform duration-700">
+        </div>
+        <div class="w-full md:w-1/2 space-y-5">
+          <div class="inline-flex w-12 h-12 rounded-2xl bg-secondary/10 items-center justify-center text-secondary font-display font-extrabold text-xl">01</div>
+          <h3 class="font-display text-2xl md:text-3xl font-bold text-on-surface">Science Before System</h3>
+          <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">Before we prescribe any protocol, we build the foundation. You understand the biology, chemistry, and physiology — so every coaching decision is backed by real understanding, not memorized templates.</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 font-body text-on-surface-variant text-sm"><span class="material-symbols-outlined text-accent text-lg mt-0.5 flex-shrink-0">check_circle</span>Cellular-level nutrition and metabolic science</li>
+            <li class="flex items-start gap-3 font-body text-on-surface-variant text-sm"><span class="material-symbols-outlined text-accent text-lg mt-0.5 flex-shrink-0">check_circle</span>Hormonal signaling and nutrient–gene interaction</li>
+            <li class="flex items-start gap-3 font-body text-on-surface-variant text-sm"><span class="material-symbols-outlined text-accent text-lg mt-0.5 flex-shrink-0">check_circle</span>Research literacy and critical evidence analysis</li>
+          </ul>
+          <a href="curriculum.html" class="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body hover:gap-3 transition-all">
+            See Curriculum <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+      <!-- Row 2: Text Left, Image Right -->
+      <div class="flex flex-col md:flex-row-reverse gap-10 md:gap-16 items-center mb-16 md:mb-24 scroll-reveal from-right">
+        <div class="w-full md:w-1/2 rounded-3xl overflow-hidden shadow-xl flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&auto=format&fit=crop&q=80" alt="Apply to Real Clients" class="w-full h-64 md:h-[400px] object-cover hover:scale-105 transition-transform duration-700">
+        </div>
+        <div class="w-full md:w-1/2 space-y-5">
+          <div class="inline-flex w-12 h-12 rounded-2xl bg-accent/20 items-center justify-center text-accent font-display font-extrabold text-xl">02</div>
+          <h3 class="font-display text-2xl md:text-3xl font-bold text-on-surface">Apply to Real Clients</h3>
+          <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">Theory without application is incomplete. NCA's case-study model bridges the gap between knowing and doing — so you graduate ready to produce results from day one with any client you serve.</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 font-body text-on-surface-variant text-sm"><span class="material-symbols-outlined text-secondary text-lg mt-0.5 flex-shrink-0">check_circle</span>Live case-study analysis with active practitioners</li>
+            <li class="flex items-start gap-3 font-body text-on-surface-variant text-sm"><span class="material-symbols-outlined text-secondary text-lg mt-0.5 flex-shrink-0">check_circle</span>Individual assessment and periodization tools</li>
+            <li class="flex items-start gap-3 font-body text-on-surface-variant text-sm"><span class="material-symbols-outlined text-secondary text-lg mt-0.5 flex-shrink-0">check_circle</span>Adapting protocols for every body type and goal</li>
+          </ul>
+          <a href="curriculum.html" class="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body hover:gap-3 transition-all">
+            See Curriculum <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+      <!-- Row 3: Image Left, Text Right -->
+      <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-center scroll-reveal from-left">
+        <div class="w-full md:w-1/2 rounded-3xl overflow-hidden shadow-xl flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop&q=80" alt="Build Your Practice" class="w-full h-64 md:h-[400px] object-cover hover:scale-105 transition-transform duration-700">
+        </div>
+        <div class="w-full md:w-1/2 space-y-5">
+          <div class="inline-flex w-12 h-12 rounded-2xl bg-secondary/10 items-center justify-center text-secondary font-display font-extrabold text-xl">03</div>
+          <h3 class="font-display text-2xl md:text-3xl font-bold text-on-surface">Build a Thriving Practice</h3>
+          <p class="text-on-surface-variant leading-relaxed font-body text-base md:text-lg">Science is your foundation. Business is your vehicle. NCA equips you with everything from client acquisition and pricing strategy to content creation — so your expertise becomes a sustainable career.</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 font-body text-on-surface-variant text-sm"><span class="material-symbols-outlined text-accent text-lg mt-0.5 flex-shrink-0">check_circle</span>Coaching business systems and premium pricing</li>
+            <li class="flex items-start gap-3 font-body text-on-surface-variant text-sm"><span class="material-symbols-outlined text-accent text-lg mt-0.5 flex-shrink-0">check_circle</span>Client communication, retention and referrals</li>
+            <li class="flex items-start gap-3 font-body text-on-surface-variant text-sm"><span class="material-symbols-outlined text-accent text-lg mt-0.5 flex-shrink-0">check_circle</span>Brand building and digital presence for coaches</li>
+          </ul>
+          <a href="contact.html" class="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body hover:gap-3 transition-all">
+            Enroll Now <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- SOCIAL PROOF -->
-  <section class="bg-surface-low py-20">
+  <section class="bg-white py-20">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
-      <div class="text-center mb-14">
+      <div class="text-center mb-14 scroll-reveal from-bottom">
         <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Scholar Stories</p>
         <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface">Global Impact &amp; Recognition</h2>
+        <p class="text-on-surface-variant text-lg font-body max-w-xl mx-auto mt-3">300+ coaches across India, UAE, USA and beyond trust NCA to level up their practice.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all scroll-reveal from-left">
           <div class="text-accent text-xl tracking-wide">★★★★★</div>
           <p class="text-on-surface leading-relaxed font-body italic">
             "Being part of NC Academy has been one of the best decisions of my life. The knowledge, clarity, and mentorship here are unmatched. Aman Sir's no-nonsense teaching style makes even complex concepts easy, while Rishabh Sir's depth of knowledge and patience ensure complete understanding."
@@ -281,7 +409,7 @@
             </div>
           </div>
         </div>
-        <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all">
+        <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all scroll-reveal from-bottom" style="transition-delay:150ms">
           <div class="text-accent text-xl tracking-wide">★★★★★</div>
           <p class="text-on-surface leading-relaxed font-body italic">
             "The coaching industry can be a lonely place. NCA is here to change that. Nutrition, exercise science, coaching best practices, mindset, business growth — pick any area of coaching and NCA has it covered. Join NCA. It's your path to lifelong learning and growth."
@@ -290,6 +418,19 @@
             <img src="assets/images/testimonials/karthik-nagarajan.png" alt="Karthik Nagarajan" class="w-12 h-12 rounded-full object-cover border-2 border-accent/30">
             <div>
               <p class="font-display font-bold text-on-surface">Karthik Nagarajan</p>
+              <p class="text-sm text-on-surface-variant font-body">Scholar · NCA</p>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all scroll-reveal from-right" style="transition-delay:300ms">
+          <div class="text-accent text-xl tracking-wide">★★★★★</div>
+          <p class="text-on-surface leading-relaxed font-body italic">
+            "NCA gave me what no other certification could — a framework that actually works for real people. The depth of science here is unlike anything else available in India. I came in as a trainer; I left as a coach who genuinely understands the human body."
+          </p>
+          <div class="flex items-center gap-4 pt-2">
+            <img src="assets/images/testimonials/siddharth-rana.png" alt="Siddharth Rana" class="w-12 h-12 rounded-full object-cover border-2 border-accent/30">
+            <div>
+              <p class="font-display font-bold text-on-surface">Siddharth Rana</p>
               <p class="text-sm text-on-surface-variant font-body">Scholar · NCA</p>
             </div>
           </div>
@@ -306,33 +447,34 @@
   <!-- FACULTY TEASER -->
   <section class="bg-white py-20">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
-      <div class="text-center mb-14">
+      <div class="text-center mb-14 scroll-reveal from-bottom">
         <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">World-Class Educators</p>
         <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface">Meet Your Mentors</h2>
+        <p class="text-on-surface-variant text-base font-body max-w-lg mx-auto mt-3">Active practitioners and researchers — not just academics — who teach from real-world experience.</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6" id="faculty-grid">
-        <div class="text-center group faculty-slide">
+        <div class="text-center group scroll-reveal from-left" style="transition-delay:0ms">
           <div class="rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
             <img src="assets/images/Amandeep.png" alt="Amandeep Singh Bindra" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           </div>
           <h3 class="font-display font-bold text-on-surface text-sm md:text-base">Amandeep Singh Bindra</h3>
           <p class="text-secondary text-xs md:text-sm font-body mt-1">Coaching &amp; Business</p>
         </div>
-        <div class="text-center group faculty-slide">
+        <div class="text-center group scroll-reveal from-right" style="transition-delay:150ms">
           <div class="rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
             <img src="assets/images/Ashley.png" alt="Ashley Johnathan D'cruz" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           </div>
           <h3 class="font-display font-bold text-on-surface text-sm md:text-base">Ashley Johnathan D'cruz</h3>
           <p class="text-secondary text-xs md:text-sm font-body mt-1">Exercise Science</p>
         </div>
-        <div class="text-center group faculty-slide">
+        <div class="text-center group scroll-reveal from-left" style="transition-delay:300ms">
           <div class="rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
             <img src="assets/images/Rishabh.png" alt="Rishabh Verma" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           </div>
           <h3 class="font-display font-bold text-on-surface text-sm md:text-base">Rishabh Verma</h3>
           <p class="text-secondary text-xs md:text-sm font-body mt-1">Nutrition Science</p>
         </div>
-        <div class="text-center group faculty-slide">
+        <div class="text-center group scroll-reveal from-right" style="transition-delay:450ms">
           <div class="rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
             <img src="assets/images/Siddhant.png" alt="Siddhant Prasad" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           </div>
@@ -351,7 +493,7 @@
   <!-- CTA -->
   <section class="bg-surface-mid py-24 relative overflow-hidden">
     <div class="absolute inset-0 dna-pattern"></div>
-    <div class="max-w-4xl mx-auto px-4 md:px-8 text-center relative z-10">
+    <div class="max-w-4xl mx-auto px-4 md:px-8 text-center relative z-10 scroll-reveal from-bottom">
       <div class="inline-flex items-center gap-2 bg-secondary/10 border border-secondary/20 text-secondary px-4 py-2 rounded-full text-sm font-bold font-body tracking-wide mb-6">
         <span class="material-symbols-outlined text-base">rocket_launch</span>
         LIMITED COHORTS
@@ -414,8 +556,19 @@
     </div>
   </footer>
 
-</body>
-</html>
+<script>
+  // Scroll reveal observer
+  const revealEls = document.querySelectorAll('.scroll-reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => revealObserver.observe(el));
+</script>
 
 <script>
   const countObserver = new IntersectionObserver((entries) => {
@@ -441,19 +594,5 @@
   document.querySelectorAll('.count-up').forEach(el => countObserver.observe(el));
 </script>
 
-<script>
-  const facultyCards = document.querySelectorAll('.faculty-slide');
-  const directions = ['from-left', 'from-right', 'from-left', 'from-right'];
-  facultyCards.forEach((card, i) => {
-    card.classList.add(directions[i % directions.length]);
-  });
-  const cardObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        cardObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-  facultyCards.forEach(card => cardObserver.observe(card));
-</script>
+</body>
+</html>
