@@ -2,8 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Nutrition Codes Academy</title>
+  <meta property="og:title" content="About Us | Nutrition Codes Academy">
+  <meta property="og:description" content="Meet the mentors and discover the mission behind Nutrition Codes Academy — rigorous science for human energy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nutritioncodes.com/about.html">
+  <meta property="og:image" content="https://nutritioncodes.com/assets/images/og-about.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Us | Nutrition Codes Academy">
+  <meta name="twitter:description" content="Meet the mentors and discover the mission behind Nutrition Codes Academy — rigorous science for human energy.">
+  <meta name="twitter:image" content="https://nutritioncodes.com/assets/images/og-about.jpg">
+  <link rel="canonical" href="https://nutritioncodes.com/about.html">
+  <link rel="icon" type="image/svg+xml" href="assets/logos/primary01.svg">
   <meta name="description" content="Learn about Nutrition Codes Academy — our mission, origin story, and the world-class faculty driving evidence-based health education.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -147,6 +159,9 @@
 </head>
 <body class="bg-background text-on-surface">
 
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-accent focus:text-on-surface focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold">Skip to main content</a>
+
+  
   <!-- NAV -->
   <nav class="fixed top-0 w-full z-50 border-b border-white/10" style="background: linear-gradient(135deg, #05101f 0%, #0d2147 100%);">
     <div class="flex justify-between items-center h-14 md:h-16 px-4 md:px-10 max-w-7xl mx-auto">
@@ -154,11 +169,11 @@
       <div class="hidden md:flex items-center gap-10 font-body">
         <a href="about.html" class="text-accent border-b-2 border-accent pb-0.5 text-[15px] font-semibold hover:text-white transition-colors">About Us</a>
         <a href="testimonials.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Testimonials</a>
-        <a href="curriculum.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">Courses</a>
+        <a href="curriculum.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Courses</a>
         <a href="contact.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Contact Us</a>
       </div>
       <div class="flex items-center gap-3">
-        <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener" aria-label="Instagram"
+        <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
            class="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center text-white hover:border-accent hover:text-accent hover:bg-white/5 transition-all">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -166,14 +181,14 @@
             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
           </svg>
         </a>
-        <button id="menu-btn" class="md:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
-          <span class="material-symbols-outlined">menu</span>
+        <button id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
     </div>
     <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 font-body" style="background:#05101f;">
       <div class="px-5 py-3 space-y-0.5">
-        <a href="about.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">About Us</a>
+        <a href="about.html" aria-current="page" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">About Us</a>
         <a href="testimonials.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">Testimonials</a>
         <a href="curriculum.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">Courses</a>
         <a href="contact.html" class="block text-white/75 font-semibold hover:text-white py-3 text-[15px]">Contact Us</a>
@@ -185,15 +200,16 @@
     const menu = document.getElementById('mobile-menu');
     btn.addEventListener('click', () => {
       menu.classList.toggle('hidden');
-      btn.querySelector('.material-symbols-outlined').textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
+      btn.setAttribute('aria-expanded', menu.classList.contains('hidden') ? 'false' : 'true');
+      btn.querySelector('svg').innerHTML = menu.classList.contains('hidden') ? '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>' : '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>';
     });
   </script>
 
   <!-- HERO -->
-  <section class="relative flex flex-col justify-center md:justify-end" style="min-height:85vh;">
+  <section id="main" class="relative flex flex-col justify-center md:justify-end" style="min-height:85vh;">
     <picture>
       <source media="(max-width:1023px)" srcset="assets/images/about/story-7.jpg?v=2">
-      <img src="assets/images/about/story-7.jpg" alt="NCA Faculty and Students" class="hero-bg-img" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;z-index:0;">
+      <img loading="lazy" decoding="async" src="assets/images/about/story-7.jpg" alt="NCA Faculty and Students" class="hero-bg-img" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;z-index:0;">
     </picture>
     <div class="hero-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;"></div>
     <div class="relative w-full max-w-7xl mx-auto px-5 md:px-8 pb-10 md:pb-24 pt-24 md:pt-0 space-y-5 md:space-y-6 text-center md:text-left" style="z-index:2;">
@@ -232,7 +248,7 @@
       <!-- Card 1: Image Left, Text Right -->
       <div class="timeline-card from-left grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div class="rounded-3xl overflow-hidden shadow-xl">
-          <img src="assets/images/about/story-1.jpg" alt="Where We Started" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
+          <img loading="lazy" decoding="async" src="assets/images/about/story-1.jpg" alt="Where We Started" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
         </div>
         <div class="space-y-4 md:space-y-6">
           <div class="flex items-center gap-4">
@@ -248,11 +264,11 @@
         </div>
       </div>
 
-      <!-- Arrow 1: card 1 from-left → arrow on LEFT edge, sweeps right-downward -->
+      <!-- Arrow 1 -->
       <div class="curved-arrow arrow-left" data-arrow>
         <svg viewBox="0 0 200 140" fill="none" class="w-36 md:w-52">
-          <path class="arrow-path" d="M 30 15 C 10 55, 60 90, 115 108 C 148 120, 178 122, 192 114" stroke="#102f65" stroke-width="6" stroke-linecap="round" fill="none" stroke-dasharray="340" stroke-dashoffset="340"/>
-          <path class="arrow-head" d="M 192 114 L 210 90 L 178 104 Z" fill="#102f65"/>
+          <path class="arrow-path" d="M 10 10 C 30 120, 140 100, 175 130" stroke="#000000" stroke-width="6" stroke-linecap="round" fill="none" stroke-dasharray="350" stroke-dashoffset="350"/>
+          <path class="arrow-head" d="M 172 134 L 184 138 L 178 126 Z" fill="#000000"/>
         </svg>
       </div>
 
@@ -271,22 +287,22 @@
           </p>
         </div>
         <div class="rounded-3xl overflow-hidden shadow-xl md:order-2 order-1">
-          <img src="assets/images/about/story-2.jpg" alt="The Real Problem" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
+          <img loading="lazy" decoding="async" src="assets/images/about/story-2.jpg" alt="The Real Problem" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
         </div>
       </div>
 
-      <!-- Arrow 2: card 2 from-right → arrow on RIGHT edge, sweeps left-downward -->
+      <!-- Arrow 2 -->
       <div class="curved-arrow arrow-right" data-arrow>
         <svg viewBox="0 0 200 140" fill="none" class="w-36 md:w-52">
-          <path class="arrow-path" d="M 170 15 C 190 55, 140 90, 85 108 C 52 120, 22 122, 8 114" stroke="#102f65" stroke-width="6" stroke-linecap="round" fill="none" stroke-dasharray="340" stroke-dashoffset="340"/>
-          <path class="arrow-head" d="M 8 114 L -10 90 L 22 104 Z" fill="#102f65"/>
+          <path class="arrow-path" d="M 190 10 C 170 120, 60 100, 25 130" stroke="#000000" stroke-width="6" stroke-linecap="round" fill="none" stroke-dasharray="350" stroke-dashoffset="350"/>
+          <path class="arrow-head" d="M 28 134 L 16 138 L 22 126 Z" fill="#000000"/>
         </svg>
       </div>
 
       <!-- Card 3: Image Left, Text Right -->
       <div class="timeline-card from-left grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div class="rounded-3xl overflow-hidden shadow-xl">
-          <img src="assets/images/about/story-3.jpg" alt="The Shift" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
+          <img loading="lazy" decoding="async" src="assets/images/about/story-3.jpg" alt="The Shift" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
         </div>
         <div class="space-y-4 md:space-y-6">
           <div class="flex items-center gap-4">
@@ -302,11 +318,11 @@
         </div>
       </div>
 
-      <!-- Arrow 3: card 3 from-left → arrow on LEFT edge, sweeps right-downward -->
+      <!-- Arrow 3 -->
       <div class="curved-arrow arrow-left" data-arrow>
         <svg viewBox="0 0 200 140" fill="none" class="w-36 md:w-52">
-          <path class="arrow-path" d="M 30 15 C 10 55, 60 90, 115 108 C 148 120, 178 122, 192 114" stroke="#102f65" stroke-width="6" stroke-linecap="round" fill="none" stroke-dasharray="340" stroke-dashoffset="340"/>
-          <path class="arrow-head" d="M 192 114 L 210 90 L 178 104 Z" fill="#102f65"/>
+          <path class="arrow-path" d="M 10 10 C 30 120, 140 100, 175 130" stroke="#000000" stroke-width="6" stroke-linecap="round" fill="none" stroke-dasharray="350" stroke-dashoffset="350"/>
+          <path class="arrow-head" d="M 172 134 L 184 138 L 178 126 Z" fill="#000000"/>
         </svg>
       </div>
 
@@ -325,22 +341,22 @@
           </p>
         </div>
         <div class="rounded-3xl overflow-hidden shadow-xl md:order-2 order-1">
-          <img src="assets/images/about/story-4.jpg" alt="Why We Built NCA" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
+          <img loading="lazy" decoding="async" src="assets/images/about/story-4.jpg" alt="Why We Built NCA" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
         </div>
       </div>
 
-      <!-- Arrow 4: card 4 from-right → arrow on RIGHT edge, sweeps left-downward -->
+      <!-- Arrow 4 -->
       <div class="curved-arrow arrow-right" data-arrow>
         <svg viewBox="0 0 200 140" fill="none" class="w-36 md:w-52">
-          <path class="arrow-path" d="M 170 15 C 190 55, 140 90, 85 108 C 52 120, 22 122, 8 114" stroke="#102f65" stroke-width="6" stroke-linecap="round" fill="none" stroke-dasharray="340" stroke-dashoffset="340"/>
-          <path class="arrow-head" d="M 8 114 L -10 90 L 22 104 Z" fill="#102f65"/>
+          <path class="arrow-path" d="M 190 10 C 170 120, 60 100, 25 130" stroke="#000000" stroke-width="6" stroke-linecap="round" fill="none" stroke-dasharray="350" stroke-dashoffset="350"/>
+          <path class="arrow-head" d="M 28 134 L 16 138 L 22 126 Z" fill="#000000"/>
         </svg>
       </div>
 
       <!-- Card 5: Image Left, Text Right -->
       <div class="timeline-card from-left grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div class="rounded-3xl overflow-hidden shadow-xl">
-          <img src="assets/images/about/story-5.jpg" alt="Our Vision" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
+          <img loading="lazy" decoding="async" src="assets/images/about/story-5.jpg" alt="Our Vision" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
         </div>
         <div class="space-y-4 md:space-y-6">
           <div class="flex items-center gap-4">
@@ -356,11 +372,11 @@
         </div>
       </div>
 
-      <!-- Arrow 5: card 5 from-left → arrow on LEFT edge, sweeps right-downward -->
+      <!-- Arrow 5 -->
       <div class="curved-arrow arrow-left" data-arrow>
         <svg viewBox="0 0 200 140" fill="none" class="w-36 md:w-52">
-          <path class="arrow-path" d="M 30 15 C 10 55, 60 90, 115 108 C 148 120, 178 122, 192 114" stroke="#102f65" stroke-width="6" stroke-linecap="round" fill="none" stroke-dasharray="340" stroke-dashoffset="340"/>
-          <path class="arrow-head" d="M 192 114 L 210 90 L 178 104 Z" fill="#102f65"/>
+          <path class="arrow-path" d="M 10 10 C 30 120, 140 100, 175 130" stroke="#000000" stroke-width="6" stroke-linecap="round" fill="none" stroke-dasharray="350" stroke-dashoffset="350"/>
+          <path class="arrow-head" d="M 172 134 L 184 138 L 178 126 Z" fill="#000000"/>
         </svg>
       </div>
 
@@ -382,7 +398,7 @@
           </a>
         </div>
         <div class="rounded-3xl overflow-hidden shadow-xl md:order-2 order-1">
-          <img src="assets/images/about/story-6.jpg" alt="The Community" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
+          <img loading="lazy" decoding="async" src="assets/images/about/story-6.jpg" alt="The Community" class="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700">
         </div>
       </div>
     </div>
@@ -463,46 +479,95 @@
         <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">What Sets Us Apart</p>
         <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface">The NCA Difference</h2>
       </div>
-      <div class="rounded-3xl overflow-hidden border border-outline-variant/40 shadow-sm bg-white">
+      <!-- Desktop Table -->
+      <div class="hidden md:block rounded-3xl overflow-hidden border border-outline-variant/40 shadow-sm bg-white">
         <div class="grid grid-cols-3 bg-primary text-white">
-          <div class="col-span-1 px-6 py-4 text-sm font-bold font-body uppercase tracking-wider text-white/70">Category</div>
-          <div class="col-span-1 px-6 py-4 text-sm font-bold font-body uppercase tracking-wider text-center">Traditional Certs</div>
-          <div class="col-span-1 px-6 py-4 text-sm font-bold font-body uppercase tracking-wider text-center text-accent">NCA Mastership</div>
+          <div class="px-6 py-4 text-sm font-bold font-body uppercase tracking-wider text-white/70">Category</div>
+          <div class="px-6 py-4 text-sm font-bold font-body uppercase tracking-wider text-center">Traditional Certs</div>
+          <div class="px-6 py-4 text-sm font-bold font-body uppercase tracking-wider text-center text-accent">NCA Mastership</div>
         </div>
         <div class="grid grid-cols-3 border-b border-outline-variant/40 hover:bg-surface-low transition-colors">
-          <div class="col-span-1 px-6 py-5 text-sm font-semibold text-on-surface font-body">Nutrition Approach</div>
-          <div class="col-span-1 px-6 py-5 text-sm text-on-surface-variant font-body text-center flex items-center justify-center gap-2">
+          <div class="px-6 py-5 text-sm font-semibold text-on-surface font-body">Nutrition Approach</div>
+          <div class="px-6 py-5 text-sm text-on-surface-variant font-body text-center flex items-center justify-center gap-2">
             <span class="material-symbols-outlined text-red-400 text-base">close</span> Generalized dietary guidelines
           </div>
-          <div class="col-span-1 px-6 py-5 text-sm text-on-surface font-body text-center flex items-center justify-center gap-2">
+          <div class="px-6 py-5 text-sm text-on-surface font-body text-center flex items-center justify-center gap-2">
             <span class="material-symbols-outlined text-accent text-base">check</span> Personalized metabolic coding
           </div>
         </div>
         <div class="grid grid-cols-3 border-b border-outline-variant/40 hover:bg-surface-low transition-colors">
-          <div class="col-span-1 px-6 py-5 text-sm font-semibold text-on-surface font-body">Learning Materials</div>
-          <div class="col-span-1 px-6 py-5 text-sm text-on-surface-variant font-body text-center flex items-center justify-center gap-2">
+          <div class="px-6 py-5 text-sm font-semibold text-on-surface font-body">Learning Materials</div>
+          <div class="px-6 py-5 text-sm text-on-surface-variant font-body text-center flex items-center justify-center gap-2">
             <span class="material-symbols-outlined text-red-400 text-base">close</span> Outdated PDF textbooks
           </div>
-          <div class="col-span-1 px-6 py-5 text-sm text-on-surface font-body text-center flex items-center justify-center gap-2">
+          <div class="px-6 py-5 text-sm text-on-surface font-body text-center flex items-center justify-center gap-2">
             <span class="material-symbols-outlined text-accent text-base">check</span> Real-time clinical research
           </div>
         </div>
         <div class="grid grid-cols-3 border-b border-outline-variant/40 hover:bg-surface-low transition-colors">
-          <div class="col-span-1 px-6 py-5 text-sm font-semibold text-on-surface font-body">Assessment</div>
-          <div class="col-span-1 px-6 py-5 text-sm text-on-surface-variant font-body text-center flex items-center justify-center gap-2">
+          <div class="px-6 py-5 text-sm font-semibold text-on-surface font-body">Assessment</div>
+          <div class="px-6 py-5 text-sm text-on-surface-variant font-body text-center flex items-center justify-center gap-2">
             <span class="material-symbols-outlined text-red-400 text-base">close</span> Multiple-choice exams
           </div>
-          <div class="col-span-1 px-6 py-5 text-sm text-on-surface font-body text-center flex items-center justify-center gap-2">
+          <div class="px-6 py-5 text-sm text-on-surface font-body text-center flex items-center justify-center gap-2">
             <span class="material-symbols-outlined text-accent text-base">check</span> Live case-study defense
           </div>
         </div>
         <div class="grid grid-cols-3 hover:bg-surface-low transition-colors">
-          <div class="col-span-1 px-6 py-5 text-sm font-semibold text-on-surface font-body">Support</div>
-          <div class="col-span-1 px-6 py-5 text-sm text-on-surface-variant font-body text-center flex items-center justify-center gap-2">
+          <div class="px-6 py-5 text-sm font-semibold text-on-surface font-body">Support</div>
+          <div class="px-6 py-5 text-sm text-on-surface-variant font-body text-center flex items-center justify-center gap-2">
             <span class="material-symbols-outlined text-red-400 text-base">close</span> Passive forum support
           </div>
-          <div class="col-span-1 px-6 py-5 text-sm text-on-surface font-body text-center flex items-center justify-center gap-2">
+          <div class="px-6 py-5 text-sm text-on-surface font-body text-center flex items-center justify-center gap-2">
             <span class="material-symbols-outlined text-accent text-base">check</span> Dedicated mentor access
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Cards -->
+      <div class="md:hidden space-y-4">
+        <div class="rounded-2xl border border-outline-variant/40 shadow-sm bg-white overflow-hidden">
+          <div class="bg-primary text-white px-5 py-3 text-sm font-bold font-body uppercase tracking-wider">Nutrition Approach</div>
+          <div class="px-5 py-4 border-b border-outline-variant/30">
+            <p class="text-xs font-body uppercase tracking-wider text-on-surface-variant mb-1">Traditional Certs</p>
+            <p class="text-sm text-on-surface-variant font-body flex items-center gap-2"><span class="material-symbols-outlined text-red-400 text-base">close</span> Generalized dietary guidelines</p>
+          </div>
+          <div class="px-5 py-4 bg-accent/5">
+            <p class="text-xs font-body uppercase tracking-wider text-accent mb-1">NCA Mastership</p>
+            <p class="text-sm text-on-surface font-body flex items-center gap-2"><span class="material-symbols-outlined text-accent text-base">check</span> Personalized metabolic coding</p>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-outline-variant/40 shadow-sm bg-white overflow-hidden">
+          <div class="bg-primary text-white px-5 py-3 text-sm font-bold font-body uppercase tracking-wider">Learning Materials</div>
+          <div class="px-5 py-4 border-b border-outline-variant/30">
+            <p class="text-xs font-body uppercase tracking-wider text-on-surface-variant mb-1">Traditional Certs</p>
+            <p class="text-sm text-on-surface-variant font-body flex items-center gap-2"><span class="material-symbols-outlined text-red-400 text-base">close</span> Outdated PDF textbooks</p>
+          </div>
+          <div class="px-5 py-4 bg-accent/5">
+            <p class="text-xs font-body uppercase tracking-wider text-accent mb-1">NCA Mastership</p>
+            <p class="text-sm text-on-surface font-body flex items-center gap-2"><span class="material-symbols-outlined text-accent text-base">check</span> Real-time clinical research</p>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-outline-variant/40 shadow-sm bg-white overflow-hidden">
+          <div class="bg-primary text-white px-5 py-3 text-sm font-bold font-body uppercase tracking-wider">Assessment</div>
+          <div class="px-5 py-4 border-b border-outline-variant/30">
+            <p class="text-xs font-body uppercase tracking-wider text-on-surface-variant mb-1">Traditional Certs</p>
+            <p class="text-sm text-on-surface-variant font-body flex items-center gap-2"><span class="material-symbols-outlined text-red-400 text-base">close</span> Multiple-choice exams</p>
+          </div>
+          <div class="px-5 py-4 bg-accent/5">
+            <p class="text-xs font-body uppercase tracking-wider text-accent mb-1">NCA Mastership</p>
+            <p class="text-sm text-on-surface font-body flex items-center gap-2"><span class="material-symbols-outlined text-accent text-base">check</span> Live case-study defense</p>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-outline-variant/40 shadow-sm bg-white overflow-hidden">
+          <div class="bg-primary text-white px-5 py-3 text-sm font-bold font-body uppercase tracking-wider">Support</div>
+          <div class="px-5 py-4 border-b border-outline-variant/30">
+            <p class="text-xs font-body uppercase tracking-wider text-on-surface-variant mb-1">Traditional Certs</p>
+            <p class="text-sm text-on-surface-variant font-body flex items-center gap-2"><span class="material-symbols-outlined text-red-400 text-base">close</span> Passive forum support</p>
+          </div>
+          <div class="px-5 py-4 bg-accent/5">
+            <p class="text-xs font-body uppercase tracking-wider text-accent mb-1">NCA Mastership</p>
+            <p class="text-sm text-on-surface font-body flex items-center gap-2"><span class="material-symbols-outlined text-accent text-base">check</span> Dedicated mentor access</p>
           </div>
         </div>
       </div>
@@ -521,7 +586,7 @@
 
         <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg faculty-slide">
           <div class="aspect-square overflow-hidden">
-            <img src="assets/images/Amandeep.png" alt="Amandeep Singh Bindra" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
+            <img loading="lazy" decoding="async" src="assets/images/Amandeep.png" alt="Amandeep Singh Bindra" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
           </div>
           <div class="p-6 space-y-3">
             <div>
@@ -531,7 +596,7 @@
             <p class="text-on-surface-variant text-sm leading-relaxed font-body">
               With over a decade of experience consulting professional athletes, Amandeep has refined the art of metabolic optimization. He leads the coaching and business development arm of NCA.
             </p>
-            <a href="https://www.instagram.com/aman_bindra" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-secondary text-sm font-bold font-body hover:gap-3 transition-all">
+            <a href="https://www.instagram.com/aman_bindra" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-secondary text-sm font-bold font-body hover:gap-3 transition-all">
               <span class="material-symbols-outlined text-base">photo_camera</span> @aman_bindra
             </a>
           </div>
@@ -539,7 +604,7 @@
 
         <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg faculty-slide">
           <div class="aspect-square overflow-hidden">
-            <img src="assets/images/Ashley.png" alt="Ashley Johnathan D'cruz" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
+            <img loading="lazy" decoding="async" src="assets/images/Ashley.png" alt="Ashley Johnathan D'cruz" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
           </div>
           <div class="p-6 space-y-3">
             <div>
@@ -549,7 +614,7 @@
             <p class="text-on-surface-variant text-sm leading-relaxed font-body">
               Holding a Master's in Kinesiology, Ashley ensures that every programming decision is grounded in biomechanics. He bridges the gap between rehab and elite performance.
             </p>
-            <a href="https://www.instagram.com/getfitwithjonathan" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-secondary text-sm font-bold font-body hover:gap-3 transition-all">
+            <a href="https://www.instagram.com/getfitwithjonathan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-secondary text-sm font-bold font-body hover:gap-3 transition-all">
               <span class="material-symbols-outlined text-base">photo_camera</span> @getfitwithjonathan
             </a>
           </div>
@@ -557,7 +622,7 @@
 
         <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg faculty-slide">
           <div class="aspect-square overflow-hidden">
-            <img src="assets/images/Rishabh.png" alt="Rishabh Verma" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
+            <img loading="lazy" decoding="async" src="assets/images/Rishabh.png" alt="Rishabh Verma" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
           </div>
           <div class="p-6 space-y-3">
             <div>
@@ -567,7 +632,7 @@
             <p class="text-on-surface-variant text-sm leading-relaxed font-body">
               Rishabh brings deep expertise in nutrition science and metabolic health to the NCA faculty. He equips scholars with the practical tools to understand the science of nutrition at a cellular level.
             </p>
-            <a href="https://www.instagram.com/rishabhvermafitness" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-secondary text-sm font-bold font-body hover:gap-3 transition-all">
+            <a href="https://www.instagram.com/rishabhvermafitness" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-secondary text-sm font-bold font-body hover:gap-3 transition-all">
               <span class="material-symbols-outlined text-base">photo_camera</span> @rishabhvermafitness
             </a>
           </div>
@@ -575,7 +640,7 @@
 
         <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg faculty-slide">
           <div class="aspect-square overflow-hidden">
-            <img src="assets/images/Siddhant.png" alt="Siddhant Prasad" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
+            <img loading="lazy" decoding="async" src="assets/images/Siddhant.png" alt="Siddhant Prasad" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
           </div>
           <div class="p-6 space-y-3">
             <div>
@@ -585,7 +650,7 @@
             <p class="text-on-surface-variant text-sm leading-relaxed font-body">
               Siddhant leads the research arm of NCA, translating the latest scientific literature into actionable coaching strategies. His analytical approach ensures scholars stay ahead of the curve.
             </p>
-            <a href="https://www.instagram.com/sid.eats.and.moves" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-secondary text-sm font-bold font-body hover:gap-3 transition-all">
+            <a href="https://www.instagram.com/sid.eats.and.moves" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-secondary text-sm font-bold font-body hover:gap-3 transition-all">
               <span class="material-symbols-outlined text-base">photo_camera</span> @sid.eats.and.moves
             </a>
           </div>
@@ -622,7 +687,7 @@
       <div class="sm:col-span-2 md:col-span-1">
         <div class="text-lg font-bold text-[#40F39A] mb-4 font-display">Nutrition Codes Academy</div>
         <p class="text-slate-300 text-sm leading-relaxed mb-6">Empowering the next generation of evidence-based health and fitness professionals in India and globally.</p>
-        <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-[#40F39A] hover:text-white transition-colors text-sm">
+        <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[#40F39A] hover:text-white transition-colors text-sm">
           <span class="material-symbols-outlined text-lg">photo_camera</span> @nutritioncodes
         </a>
       </div>
@@ -701,6 +766,8 @@
     const facultyGrid = document.getElementById('faculty-grid');
     if (facultyGrid) facultyObserver.observe(facultyGrid);
   </script>
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Nutrition Codes Academy", "url": "https://nutritioncodes.com/", "logo": "https://nutritioncodes.com/assets/logos/primary01.svg", "sameAs": ["https://www.instagram.com/nutritioncodes/"], "description": "India's most rigorous nutrition and fitness education platform."}</script>
 
 </body>
 </html>

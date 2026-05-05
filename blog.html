@@ -4,6 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nutrition Codes — Blog</title>
+  <meta property="og:title" content="Blog | Nutrition Codes Academy">
+  <meta property="og:description" content="Expert articles on nutrition science, exercise physiology, and coaching from the Nutrition Codes faculty team.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nutritioncodes.com/blog.html">
+  <meta property="og:image" content="https://nutritioncodes.com/assets/images/og-blog.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog | Nutrition Codes Academy">
+  <meta name="twitter:description" content="Expert articles on nutrition science, exercise physiology, and coaching from the Nutrition Codes faculty team.">
+  <meta name="twitter:image" content="https://nutritioncodes.com/assets/images/og-blog.jpg">
+  <link rel="canonical" href="https://nutritioncodes.com/blog.html">
   <meta name="description" content="Expert articles on nutrition science, exercise physiology, and coaching from the Nutrition Codes faculty team." />
   <link rel="icon" href="assets/icons/favicon.png" />
   <link rel="stylesheet" href="css/style.css" />
@@ -61,10 +71,38 @@
       #nc-nav .nc-links { display: none; }
       #nc-nav .nc-hamburger { display: block; }
     }
+    /* Scroll reveal animations */
+    .scroll-reveal {
+      opacity: 0;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .scroll-reveal.from-left {
+      transform: translateX(-60px);
+    }
+    .scroll-reveal.from-right {
+      transform: translateX(60px);
+    }
+    .scroll-reveal.from-bottom {
+      transform: translateY(40px);
+    }
+    .scroll-reveal.in-view {
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <a href="#main" style="position:absolute;left:-9999px;" onfocus="this.style.position='static';this.style.display='block';this.style.padding='8px 16px';this.style.background='#40F39A';this.style.color='#0b1b36';this.style.fontWeight='600';this.style.borderRadius='8px';this.style.zIndex='99999';" onblur="this.style.position='absolute';this.style.left='-9999px';">Skip to main content</a>
+
+  
   <!-- Liquid Mesh Background -->
   <div class="mesh-bg"></div>
 
@@ -82,7 +120,7 @@
         <a href="contact.html">Contact Us</a>
       </div>
       <div style="display:flex;align-items:center;gap:10px;">
-        <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener" aria-label="Instagram" class="nc-ig">
+        <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="nc-ig">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
@@ -90,7 +128,7 @@
           </svg>
         </a>
         <button class="nc-hamburger" id="nc-menu-btn" aria-label="Menu">
-          <span class="material-symbols-outlined">menu</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
     </div>
@@ -107,13 +145,14 @@
     ncBtn.addEventListener('click', () => {
       const open = ncMenu.style.display === 'block';
       ncMenu.style.display = open ? 'none' : 'block';
-      ncBtn.querySelector('.material-symbols-outlined').textContent = open ? 'menu' : 'close';
+      ncBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      ncBtn.querySelector('svg').innerHTML = open ? '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>' : '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>';
     });
   </script>
 
   <!-- HERO -->
   <header class="page-hero">
-    <div class="container text-center">
+    <div class="container text-center scroll-reveal from-bottom">
       <span class="section-label">Journal & Insights</span>
       <h1 class="section-title split-text">The Science of Performance</h1>
       <p class="section-subtitle">Read the latest research breakdowns, coaching strategies, and industry news.</p>
@@ -121,16 +160,16 @@
   </header>
 
   <!-- BLOG LAYOUT -->
-  <section class="blog-section section">
+  <section id="main" class="blog-section section">
     <div class="blog-layout">
       
       <!-- POST GRID (Left Column) -->
       <div class="post-grid">
         
         <!-- Post 1 -->
-        <article class="post-card glass" style="border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column;">
+        <article class="post-card glass scroll-reveal from-left" style="border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition-delay: 0ms;">
           <div style="overflow: hidden;">
-            <img src="https://images.unsplash.com/photo-1542841791-1925b02a2bf5?auto=format&fit=crop&w=600&q=80" alt="Metabolism" class="post-thumb parallax-img" style="width: 100%; height: 260px; object-fit: cover;" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1542841791-1925b02a2bf5?auto=format&fit=crop&w=600&q=80" alt="Metabolism" class="post-thumb parallax-img" style="width: 100%; height: 260px; object-fit: cover;" />
           </div>
           <div class="post-content" style="padding: 32px; display: flex; flex-direction: column; flex: 1;">
             <div class="post-meta" style="display: flex; justify-content: space-between; margin-bottom: 16px;">
@@ -144,9 +183,9 @@
         </article>
 
         <!-- Post 2 -->
-        <article class="post-card glass" style="border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column;">
+        <article class="post-card glass scroll-reveal from-left" style="border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition-delay: 150ms;">
           <div style="overflow: hidden;">
-            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Gym" class="post-thumb parallax-img" style="width: 100%; height: 260px; object-fit: cover;" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Gym" class="post-thumb parallax-img" style="width: 100%; height: 260px; object-fit: cover;" />
           </div>
           <div class="post-content" style="padding: 32px; display: flex; flex-direction: column; flex: 1;">
             <div class="post-meta" style="display: flex; justify-content: space-between; margin-bottom: 16px;">
@@ -160,9 +199,9 @@
         </article>
 
         <!-- Post 3 -->
-        <article class="post-card glass" style="border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column;">
+        <article class="post-card glass scroll-reveal from-left" style="border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition-delay: 300ms;">
           <div style="overflow: hidden;">
-            <img src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=600&q=80" alt="Meeting" class="post-thumb parallax-img" style="width: 100%; height: 260px; object-fit: cover;" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=600&q=80" alt="Meeting" class="post-thumb parallax-img" style="width: 100%; height: 260px; object-fit: cover;" />
           </div>
           <div class="post-content" style="padding: 32px; display: flex; flex-direction: column; flex: 1;">
             <div class="post-meta" style="display: flex; justify-content: space-between; margin-bottom: 16px;">
@@ -176,9 +215,9 @@
         </article>
 
         <!-- Post 4 -->
-        <article class="post-card glass" style="border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column;">
+        <article class="post-card glass scroll-reveal from-left" style="border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition-delay: 450ms;">
           <div style="overflow: hidden;">
-            <img src="https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?auto=format&fit=crop&w=600&q=80" alt="Office" class="post-thumb parallax-img" style="width: 100%; height: 260px; object-fit: cover;" />
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?auto=format&fit=crop&w=600&q=80" alt="Office" class="post-thumb parallax-img" style="width: 100%; height: 260px; object-fit: cover;" />
           </div>
           <div class="post-content" style="padding: 32px; display: flex; flex-direction: column; flex: 1;">
             <div class="post-meta" style="display: flex; justify-content: space-between; margin-bottom: 16px;">
@@ -197,17 +236,17 @@
       <aside class="sidebar" style="display: flex; flex-direction: column; gap: 40px;">
         
         <!-- Widget: Newsletter -->
-        <div class="widget widget-newsletter glass" style="padding: 40px; border-radius: var(--radius-lg);">
+        <div class="widget widget-newsletter glass scroll-reveal from-right" style="padding: 40px; border-radius: var(--radius-lg); transition-delay: 0ms;">
           <h4 class="widget-title" style="font-size: 1.3rem; margin-bottom: 24px;">Stay Updated</h4>
           <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 24px;">Get our weekly breakdowns of the latest fitness research directly in your inbox.</p>
-          <form class="newsletter-form" action="#" method="POST" style="display: flex; flex-direction: column; gap: 16px;">
+          <form class="newsletter-form" action="#" method="POST" style="display: flex; flex-direction: column; gap: 16px;" onsubmit="event.preventDefault();alert('Coming soon! Subscribe functionality will be live shortly.');">
             <input type="email" placeholder="Your email address" required style="padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg-main); outline: none;" />
             <button type="submit" class="btn btn-accent" style="width: 100%;">Subscribe</button>
           </form>
         </div>
 
         <!-- Widget: Categories -->
-        <div class="widget widget-categories glass" style="padding: 40px; border-radius: var(--radius-lg);">
+        <div class="widget widget-categories glass scroll-reveal from-right" style="padding: 40px; border-radius: var(--radius-lg); transition-delay: 200ms;">
           <h4 class="widget-title" style="font-size: 1.3rem; margin-bottom: 24px;">Categories</h4>
           <ul style="display: flex; flex-direction: column; gap: 16px;">
             <li><a href="#" style="display: flex; justify-content: space-between; color: var(--text-muted);">Nutrition Science <span style="background: rgba(0,0,0,0.05); padding: 2px 10px; border-radius: 20px; font-size: 0.8rem;">12</span></a></li>
@@ -230,7 +269,7 @@
         <img src="assets/logos/primary01.svg" alt="Nutrition Codes Logo" style="height: 48px; margin-bottom: 24px;" />
         <p class="footer-tagline">Empowering the next generation of evidence-based health and fitness professionals in India and globally.</p>
         <div class="footer-socials">
-          <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener" class="magnetic" aria-label="Instagram">
+          <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener noreferrer" class="magnetic" aria-label="Instagram">
             <svg class="icon-svg" style="width:18px;height:18px" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
           </a>
           <a href="#" class="magnetic" aria-label="YouTube">
@@ -279,5 +318,20 @@
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
   
   <script src="js/main.js"></script>
+  <script>
+    // Scroll reveal observer
+    const revealEls = document.querySelectorAll('.scroll-reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => revealObserver.observe(el));
+  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Nutrition Codes Academy", "url": "https://nutritioncodes.com/", "logo": "https://nutritioncodes.com/assets/logos/primary01.svg", "sameAs": ["https://www.instagram.com/nutritioncodes/"], "description": "India's most rigorous nutrition and fitness education platform."}</script>
+
 </body>
 </html>

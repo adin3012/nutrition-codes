@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Nutrition Codes Academy</title>
+  <meta name="description" content="The page you are looking for does not exist. Return to Nutrition Codes Academy.">
+  <link rel="icon" type="image/svg+xml" href="assets/logos/primary01.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#102f65',
+            secondary: '#4173F4',
+            accent: '#40F39A',
+            'on-surface': '#0b1b36',
+            'surface-low': '#f1f3ff',
+          },
+          fontFamily: {
+            display: ['Manrope', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .font-display { font-family: 'Manrope', sans-serif; }
+    .font-body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col items-center justify-center px-4">
+
+  <div class="text-center max-w-lg">
+    <h1 class="font-display text-8xl md:text-9xl font-extrabold text-primary mb-4">404</h1>
+    <p class="font-display text-2xl md:text-3xl font-bold text-on-surface mb-4">Page Not Found</p>
+    <p class="font-body text-on-surface-variant mb-8 leading-relaxed">
+      The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+    </p>
+    <a href="index.html" class="inline-flex items-center gap-2 bg-primary text-white font-body font-semibold px-8 py-3.5 rounded-xl hover:bg-primary-container transition-colors">
+      Back to Home
+    </a>
+  </div>
+
+  <footer class="absolute bottom-6 text-center text-slate-400 text-xs font-body">
+    © 2026 Nutrition Codes Academy. All rights reserved.
+  </footer>
+
+</body>
+</html>

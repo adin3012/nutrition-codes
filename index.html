@@ -2,8 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nutrition Codes Academy | Science-Backed Coaching</title>
+  <meta property="og:title" content="Nutrition Codes Academy | Science-Backed Coaching">
+  <meta property="og:description" content="India's most rigorous nutrition and fitness education platform. Join 300+ scholars mastering science-backed coaching with Nutrition Codes Academy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nutritioncodes.com/">
+  <meta property="og:image" content="https://nutritioncodes.com/assets/images/og-home.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nutrition Codes Academy | Science-Backed Coaching">
+  <meta name="twitter:description" content="India's most rigorous nutrition and fitness education platform. Join 300+ scholars mastering science-backed coaching with Nutrition Codes Academy.">
+  <meta name="twitter:image" content="https://nutritioncodes.com/assets/images/og-home.jpg">
+  <link rel="canonical" href="https://nutritioncodes.com/">
+  <link rel="icon" type="image/svg+xml" href="assets/logos/primary01.svg">
   <meta name="description" content="India's most rigorous nutrition and fitness education platform. Join 300+ scholars mastering science-backed coaching with Nutrition Codes Academy.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,6 +124,13 @@
     .scroll-reveal.from-bottom {
       transform: translateY(40px);
     }
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
     .scroll-reveal.in-view {
       opacity: 1;
       transform: translateX(0) translateY(0);
@@ -120,6 +139,9 @@
 </head>
 <body class="bg-background text-on-surface">
 
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-accent focus:text-on-surface focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold">Skip to main content</a>
+
+  
   <!-- NAV -->
   <nav class="fixed top-0 w-full z-50 border-b border-white/10" style="background: linear-gradient(135deg, #05101f 0%, #0d2147 100%);">
     <div class="flex justify-between items-center h-14 md:h-16 px-4 md:px-10 max-w-7xl mx-auto">
@@ -129,12 +151,12 @@
       <div class="hidden md:flex items-center gap-10 font-body">
         <a href="about.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">About Us</a>
         <a href="testimonials.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Testimonials</a>
-        <a href="curriculum.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">Courses</a>
+        <a href="curriculum.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Courses</a>
         <a href="contact.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Contact Us</a>
       </div>
       <!-- Right: transparent Instagram + hamburger -->
       <div class="flex items-center gap-3">
-        <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener" aria-label="Instagram"
+        <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
            class="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center text-white hover:border-accent hover:text-accent hover:bg-white/5 transition-all">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -142,8 +164,8 @@
             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
           </svg>
         </a>
-        <button id="menu-btn" class="md:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
-          <span class="material-symbols-outlined">menu</span>
+        <button id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
     </div>
@@ -162,15 +184,16 @@
     const menu = document.getElementById('mobile-menu');
     btn.addEventListener('click', () => {
       menu.classList.toggle('hidden');
-      btn.querySelector('.material-symbols-outlined').textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
+      btn.setAttribute('aria-expanded', menu.classList.contains('hidden') ? 'false' : 'true');
+      btn.querySelector('svg').innerHTML = menu.classList.contains('hidden') ? '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>' : '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>';
     });
   </script>
 
   <!-- HERO -->
-  <section class="relative flex flex-col justify-center md:justify-end" style="min-height:100vh;min-height:100svh;">
+  <section id="main" class="relative flex flex-col justify-center md:justify-end" style="min-height:100vh;min-height:100svh;">
     <picture>
       <source media="(max-width:1023px)" srcset="assets/images/hero-main-mobile.jpg?v=3">
-      <img src="assets/images/hero-main.jpg" alt="" class="hero-bg-img" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+      <img loading="lazy" decoding="async" src="assets/images/hero-main.jpg" alt="" class="hero-bg-img" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
     </picture>
     <!-- stronger overlay on mobile for text readability -->
     <div class="hero-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;"></div>
@@ -192,9 +215,9 @@
       </div>
       <div class="flex items-center gap-4 pt-1 justify-center md:justify-start">
         <div class="flex -space-x-3">
-          <img src="assets/images/testimonials/mahesh-giri.png" alt="" class="w-8 h-8 rounded-full border-2 border-white object-cover">
-          <img src="assets/images/testimonials/karthik-nagarajan.png" alt="" class="w-8 h-8 rounded-full border-2 border-white object-cover">
-          <img src="assets/images/testimonials/siddharth-rana.png" alt="" class="w-8 h-8 rounded-full border-2 border-white object-cover">
+          <img loading="lazy" decoding="async" src="assets/images/testimonials/mahesh-giri.png" alt="" class="w-8 h-8 rounded-full border-2 border-white object-cover">
+          <img loading="lazy" decoding="async" src="assets/images/testimonials/karthik-nagarajan.png" alt="" class="w-8 h-8 rounded-full border-2 border-white object-cover">
+          <img loading="lazy" decoding="async" src="assets/images/testimonials/siddharth-rana.png" alt="" class="w-8 h-8 rounded-full border-2 border-white object-cover">
           <div class="w-8 h-8 rounded-full border-2 border-white bg-secondary flex items-center justify-center text-white text-xs font-bold font-body">+</div>
         </div>
         <p class="text-xs md:text-sm text-white/70 font-body"><span class="font-bold text-white"><span class="count-up" data-target="300">0</span>+ scholars</span> transforming their careers</p>
@@ -330,7 +353,7 @@
       <!-- Row 1: Image Left, Text Right -->
       <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-center mb-16 md:mb-24 scroll-reveal from-left">
         <div class="w-full md:w-1/2 rounded-3xl overflow-hidden shadow-xl flex-shrink-0">
-          <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=800&auto=format&fit=crop&q=80" alt="Science Before System" class="w-full h-64 md:h-[400px] object-cover hover:scale-105 transition-transform duration-700">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=800&auto=format&fit=crop&q=80" alt="Science Before System" class="w-full h-64 md:h-[400px] object-cover hover:scale-105 transition-transform duration-700">
         </div>
         <div class="w-full md:w-1/2 space-y-5">
           <div class="inline-flex w-12 h-12 rounded-2xl bg-secondary/10 items-center justify-center text-secondary font-display font-extrabold text-xl">01</div>
@@ -349,7 +372,7 @@
       <!-- Row 2: Text Left, Image Right -->
       <div class="flex flex-col md:flex-row-reverse gap-10 md:gap-16 items-center mb-16 md:mb-24 scroll-reveal from-right">
         <div class="w-full md:w-1/2 rounded-3xl overflow-hidden shadow-xl flex-shrink-0">
-          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&auto=format&fit=crop&q=80" alt="Apply to Real Clients" class="w-full h-64 md:h-[400px] object-cover hover:scale-105 transition-transform duration-700">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&auto=format&fit=crop&q=80" alt="Apply to Real Clients" class="w-full h-64 md:h-[400px] object-cover hover:scale-105 transition-transform duration-700">
         </div>
         <div class="w-full md:w-1/2 space-y-5">
           <div class="inline-flex w-12 h-12 rounded-2xl bg-accent/20 items-center justify-center text-accent font-display font-extrabold text-xl">02</div>
@@ -368,7 +391,7 @@
       <!-- Row 3: Image Left, Text Right -->
       <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-center scroll-reveal from-left">
         <div class="w-full md:w-1/2 rounded-3xl overflow-hidden shadow-xl flex-shrink-0">
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop&q=80" alt="Build Your Practice" class="w-full h-64 md:h-[400px] object-cover hover:scale-105 transition-transform duration-700">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop&q=80" alt="Build Your Practice" class="w-full h-64 md:h-[400px] object-cover hover:scale-105 transition-transform duration-700">
         </div>
         <div class="w-full md:w-1/2 space-y-5">
           <div class="inline-flex w-12 h-12 rounded-2xl bg-secondary/10 items-center justify-center text-secondary font-display font-extrabold text-xl">03</div>
@@ -402,7 +425,7 @@
             "Being part of NC Academy has been one of the best decisions of my life. The knowledge, clarity, and mentorship here are unmatched. Aman Sir's no-nonsense teaching style makes even complex concepts easy, while Rishabh Sir's depth of knowledge and patience ensure complete understanding."
           </p>
           <div class="flex items-center gap-4 pt-2">
-            <img src="assets/images/testimonials/mahesh-giri.png" alt="Mahesh Giri" class="w-12 h-12 rounded-full object-cover border-2 border-accent/30">
+            <img loading="lazy" decoding="async" src="assets/images/testimonials/mahesh-giri.png" alt="Mahesh Giri" class="w-12 h-12 rounded-full object-cover border-2 border-accent/30">
             <div>
               <p class="font-display font-bold text-on-surface">Mahesh Giri</p>
               <p class="text-sm text-on-surface-variant font-body">Scholar · NCA</p>
@@ -415,7 +438,7 @@
             "The coaching industry can be a lonely place. NCA is here to change that. Nutrition, exercise science, coaching best practices, mindset, business growth — pick any area of coaching and NCA has it covered. Join NCA. It's your path to lifelong learning and growth."
           </p>
           <div class="flex items-center gap-4 pt-2">
-            <img src="assets/images/testimonials/karthik-nagarajan.png" alt="Karthik Nagarajan" class="w-12 h-12 rounded-full object-cover border-2 border-accent/30">
+            <img loading="lazy" decoding="async" src="assets/images/testimonials/karthik-nagarajan.png" alt="Karthik Nagarajan" class="w-12 h-12 rounded-full object-cover border-2 border-accent/30">
             <div>
               <p class="font-display font-bold text-on-surface">Karthik Nagarajan</p>
               <p class="text-sm text-on-surface-variant font-body">Scholar · NCA</p>
@@ -428,7 +451,7 @@
             "NCA gave me what no other certification could — a framework that actually works for real people. The depth of science here is unlike anything else available in India. I came in as a trainer; I left as a coach who genuinely understands the human body."
           </p>
           <div class="flex items-center gap-4 pt-2">
-            <img src="assets/images/testimonials/siddharth-rana.png" alt="Siddharth Rana" class="w-12 h-12 rounded-full object-cover border-2 border-accent/30">
+            <img loading="lazy" decoding="async" src="assets/images/testimonials/siddharth-rana.png" alt="Siddharth Rana" class="w-12 h-12 rounded-full object-cover border-2 border-accent/30">
             <div>
               <p class="font-display font-bold text-on-surface">Siddharth Rana</p>
               <p class="text-sm text-on-surface-variant font-body">Scholar · NCA</p>
@@ -455,28 +478,28 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6" id="faculty-grid">
         <div class="text-center group scroll-reveal from-left" style="transition-delay:0ms">
           <div class="rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
-            <img src="assets/images/Amandeep.png" alt="Amandeep Singh Bindra" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <img loading="lazy" decoding="async" src="assets/images/Amandeep.png" alt="Amandeep Singh Bindra" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           </div>
           <h3 class="font-display font-bold text-on-surface text-sm md:text-base">Amandeep Singh Bindra</h3>
           <p class="text-secondary text-xs md:text-sm font-body mt-1">Coaching &amp; Business</p>
         </div>
         <div class="text-center group scroll-reveal from-right" style="transition-delay:150ms">
           <div class="rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
-            <img src="assets/images/Ashley.png" alt="Ashley Johnathan D'cruz" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <img loading="lazy" decoding="async" src="assets/images/Ashley.png" alt="Ashley Johnathan D'cruz" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           </div>
           <h3 class="font-display font-bold text-on-surface text-sm md:text-base">Ashley Johnathan D'cruz</h3>
           <p class="text-secondary text-xs md:text-sm font-body mt-1">Exercise Science</p>
         </div>
         <div class="text-center group scroll-reveal from-left" style="transition-delay:300ms">
           <div class="rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
-            <img src="assets/images/Rishabh.png" alt="Rishabh Verma" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <img loading="lazy" decoding="async" src="assets/images/Rishabh.png" alt="Rishabh Verma" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           </div>
           <h3 class="font-display font-bold text-on-surface text-sm md:text-base">Rishabh Verma</h3>
           <p class="text-secondary text-xs md:text-sm font-body mt-1">Nutrition Science</p>
         </div>
         <div class="text-center group scroll-reveal from-right" style="transition-delay:450ms">
           <div class="rounded-2xl overflow-hidden mb-4 shadow-md aspect-square">
-            <img src="assets/images/Siddhant.png" alt="Siddhant Prasad" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <img loading="lazy" decoding="async" src="assets/images/Siddhant.png" alt="Siddhant Prasad" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
           </div>
           <h3 class="font-display font-bold text-on-surface text-sm md:text-base">Siddhant Prasad</h3>
           <p class="text-secondary text-xs md:text-sm font-body mt-1">Fitness Research</p>
@@ -521,7 +544,7 @@
       <div class="sm:col-span-2 md:col-span-1">
         <div class="text-lg font-bold text-[#40F39A] mb-4 font-display">Nutrition Codes Academy</div>
         <p class="text-slate-300 text-sm leading-relaxed mb-6">Empowering the next generation of evidence-based health and fitness professionals in India and globally.</p>
-        <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-[#40F39A] hover:text-white transition-colors text-sm">
+        <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[#40F39A] hover:text-white transition-colors text-sm">
           <span class="material-symbols-outlined text-lg">photo_camera</span> @nutritioncodes
         </a>
       </div>
@@ -593,6 +616,8 @@
   }, { threshold: 0.5 });
   document.querySelectorAll('.count-up').forEach(el => countObserver.observe(el));
 </script>
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Nutrition Codes Academy", "url": "https://nutritioncodes.com/", "logo": "https://nutritioncodes.com/assets/logos/primary01.svg", "sameAs": ["https://www.instagram.com/nutritioncodes/"], "description": "India's most rigorous nutrition and fitness education platform."}</script>
 
 </body>
 </html>
