@@ -74,12 +74,17 @@
     }
     .faculty-slide {
       opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .faculty-slide.from-left {
+      transform: translateX(-60px);
+    }
+    .faculty-slide.from-right {
+      transform: translateX(60px);
     }
     .faculty-slide.in-view {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateX(0);
     }
   </style>
 </head>
@@ -437,19 +442,18 @@
 </script>
 
 <script>
-  const facultyObserver = new IntersectionObserver((entries) => {
+  const facultyCards = document.querySelectorAll('.faculty-slide');
+  const directions = ['from-left', 'from-right', 'from-left', 'from-right'];
+  facultyCards.forEach((card, i) => {
+    card.classList.add(directions[i % directions.length]);
+  });
+  const cardObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const cards = entry.target.querySelectorAll('.faculty-slide');
-        cards.forEach((card, i) => {
-          setTimeout(() => {
-            card.classList.add('in-view');
-          }, i * 150);
-        });
-        facultyObserver.unobserve(entry.target);
+        entry.target.classList.add('in-view');
+        cardObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.2 });
-  const facultyGrid = document.getElementById('faculty-grid');
-  if (facultyGrid) facultyObserver.observe(facultyGrid);
+  }, { threshold: 0.3 });
+  facultyCards.forEach(card => cardObserver.observe(card));
 </script>
