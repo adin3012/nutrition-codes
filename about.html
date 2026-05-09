@@ -158,10 +158,13 @@
       opacity: 0;
       transform: translateY(40px);
       transition: opacity 0.7s ease, transform 0.7s ease;
+      animation: facultyFallback 0s 1.8s forwards;
     }
+    @keyframes facultyFallback { to { opacity: 1; transform: translateY(0); } }
     .faculty-slide.in-view {
       opacity: 1;
       transform: translateY(0);
+      animation: none;
     }
   </style>
 </head>
@@ -795,23 +798,17 @@
     }, { threshold: 0.4 });
     curvedArrows.forEach(arrow => arrowObserver.observe(arrow));
 
-    // Faculty cards slide up
+    // Faculty cards slide up — observe each card individually for reliability
     const facultyCards = document.querySelectorAll('.faculty-slide');
     const facultyObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const cards = entry.target.parentElement.querySelectorAll('.faculty-slide');
-          cards.forEach((card, i) => {
-            setTimeout(() => {
-              card.classList.add('in-view');
-            }, i * 150);
-          });
+          entry.target.classList.add('in-view');
           facultyObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.08 });
-    const facultyGrid = document.getElementById('faculty-grid');
-    if (facultyGrid) facultyObserver.observe(facultyGrid);
+    facultyCards.forEach(card => facultyObserver.observe(card));
   </script>
 
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Nutrition Codes Academy", "url": "https://nutritioncodes.com/", "logo": "https://nutritioncodes.com/assets/logos/primary01.svg", "sameAs": ["https://www.instagram.com/nutritioncodes/"], "description": "India's most rigorous nutrition and fitness education platform."}</script>
