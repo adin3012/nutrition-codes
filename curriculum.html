@@ -17,11 +17,19 @@
   <link rel="canonical" href="https://nutritioncodes.com/curriculum.html">
   <link rel="icon" type="image/svg+xml" href="assets/logos/primary01.svg">
   <meta name="description" content="Explore the Nutrition Codes Academy curriculum — a science-first mastership covering precision nutrition, exercise physiology, recovery, ergogenic aids, and elite coaching.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shared.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script>
     tailwind.config = {
@@ -116,7 +124,7 @@
   <nav class="fixed top-0 w-full z-50 border-b border-white/10" style="background: linear-gradient(135deg, #05101f 0%, #0d2147 100%);">
     <div class="flex justify-between items-center h-14 md:h-16 px-4 md:px-10 max-w-7xl mx-auto">
       <!-- Logo + name stacked -->
-      <a href="index.html"><img src="assets/logos/primary01.svg" alt="Nutrition Codes" class="h-8 md:h-9 brightness-0 invert"></a>
+      <a href="index.html"><img decoding="async" src="assets/logos/primary01.svg" alt="Nutrition Codes" class="h-8 md:h-9 brightness-0 invert"></a>
       <!-- Desktop links -->
       <div class="hidden md:flex items-center gap-10 font-body">
         <a href="about.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">About Us</a>
@@ -149,21 +157,13 @@
       </div>
     </div>
   </nav>
-  <script>
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-      btn.setAttribute('aria-expanded', menu.classList.contains('hidden') ? 'false' : 'true');
-      btn.querySelector('svg').innerHTML = menu.classList.contains('hidden') ? '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>' : '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>';
-    });
-  </script>
+  <script src="js/nav.js" defer></script>
 
   <!-- HERO -->
   <section id="main" class="relative flex flex-col justify-end" style="min-height:85vh;">
     <picture>
       <source media="(max-width:767px)" srcset="assets/images/course-bg-mobile.jpg">
-      <img loading="lazy" decoding="async" src="assets/images/course-bg.jpg" alt="" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;">
+      <img loading="eager" decoding="async" fetchpriority="high" src="assets/images/course-bg.jpg" alt="" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;">
     </picture>
     <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to top,#05101f 30%,rgba(5,16,31,0.75) 60%,rgba(5,16,31,0.25) 100%);z-index:1;"></div>
     <div class="relative w-full max-w-7xl mx-auto px-5 md:px-8 pb-10 md:pb-24 pt-24 md:pt-0 space-y-5 md:space-y-6 text-center md:text-left" style="z-index:2;">
@@ -199,7 +199,7 @@
         <div class="swiper-wrapper">
           
           <!-- Pillar 1 -->
-          <div class="swiper-slide w-[320px] max-w-[85vw] md:w-[420px] md:max-w-none scroll-reveal from-left" style="transition-delay: 0ms">
+          <div class="swiper-slide w-[320px] max-w-[85vw] md:w-[420px] md:max-w-none tilt-3d scroll-reveal from-left" style="transition-delay: 0ms">
             <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/30 h-[580px] flex flex-col relative group">
               <div class="h-[240px] relative overflow-hidden">
                 <img loading="lazy" decoding="async" src="assets/images/pillar-nutrition.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Precision Nutrition">
@@ -227,7 +227,7 @@
           </div>
 
           <!-- Pillar 2 -->
-          <div class="swiper-slide w-[320px] max-w-[85vw] md:w-[420px] md:max-w-none scroll-reveal from-left" style="transition-delay: 100ms">
+          <div class="swiper-slide w-[320px] max-w-[85vw] md:w-[420px] md:max-w-none tilt-3d scroll-reveal from-left" style="transition-delay: 100ms">
             <div class="bg-primary rounded-3xl overflow-hidden shadow-2xl border border-primary-container h-[580px] flex flex-col relative group text-white">
               <div class="h-[240px] relative overflow-hidden">
                 <img loading="lazy" decoding="async" src="assets/images/pillar-exercise.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" alt="Exercise Physiology">
@@ -255,7 +255,7 @@
           </div>
 
           <!-- Pillar 3 -->
-          <div class="swiper-slide w-[320px] max-w-[85vw] md:w-[420px] md:max-w-none scroll-reveal from-left" style="transition-delay: 200ms">
+          <div class="swiper-slide w-[320px] max-w-[85vw] md:w-[420px] md:max-w-none tilt-3d scroll-reveal from-left" style="transition-delay: 200ms">
             <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/30 h-[580px] flex flex-col relative group">
               <div class="h-[240px] relative overflow-hidden">
                 <img loading="lazy" decoding="async" src="assets/images/pillar-recovery.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Neural Restoration">
@@ -283,7 +283,7 @@
           </div>
 
           <!-- Pillar 4 -->
-          <div class="swiper-slide w-[320px] max-w-[85vw] md:w-[420px] md:max-w-none scroll-reveal from-left" style="transition-delay: 300ms">
+          <div class="swiper-slide w-[320px] max-w-[85vw] md:w-[420px] md:max-w-none tilt-3d scroll-reveal from-left" style="transition-delay: 300ms">
             <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/30 h-[580px] flex flex-col relative group">
               <div class="h-[240px] relative overflow-hidden">
                 <img loading="lazy" decoding="async" src="assets/images/pillar-supplements.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Ergogenic Aids">
@@ -311,7 +311,7 @@
           </div>
 
           <!-- Pillar 5 -->
-          <div class="swiper-slide w-[320px] max-w-[85vw] md:w-[420px] md:max-w-none scroll-reveal from-left" style="transition-delay: 400ms">
+          <div class="swiper-slide w-[320px] max-w-[85vw] md:w-[420px] md:max-w-none tilt-3d scroll-reveal from-left" style="transition-delay: 400ms">
             <div class="bg-[#003a1f] text-white rounded-3xl overflow-hidden shadow-2xl border border-white/10 h-[580px] flex flex-col relative group">
               <div class="h-[240px] relative overflow-hidden">
                 <img loading="lazy" decoding="async" src="assets/images/pillar-mindset.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" alt="Mindset Pivot">
@@ -461,6 +461,175 @@
     </div>
   </section>
 
+  <!-- INSIDE OUR COURSE -->
+  <section class="bg-white py-20">
+    <div class="max-w-5xl mx-auto px-4 md:px-8 text-center scroll-reveal from-bottom">
+      <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">The Experience</p>
+      <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-6">Inside Our Course</h2>
+      <p class="text-on-surface-variant text-lg md:text-xl font-body leading-relaxed max-w-3xl mx-auto">
+        Gain first-hand experience of what it takes to run a successful coaching business, stay up to date with the latest topics and trends in the fitness industry, receive science-backed supplement recommendations, and get detailed, well-explained answers to all your fitness-related queries, along with in-depth analysis of complex medical reports, and so much more.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-surface-low py-20">
+    <div class="max-w-4xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-14 scroll-reveal from-bottom">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Got Questions?</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">Frequently Asked Questions</h2>
+        <p class="text-on-surface-variant text-lg font-body max-w-xl mx-auto">Everything you need to know before joining Nutrition Codes Academy.</p>
+      </div>
+      <div class="space-y-4">
+        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
+            <span>Are the sessions live or pre-recorded?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+            All sessions are conducted live on Zoom, and recordings will be provided for later viewing and revision.
+          </div>
+        </details>
+        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:50ms">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
+            <span>How will communication happen?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+            Communication will primarily be through WhatsApp. There will be a community group for discussions, networking, and resolving queries, and an announcement group for important updates and reminders.
+          </div>
+        </details>
+        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:100ms">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
+            <span>Will there be additional course materials?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+            Yes, you will receive revision notes for every lecture, special coaching templates, textbook recommendations to deepen your understanding, and additional resources to stay updated on fitness trends and practices.
+          </div>
+        </details>
+        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:150ms">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
+            <span>Who is this program for?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+            This program is suitable for everyone, from complete beginners to experienced fitness coaches. Whether you're looking to start your fitness journey, improve your knowledge, or advance your career, this course is designed to help you grow both personally and professionally.
+          </div>
+        </details>
+        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:200ms">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
+            <span>What will I learn?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+            This program covers everything you need to excel in the fitness industry, including nutrition, exercise, coaching, business, social media, and research. You'll master topics like metabolism, specialized diets, and effective nutrition planning for various needs, such as hypertrophy and injury recovery. You'll gain expertise in anatomy, biomechanics, and training program design, along with injury management. The coaching module focuses on client communication, psychology, and business growth strategies. Social media lessons will teach you how to create impactful content, edit videos, and engage with your audience effectively. Finally, you'll learn how to analyze and apply research to stay at the forefront of the industry.
+          </div>
+        </details>
+        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:250ms">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
+            <span>What if I have doubts?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+            You can ask your questions during live sessions, in the community group, or during dedicated Q&amp;A sessions. If needed, you can also schedule personal meetings with the faculty to resolve your doubts.
+          </div>
+        </details>
+        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:300ms">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
+            <span>How much time will I need to grasp the topics?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+            The program is self-paced, but dedicating three to six months with consistent effort should be enough to build a strong understanding, especially if you actively participate in lectures and discussions.
+          </div>
+        </details>
+        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:350ms">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
+            <span>When are the sessions held?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+            Sessions are typically held on weekends at 2 PM. The timing may be adjusted based on student consensus. One lecture per week is planned to give students ample time to absorb and practice the material.
+          </div>
+        </details>
+        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:400ms">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
+            <span>What language will the sessions be in?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+            The sessions will be conducted in both Hindi and English to ensure every student can easily follow and understand the content.
+          </div>
+        </details>
+        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:450ms">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
+            <span>When can I join, and how long is the course?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+            You can join anytime, and you'll have lifetime access to all course materials, including past, current, and future content. We plan to keep the course running for as long as the students need to learn, grow, and excel as fitness professionals. The program is continually updated with new topics and lectures to ensure the learning process never stops.
+          </div>
+        </details>
+        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:500ms">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
+            <span>How much time will it take to finish the curriculum?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+            The curriculum is designed to be completed over the course of one year, allowing you enough time to thoroughly understand, apply, and master each topic while balancing consistency and practical learning.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE PREVIEWS -->
+  <section class="bg-surface-low py-20">
+    <div class="max-w-5xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-12 scroll-reveal from-bottom">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Explore First</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">Preview Our Content</h2>
+        <p class="text-on-surface-variant text-lg font-body max-w-xl mx-auto">Get a taste of what NCA offers before you enroll. Explore the full curriculum and watch free sample lectures.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="https://docs.google.com/spreadsheets/d/1xajKMSz3KXCwDizIwl9UPUepRpcR5ogC_enhNMlDqx4/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer"
+           class="group bg-surface-low rounded-2xl p-6 border border-outline-variant/40 hover:-translate-y-1 hover:shadow-lg transition-all scroll-reveal from-left">
+          <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-secondary text-2xl">table_chart</span>
+          </div>
+          <h4 class="font-display font-bold text-on-surface text-lg mb-2 group-hover:text-secondary transition-colors">Full Course Curriculum</h4>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed mb-4">See every module, topic, and lecture in our complete curriculum spreadsheet.</p>
+          <span class="inline-flex items-center gap-1 text-secondary font-bold text-sm font-body group-hover:gap-2 transition-all">
+            View Curriculum <span class="material-symbols-outlined text-base">open_in_new</span>
+          </span>
+        </a>
+        <a href="https://drive.google.com/file/d/1w8THJ9v79oqfsGKYUQl-qVWD-jHZYg9K/view?usp=drivesdk" target="_blank" rel="noopener noreferrer"
+           class="group bg-surface-low rounded-2xl p-6 border border-outline-variant/40 hover:-translate-y-1 hover:shadow-lg transition-all scroll-reveal from-bottom" style="transition-delay: 100ms">
+          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-accent text-2xl">nutrition</span>
+          </div>
+          <h4 class="font-display font-bold text-on-surface text-lg mb-2 group-hover:text-secondary transition-colors">Free Nutrition Lecture</h4>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed mb-4">Watch a full nutrition lecture to experience our teaching style and depth.</p>
+          <span class="inline-flex items-center gap-1 text-secondary font-bold text-sm font-body group-hover:gap-2 transition-all">
+            Watch Now <span class="material-symbols-outlined text-base">open_in_new</span>
+          </span>
+        </a>
+        <a href="https://youtu.be/s9XlY6nOfFY?si=EA59EGBlTkUL8kRD" target="_blank" rel="noopener noreferrer"
+           class="group bg-surface-low rounded-2xl p-6 border border-outline-variant/40 hover:-translate-y-1 hover:shadow-lg transition-all scroll-reveal from-right" style="transition-delay: 200ms">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-primary text-2xl">fitness_center</span>
+          </div>
+          <h4 class="font-display font-bold text-on-surface text-lg mb-2 group-hover:text-secondary transition-colors">Free Exercise Lecture</h4>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed mb-4">Watch a full exercise science lecture and see how we break down complex topics.</p>
+          <span class="inline-flex items-center gap-1 text-secondary font-bold text-sm font-body group-hover:gap-2 transition-all">
+            Watch Now <span class="material-symbols-outlined text-base">open_in_new</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="bg-primary py-20 text-center">
     <div class="max-w-4xl mx-auto px-4 md:px-8 space-y-6 scroll-reveal from-bottom">
@@ -566,5 +735,7 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Nutrition Codes Academy", "url": "https://nutritioncodes.com/", "logo": "https://nutritioncodes.com/assets/logos/primary01.svg", "sameAs": ["https://www.instagram.com/nutritioncodes/"], "description": "India's most rigorous nutrition and fitness education platform."}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Course", "name": "NCA Mastership Program", "description": "Comprehensive nutrition and fitness coaching certification covering metabolic coding, biomechanics, sleep science, supplementation, and business mastery.", "provider": {"@type": "Organization", "name": "Nutrition Codes Academy", "sameAs": "https://nutritioncodes.com/"}, "url": "https://nutritioncodes.com/curriculum.html"}</script>
 
+<script src="js/tilt.js" defer></script>
+<script src="js/polish.js" defer></script>
 </body>
 </html>

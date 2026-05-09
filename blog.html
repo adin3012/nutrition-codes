@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nutrition Codes — Blog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Nutrition Codes Academy</title>
   <meta property="og:title" content="Blog | Nutrition Codes Academy">
   <meta property="og:description" content="Expert articles on nutrition science, exercise physiology, and coaching from the Nutrition Codes faculty team.">
   <meta property="og:type" content="website">
@@ -14,310 +14,321 @@
   <meta name="twitter:description" content="Expert articles on nutrition science, exercise physiology, and coaching from the Nutrition Codes faculty team.">
   <meta name="twitter:image" content="https://nutritioncodes.com/assets/images/og-blog.jpg">
   <link rel="canonical" href="https://nutritioncodes.com/blog.html">
-  <meta name="description" content="Expert articles on nutrition science, exercise physiology, and coaching from the Nutrition Codes faculty team." />
-  <link rel="icon" href="assets/icons/favicon.png" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/blog.css" />
+  <meta name="description" content="Expert articles on nutrition science, exercise physiology, and coaching from the Nutrition Codes faculty team.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  <link rel="icon" type="image/svg+xml" href="assets/logos/primary01.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
-  <style>
-    #nc-nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
-      background: linear-gradient(135deg, #05101f 0%, #0d2147 100%);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    #nc-nav .nc-inner {
-      display: flex; justify-content: space-between; align-items: center;
-      height: 60px; padding: 0 40px; max-width: 1280px; margin: 0 auto;
-    }
-    #nc-nav .nc-logo { display: flex; flex-direction: column; gap: 2px; text-decoration: none; }
-    #nc-nav .nc-logo img { height: 28px; filter: brightness(0) invert(1); }
-    #nc-nav .nc-logo span {
-      font-family: 'Manrope', sans-serif; font-size: 9px; font-weight: 800;
-      color: rgba(255,255,255,0.7); letter-spacing: 0.14em; text-transform: uppercase; line-height: 1;
-    }
-    #nc-nav .nc-links { display: flex; align-items: center; gap: 36px; }
-    #nc-nav .nc-links a {
-      font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600;
-      color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s;
-    }
-    #nc-nav .nc-links a:hover { color: #fff; }
-    #nc-nav .nc-links a.active {
-      color: #40F39A; border-bottom: 2px solid #40F39A; padding-bottom: 2px;
-    }
-    #nc-nav .nc-ig {
-      width: 36px; height: 36px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      background: transparent; border: 1px solid rgba(255,255,255,0.3);
-      color: white; text-decoration: none; transition: all 0.2s;
-    }
-    #nc-nav .nc-ig:hover { border-color: #40F39A; color: #40F39A; background: rgba(255,255,255,0.05); }
-    #nc-nav .nc-hamburger {
-      display: none; background: none; border: none; cursor: pointer;
-      padding: 6px; color: white;
-    }
-    #nc-mobile-menu {
-      display: none; background: #05101f; border-top: 1px solid rgba(255,255,255,0.08);
-    }
-    #nc-mobile-menu a {
-      display: block; padding: 14px 24px;
-      font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600;
-      color: rgba(255,255,255,0.75); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.06);
-      transition: color 0.2s;
-    }
-    #nc-mobile-menu a:hover { color: #fff; }
-    @media (max-width: 768px) {
-      #nc-nav .nc-links { display: none; }
-      #nc-nav .nc-hamburger { display: block; }
-    }
-    /* Scroll reveal animations */
-    .scroll-reveal {
-      opacity: 0;
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .scroll-reveal.from-left {
-      transform: translateX(-60px);
-    }
-    .scroll-reveal.from-right {
-      transform: translateX(60px);
-    }
-    .scroll-reveal.from-bottom {
-      transform: translateY(40px);
-    }
-    .scroll-reveal.in-view {
-      opacity: 1;
-      transform: translateX(0) translateY(0);
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .scroll-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shared.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#102f65',
+            'primary-container': '#2b467d',
+            'on-primary': '#ffffff',
+            'on-primary-container': '#9cb5f4',
+            secondary: '#4173F4',
+            'on-secondary': '#ffffff',
+            accent: '#40F39A',
+            'on-surface': '#0b1b36',
+            'on-surface-variant': '#444650',
+            'surface-low': '#f1f3ff',
+            'surface-mid': '#e8eeff',
+            'surface-high': '#e0e8ff',
+            'surface-highest': '#d7e2ff',
+            'outline-variant': '#c4c6d1',
+            background: '#f9f9ff',
+          },
+          fontFamily: {
+            display: ['Manrope', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
       }
+    }
+  </script>
+  <style>
+    .blog-card {
+      transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(16, 47, 101, 0.12);
+      border-color: rgba(64, 243, 154, 0.4);
+    }
+    .blog-card img {
+      transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    .blog-card:hover img {
+      transform: scale(1.05);
+    }
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .section-divider::before,
+    .section-divider::after {
+      content: '';
+      width: 32px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #4173F4, transparent);
+      border-radius: 2px;
+    }
+    .section-divider .dot {
+      width: 6px;
+      height: 6px;
+      background: #40F39A;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(64, 243, 154, 0.5);
     }
   </style>
 </head>
-<body>
+<body class="bg-background text-on-surface">
 
-  <a href="#main" style="position:absolute;left:-9999px;" onfocus="this.style.position='static';this.style.display='block';this.style.padding='8px 16px';this.style.background='#40F39A';this.style.color='#0b1b36';this.style.fontWeight='600';this.style.borderRadius='8px';this.style.zIndex='99999';" onblur="this.style.position='absolute';this.style.left='-9999px';">Skip to main content</a>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-  
-  <!-- Liquid Mesh Background -->
-  <div class="mesh-bg"></div>
-
-  
   <!-- NAV -->
-  <nav id="nc-nav">
-    <div class="nc-inner">
-      <a href="index.html" class="nc-logo">
-        <img src="assets/logos/primary01.svg" alt="Nutrition Codes">
-      </a>
-      <div class="nc-links">
-        <a href="about.html">About Us</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="curriculum.html">Courses</a>
-        <a href="contact.html">Contact Us</a>
+  <nav class="fixed top-0 w-full z-50 border-b border-white/10" style="background: linear-gradient(135deg, #05101f 0%, #0d2147 100%);">
+    <div class="flex justify-between items-center h-14 md:h-16 px-4 md:px-10 max-w-7xl mx-auto">
+      <a href="index.html"><img decoding="async" src="assets/logos/primary01.svg" alt="Nutrition Codes" class="h-8 md:h-9 brightness-0 invert"></a>
+      <div class="hidden md:flex items-center gap-10 font-body">
+        <a href="about.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">About Us</a>
+        <a href="testimonials.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Testimonials</a>
+        <a href="curriculum.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Courses</a>
+        <a href="contact.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Contact Us</a>
       </div>
-      <div style="display:flex;align-items:center;gap:10px;">
-        <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="nc-ig">
-          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="flex items-center gap-3">
+        <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+           class="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center text-white hover:border-accent hover:text-accent hover:bg-white/5 transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
           </svg>
         </a>
-        <button class="nc-hamburger" id="nc-menu-btn" aria-label="Menu">
+        <button id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
     </div>
-    <div id="nc-mobile-menu">
-      <a href="about.html">About Us</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="curriculum.html">Courses</a>
-      <a href="contact.html">Contact Us</a>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 font-body" style="background:#05101f;">
+      <div class="px-5 py-3 space-y-0.5">
+        <a href="about.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">About Us</a>
+        <a href="testimonials.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">Testimonials</a>
+        <a href="curriculum.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">Courses</a>
+        <a href="contact.html" class="block text-white/75 font-semibold hover:text-white py-3 text-[15px]">Contact Us</a>
+      </div>
     </div>
   </nav>
-  <script>
-    const ncBtn = document.getElementById('nc-menu-btn');
-    const ncMenu = document.getElementById('nc-mobile-menu');
-    ncBtn.addEventListener('click', () => {
-      const open = ncMenu.style.display === 'block';
-      ncMenu.style.display = open ? 'none' : 'block';
-      ncBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
-      ncBtn.querySelector('svg').innerHTML = open ? '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>' : '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>';
-    });
-  </script>
+  <script src="js/nav.js" defer></script>
 
   <!-- HERO -->
-  <header class="page-hero">
-    <div class="container text-center scroll-reveal from-bottom">
-      <span class="section-label">Journal & Insights</span>
-      <h1 class="section-title split-text">The Science of Performance</h1>
-      <p class="section-subtitle">Read the latest research breakdowns, coaching strategies, and industry news.</p>
+  <section class="relative flex flex-col justify-end" style="min-height:50vh; padding-top: 80px;">
+    <div class="absolute inset-0 dna-pattern"></div>
+    <div class="absolute inset-0" style="background: linear-gradient(135deg, #05101f 0%, #0d2147 100%);"></div>
+    <div class="relative w-full max-w-7xl mx-auto px-5 md:px-8 pb-10 md:pb-16 pt-24 md:pt-0 space-y-5 md:space-y-6 text-center" style="z-index:2;">
+      <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body">Journal & Insights</p>
+      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+        The Science of <span class="text-accent">Performance</span>
+      </h1>
+      <p class="text-white/70 text-base md:text-lg leading-relaxed font-body mx-auto max-w-xl">
+        Read the latest research breakdowns, coaching strategies, and industry news.
+      </p>
+      <div class="section-divider">
+        <span class="dot"></span>
+      </div>
     </div>
-  </header>
+  </section>
 
   <!-- BLOG LAYOUT -->
-  <section id="main" class="blog-section section">
-    <div class="blog-layout">
-      
-      <!-- POST GRID (Left Column) -->
-      <div class="post-grid">
-        
-        <!-- Post 1 -->
-        <article class="post-card glass scroll-reveal from-left" style="border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition-delay: 0ms;">
-          <div style="overflow: hidden;">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1542841791-1925b02a2bf5?auto=format&fit=crop&w=600&q=80" alt="Metabolism" class="post-thumb parallax-img" style="width: 100%; height: 260px; object-fit: cover;" />
-          </div>
-          <div class="post-content" style="padding: 32px; display: flex; flex-direction: column; flex: 1;">
-            <div class="post-meta" style="display: flex; justify-content: space-between; margin-bottom: 16px;">
-              <span class="post-category" style="color: var(--accent); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">Nutrition</span>
-              <span class="post-date" style="color: var(--text-muted); font-size: 0.85rem;">May 12, 2026</span>
-            </div>
-            <h3 style="font-size: 1.4rem; margin-bottom: 16px; line-height: 1.4;"><a href="#">Debunking Metabolic Adaptation: What the Data Actually Says</a></h3>
-            <p style="color: var(--text-muted); line-height: 1.7; flex: 1;">We review three recent RCTs on metabolic slowdown during prolonged caloric deficits and how to counter it.</p>
-            <a href="#" class="read-more" style="display: inline-block; margin-top: 24px; font-weight: 600;">Read Article →</a>
-          </div>
-        </article>
+  <section id="main" class="py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 lg:gap-16">
 
-        <!-- Post 2 -->
-        <article class="post-card glass scroll-reveal from-left" style="border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition-delay: 150ms;">
-          <div style="overflow: hidden;">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Gym" class="post-thumb parallax-img" style="width: 100%; height: 260px; object-fit: cover;" />
-          </div>
-          <div class="post-content" style="padding: 32px; display: flex; flex-direction: column; flex: 1;">
-            <div class="post-meta" style="display: flex; justify-content: space-between; margin-bottom: 16px;">
-              <span class="post-category" style="color: var(--accent); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">Exercise Science</span>
-              <span class="post-date" style="color: var(--text-muted); font-size: 0.85rem;">May 05, 2026</span>
-            </div>
-            <h3 style="font-size: 1.4rem; margin-bottom: 16px; line-height: 1.4;"><a href="#">Optimizing Hypertrophy: Volume vs. Intensity</a></h3>
-            <p style="color: var(--text-muted); line-height: 1.7; flex: 1;">A deep dive into the current literature on whether higher volume or higher intensity yields better muscular adaptations.</p>
-            <a href="#" class="read-more" style="display: inline-block; margin-top: 24px; font-weight: 600;">Read Article →</a>
-          </div>
-        </article>
+        <!-- POST GRID (Left Column) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
-        <!-- Post 3 -->
-        <article class="post-card glass scroll-reveal from-left" style="border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition-delay: 300ms;">
-          <div style="overflow: hidden;">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=600&q=80" alt="Meeting" class="post-thumb parallax-img" style="width: 100%; height: 260px; object-fit: cover;" />
-          </div>
-          <div class="post-content" style="padding: 32px; display: flex; flex-direction: column; flex: 1;">
-            <div class="post-meta" style="display: flex; justify-content: space-between; margin-bottom: 16px;">
-              <span class="post-category" style="color: var(--accent); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">Business</span>
-              <span class="post-date" style="color: var(--text-muted); font-size: 0.85rem;">April 28, 2026</span>
+          <!-- Post 1 -->
+          <article class="blog-card bg-white rounded-3xl border border-outline-variant/30 overflow-hidden flex flex-col tilt-3d scroll-reveal from-left" style="transition-delay: 0ms;">
+            <div class="overflow-hidden">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1542841791-1925b02a2bf5?auto=format&fit=crop&w=600&q=80" alt="Metabolism" class="w-full h-56 object-cover" />
             </div>
-            <h3 style="font-size: 1.4rem; margin-bottom: 16px; line-height: 1.4;"><a href="#">How to Price Your Online Coaching Programs</a></h3>
-            <p style="color: var(--text-muted); line-height: 1.7; flex: 1;">Stop charging per session. Learn how to structure high-ticket hybrid coaching models for better client adherence.</p>
-            <a href="#" class="read-more" style="display: inline-block; margin-top: 24px; font-weight: 600;">Read Article →</a>
-          </div>
-        </article>
+            <div class="p-6 md:p-8 flex flex-col flex-1">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-accent font-bold text-xs uppercase tracking-wider font-body">Nutrition</span>
+                <span class="text-on-surface-variant text-sm font-body">May 12, 2026</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-on-surface mb-3 leading-snug">
+                <a href="#" class="hover:text-secondary transition-colors">Debunking Metabolic Adaptation: What the Data Actually Says</a>
+              </h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed font-body flex-1">We review three recent RCTs on metabolic slowdown during prolonged caloric deficits and how to counter it.</p>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body hover:gap-3 transition-all mt-6">
+                Read Article <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+            </div>
+          </article>
 
-        <!-- Post 4 -->
-        <article class="post-card glass scroll-reveal from-left" style="border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition-delay: 450ms;">
-          <div style="overflow: hidden;">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?auto=format&fit=crop&w=600&q=80" alt="Office" class="post-thumb parallax-img" style="width: 100%; height: 260px; object-fit: cover;" />
-          </div>
-          <div class="post-content" style="padding: 32px; display: flex; flex-direction: column; flex: 1;">
-            <div class="post-meta" style="display: flex; justify-content: space-between; margin-bottom: 16px;">
-              <span class="post-category" style="color: var(--accent); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">Psychology</span>
-              <span class="post-date" style="color: var(--text-muted); font-size: 0.85rem;">April 20, 2026</span>
+          <!-- Post 2 -->
+          <article class="blog-card bg-white rounded-3xl border border-outline-variant/30 overflow-hidden flex flex-col tilt-3d scroll-reveal from-left" style="transition-delay: 150ms;">
+            <div class="overflow-hidden">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Gym" class="w-full h-56 object-cover" />
             </div>
-            <h3 style="font-size: 1.4rem; margin-bottom: 16px; line-height: 1.4;"><a href="#">The Role of Motivational Interviewing in Client Retention</a></h3>
-            <p style="color: var(--text-muted); line-height: 1.7; flex: 1;">Why telling your clients what to do rarely works, and how to help them find their own intrinsic motivation.</p>
-            <a href="#" class="read-more" style="display: inline-block; margin-top: 24px; font-weight: 600;">Read Article →</a>
+            <div class="p-6 md:p-8 flex flex-col flex-1">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-accent font-bold text-xs uppercase tracking-wider font-body">Exercise Science</span>
+                <span class="text-on-surface-variant text-sm font-body">May 05, 2026</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-on-surface mb-3 leading-snug">
+                <a href="#" class="hover:text-secondary transition-colors">Optimizing Hypertrophy: Volume vs. Intensity</a>
+              </h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed font-body flex-1">A deep dive into the current literature on whether higher volume or higher intensity yields better muscular adaptations.</p>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body hover:gap-3 transition-all mt-6">
+                Read Article <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="blog-card bg-white rounded-3xl border border-outline-variant/30 overflow-hidden flex flex-col tilt-3d scroll-reveal from-left" style="transition-delay: 300ms;">
+            <div class="overflow-hidden">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=600&q=80" alt="Meeting" class="w-full h-56 object-cover" />
+            </div>
+            <div class="p-6 md:p-8 flex flex-col flex-1">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-accent font-bold text-xs uppercase tracking-wider font-body">Business</span>
+                <span class="text-on-surface-variant text-sm font-body">April 28, 2026</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-on-surface mb-3 leading-snug">
+                <a href="#" class="hover:text-secondary transition-colors">How to Price Your Online Coaching Programs</a>
+              </h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed font-body flex-1">Stop charging per session. Learn how to structure high-ticket hybrid coaching models for better client adherence.</p>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body hover:gap-3 transition-all mt-6">
+                Read Article <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 4 -->
+          <article class="blog-card bg-white rounded-3xl border border-outline-variant/30 overflow-hidden flex flex-col tilt-3d scroll-reveal from-left" style="transition-delay: 450ms;">
+            <div class="overflow-hidden">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?auto=format&fit=crop&w=600&q=80" alt="Office" class="w-full h-56 object-cover" />
+            </div>
+            <div class="p-6 md:p-8 flex flex-col flex-1">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-accent font-bold text-xs uppercase tracking-wider font-body">Psychology</span>
+                <span class="text-on-surface-variant text-sm font-body">April 20, 2026</span>
+              </div>
+              <h3 class="font-display text-lg font-bold text-on-surface mb-3 leading-snug">
+                <a href="#" class="hover:text-secondary transition-colors">The Role of Motivational Interviewing in Client Retention</a>
+              </h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed font-body flex-1">Why telling your clients what to do rarely works, and how to help them find their own intrinsic motivation.</p>
+              <a href="#" class="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body hover:gap-3 transition-all mt-6">
+                Read Article <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- SIDEBAR (Right Column) -->
+        <aside class="flex flex-col gap-6">
+
+          <!-- Widget: Newsletter -->
+          <div class="bg-white rounded-3xl border border-outline-variant/30 p-6 md:p-8 shadow-sm scroll-reveal from-right" style="transition-delay: 0ms;">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center">
+                <span class="material-symbols-outlined text-secondary">mail</span>
+              </div>
+              <h4 class="font-display font-bold text-on-surface text-lg">Stay Updated</h4>
+            </div>
+            <p class="text-on-surface-variant text-sm leading-relaxed font-body mb-5">Get our weekly breakdowns of the latest fitness research directly in your inbox.</p>
+            <form action="#" method="POST" class="flex flex-col gap-3" onsubmit="event.preventDefault();alert('Coming soon! Subscribe functionality will be live shortly.');">
+              <input type="email" placeholder="Your email address" required
+                class="w-full border border-outline-variant rounded-xl px-4 py-3 text-on-surface font-body text-sm focus:outline-none focus:ring-2 focus:ring-secondary/30 focus:border-secondary transition-all bg-background placeholder:text-on-surface-variant/40" />
+              <button type="submit" class="w-full bg-secondary text-white py-3 rounded-xl font-bold text-sm hover:-translate-y-0.5 hover:shadow-lg hover:shadow-secondary/30 transition-all font-body">
+                Subscribe
+              </button>
+            </form>
           </div>
-        </article>
+
+          <!-- Widget: Categories -->
+          <div class="bg-white rounded-3xl border border-outline-variant/30 p-6 md:p-8 shadow-sm scroll-reveal from-right" style="transition-delay: 200ms;">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
+                <span class="material-symbols-outlined text-accent">folder</span>
+              </div>
+              <h4 class="font-display font-bold text-on-surface text-lg">Categories</h4>
+            </div>
+            <ul class="flex flex-col gap-3">
+              <li><a href="#" class="flex items-center justify-between text-on-surface-variant font-body text-sm hover:text-secondary transition-colors py-1">Nutrition Science <span class="bg-surface-low text-on-surface-variant text-xs font-bold px-2.5 py-0.5 rounded-full">12</span></a></li>
+              <li><a href="#" class="flex items-center justify-between text-on-surface-variant font-body text-sm hover:text-secondary transition-colors py-1">Exercise Mechanics <span class="bg-surface-low text-on-surface-variant text-xs font-bold px-2.5 py-0.5 rounded-full">8</span></a></li>
+              <li><a href="#" class="flex items-center justify-between text-on-surface-variant font-body text-sm hover:text-secondary transition-colors py-1">Business Mentorship <span class="bg-surface-low text-on-surface-variant text-xs font-bold px-2.5 py-0.5 rounded-full">15</span></a></li>
+              <li><a href="#" class="flex items-center justify-between text-on-surface-variant font-body text-sm hover:text-secondary transition-colors py-1">Coaching Psychology <span class="bg-surface-low text-on-surface-variant text-xs font-bold px-2.5 py-0.5 rounded-full">6</span></a></li>
+              <li><a href="#" class="flex items-center justify-between text-on-surface-variant font-body text-sm hover:text-secondary transition-colors py-1">Case Studies <span class="bg-surface-low text-on-surface-variant text-xs font-bold px-2.5 py-0.5 rounded-full">4</span></a></li>
+            </ul>
+          </div>
+
+        </aside>
 
       </div>
-
-      <!-- SIDEBAR (Right Column) -->
-      <aside class="sidebar" style="display: flex; flex-direction: column; gap: 40px;">
-        
-        <!-- Widget: Newsletter -->
-        <div class="widget widget-newsletter glass scroll-reveal from-right" style="padding: 40px; border-radius: var(--radius-lg); transition-delay: 0ms;">
-          <h4 class="widget-title" style="font-size: 1.3rem; margin-bottom: 24px;">Stay Updated</h4>
-          <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 24px;">Get our weekly breakdowns of the latest fitness research directly in your inbox.</p>
-          <form class="newsletter-form" action="#" method="POST" style="display: flex; flex-direction: column; gap: 16px;" onsubmit="event.preventDefault();alert('Coming soon! Subscribe functionality will be live shortly.');">
-            <input type="email" placeholder="Your email address" required style="padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg-main); outline: none;" />
-            <button type="submit" class="btn btn-accent" style="width: 100%;">Subscribe</button>
-          </form>
-        </div>
-
-        <!-- Widget: Categories -->
-        <div class="widget widget-categories glass scroll-reveal from-right" style="padding: 40px; border-radius: var(--radius-lg); transition-delay: 200ms;">
-          <h4 class="widget-title" style="font-size: 1.3rem; margin-bottom: 24px;">Categories</h4>
-          <ul style="display: flex; flex-direction: column; gap: 16px;">
-            <li><a href="#" style="display: flex; justify-content: space-between; color: var(--text-muted);">Nutrition Science <span style="background: rgba(0,0,0,0.05); padding: 2px 10px; border-radius: 20px; font-size: 0.8rem;">12</span></a></li>
-            <li><a href="#" style="display: flex; justify-content: space-between; color: var(--text-muted);">Exercise Mechanics <span style="background: rgba(0,0,0,0.05); padding: 2px 10px; border-radius: 20px; font-size: 0.8rem;">8</span></a></li>
-            <li><a href="#" style="display: flex; justify-content: space-between; color: var(--text-muted);">Business Mentorship <span style="background: rgba(0,0,0,0.05); padding: 2px 10px; border-radius: 20px; font-size: 0.8rem;">15</span></a></li>
-            <li><a href="#" style="display: flex; justify-content: space-between; color: var(--text-muted);">Coaching Psychology <span style="background: rgba(0,0,0,0.05); padding: 2px 10px; border-radius: 20px; font-size: 0.8rem;">6</span></a></li>
-            <li><a href="#" style="display: flex; justify-content: space-between; color: var(--text-muted);">Case Studies <span style="background: rgba(0,0,0,0.05); padding: 2px 10px; border-radius: 20px; font-size: 0.8rem;">4</span></a></li>
-          </ul>
-        </div>
-
-      </aside>
-
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer glass" style="margin: 40px; border-radius: var(--radius-lg);">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="assets/logos/primary01.svg" alt="Nutrition Codes Logo" style="height: 48px; margin-bottom: 24px;" />
-        <p class="footer-tagline">Empowering the next generation of evidence-based health and fitness professionals in India and globally.</p>
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener noreferrer" class="magnetic" aria-label="Instagram">
-            <svg class="icon-svg" style="width:18px;height:18px" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-          </a>
-          <a href="#" class="magnetic" aria-label="YouTube">
-            <svg class="icon-svg" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-          </a>
-          <a href="#" class="magnetic" aria-label="LinkedIn">
-            <svg class="icon-svg" style="width:18px;height:18px" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          </a>
-        </div>
+  <footer class="bg-[#2B467D] text-white font-body">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <div class="sm:col-span-2 md:col-span-1">
+        <div class="text-lg font-bold text-[#40F39A] mb-4 font-display">Nutrition Codes Academy</div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">Empowering the next generation of evidence-based health and fitness professionals in India and globally.</p>
+        <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[#40F39A] hover:text-white transition-colors text-sm">
+          <span class="material-symbols-outlined text-lg">photo_camera</span> @nutritioncodes
+        </a>
       </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="blog.html">Blog</a></li>
+      <div>
+        <h4 class="font-bold text-white mb-5 text-sm uppercase tracking-wider">Navigate</h4>
+        <ul class="space-y-3">
+          <li><a href="index.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Home</a></li>
+          <li><a href="curriculum.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Courses</a></li>
+          <li><a href="about.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">About</a></li>
+          <li><a href="testimonials.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Results</a></li>
+          <li><a href="blog.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Blog</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Programs</h4>
-        <ul>
-          <li><a href="#">Nutrition Science</a></li>
-          <li><a href="#">Exercise Mechanics</a></li>
-          <li><a href="#">Business Mentorship</a></li>
+      <div>
+        <h4 class="font-bold text-white mb-5 text-sm uppercase tracking-wider">Programs</h4>
+        <ul class="space-y-3">
+          <li><a href="curriculum.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Nutrition Science</a></li>
+          <li><a href="curriculum.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Exercise Physiology</a></li>
+          <li><a href="curriculum.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Business Mentorship</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:nutritioncodes0@gmail.com">nutritioncodes0@gmail.com</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+      <div>
+        <h4 class="font-bold text-white mb-5 text-sm uppercase tracking-wider">Contact</h4>
+        <ul class="space-y-3">
+          <li><a href="mailto:nutritioncodes0@gmail.com" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm break-all">nutritioncodes0@gmail.com</a></li>
+          <li><a href="contact.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Contact Form</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Nutrition Codes. All rights reserved.</p>
-      <p>Designed for Elite Performance.</p>
+    <div class="border-t border-white/10 py-6 px-8 text-center text-slate-400 text-xs">
+      © 2026 Nutrition Codes Academy. Rigorous science for human energy.
     </div>
   </footer>
 
-  <!-- GSAP & Lenis CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/split-type"></script>
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
-  
-  <script src="js/main.js"></script>
   <script>
     // Scroll reveal observer
     const revealEls = document.querySelectorAll('.scroll-reveal');
@@ -333,5 +344,7 @@
   </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Nutrition Codes Academy", "url": "https://nutritioncodes.com/", "logo": "https://nutritioncodes.com/assets/logos/primary01.svg", "sameAs": ["https://www.instagram.com/nutritioncodes/"], "description": "India's most rigorous nutrition and fitness education platform."}</script>
 
+<script src="js/tilt.js" defer></script>
+<script src="js/polish.js" defer></script>
 </body>
 </html>

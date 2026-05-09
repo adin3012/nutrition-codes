@@ -17,11 +17,19 @@
   <link rel="canonical" href="https://nutritioncodes.com/contact.html">
   <link rel="icon" type="image/svg+xml" href="assets/logos/primary01.svg">
   <meta name="description" content="Get in touch with Nutrition Codes Academy — inquire about enrollment, courses, or general support. We're here to help.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shared.css">
   <script>
     tailwind.config = {
       theme: {
@@ -88,7 +96,7 @@
   <nav class="fixed top-0 w-full z-50 border-b border-white/10" style="background: linear-gradient(135deg, #05101f 0%, #0d2147 100%);">
     <div class="flex justify-between items-center h-14 md:h-16 px-4 md:px-10 max-w-7xl mx-auto">
       <!-- Logo + name stacked -->
-      <a href="index.html"><img src="assets/logos/primary01.svg" alt="Nutrition Codes" class="h-8 md:h-9 brightness-0 invert"></a>
+      <a href="index.html"><img decoding="async" src="assets/logos/primary01.svg" alt="Nutrition Codes" class="h-8 md:h-9 brightness-0 invert"></a>
       <!-- Desktop links -->
       <div class="hidden md:flex items-center gap-10 font-body">
         <a href="about.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">About Us</a>
@@ -121,15 +129,7 @@
       </div>
     </div>
   </nav>
-  <script>
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-      btn.setAttribute('aria-expanded', menu.classList.contains('hidden') ? 'false' : 'true');
-      btn.querySelector('svg').innerHTML = menu.classList.contains('hidden') ? '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>' : '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>';
-    });
-  </script>
+  <script src="js/nav.js" defer></script>
 
   <!-- MAIN -->
   <main class="pt-32 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
@@ -423,5 +423,7 @@
 
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Nutrition Codes Academy", "url": "https://nutritioncodes.com/", "logo": "https://nutritioncodes.com/assets/logos/primary01.svg", "sameAs": ["https://www.instagram.com/nutritioncodes/"], "description": "India's most rigorous nutrition and fitness education platform."}</script>
 
+<script src="js/tilt.js" defer></script>
+<script src="js/polish.js" defer></script>
 </body>
 </html>

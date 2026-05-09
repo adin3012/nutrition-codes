@@ -17,11 +17,19 @@
   <link rel="canonical" href="https://nutritioncodes.com/">
   <link rel="icon" type="image/svg+xml" href="assets/logos/primary01.svg">
   <meta name="description" content="India's most rigorous nutrition and fitness education platform. Join 300+ scholars mastering science-backed coaching with Nutrition Codes Academy.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shared.css">
   <script>
     tailwind.config = {
       theme: {
@@ -146,7 +154,7 @@
   <nav class="fixed top-0 w-full z-50 border-b border-white/10" style="background: linear-gradient(135deg, #05101f 0%, #0d2147 100%);">
     <div class="flex justify-between items-center h-14 md:h-16 px-4 md:px-10 max-w-7xl mx-auto">
       <!-- Logo + name stacked -->
-      <a href="index.html"><img src="assets/logos/primary01.svg" alt="Nutrition Codes" class="h-8 md:h-9 brightness-0 invert"></a>
+      <a href="index.html"><img decoding="async" src="assets/logos/primary01.svg" alt="Nutrition Codes" class="h-8 md:h-9 brightness-0 invert"></a>
       <!-- Desktop links -->
       <div class="hidden md:flex items-center gap-10 font-body">
         <a href="about.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">About Us</a>
@@ -179,21 +187,13 @@
       </div>
     </div>
   </nav>
-  <script>
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-      btn.setAttribute('aria-expanded', menu.classList.contains('hidden') ? 'false' : 'true');
-      btn.querySelector('svg').innerHTML = menu.classList.contains('hidden') ? '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>' : '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>';
-    });
-  </script>
+  <script src="js/nav.js" defer></script>
 
   <!-- HERO -->
   <section id="main" class="relative flex flex-col justify-center md:justify-end" style="min-height:100vh;min-height:100svh;">
     <picture>
       <source media="(max-width:1023px)" srcset="assets/images/hero-main-mobile.jpg?v=3">
-      <img decoding="async" src="assets/images/hero-main.jpg" alt="" class="hero-bg-img" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+      <img decoding="async" loading="eager" fetchpriority="high" src="assets/images/hero-main.jpg" alt="" class="hero-bg-img" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
     </picture>
     <!-- stronger overlay on mobile for text readability -->
     <div class="hero-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;"></div>
@@ -206,10 +206,10 @@
         India's most rigorous nutrition and fitness education platform. We don't teach trends — we decode the science behind lasting human performance.
       </p>
       <div class="flex flex-col sm:flex-row gap-3 md:gap-4 pt-1 items-center md:items-start">
-        <a href="contact.html" class="w-full sm:w-auto bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/40 transition-all font-body text-center">
+        <a href="contact.html" class="w-full sm:w-auto bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/40 transition-all font-body text-center btn-glow">
           Enroll Now
         </a>
-        <a href="curriculum.html" class="w-full sm:w-auto border-2 border-white text-white px-8 py-3.5 rounded-xl font-bold text-base hover:bg-white hover:text-primary transition-all font-body text-center">
+        <a href="curriculum.html" class="w-full sm:w-auto border-2 border-accent text-accent px-8 py-3.5 rounded-xl font-bold text-base hover:bg-accent hover:text-primary transition-all font-body text-center">
           View Courses
         </a>
       </div>
@@ -255,12 +255,12 @@
         <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">What We Teach</p>
         <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">Core Pillars of Excellence</h2>
         <p class="text-on-surface-variant text-lg font-body max-w-2xl mx-auto mt-3">Five evidence-based domains that transform how you understand and apply nutrition, exercise, and coaching science.</p>
-        <div class="w-16 h-1 bg-secondary rounded-full mx-auto mt-5"></div>
+        <div class="section-divider mt-5"><span class="dot"></span></div>
       </div>
       <!-- Bento Grid -->
       <div class="grid grid-cols-12 gap-5">
         <!-- Pillar 1 large -->
-        <div class="col-span-12 md:col-span-8 rounded-3xl bg-surface-low p-8 md:p-10 flex flex-col sm:flex-row gap-8 items-center border border-outline-variant/40 hover:shadow-lg transition-shadow scroll-reveal from-left" style="transition-delay:0ms">
+        <div class="col-span-12 md:col-span-8 rounded-3xl bg-surface-low p-8 md:p-10 flex flex-col sm:flex-row gap-8 items-center border border-outline-variant/40 card-premium tilt-3d hover:shadow-lg scroll-reveal from-left" style="transition-delay:0ms">
           <div class="flex-1 space-y-4">
             <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center">
               <span class="material-symbols-outlined text-secondary text-3xl">nutrition</span>
@@ -278,7 +278,7 @@
           </div>
         </div>
         <!-- Pillar 2 -->
-        <div class="col-span-12 md:col-span-4 rounded-3xl bg-primary text-white p-8 space-y-4 hover:shadow-lg transition-shadow scroll-reveal from-right" style="transition-delay:150ms">
+        <div class="col-span-12 md:col-span-4 rounded-3xl bg-primary text-white p-8 space-y-4 card-premium tilt-3d hover:shadow-lg scroll-reveal from-right" style="transition-delay:150ms">
           <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center">
             <span class="material-symbols-outlined text-accent text-3xl">fitness_center</span>
           </div>
@@ -293,7 +293,7 @@
           </a>
         </div>
         <!-- Pillar 3 -->
-        <div class="col-span-12 md:col-span-4 rounded-3xl bg-surface-low p-8 space-y-4 border border-outline-variant/40 hover:shadow-lg transition-shadow scroll-reveal from-left" style="transition-delay:300ms">
+        <div class="col-span-12 md:col-span-4 rounded-3xl bg-surface-low p-8 space-y-4 border border-outline-variant/40 card-premium tilt-3d hover:shadow-lg scroll-reveal from-left" style="transition-delay:300ms">
           <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center">
             <span class="material-symbols-outlined text-accent text-3xl">bedtime</span>
           </div>
@@ -308,7 +308,7 @@
           </a>
         </div>
         <!-- Pillar 4 -->
-        <div class="col-span-12 md:col-span-4 rounded-3xl bg-primary-container text-white p-8 space-y-4 hover:shadow-lg transition-shadow scroll-reveal from-right" style="transition-delay:450ms">
+        <div class="col-span-12 md:col-span-4 rounded-3xl bg-primary-container text-white p-8 space-y-4 card-premium tilt-3d hover:shadow-lg scroll-reveal from-right" style="transition-delay:450ms">
           <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center">
             <span class="material-symbols-outlined text-accent text-3xl">groups</span>
           </div>
@@ -323,7 +323,7 @@
           </a>
         </div>
         <!-- Pillar 5 -->
-        <div class="col-span-12 md:col-span-4 rounded-3xl bg-surface-low p-8 space-y-4 border border-outline-variant/40 hover:shadow-lg transition-shadow scroll-reveal from-left" style="transition-delay:600ms">
+        <div class="col-span-12 md:col-span-4 rounded-3xl bg-surface-low p-8 space-y-4 border border-outline-variant/40 card-premium tilt-3d hover:shadow-lg scroll-reveal from-left" style="transition-delay:600ms">
           <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center">
             <span class="material-symbols-outlined text-secondary text-3xl">biotech</span>
           </div>
@@ -341,14 +341,86 @@
     </div>
   </section>
 
-  <!-- NCA METHOD -->
+  <!-- WHAT DOES OUR COURSE INCLUDE -->
   <section class="bg-surface-low py-24">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-16 scroll-reveal from-bottom">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">What You Get</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">What Does Our Course Include?</h2>
+        <p class="text-on-surface-variant text-lg font-body max-w-2xl mx-auto">This is more than just a course — it's a career-long support system designed to help you learn, apply, and grow without limits.</p>
+        <div class="section-divider mt-5"><span class="dot"></span></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-3xl p-8 space-y-4 border border-outline-variant/40 hover:-translate-y-1 hover:shadow-lg transition-all scroll-reveal from-left">
+          <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-secondary text-3xl">all_inclusive</span>
+          </div>
+          <h3 class="font-display text-xl font-extrabold text-on-surface">Lifetime Access</h3>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Pay once and unlock lifetime access to all past, present, and future lectures. The learning never stops.</p>
+        </div>
+        <div class="bg-white rounded-3xl p-8 space-y-4 border border-outline-variant/40 hover:-translate-y-1 hover:shadow-lg transition-all scroll-reveal from-bottom" style="transition-delay:100ms">
+          <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-accent text-3xl">update</span>
+          </div>
+          <h3 class="font-display text-xl font-extrabold text-on-surface">Evolving Curriculum</h3>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">There are no fixed timelines. New topics and lectures are continuously added as the industry evolves.</p>
+        </div>
+        <div class="bg-white rounded-3xl p-8 space-y-4 border border-outline-variant/40 hover:-translate-y-1 hover:shadow-lg transition-all scroll-reveal from-right" style="transition-delay:200ms">
+          <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-primary text-3xl">support_agent</span>
+          </div>
+          <h3 class="font-display text-xl font-extrabold text-on-surface">Personal Mentorship</h3>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Get personal guidance to overcome doubts and roadblocks, ensuring you always move forward in your coaching career.</p>
+        </div>
+        <div class="bg-white rounded-3xl p-8 space-y-4 border border-outline-variant/40 hover:-translate-y-1 hover:shadow-lg transition-all scroll-reveal from-left" style="transition-delay:300ms">
+          <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-secondary text-3xl">live_tv</span>
+          </div>
+          <h3 class="font-display text-xl font-extrabold text-on-surface">Live &amp; Recorded Sessions</h3>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">All lectures are delivered LIVE on Zoom during weekends, with full recordings available if you can't attend live.</p>
+        </div>
+        <div class="bg-primary rounded-3xl p-8 space-y-4 text-white hover:-translate-y-1 hover:shadow-lg transition-all scroll-reveal from-bottom" style="transition-delay:400ms">
+          <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-accent text-3xl">library_books</span>
+          </div>
+          <h3 class="font-display text-xl font-extrabold">Additional Resources</h3>
+          <ul class="space-y-2 text-sm font-body text-white/70">
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-sm">check_circle</span>Textbook recommendations</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-sm">check_circle</span>Lecture PDF notes for revision</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-sm">check_circle</span>Community group for networking</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-sm">check_circle</span>Regular LIVE Q&amp;A sessions</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-sm">check_circle</span>Interactive quizzes</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-3xl p-8 space-y-4 border border-outline-variant/40 hover:-translate-y-1 hover:shadow-lg transition-all scroll-reveal from-right" style="transition-delay:500ms">
+          <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-accent text-3xl">schedule</span>
+          </div>
+          <h3 class="font-display text-xl font-extrabold text-on-surface">Weekend Schedule</h3>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Sessions are typically held on weekends at 2 PM. One lecture per week gives you ample time to absorb and practice.</p>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Conducted in both <span class="font-bold text-on-surface">Hindi &amp; English</span>.</p>
+        </div>
+      </div>
+      <div class="mt-8 max-w-xl mx-auto scroll-reveal from-bottom" style="transition-delay:600ms">
+        <div class="bg-primary rounded-3xl p-8 text-white text-center space-y-4 hover:-translate-y-1 hover:shadow-lg transition-all">
+          <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mx-auto">
+            <span class="material-symbols-outlined text-accent text-3xl">verified</span>
+          </div>
+          <h3 class="font-display text-xl font-extrabold">Certification Program</h3>
+          <p class="text-white/70 text-sm font-body leading-relaxed">Complete the program and earn your NCA certification — a credential that signals rigorous, evidence-based training to clients and employers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NCA METHOD -->
+  <section class="bg-white py-24">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
       <div class="text-center mb-16 scroll-reveal from-bottom">
         <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">How We Teach</p>
         <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">The NCA Method</h2>
         <p class="text-on-surface-variant text-lg font-body max-w-xl mx-auto">Three stages that take you from raw information to confident mastery — and a thriving practice.</p>
-        <div class="w-16 h-1 bg-accent rounded-full mx-auto mt-5"></div>
+        <div class="section-divider mt-5"><span class="dot"></span></div>
       </div>
       <!-- Row 1: Image Left, Text Right -->
       <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-center mb-16 md:mb-24 scroll-reveal from-left">
@@ -372,7 +444,7 @@
       <!-- Row 2: Text Left, Image Right -->
       <div class="flex flex-col md:flex-row-reverse gap-10 md:gap-16 items-center mb-16 md:mb-24 scroll-reveal from-right">
         <div class="w-full md:w-1/2 rounded-3xl overflow-hidden shadow-xl flex-shrink-0">
-          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&auto=format&fit=crop&q=80" alt="Apply to Real Clients" class="w-full h-64 md:h-[400px] object-cover hover:scale-105 transition-transform duration-700">
+          <img loading="lazy" decoding="async" src="assets/images/nca-method-clients.jpg" alt="Apply to Real Clients" class="w-full h-64 md:h-[400px] object-cover hover:scale-105 transition-transform duration-700">
         </div>
         <div class="w-full md:w-1/2 space-y-5">
           <div class="inline-flex w-12 h-12 rounded-2xl bg-accent/20 items-center justify-center text-accent font-display font-extrabold text-xl">02</div>
@@ -419,7 +491,7 @@
         <p class="text-on-surface-variant text-lg font-body max-w-xl mx-auto mt-3">300+ coaches across India, UAE, USA and beyond trust NCA to level up their practice.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all scroll-reveal from-left">
+        <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all tilt-3d scroll-reveal from-left">
           <div class="text-accent text-xl tracking-wide">★★★★★</div>
           <p class="text-on-surface leading-relaxed font-body italic">
             "Being part of NC Academy has been one of the best decisions of my life. The knowledge, clarity, and mentorship here are unmatched. Aman Sir's no-nonsense teaching style makes even complex concepts easy, while Rishabh Sir's depth of knowledge and patience ensure complete understanding."
@@ -432,7 +504,7 @@
             </div>
           </div>
         </div>
-        <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all scroll-reveal from-bottom" style="transition-delay:150ms">
+        <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all tilt-3d scroll-reveal from-bottom" style="transition-delay:150ms">
           <div class="text-accent text-xl tracking-wide">★★★★★</div>
           <p class="text-on-surface leading-relaxed font-body italic">
             "The coaching industry can be a lonely place. NCA is here to change that. Nutrition, exercise science, coaching best practices, mindset, business growth — pick any area of coaching and NCA has it covered. Join NCA. It's your path to lifelong learning and growth."
@@ -445,7 +517,7 @@
             </div>
           </div>
         </div>
-        <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all scroll-reveal from-right" style="transition-delay:300ms">
+        <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all tilt-3d scroll-reveal from-right" style="transition-delay:300ms">
           <div class="text-accent text-xl tracking-wide">★★★★★</div>
           <p class="text-on-surface leading-relaxed font-body italic">
             "NCA gave me what no other certification could — a framework that actually works for real people. The depth of science here is unlike anything else available in India. I came in as a trainer; I left as a coach who genuinely understands the human body."
@@ -508,6 +580,37 @@
       <div class="text-center mt-10">
         <a href="about.html" class="inline-flex items-center gap-2 border-2 border-primary text-primary px-8 py-3 rounded-xl font-bold font-body hover:bg-primary hover:text-white transition-all">
           About Our Faculty <span class="material-symbols-outlined text-base">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE PREVIEWS -->
+  <section class="bg-white py-16">
+    <div class="max-w-5xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-10 scroll-reveal from-bottom">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Explore First</p>
+        <h2 class="font-display text-3xl md:text-4xl font-extrabold text-on-surface mb-3">Preview Our Content</h2>
+        <p class="text-on-surface-variant font-body max-w-lg mx-auto">Get a taste of what NCA offers before you enroll.</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://docs.google.com/spreadsheets/d/1xajKMSz3KXCwDizIwl9UPUepRpcR5ogC_enhNMlDqx4/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-surface-low border border-outline-variant/40 text-on-surface px-6 py-3 rounded-xl font-bold text-sm font-body hover:-translate-y-1 hover:shadow-md transition-all">
+          <span class="material-symbols-outlined text-secondary text-base">table_chart</span>
+          Full Course Curriculum
+          <span class="material-symbols-outlined text-on-surface-variant text-sm">open_in_new</span>
+        </a>
+        <a href="https://drive.google.com/file/d/1w8THJ9v79oqfsGKYUQl-qVWD-jHZYg9K/view?usp=drivesdk" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-surface-low border border-outline-variant/40 text-on-surface px-6 py-3 rounded-xl font-bold text-sm font-body hover:-translate-y-1 hover:shadow-md transition-all">
+          <span class="material-symbols-outlined text-accent text-base">nutrition</span>
+          Free Nutrition Lecture
+          <span class="material-symbols-outlined text-on-surface-variant text-sm">open_in_new</span>
+        </a>
+        <a href="https://youtu.be/s9XlY6nOfFY?si=EA59EGBlTkUL8kRD" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-surface-low border border-outline-variant/40 text-on-surface px-6 py-3 rounded-xl font-bold text-sm font-body hover:-translate-y-1 hover:shadow-md transition-all">
+          <span class="material-symbols-outlined text-primary text-base">fitness_center</span>
+          Free Exercise Lecture
+          <span class="material-symbols-outlined text-on-surface-variant text-sm">open_in_new</span>
         </a>
       </div>
     </div>
@@ -619,5 +722,7 @@
 
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Nutrition Codes Academy", "url": "https://nutritioncodes.com/", "logo": "https://nutritioncodes.com/assets/logos/primary01.svg", "sameAs": ["https://www.instagram.com/nutritioncodes/"], "description": "India's most rigorous nutrition and fitness education platform."}</script>
 
+<script src="js/tilt.js" defer></script>
+<script src="js/polish.js" defer></script>
 </body>
 </html>

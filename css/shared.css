@@ -1,0 +1,416 @@
+/* =============================================
+   SHARED STYLES — Nutrition Codes Academy
+   Common styles across all pages
+   ============================================= */
+
+/* ── DNA Pattern Background ── */
+.dna-pattern {
+  background-image: radial-gradient(#2b467d 0.5px, transparent 0.5px);
+  background-size: 24px 24px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* ── Glass Card ── */
+.glass-card {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(43,70,125,0.1);
+}
+
+/* ── Material Symbols ── */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ── Body font fallback ── */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── Smooth Scroll ── */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* ── Hero backgrounds ── */
+.hero-bg-img {
+  object-position: center top;
+}
+.hero-overlay {
+  background: linear-gradient(to top, #05101f 30%, rgba(5,16,31,0.75) 60%, rgba(5,16,31,0.25) 100%);
+}
+
+/* ── Mobile hero adjustments ── */
+@media (max-width: 1023px) {
+  .hero-bg-img {
+    object-position: 70% top;
+  }
+  .hero-overlay {
+    background: linear-gradient(to top, rgba(5,16,31,0.85) 0%, rgba(5,16,31,0.55) 50%, rgba(5,16,31,0.20) 100%) !important;
+  }
+  .hero-text-shadow {
+    text-shadow: 0 2px 10px rgba(0,0,0,0.60), 0 4px 20px rgba(0,0,0,0.40);
+  }
+}
+
+/* ── Scroll Reveal Animations ── */
+.scroll-reveal {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.scroll-reveal.from-left {
+  transform: translateX(-60px);
+}
+.scroll-reveal.from-right {
+  transform: translateX(60px);
+}
+.scroll-reveal.from-bottom {
+  transform: translateY(40px);
+}
+.scroll-reveal.in-view {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+/* ── Faculty / Timeline slide animations ── */
+.faculty-slide,
+.timeline-card {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.faculty-slide.from-left,
+.timeline-card.from-left {
+  transform: translateX(-60px);
+}
+.faculty-slide.from-right,
+.timeline-card.from-right {
+  transform: translateX(60px);
+}
+.faculty-slide.in-view,
+.timeline-card.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Reduced motion preference ── */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .faculty-slide,
+  .timeline-card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ── Form Status ── */
+.form-status {
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+}
+.form-status.success {
+  color: #059669;
+  background: #ecfdf5;
+  border: 1px solid #6ee7b7;
+}
+.form-status.error {
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+}
+
+/* ── FAQ Accordion ── */
+.faq-item details summary {
+  cursor: pointer;
+  list-style: none;
+}
+.faq-item details summary::-webkit-details-marker {
+  display: none;
+}
+.faq-icon-open {
+  display: none;
+}
+.faq-item details[open] .faq-icon-closed {
+  display: none;
+}
+.faq-item details[open] .faq-icon-open {
+  display: inline-block;
+}
+
+/* ── HAMBURGER ROBUSTNESS FIX ──
+   Explicitly ensure mobile menu button is visible
+   below the md breakpoint even if Tailwind CDN hiccups.
+   This overrides any accidental hiding.
+*/
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  #nc-menu-btn {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+@media (min-width: 769px) {
+  #menu-btn {
+    display: none !important;
+  }
+  #nc-menu-btn {
+    display: none !important;
+  }
+}
+
+/* ── Mobile menu open state helpers ── */
+#mobile-menu.open,
+#nc-mobile-menu.open {
+  display: block !important;
+}
+
+/* ── Skip link improvements ── */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  display: block;
+  padding: 8px 16px;
+  background: #40F39A;
+  color: #0b1b36;
+  font-weight: 600;
+  border-radius: 8px;
+  z-index: 99999;
+}
+
+/* =============================================
+   PREMIUM VISUAL ENHANCEMENTS (Option A)
+   ============================================= */
+
+/* ── Section Divider (replaces boring bar) ── */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  width: 32px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4173F4, transparent);
+  border-radius: 2px;
+}
+.section-divider .dot {
+  width: 6px;
+  height: 6px;
+  background: #40F39A;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(64, 243, 154, 0.5);
+}
+
+/* ── Premium Card Hover (all pages) ── */
+.card-premium {
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.card-premium:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(16, 47, 101, 0.12);
+  border-color: rgba(64, 243, 154, 0.4);
+}
+
+/* ── Accent Glow Button ── */
+.btn-glow {
+  position: relative;
+  overflow: visible;
+}
+.btn-glow::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #40F39A, #4173F4);
+  opacity: 0;
+  filter: blur(12px);
+  z-index: -1;
+  transition: opacity 0.4s ease;
+}
+.btn-glow:hover::after {
+  opacity: 0.5;
+}
+
+/* ── Active nav accent underline ── */
+nav a[aria-current="page"] {
+  color: #40F39A !important;
+  border-bottom-color: #40F39A !important;
+}
+#nc-nav a[aria-current="page"] {
+  color: #40F39A !important;
+  border-bottom-color: #40F39A !important;
+}
+
+/* ── Nav blur on scroll ── */
+nav.nav-scrolled {
+  background: rgba(5, 16, 31, 0.85) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom-color: rgba(255,255,255,0.08) !important;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+}
+
+/* ── Link underline animation ── */
+.link-animated {
+  position: relative;
+  text-decoration: none;
+}
+.link-animated::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #40F39A, #4173F4);
+  transition: width 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.link-animated:hover::after {
+  width: 100%;
+}
+
+/* ── Button press effect ── */
+.btn-press:active {
+  transform: scale(0.97) !important;
+}
+
+/* ── Image reveal on load ── */
+.img-reveal {
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0.8s ease, transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.img-reveal.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── FAQ smooth open/close ── */
+details > div {
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s ease;
+}
+details:not([open]) > div {
+  max-height: 0;
+  opacity: 0;
+}
+details[open] > div {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* ── Image zoom on card hover ── */
+.img-zoom {
+  overflow: hidden;
+}
+.img-zoom img {
+  transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.img-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* =============================================
+   3D CARD TILT EFFECT
+   ============================================= */
+.tilt-3d {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.tilt-3d .tilt-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  mix-blend-mode: overlay;
+}
+
+/* =============================================
+   PAGE TRANSITION OVERLAY
+   ============================================= */
+#page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  visibility: hidden;
+  pointer-events: none;
+}
+#page-transition .pt-inner {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #05101f 0%, #0d2147 50%, #102f65 100%);
+  transform: translateY(-100%);
+}
+
+/* Enter: cover the screen */
+#page-transition.pt-enter {
+  visibility: visible;
+  pointer-events: all;
+}
+#page-transition.pt-enter .pt-inner {
+  animation: ptSlideIn 0.5s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+/* Exit: reveal content */
+#page-transition.pt-exit {
+  visibility: visible;
+}
+#page-transition.pt-exit .pt-inner {
+  animation: ptSlideOut 0.5s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes ptSlideIn {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+@keyframes ptSlideOut {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #page-transition,
+  #page-transition .pt-inner {
+    animation: none !important;
+    transition: none !important;
+    display: none !important;
+  }
+}
