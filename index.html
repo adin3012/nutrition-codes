@@ -593,57 +593,86 @@
   </section>
 
   <!-- FREE PREVIEWS -->
-  <section class="bg-white py-16">
-    <div class="max-w-5xl mx-auto px-4 md:px-8">
-      <div class="text-center mb-10 scroll-reveal from-bottom">
+  <section class="bg-surface-low py-20">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-14 scroll-reveal from-bottom">
         <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Explore First</p>
-        <h2 class="font-display text-3xl md:text-4xl font-extrabold text-on-surface mb-3">Preview Our Content</h2>
-        <p class="text-on-surface-variant font-body max-w-lg mx-auto">Get a taste of what NCA offers before you enroll.</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">Preview Our Content</h2>
+        <p class="text-on-surface-variant text-lg font-body max-w-xl mx-auto">Get a real taste of what NCA offers before you enroll. No sign-up required.</p>
       </div>
-      <div class="flex flex-wrap justify-center gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Curriculum -->
         <a href="https://docs.google.com/spreadsheets/d/1xajKMSz3KXCwDizIwl9UPUepRpcR5ogC_enhNMlDqx4/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 bg-surface-low border border-outline-variant/40 text-on-surface px-6 py-3 rounded-xl font-bold text-sm font-body hover:-translate-y-1 hover:shadow-md transition-all">
-          <span class="material-symbols-outlined text-secondary text-base">table_chart</span>
-          Full Course Curriculum
-          <span class="material-symbols-outlined text-on-surface-variant text-sm">open_in_new</span>
+           class="group bg-white rounded-3xl p-8 border border-outline-variant/40 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all flex flex-col gap-5 scroll-reveal from-left">
+          <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-secondary text-3xl">table_chart</span>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-display font-extrabold text-on-surface text-xl mb-2">Full Course Curriculum</h3>
+            <p class="text-on-surface-variant font-body text-sm leading-relaxed">See every module, topic, and lecture in our complete curriculum spreadsheet.</p>
+          </div>
+          <div class="inline-flex items-center gap-2 text-secondary font-bold font-body text-sm group-hover:gap-3 transition-all">
+            View Curriculum <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </div>
         </a>
+        <!-- Nutrition Lecture -->
         <a href="https://drive.google.com/file/d/1w8THJ9v79oqfsGKYUQl-qVWD-jHZYg9K/view?usp=drivesdk" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 bg-surface-low border border-outline-variant/40 text-on-surface px-6 py-3 rounded-xl font-bold text-sm font-body hover:-translate-y-1 hover:shadow-md transition-all">
-          <span class="material-symbols-outlined text-accent text-base">nutrition</span>
-          Free Nutrition Lecture
-          <span class="material-symbols-outlined text-on-surface-variant text-sm">open_in_new</span>
+           class="group bg-white rounded-3xl p-8 border border-outline-variant/40 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all flex flex-col gap-5 scroll-reveal from-bottom" style="transition-delay:100ms">
+          <div class="w-14 h-14 rounded-2xl bg-accent/15 flex items-center justify-center">
+            <span class="material-symbols-outlined text-accent text-3xl">nutrition</span>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-display font-extrabold text-on-surface text-xl mb-2">Free Nutrition Lecture</h3>
+            <p class="text-on-surface-variant font-body text-sm leading-relaxed">Watch a full nutrition lecture to experience our teaching style and depth of science.</p>
+          </div>
+          <div class="inline-flex items-center gap-2 text-accent font-bold font-body text-sm group-hover:gap-3 transition-all">
+            Watch Now <span class="material-symbols-outlined text-base">play_circle</span>
+          </div>
         </a>
+        <!-- Exercise Lecture -->
         <a href="https://youtu.be/s9XlY6nOfFY?si=EA59EGBlTkUL8kRD" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 bg-surface-low border border-outline-variant/40 text-on-surface px-6 py-3 rounded-xl font-bold text-sm font-body hover:-translate-y-1 hover:shadow-md transition-all">
-          <span class="material-symbols-outlined text-primary text-base">fitness_center</span>
-          Free Exercise Lecture
-          <span class="material-symbols-outlined text-on-surface-variant text-sm">open_in_new</span>
+           class="group bg-white rounded-3xl p-8 border border-outline-variant/40 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all flex flex-col gap-5 scroll-reveal from-right" style="transition-delay:200ms">
+          <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-primary text-3xl">fitness_center</span>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-display font-extrabold text-on-surface text-xl mb-2">Free Exercise Lecture</h3>
+            <p class="text-on-surface-variant font-body text-sm leading-relaxed">See how we break down complex exercise science topics in an accessible, rigorous way.</p>
+          </div>
+          <div class="inline-flex items-center gap-2 text-primary font-bold font-body text-sm group-hover:gap-3 transition-all">
+            Watch Now <span class="material-symbols-outlined text-base">play_circle</span>
+          </div>
         </a>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="bg-surface-mid py-24 relative overflow-hidden">
-    <div class="absolute inset-0 dna-pattern"></div>
-    <div class="max-w-4xl mx-auto px-4 md:px-8 text-center relative z-10 scroll-reveal from-bottom">
-      <div class="inline-flex items-center gap-2 bg-secondary/10 border border-secondary/20 text-secondary px-4 py-2 rounded-full text-sm font-bold font-body tracking-wide mb-6">
+  <section class="py-24 relative overflow-hidden" style="background: linear-gradient(135deg, #05101f 0%, #0d2147 100%);">
+    <div class="absolute inset-0 dna-pattern opacity-10"></div>
+    <div class="max-w-5xl mx-auto px-4 md:px-8 text-center relative z-10 scroll-reveal from-bottom">
+      <div class="inline-flex items-center gap-2 bg-accent/20 border border-accent/30 text-accent px-4 py-2 rounded-full text-sm font-bold font-body tracking-widest mb-8">
         <span class="material-symbols-outlined text-base">rocket_launch</span>
-        LIMITED COHORTS
+        LIMITED COHORTS — ENROL NOW
       </div>
-      <h2 class="font-display text-4xl md:text-6xl font-extrabold text-on-surface mb-6 leading-tight">
-        Ready to Lead the Revolution?
+      <h2 class="font-display text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+        Ready to Decode<br class="hidden md:block"> Your Future?
       </h2>
-      <p class="text-on-surface-variant text-lg md:text-xl leading-relaxed mb-10 font-body max-w-2xl mx-auto">
-        Join the growing community of evidence-based coaches who are transforming the health industry with real science, not guesswork.
+      <p class="text-white/70 text-lg md:text-xl leading-relaxed mb-10 font-body max-w-2xl mx-auto">
+        Join 300+ evidence-based coaches transforming the health industry with real science. Not templates. Not trends. Just mastery.
       </p>
-      <div class="flex flex-wrap gap-4 justify-center">
-        <a href="contact.html" class="bg-secondary text-white px-10 py-4 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-xl hover:shadow-secondary/30 transition-all font-body">
+      <div class="flex flex-wrap gap-4 justify-center mb-10">
+        <a href="contact.html" class="bg-accent text-on-surface px-10 py-4 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-xl hover:shadow-accent/30 transition-all font-body">
           Apply Now
         </a>
-        <a href="curriculum.html" class="border-2 border-primary text-primary px-10 py-4 rounded-xl font-bold text-base hover:bg-primary hover:text-white transition-all font-body">
+        <a href="curriculum.html" class="border-2 border-white/40 text-white px-10 py-4 rounded-xl font-bold text-base hover:bg-white hover:text-on-surface transition-all font-body">
           View Curriculum
         </a>
+      </div>
+      <div class="flex flex-wrap justify-center gap-8 text-white/50 text-sm font-body">
+        <span class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-base">check_circle</span> Science-backed curriculum</span>
+        <span class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-base">check_circle</span> Expert faculty</span>
+        <span class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-base">check_circle</span> Lifetime community access</span>
       </div>
     </div>
   </section>
