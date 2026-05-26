@@ -113,49 +113,6 @@
       opacity: 1;
       transform: translateX(0) translateY(0);
     }
-    /* Sticky CTA Button */
-    .sticky-guide-btn {
-      position: fixed;
-      bottom: 1rem;
-      right: 1rem;
-      z-index: 40;
-      background: #4173F4;
-      color: #fff;
-      padding: 0.875rem 1.5rem;
-      border-radius: 9999px;
-      font-weight: 700;
-      font-size: 0.875rem;
-      box-shadow: 0 10px 25px rgba(65,115,244,0.4);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border: none;
-      cursor: pointer;
-      font-family: 'Inter', sans-serif;
-    }
-    .sticky-guide-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(65,115,244,0.5);
-    }
-    .sticky-guide-btn .material-symbols-outlined {
-      font-size: 1.25rem;
-    }
-    @media (max-width: 640px) {
-      .sticky-guide-btn {
-        bottom: 0;
-        left: 0;
-        right: 0;
-        border-radius: 1rem 1rem 0 0;
-        justify-content: center;
-        padding: 1rem;
-        font-size: 1rem;
-      }
-    }
-    /* Hide sticky button when modal is open */
-    body.modal-open .sticky-guide-btn {
-      display: none;
-    }
     /* Swiper video testimonials */
     .video-swiper .swiper-button-next,
     .video-swiper .swiper-button-prev {
@@ -358,6 +315,7 @@
           <input type="hidden" name="_subject" value="New Course Guide Download - Nutrition Codes">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="form_type" value="course_guide_download">
+          <input type="hidden" name="_autoresponse" value="Thank you for your interest in the NCA Course Guide! Your PDF should be downloading automatically. If it didn't start, please reply to this email and we'll send it to you directly. Questions? Email us at nutritioncodes0@gmail.com">
           <div>
             <label for="guide-name" class="block text-sm font-semibold text-on-surface font-body mb-1.5">Full Name</label>
             <input type="text" id="guide-name" name="name" required placeholder="Your full name"
@@ -435,7 +393,7 @@
           });
           if (res.ok) {
             status.className = 'text-center text-sm font-medium text-green-600 bg-green-50 border border-green-200 rounded-xl px-4 py-3';
-            status.textContent = '✓ Course guide sent! Check your inbox. The download will start automatically.';
+            status.textContent = '✓ Your PDF is downloading now! Check your downloads folder.';
             status.classList.remove('hidden');
             form.reset();
             // Trigger PDF download
@@ -480,7 +438,7 @@
         <div class="scroll-reveal from-left md:col-span-2 lg:col-span-2" style="transition-delay: 0ms">
           <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-outline-variant/30 flex flex-col relative group h-full">
             <div class="h-[220px] relative overflow-hidden">
-              <img loading="lazy" decoding="async" src="assets/images/course-cards/live-lectures.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Precision Nutrition">
+              <img loading="lazy" decoding="async" src="assets/images/pillar-nutrition.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Precision Nutrition">
               <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20"></div>
               <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider border border-white/20">
                 Pillar 1
@@ -508,7 +466,7 @@
         <div class="scroll-reveal from-left md:col-span-2 lg:col-span-2" style="transition-delay: 100ms">
           <div class="bg-primary rounded-3xl overflow-hidden shadow-xl border border-primary-container flex flex-col relative group text-white h-full">
             <div class="h-[220px] relative overflow-hidden">
-              <img loading="lazy" decoding="async" src="assets/images/course-cards/study-materials.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Exercise Physiology">
+              <img loading="lazy" decoding="async" src="assets/images/pillar-exercise.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Exercise Physiology">
               <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent"></div>
               <div class="absolute top-4 right-4 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full text-accent text-xs font-bold uppercase tracking-wider border border-accent/30">
                 Pillar 2
@@ -536,7 +494,7 @@
         <div class="scroll-reveal from-left md:col-span-2 lg:col-span-2" style="transition-delay: 200ms">
           <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-outline-variant/30 flex flex-col relative group h-full">
             <div class="h-[220px] relative overflow-hidden">
-              <img loading="lazy" decoding="async" src="assets/images/course-cards/lifetime-access.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Neural Restoration">
+              <img loading="lazy" decoding="async" src="assets/images/pillar-recovery.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Neural Restoration">
               <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20"></div>
               <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider border border-white/20">
                 Pillar 3
@@ -564,7 +522,7 @@
         <div class="scroll-reveal from-left md:col-span-2 lg:col-start-2 lg:col-span-2" style="transition-delay: 300ms">
           <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-outline-variant/30 flex flex-col relative group h-full">
             <div class="h-[220px] relative overflow-hidden">
-              <img loading="lazy" decoding="async" src="assets/images/course-cards/qa-sessions.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Ergogenic Aids">
+              <img loading="lazy" decoding="async" src="assets/images/pillar-supplements.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Ergogenic Aids">
               <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20"></div>
               <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider border border-white/20">
                 Pillar 4
@@ -592,7 +550,7 @@
         <div class="scroll-reveal from-left md:col-start-2 md:col-span-2 lg:col-span-2" style="transition-delay: 400ms">
           <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-outline-variant/30 flex flex-col relative group h-full">
             <div class="h-[220px] relative overflow-hidden">
-              <img loading="lazy" decoding="async" src="assets/images/course-cards/community.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Mindset Pivot">
+              <img loading="lazy" decoding="async" src="assets/images/pillar-mindset.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Mindset Pivot">
               <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20"></div>
               <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider border border-white/20">
                 Pillar 5
@@ -820,7 +778,7 @@
         <div class="scroll-reveal from-left" style="transition-delay: 0ms">
           <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 group h-full bg-surface-low">
             <div class="aspect-video relative overflow-hidden">
-              <img loading="lazy" decoding="async" src="assets/images/pillar-nutrition.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Live Lectures">
+              <img loading="lazy" decoding="async" src="assets/images/course-cards/live-lectures.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Live Lectures">
               <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
               <div class="absolute bottom-4 left-4 right-4">
                 <span class="inline-flex items-center gap-1.5 bg-accent text-on-surface text-xs font-bold px-3 py-1.5 rounded-full">
@@ -860,7 +818,7 @@
         <div class="scroll-reveal from-right" style="transition-delay: 200ms">
           <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 group h-full bg-surface-low">
             <div class="aspect-video relative overflow-hidden">
-              <img loading="lazy" decoding="async" src="assets/images/pillar-mindset.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Community">
+              <img loading="lazy" decoding="async" src="assets/images/course-cards/community.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Community">
               <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
               <div class="absolute bottom-4 left-4 right-4">
                 <span class="inline-flex items-center gap-1.5 bg-white text-primary text-xs font-bold px-3 py-1.5 rounded-full">
@@ -880,7 +838,7 @@
         <div class="scroll-reveal from-left" style="transition-delay: 300ms">
           <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 group h-full bg-surface-low">
             <div class="aspect-video relative overflow-hidden">
-              <img loading="lazy" decoding="async" src="assets/images/pillar-exercise.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Study Materials">
+              <img loading="lazy" decoding="async" src="assets/images/course-cards/study-materials.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Study Materials">
               <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
               <div class="absolute bottom-4 left-4 right-4">
                 <span class="inline-flex items-center gap-1.5 bg-accent text-on-surface text-xs font-bold px-3 py-1.5 rounded-full">
@@ -900,7 +858,7 @@
         <div class="scroll-reveal from-bottom" style="transition-delay: 400ms">
           <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 group h-full bg-surface-low">
             <div class="aspect-video relative overflow-hidden">
-              <img loading="lazy" decoding="async" src="assets/images/pillar-supplements.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Q&A Sessions">
+              <img loading="lazy" decoding="async" src="assets/images/course-cards/qa-sessions.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Q&A Sessions">
               <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
               <div class="absolute bottom-4 left-4 right-4">
                 <span class="inline-flex items-center gap-1.5 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">
@@ -920,7 +878,7 @@
         <div class="scroll-reveal from-right" style="transition-delay: 500ms">
           <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 group h-full bg-surface-low">
             <div class="aspect-video relative overflow-hidden">
-              <img loading="lazy" decoding="async" src="assets/images/pillar-recovery.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Lifetime Access">
+              <img loading="lazy" decoding="async" src="assets/images/course-cards/lifetime-access.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Lifetime Access">
               <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
               <div class="absolute bottom-4 left-4 right-4">
                 <span class="inline-flex items-center gap-1.5 bg-white text-primary text-xs font-bold px-3 py-1.5 rounded-full">
@@ -1345,12 +1303,6 @@
   </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Nutrition Codes Academy", "url": "https://nutritioncodes.com/", "logo": "https://nutritioncodes.com/assets/logos/primary01.svg", "sameAs": ["https://www.instagram.com/nutritioncodes/"], "description": "India's most rigorous nutrition and fitness education platform."}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Course", "name": "NCA Mastership Program", "description": "Comprehensive nutrition and fitness coaching certification covering metabolic coding, biomechanics, sleep science, supplementation, and business mastery.", "provider": {"@type": "Organization", "name": "Nutrition Codes Academy", "sameAs": "https://nutritioncodes.com/"}, "url": "https://nutritioncodes.com/curriculum.html"}</script>
-
-<button class="sticky-guide-btn open-guide-modal-btn" aria-label="Download Course Guide">
-  <span class="material-symbols-outlined">download</span>
-  <span class="hidden sm:inline">Get Course Guide</span>
-  <span class="sm:hidden">Get Course Guide</span>
-</button>
 
 <script src="js/tilt.js" defer></script>
 <script src="js/polish.js" defer></script>
