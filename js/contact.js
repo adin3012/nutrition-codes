@@ -1,5 +1,5 @@
 /* =============================================
-   CONTACT.JS — Netlify form handling
+   CONTACT.JS — FormSubmit.co AJAX handling
    ============================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -15,13 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.disabled = true;
     btn.textContent = 'Sending…';
 
-    const data = new URLSearchParams(new FormData(form));
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
 
     try {
-      const res = await fetch('/', {
+      const res = await fetch(form.action, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: data.toString(),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data),
       });
 
       if (res.ok) {
@@ -33,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } catch {
       status.className = 'form-status error';
-      status.textContent = '✗ Something went wrong. Please email us directly.';
+      status.textContent = '✗ Something went wrong. Please email us directly at nutritioncodes0@gmail.com';
     } finally {
       btn.disabled = false;
       btn.textContent = 'Send Message';
