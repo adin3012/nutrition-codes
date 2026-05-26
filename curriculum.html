@@ -16,7 +16,7 @@
   <meta name="twitter:image" content="https://nutritioncodes.com/assets/images/og-curriculum.jpg">
   <link rel="canonical" href="https://nutritioncodes.com/curriculum.html">
   <link rel="icon" type="image/svg+xml" href="assets/logos/primary01.svg">
-  <meta name="description" content="Explore the Nutrition Codes Academy curriculum — a science-first mastership covering precision nutrition, exercise physiology, recovery, ergogenic aids, and elite coaching.">
+  <meta name="description" content="Explore the Nutrition Codes Academy curriculum. A science first mastership covering precision nutrition, exercise physiology, recovery, ergogenic aids, and elite coaching.">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
@@ -113,6 +113,62 @@
       opacity: 1;
       transform: translateX(0) translateY(0);
     }
+    /* Sticky CTA Button */
+    .sticky-guide-btn {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      z-index: 40;
+      background: #4173F4;
+      color: #fff;
+      padding: 0.875rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 0.875rem;
+      box-shadow: 0 10px 25px rgba(65,115,244,0.4);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: none;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+    }
+    .sticky-guide-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(65,115,244,0.5);
+    }
+    .sticky-guide-btn .material-symbols-outlined {
+      font-size: 1.25rem;
+    }
+    @media (max-width: 640px) {
+      .sticky-guide-btn {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 1rem 1rem 0 0;
+        justify-content: center;
+        padding: 1rem;
+        font-size: 1rem;
+      }
+    }
+    /* Hide sticky button when modal is open */
+    body.modal-open .sticky-guide-btn {
+      display: none;
+    }
+    /* Swiper video testimonials */
+    .video-swiper .swiper-button-next,
+    .video-swiper .swiper-button-prev {
+      width: 44px; height: 44px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 4px 16px rgba(16,47,101,0.12);
+      color: #102f65;
+    }
+    .video-swiper .swiper-button-next::after,
+    .video-swiper .swiper-button-prev::after { font-size: 16px; font-weight: 800; }
+    .video-swiper .swiper-pagination-bullet { background: #c4c6d1; opacity: 1; }
+    .video-swiper .swiper-pagination-bullet-active { background: #4173F4; }
   </style>
 </head>
 <body class="bg-background text-on-surface">
@@ -169,10 +225,10 @@
     <div class="relative w-full max-w-7xl mx-auto px-5 md:px-8 pb-10 md:pb-24 pt-24 md:pt-0 space-y-5 md:space-y-6 text-center md:text-left" style="z-index:2;">
       <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mx-auto md:mx-0 max-w-2xl">
         The Curriculum:<br>
-        <span class="text-accent">A Science-First Approach</span>
+        <span class="text-accent">A Science First Approach</span>
       </h1>
       <p class="text-white/80 text-base md:text-lg leading-relaxed font-body mx-auto md:mx-0 max-w-sm md:max-w-xl">
-        Five interconnected pillars of knowledge — each grounded in peer-reviewed science, taught by active practitioners who apply it every day.
+        Five interconnected pillars of knowledge, each grounded in peer reviewed science, taught by active practitioners who apply it every day.
       </p>
       <div class="flex flex-col sm:flex-row gap-3 md:gap-4 pt-1 items-center md:items-start">
         <a href="contact.html" class="w-full sm:w-auto bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/40 transition-all font-body text-center">
@@ -185,161 +241,449 @@
     </div>
   </section>
 
+  <!-- TRUST BAR -->
+  <section class="bg-primary border-y border-white/10">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 md:divide-x md:divide-white/10 text-center">
+        <div class="px-4 scroll-reveal from-bottom" style="transition-delay:0ms">
+          <div class="text-3xl md:text-4xl font-extrabold font-display text-accent mb-1">100+</div>
+          <div class="text-sm font-semibold text-white/90 font-body">Hours of Live Science</div>
+          <div class="text-xs text-white/50 mt-0.5 font-body">Expert-led, evidence-based lectures</div>
+        </div>
+        <div class="px-4 scroll-reveal from-bottom" style="transition-delay:100ms">
+          <div class="text-3xl md:text-4xl font-extrabold font-display text-accent mb-1">300+</div>
+          <div class="text-sm font-semibold text-white/90 font-body">Scholars Trained</div>
+          <div class="text-xs text-white/50 mt-0.5 font-body">Coaches across India, UAE, USA & beyond</div>
+        </div>
+        <div class="px-4 scroll-reveal from-bottom" style="transition-delay:200ms">
+          <div class="text-3xl md:text-4xl font-extrabold font-display text-accent mb-1">5</div>
+          <div class="text-sm font-semibold text-white/90 font-body">Expert Mentors</div>
+          <div class="text-xs text-white/50 mt-0.5 font-body">Active practitioners, not just academics</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET COURSE GUIDE BANNER -->
+  <section class="py-16 bg-surface-mid">
+    <div class="max-w-5xl mx-auto px-4 md:px-8">
+      <div class="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-outline-variant/30 flex flex-col md:flex-row items-center gap-8 md:gap-12 scroll-reveal from-bottom">
+        <div class="flex-shrink-0">
+          <div class="w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-secondary/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-secondary text-5xl md:text-6xl">menu_book</span>
+          </div>
+        </div>
+        <div class="flex-1 text-center md:text-left">
+          <h2 class="font-display text-2xl md:text-3xl font-extrabold text-on-surface mb-3">Get the Complete NCA Course Guide</h2>
+          <p class="text-on-surface-variant font-body mb-4">Download the full course brochure with detailed module breakdowns, faculty profiles, and everything you need to know about the NCA Mastership.</p>
+          <ul class="flex flex-wrap gap-2 justify-center md:justify-start mb-6">
+            <li class="bg-secondary/10 text-secondary text-xs font-bold font-body px-3 py-1.5 rounded-full border border-secondary/20">Full Syllabus</li>
+            <li class="bg-secondary/10 text-secondary text-xs font-bold font-body px-3 py-1.5 rounded-full border border-secondary/20">Module Breakdown</li>
+            <li class="bg-secondary/10 text-secondary text-xs font-bold font-body px-3 py-1.5 rounded-full border border-secondary/20">Pricing Details</li>
+            <li class="bg-secondary/10 text-secondary text-xs font-bold font-body px-3 py-1.5 rounded-full border border-secondary/20">Faculty Profiles</li>
+          </ul>
+          <button id="open-guide-modal" class="w-full sm:w-auto bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/40 transition-all font-body inline-flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined">download</span> Download Course Guide
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS NCA MASTERSHIP -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="scroll-reveal from-left">
+          <div class="rounded-3xl overflow-hidden aspect-[4/3] relative">
+            <img loading="lazy" decoding="async" src="assets/images/course-cards/live-lectures.jpg" class="w-full h-full object-cover" alt="NCA Live Lectures">
+            <div class="absolute inset-0 bg-gradient-to-tr from-primary/60 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md border border-white/20 text-white text-xs font-bold px-4 py-2 rounded-full">
+                <span class="material-symbols-outlined text-sm">videocam</span> Live Weekend Sessions
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-reveal from-right space-y-6">
+          <div>
+            <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">The Program</p>
+            <h2 class="font-display text-3xl md:text-4xl font-extrabold text-on-surface leading-tight">What is the NCA Mastership?</h2>
+          </div>
+          <p class="text-on-surface-variant font-body leading-relaxed">
+            The NCA Mastership is a comprehensive, science-first certification designed for coaches who refuse to settle for bro-science. Built on five interconnected pillars, it transforms how you understand nutrition, exercise, recovery, and client psychology.
+          </p>
+          <p class="text-on-surface-variant font-body leading-relaxed">
+            Unlike generic online courses, every module is taught by active practitioners who apply these principles with real clients daily. You don't just learn theory — you develop the clinical decision-making muscle that separates elite coaches from average ones.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 font-body text-on-surface text-sm">
+              <span class="material-symbols-outlined text-accent text-lg mt-0.5 flex-shrink-0">check_circle</span>
+              <span>Live, interactive weekend lectures on Zoom</span>
+            </li>
+            <li class="flex items-start gap-3 font-body text-on-surface text-sm">
+              <span class="material-symbols-outlined text-accent text-lg mt-0.5 flex-shrink-0">check_circle</span>
+              <span>Lifetime access to all recordings and future updates</span>
+            </li>
+            <li class="flex items-start gap-3 font-body text-on-surface text-sm">
+              <span class="material-symbols-outlined text-accent text-lg mt-0.5 flex-shrink-0">check_circle</span>
+              <span>Private scholar community for peer learning &amp; networking</span>
+            </li>
+            <li class="flex items-start gap-3 font-body text-on-surface text-sm">
+              <span class="material-symbols-outlined text-accent text-lg mt-0.5 flex-shrink-0">check_circle</span>
+              <span>50+ study materials, templates &amp; case studies</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSE GUIDE MODAL -->
+  <div id="guide-modal" class="fixed inset-0 z-[100] hidden" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="guide-modal-overlay"></div>
+    <div class="relative z-10 flex items-center justify-center min-h-screen px-4 py-8">
+      <div class="bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 relative">
+        <button id="close-guide-modal" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-surface-low flex items-center justify-center text-on-surface-variant hover:bg-surface-mid transition-colors" aria-label="Close">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="text-center mb-6">
+          <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-secondary text-3xl">menu_book</span>
+          </div>
+          <h3 class="font-display text-2xl font-extrabold text-on-surface mb-2">Download Course Guide</h3>
+          <p class="text-on-surface-variant text-sm font-body">Enter your details and we'll send the complete NCA course guide to your inbox.</p>
+        </div>
+        <form id="guide-form" action="https://formsubmit.co/ajax/nutritioncodes0@gmail.com" method="POST" class="space-y-4">
+          <input type="hidden" name="_subject" value="New Course Guide Download - Nutrition Codes">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="form_type" value="course_guide_download">
+          <div>
+            <label for="guide-name" class="block text-sm font-semibold text-on-surface font-body mb-1.5">Full Name</label>
+            <input type="text" id="guide-name" name="name" required placeholder="Your full name"
+              class="w-full border border-outline-variant rounded-xl px-4 py-3 text-on-surface font-body text-sm focus:outline-none focus:ring-2 focus:ring-secondary/30 focus:border-secondary transition-all bg-background placeholder:text-on-surface-variant/40">
+          </div>
+          <div>
+            <label for="guide-email" class="block text-sm font-semibold text-on-surface font-body mb-1.5">Email Address <span class="text-red-400">*</span></label>
+            <input type="email" id="guide-email" name="email" required placeholder="your@email.com"
+              class="w-full border border-outline-variant rounded-xl px-4 py-3 text-on-surface font-body text-sm focus:outline-none focus:ring-2 focus:ring-secondary/30 focus:border-secondary transition-all bg-background placeholder:text-on-surface-variant/40">
+          </div>
+          <div class="flex items-start gap-3">
+            <input type="checkbox" id="guide-consent" name="consent" required
+              class="mt-1 w-5 h-5 rounded border-outline-variant text-secondary focus:ring-secondary/30 cursor-pointer accent-secondary">
+            <label for="guide-consent" class="text-xs text-on-surface-variant font-body leading-relaxed cursor-pointer">
+              I consent to Nutrition Codes Academy collecting my name and email to send the course guide and related updates. I understand I can withdraw consent anytime. <span class="text-red-400">*</span>
+            </label>
+          </div>
+          <button type="submit" class="w-full bg-secondary text-white py-3.5 rounded-xl font-bold text-base hover:-translate-y-0.5 hover:shadow-lg hover:shadow-secondary/30 transition-all font-body flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-xl">download</span> Send Me The Guide
+          </button>
+          <div id="guide-form-status" class="text-sm font-medium hidden"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function() {
+    const modal = document.getElementById('guide-modal');
+    const openBtn = document.getElementById('open-guide-modal');
+    const openBtns = document.querySelectorAll('.open-guide-modal-btn');
+    const closeBtn = document.getElementById('close-guide-modal');
+    const overlay = document.getElementById('guide-modal-overlay');
+    const form = document.getElementById('guide-form');
+    const status = document.getElementById('guide-form-status');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      document.body.classList.add('modal-open');
+      modal.setAttribute('aria-hidden', 'false');
+    }
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+      document.body.classList.remove('modal-open');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    if (openBtn) openBtn.addEventListener('click', openModal);
+    openBtns.forEach(function(btn) {
+      btn.addEventListener('click', openModal);
+    });
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', closeModal);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+    });
+
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = form.querySelector('[type="submit"]');
+        btn.disabled = true;
+        btn.innerHTML = '<span class="material-symbols-outlined text-xl">schedule</span> Sending…';
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(data),
+          });
+          if (res.ok) {
+            status.className = 'text-center text-sm font-medium text-green-600 bg-green-50 border border-green-200 rounded-xl px-4 py-3';
+            status.textContent = '✓ Course guide sent! Check your inbox. The download will start automatically.';
+            status.classList.remove('hidden');
+            form.reset();
+            // Trigger PDF download
+            setTimeout(function() {
+              const link = document.createElement('a');
+              link.href = 'NC%20Course%20Guide.pdf';
+              link.download = 'NCA_Course_Guide.pdf';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }, 800);
+            setTimeout(closeModal, 4000);
+          } else {
+            throw new Error('Network response was not ok');
+          }
+        } catch {
+          status.className = 'text-center text-sm font-medium text-red-600 bg-red-50 border border-red-200 rounded-xl px-4 py-3';
+          status.textContent = '✗ Something went wrong. Please email us at nutritioncodes0@gmail.com';
+          status.classList.remove('hidden');
+        } finally {
+          btn.disabled = false;
+          btn.innerHTML = '<span class="material-symbols-outlined text-xl">download</span> Send Me The Guide';
+        }
+      });
+    }
+  })();
+  </script>
+
   <!-- 5 PILLARS 3D SWIPER -->
   <section class="py-20 bg-background overflow-hidden relative">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
       <div class="text-center mb-10 scroll-reveal from-bottom">
         <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">The Five Pillars</p>
         <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface">What You'll Master</h2>
-        <p class="text-on-surface-variant mt-4 font-body max-w-2xl mx-auto">Swipe or scroll horizontally to explore our science-first curriculum, guided by industry-leading mentors.</p>
+        <p class="text-on-surface-variant mt-4 font-body max-w-2xl mx-auto">Swipe or scroll horizontally to explore our science first curriculum, guided by industry leading mentors.</p>
       </div>
       
-      <!-- Swiper -->
-      <div class="swiper pillars-swiper pb-16 pt-8">
-        <div class="swiper-wrapper">
-          
-          <!-- Pillar 1 -->
-          <div class="swiper-slide w-[320px] max-w-[85vw] md:w-[420px] md:max-w-none tilt-3d scroll-reveal from-left" style="transition-delay: 0ms">
-            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/30 h-[580px] flex flex-col relative group">
-              <div class="h-[240px] relative overflow-hidden">
-                <img loading="lazy" decoding="async" src="assets/images/pillar-nutrition.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Precision Nutrition">
-                <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20"></div>
-                <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider border border-white/20">
-                  Pillar 1
-                </div>
+      <!-- Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6 pt-8">
+        
+        <!-- Pillar 1 -->
+        <div class="scroll-reveal from-left md:col-span-2 lg:col-span-2" style="transition-delay: 0ms">
+          <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-outline-variant/30 flex flex-col relative group h-full">
+            <div class="h-[220px] relative overflow-hidden">
+              <img loading="lazy" decoding="async" src="assets/images/course-cards/live-lectures.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Precision Nutrition">
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20"></div>
+              <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider border border-white/20">
+                Pillar 1
               </div>
-              <div class="p-8 flex flex-col flex-1">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                    <span class="material-symbols-outlined text-secondary">nutrition</span>
-                  </div>
-                  <h3 class="font-display text-2xl font-extrabold text-on-surface">Precision Bio-Nutrition</h3>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-secondary">nutrition</span>
                 </div>
-                <p class="text-on-surface-variant leading-relaxed font-body text-sm flex-1">
-                  Move beyond calorie counting into the cellular mechanisms of nutrition. Decode macronutrient partitioning, metabolic flexibility, insulin signaling, and micronutrient synergy to build individualized protocols.
-                </p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                  <span class="bg-secondary/10 text-secondary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-secondary/20">Metabolic Flexibility</span>
-                  <span class="bg-secondary/10 text-secondary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-secondary/20">Gut Microbiome</span>
-                </div>
+                <h3 class="font-display text-xl font-extrabold text-on-surface">Precision Bio Nutrition</h3>
+              </div>
+              <p class="text-on-surface-variant leading-relaxed font-body text-sm flex-1">
+                Move beyond calorie counting into the cellular mechanisms of nutrition. Decode macronutrient partitioning, metabolic flexibility, insulin signaling, and micronutrient synergy to build individualized protocols.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="bg-secondary/10 text-secondary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-secondary/20">Metabolic Flexibility</span>
+                <span class="bg-secondary/10 text-secondary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-secondary/20">Gut Microbiome</span>
               </div>
             </div>
           </div>
-
-          <!-- Pillar 2 -->
-          <div class="swiper-slide w-[320px] max-w-[85vw] md:w-[420px] md:max-w-none tilt-3d scroll-reveal from-left" style="transition-delay: 100ms">
-            <div class="bg-primary rounded-3xl overflow-hidden shadow-2xl border border-primary-container h-[580px] flex flex-col relative group text-white">
-              <div class="h-[240px] relative overflow-hidden">
-                <img loading="lazy" decoding="async" src="assets/images/pillar-exercise.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" alt="Exercise Physiology">
-                <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent"></div>
-                <div class="absolute top-4 right-4 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full text-accent text-xs font-bold uppercase tracking-wider border border-accent/30">
-                  Pillar 2
-                </div>
-              </div>
-              <div class="p-8 flex flex-col flex-1">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
-                    <span class="material-symbols-outlined text-accent">fitness_center</span>
-                  </div>
-                  <h3 class="font-display text-2xl font-extrabold text-white">Exercise Physiology</h3>
-                </div>
-                <p class="text-white/70 leading-relaxed font-body text-sm flex-1">
-                  Biomechanics, muscle fiber recruitment, VO2 max, lactate threshold, and progressive overload science. Design evidence-based training programs for hypertrophy, fat loss, and endurance.
-                </p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                  <span class="bg-white/10 text-white text-[11px] font-bold font-body px-3 py-1 rounded-full border border-white/20">Biomechanics</span>
-                  <span class="bg-white/10 text-white text-[11px] font-bold font-body px-3 py-1 rounded-full border border-white/20">Periodization</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pillar 3 -->
-          <div class="swiper-slide w-[320px] max-w-[85vw] md:w-[420px] md:max-w-none tilt-3d scroll-reveal from-left" style="transition-delay: 200ms">
-            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/30 h-[580px] flex flex-col relative group">
-              <div class="h-[240px] relative overflow-hidden">
-                <img loading="lazy" decoding="async" src="assets/images/pillar-recovery.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Neural Restoration">
-                <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20"></div>
-                <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider border border-white/20">
-                  Pillar 3
-                </div>
-              </div>
-              <div class="p-8 flex flex-col flex-1">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <span class="material-symbols-outlined text-accent">bedtime</span>
-                  </div>
-                  <h3 class="font-display text-2xl font-extrabold text-on-surface">Neural Restoration</h3>
-                </div>
-                <p class="text-on-surface-variant leading-relaxed font-body text-sm flex-1">
-                  Sleep architecture, HRV biofeedback, cortisol rhythms and parasympathetic recovery protocols. Teach clients to optimize the 8 hours that make or break every training adaptation.
-                </p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                  <span class="bg-accent/10 text-primary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-accent/30">Sleep Optimization</span>
-                  <span class="bg-accent/10 text-primary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-accent/30">HRV Tracking</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pillar 4 -->
-          <div class="swiper-slide w-[320px] max-w-[85vw] md:w-[420px] md:max-w-none tilt-3d scroll-reveal from-left" style="transition-delay: 300ms">
-            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/30 h-[580px] flex flex-col relative group">
-              <div class="h-[240px] relative overflow-hidden">
-                <img loading="lazy" decoding="async" src="assets/images/pillar-supplements.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Ergogenic Aids">
-                <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20"></div>
-                <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider border border-white/20">
-                  Pillar 4
-                </div>
-              </div>
-              <div class="p-8 flex flex-col flex-1">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                    <span class="material-symbols-outlined text-secondary">pill</span>
-                  </div>
-                  <h3 class="font-display text-2xl font-extrabold text-on-surface">Ergogenic Aids</h3>
-                </div>
-                <p class="text-on-surface-variant leading-relaxed font-body text-sm flex-1">
-                  The evidence-based guide to supplements, adaptogens, and performance compounds. Cut through the marketing noise with actual research on what works, what doesn't, and for whom.
-                </p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                  <span class="bg-secondary/10 text-secondary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-secondary/20">Supplement Review</span>
-                  <span class="bg-secondary/10 text-secondary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-secondary/20">Dosing Protocols</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pillar 5 -->
-          <div class="swiper-slide w-[320px] max-w-[85vw] md:w-[420px] md:max-w-none tilt-3d scroll-reveal from-left" style="transition-delay: 400ms">
-            <div class="bg-[#003a1f] text-white rounded-3xl overflow-hidden shadow-2xl border border-white/10 h-[580px] flex flex-col relative group">
-              <div class="h-[240px] relative overflow-hidden">
-                <img loading="lazy" decoding="async" src="assets/images/pillar-mindset.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" alt="Mindset Pivot">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#003a1f] to-transparent"></div>
-                <div class="absolute top-4 right-4 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full text-accent text-xs font-bold uppercase tracking-wider border border-accent/30">
-                  Pillar 5
-                </div>
-              </div>
-              <div class="p-8 flex flex-col flex-1">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
-                    <span class="material-symbols-outlined text-accent">psychology</span>
-                  </div>
-                  <h3 class="font-display text-2xl font-extrabold text-white">The Mindset Pivot</h3>
-                </div>
-                <p class="text-white/80 leading-relaxed font-body text-sm flex-1">
-                  Behavioral psychology, habit architecture, motivational interviewing, and client communication science. Because the best protocol in the world is worthless if the client doesn't follow it.
-                </p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                  <span class="bg-white/10 text-white text-[11px] font-bold font-body px-3 py-1 rounded-full border border-white/20">Behavioral Change</span>
-                  <span class="bg-white/10 text-white text-[11px] font-bold font-body px-3 py-1 rounded-full border border-white/20">Habit Architecture</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
-        <div class="swiper-pagination mt-8 relative"></div>
+
+        <!-- Pillar 2 -->
+        <div class="scroll-reveal from-left md:col-span-2 lg:col-span-2" style="transition-delay: 100ms">
+          <div class="bg-primary rounded-3xl overflow-hidden shadow-xl border border-primary-container flex flex-col relative group text-white h-full">
+            <div class="h-[220px] relative overflow-hidden">
+              <img loading="lazy" decoding="async" src="assets/images/course-cards/study-materials.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Exercise Physiology">
+              <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent"></div>
+              <div class="absolute top-4 right-4 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full text-accent text-xs font-bold uppercase tracking-wider border border-accent/30">
+                Pillar 2
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-accent">fitness_center</span>
+                </div>
+                <h3 class="font-display text-xl font-extrabold text-white">Exercise Physiology</h3>
+              </div>
+              <p class="text-white/70 leading-relaxed font-body text-sm flex-1">
+                Biomechanics, muscle fiber recruitment, VO2 max, lactate threshold, and progressive overload science. Design evidence based training programs for hypertrophy, fat loss, and endurance.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="bg-white/10 text-white text-[11px] font-bold font-body px-3 py-1 rounded-full border border-white/20">Biomechanics</span>
+                <span class="bg-white/10 text-white text-[11px] font-bold font-body px-3 py-1 rounded-full border border-white/20">Periodization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="scroll-reveal from-left md:col-span-2 lg:col-span-2" style="transition-delay: 200ms">
+          <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-outline-variant/30 flex flex-col relative group h-full">
+            <div class="h-[220px] relative overflow-hidden">
+              <img loading="lazy" decoding="async" src="assets/images/course-cards/lifetime-access.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Neural Restoration">
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20"></div>
+              <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider border border-white/20">
+                Pillar 3
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-accent">bedtime</span>
+                </div>
+                <h3 class="font-display text-xl font-extrabold text-on-surface">Neural Restoration</h3>
+              </div>
+              <p class="text-on-surface-variant leading-relaxed font-body text-sm flex-1">
+                Sleep architecture, HRV biofeedback, cortisol rhythms and parasympathetic recovery protocols. Teach clients to optimize the 8 hours that make or break every training adaptation.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="bg-accent/10 text-primary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-accent/30">Sleep Optimization</span>
+                <span class="bg-accent/10 text-primary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-accent/30">HRV Tracking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="scroll-reveal from-left md:col-span-2 lg:col-start-2 lg:col-span-2" style="transition-delay: 300ms">
+          <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-outline-variant/30 flex flex-col relative group h-full">
+            <div class="h-[220px] relative overflow-hidden">
+              <img loading="lazy" decoding="async" src="assets/images/course-cards/qa-sessions.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Ergogenic Aids">
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20"></div>
+              <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider border border-white/20">
+                Pillar 4
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-secondary">pill</span>
+                </div>
+                <h3 class="font-display text-xl font-extrabold text-on-surface">Ergogenic Aids</h3>
+              </div>
+              <p class="text-on-surface-variant leading-relaxed font-body text-sm flex-1">
+                The evidence based guide to supplements, adaptogens, and performance compounds. Cut through the marketing noise with actual research on what works, what doesn't, and for whom.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="bg-secondary/10 text-secondary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-secondary/20">Supplement Review</span>
+                <span class="bg-secondary/10 text-secondary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-secondary/20">Dosing Protocols</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 5 -->
+        <div class="scroll-reveal from-left md:col-start-2 md:col-span-2 lg:col-span-2" style="transition-delay: 400ms">
+          <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-outline-variant/30 flex flex-col relative group h-full">
+            <div class="h-[220px] relative overflow-hidden">
+              <img loading="lazy" decoding="async" src="assets/images/course-cards/community.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Mindset Pivot">
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20"></div>
+              <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider border border-white/20">
+                Pillar 5
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-secondary">psychology</span>
+                </div>
+                <h3 class="font-display text-xl font-extrabold text-on-surface">The Mindset Pivot</h3>
+              </div>
+              <p class="text-on-surface-variant leading-relaxed font-body text-sm flex-1">
+                Behavioral psychology, habit architecture, motivational interviewing, and client communication science. Because the best protocol in the world is worthless if the client doesn't follow it.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="bg-secondary/10 text-secondary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-secondary/20">Behavioral Change</span>
+                <span class="bg-secondary/10 text-secondary text-[11px] font-bold font-body px-3 py-1 rounded-full border border-secondary/20">Habit Architecture</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- YOU WILL LEARN HOW TO -->
+  <section class="py-20 md:py-28 bg-surface-low">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-14 scroll-reveal from-bottom">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Outcomes</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">You Will Learn How To...</h2>
+        <p class="text-on-surface-variant text-lg font-body max-w-2xl mx-auto">
+          Not just theory. Real skills you can apply with clients from day one.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Outcome 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-outline-variant/30 hover:-translate-y-1 hover:shadow-lg transition-all scroll-reveal from-left" style="transition-delay:0ms">
+          <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-secondary">restaurant</span>
+          </div>
+          <h4 class="font-display font-bold text-on-surface text-lg mb-2">Prescribe Precision Nutrition</h4>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Build individualized macro and micronutrient protocols for fat loss, muscle gain, performance, and metabolic health — backed by peer-reviewed research.</p>
+        </div>
+        <!-- Outcome 2 -->
+        <div class="bg-white rounded-2xl p-6 border border-outline-variant/30 hover:-translate-y-1 hover:shadow-lg transition-all scroll-reveal from-bottom" style="transition-delay:100ms">
+          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-accent">fitness_center</span>
+          </div>
+          <h4 class="font-display font-bold text-on-surface text-lg mb-2">Design Periodized Training</h4>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Create evidence-based programs for hypertrophy, strength, endurance, and injury rehab using biomechanics and progressive overload science.</p>
+        </div>
+        <!-- Outcome 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-outline-variant/30 hover:-translate-y-1 hover:shadow-lg transition-all scroll-reveal from-right" style="transition-delay:200ms">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-primary">biotech</span>
+          </div>
+          <h4 class="font-display font-bold text-on-surface text-lg mb-2">Read &amp; Apply Research</h4>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Decode PubMed papers without getting lost in jargon. Learn to separate real evidence from industry marketing noise.</p>
+        </div>
+        <!-- Outcome 4 -->
+        <div class="bg-white rounded-2xl p-6 border border-outline-variant/30 hover:-translate-y-1 hover:shadow-lg transition-all scroll-reveal from-left" style="transition-delay:300ms">
+          <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-secondary">trending_up</span>
+          </div>
+          <h4 class="font-display font-bold text-on-surface text-lg mb-2">Scale Your Coaching Business</h4>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Master pricing psychology, client acquisition, retention systems, and social media strategy to grow from side-hustle to full-time.</p>
+        </div>
+        <!-- Outcome 5 -->
+        <div class="bg-white rounded-2xl p-6 border border-outline-variant/30 hover:-translate-y-1 hover:shadow-lg transition-all scroll-reveal from-bottom" style="transition-delay:400ms">
+          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-accent">self_improvement</span>
+          </div>
+          <h4 class="font-display font-bold text-on-surface text-lg mb-2">Optimize Recovery &amp; Stress</h4>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Use HRV, sleep architecture, and cortisol management to maximize training adaptations and client results.</p>
+        </div>
+        <!-- Outcome 6 -->
+        <div class="bg-white rounded-2xl p-6 border border-outline-variant/30 hover:-translate-y-1 hover:shadow-lg transition-all scroll-reveal from-right" style="transition-delay:500ms">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-primary">forum</span>
+          </div>
+          <h4 class="font-display font-bold text-on-surface text-lg mb-2">Communicate Like a Pro</h4>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Translate complex science into plain language. Use motivational interviewing and habit architecture so clients actually follow your protocols.</p>
+        </div>
+      </div>
+      <div class="text-center mt-12 scroll-reveal from-bottom">
+        <button class="open-guide-modal-btn bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/40 transition-all font-body inline-flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined">download</span> Get the Full Syllabus
+        </button>
       </div>
     </div>
   </section>
@@ -357,7 +701,7 @@
             <span class="material-symbols-outlined text-secondary">groups</span>
           </div>
           <h4 class="font-display font-bold text-on-surface text-lg">Business &amp; Sales Mastery</h4>
-          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Consultation frameworks, pricing strategy, sales psychology, and systems to scale your coaching practice from side hustle to full-time business.</p>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Consultation frameworks, pricing strategy, sales psychology, and systems to scale your coaching practice from side hustle to full time business.</p>
         </div>
         <div class="glass-card rounded-2xl p-6 space-y-3 hover:-translate-y-1 transition-all scroll-reveal from-right" style="transition-delay: 100ms">
           <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
@@ -371,14 +715,14 @@
             <span class="material-symbols-outlined text-primary">forum</span>
           </div>
           <h4 class="font-display font-bold text-on-surface text-lg">Live Mentorship Calls</h4>
-          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Regular live sessions with all four mentors. Ask anything. Get direct, real-world answers from practitioners who work with real clients.</p>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Regular live sessions with all four mentors. Ask anything. Get direct, real world answers from practitioners who work with real clients.</p>
         </div>
         <div class="glass-card rounded-2xl p-6 space-y-3 hover:-translate-y-1 transition-all scroll-reveal from-right" style="transition-delay: 300ms">
           <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center">
             <span class="material-symbols-outlined text-secondary">article</span>
           </div>
           <h4 class="font-display font-bold text-on-surface text-lg">Research Breakdown Series</h4>
-          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Siddhant's ongoing analysis of the latest fitness and nutrition research — delivered in plain language with actionable coaching takeaways.</p>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Siddhant's ongoing analysis of the latest fitness and nutrition research, delivered in plain language with actionable coaching takeaways.</p>
         </div>
         <div class="glass-card rounded-2xl p-6 space-y-3 hover:-translate-y-1 transition-all scroll-reveal from-left" style="transition-delay: 400ms">
           <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
@@ -392,7 +736,7 @@
             <span class="material-symbols-outlined text-primary">people</span>
           </div>
           <h4 class="font-display font-bold text-on-surface text-lg">Private Scholar Community</h4>
-          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Access a private community of like-minded coaches for peer learning, accountability, referrals, and ongoing support long after you complete the program.</p>
+          <p class="text-on-surface-variant text-sm font-body leading-relaxed">Access a private community of like minded coaches for peer learning, accountability, referrals, and ongoing support long after you complete the program.</p>
         </div>
       </div>
     </div>
@@ -411,8 +755,8 @@
               <div class="w-20 h-20 rounded-full bg-accent/20 flex items-center justify-center mx-auto">
                 <span class="material-symbols-outlined text-accent text-5xl">biotech</span>
               </div>
-              <h3 class="font-display text-3xl font-extrabold text-[#eeeeee]">100%<br>Evidence-Based</h3>
-              <p class="text-[#eeeeee]/70 font-body text-sm max-w-xs mx-auto">Every claim is backed by peer-reviewed research. No bro-science. No trends. Just the truth as the science currently understands it.</p>
+              <h3 class="font-display text-3xl font-extrabold text-[#eeeeee]">100%<br>Evidence Based</h3>
+              <p class="text-[#eeeeee]/70 font-body text-sm max-w-xs mx-auto">Every claim is backed by peer reviewed research. No bro science. No trends. Just the truth as the science currently understands it.</p>
               <div class="flex flex-wrap gap-2 justify-center mt-4">
                 <span class="bg-[#eeeeee]/10 text-[#eeeeee] text-xs font-bold font-body px-3 py-1.5 rounded-full border border-[#eeeeee]/20">PubMed Referenced</span>
                 <span class="bg-[#eeeeee]/10 text-[#eeeeee] text-xs font-bold font-body px-3 py-1.5 rounded-full border border-[#eeeeee]/20">Regularly Updated</span>
@@ -433,8 +777,8 @@
                 <span class="material-symbols-outlined text-secondary">biotech</span>
               </div>
               <div>
-                <h4 class="font-display font-bold text-on-surface text-lg mb-1">Research-First Foundation</h4>
-                <p class="text-on-surface-variant font-body text-sm leading-relaxed">Every module begins with the evidence. Peer-reviewed studies are dissected in plain language so you understand the 'why' behind every protocol — not just the 'what'.</p>
+                <h4 class="font-display font-bold text-on-surface text-lg mb-1">Research First Foundation</h4>
+                <p class="text-on-surface-variant font-body text-sm leading-relaxed">Every module begins with the evidence. Peer reviewed studies are dissected in plain language so you understand the 'why' behind every protocol, not just the 'what'.</p>
               </div>
             </div>
             <div class="flex gap-5 items-start scroll-reveal from-right" style="transition-delay: 150ms">
@@ -442,8 +786,8 @@
                 <span class="material-symbols-outlined text-accent">monitoring</span>
               </div>
               <div>
-                <h4 class="font-display font-bold text-on-surface text-lg mb-1">Real-Client Case Studies</h4>
-                <p class="text-on-surface-variant font-body text-sm leading-relaxed">Theory meets reality through live case study analysis. Work through real client scenarios with mentor guidance — building the decision-making muscle that separates elite coaches from average ones.</p>
+                <h4 class="font-display font-bold text-on-surface text-lg mb-1">Real Client Case Studies</h4>
+                <p class="text-on-surface-variant font-body text-sm leading-relaxed">Theory meets reality through live case study analysis. Work through real client scenarios with mentor guidance, building the decision making muscle that separates elite coaches from average ones.</p>
               </div>
             </div>
             <div class="flex gap-5 items-start scroll-reveal from-right" style="transition-delay: 300ms">
@@ -452,7 +796,7 @@
               </div>
               <div>
                 <h4 class="font-display font-bold text-on-surface text-lg mb-1">Ongoing Curriculum Updates</h4>
-                <p class="text-on-surface-variant font-body text-sm leading-relaxed">The science evolves — so does our curriculum. Scholars receive ongoing updates as new research emerges, ensuring the knowledge you apply is never outdated.</p>
+                <p class="text-on-surface-variant font-body text-sm leading-relaxed">The science evolves, so does our curriculum. Scholars receive ongoing updates as new research emerges, ensuring the knowledge you apply is never outdated.</p>
               </div>
             </div>
           </div>
@@ -462,124 +806,393 @@
   </section>
 
   <!-- INSIDE OUR COURSE -->
-  <section class="bg-white py-20">
-    <div class="max-w-5xl mx-auto px-4 md:px-8 text-center scroll-reveal from-bottom">
-      <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">The Experience</p>
-      <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-6">Inside Our Course</h2>
-      <p class="text-on-surface-variant text-lg md:text-xl font-body leading-relaxed max-w-3xl mx-auto">
-        Gain first-hand experience of what it takes to run a successful coaching business, stay up to date with the latest topics and trends in the fitness industry, receive science-backed supplement recommendations, and get detailed, well-explained answers to all your fitness-related queries, along with in-depth analysis of complex medical reports, and so much more.
+  <section class="bg-white py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-14 scroll-reveal from-bottom">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">The Experience</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">Inside Our Course</h2>
+        <p class="text-on-surface-variant text-lg font-body max-w-2xl mx-auto">
+          A glimpse into the real world learning environment at NCA. Live lectures, case studies, community interactions, and hands-on coaching practice.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="scroll-reveal from-left" style="transition-delay: 0ms">
+          <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 group h-full bg-surface-low">
+            <div class="aspect-video relative overflow-hidden">
+              <img loading="lazy" decoding="async" src="assets/images/pillar-nutrition.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Live Lectures">
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <span class="inline-flex items-center gap-1.5 bg-accent text-on-surface text-xs font-bold px-3 py-1.5 rounded-full">
+                  <span class="material-symbols-outlined text-sm">videocam</span> Live Sessions
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-on-surface text-lg mb-2">Interactive Live Lectures</h3>
+              <p class="text-on-surface-variant text-sm font-body leading-relaxed">
+                Every weekend, join live Zoom sessions where mentors break down complex science into actionable coaching strategies. Ask questions in real time.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="scroll-reveal from-bottom" style="transition-delay: 100ms">
+          <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 group h-full bg-surface-low">
+            <div class="aspect-video relative overflow-hidden">
+              <img loading="lazy" decoding="async" src="assets/images/course-cards/case-studies.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Case Studies">
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <span class="inline-flex items-center gap-1.5 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                  <span class="material-symbols-outlined text-sm">folder_open</span> Real Cases
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-on-surface text-lg mb-2">Live Case Study Analysis</h3>
+              <p class="text-on-surface-variant text-sm font-body leading-relaxed">
+                Work through real client scenarios with actual blood reports, training data, and progress photos. Learn how elite coaches think and decide.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="scroll-reveal from-right" style="transition-delay: 200ms">
+          <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 group h-full bg-surface-low">
+            <div class="aspect-video relative overflow-hidden">
+              <img loading="lazy" decoding="async" src="assets/images/pillar-mindset.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Community">
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <span class="inline-flex items-center gap-1.5 bg-white text-primary text-xs font-bold px-3 py-1.5 rounded-full">
+                  <span class="material-symbols-outlined text-sm">groups</span> Community
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-on-surface text-lg mb-2">Private Scholar Network</h3>
+              <p class="text-on-surface-variant text-sm font-body leading-relaxed">
+                A dedicated WhatsApp community for discussions, peer learning, networking, and ongoing support from fellow coaches and mentors.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="scroll-reveal from-left" style="transition-delay: 300ms">
+          <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 group h-full bg-surface-low">
+            <div class="aspect-video relative overflow-hidden">
+              <img loading="lazy" decoding="async" src="assets/images/pillar-exercise.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Study Materials">
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <span class="inline-flex items-center gap-1.5 bg-accent text-on-surface text-xs font-bold px-3 py-1.5 rounded-full">
+                  <span class="material-symbols-outlined text-sm">description</span> Resources
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-on-surface text-lg mb-2">50+ Study Materials</h3>
+              <p class="text-on-surface-variant text-sm font-body leading-relaxed">
+                Revision notes, coaching templates, textbook recommendations, and reference guides you can use with your own clients from day one.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="scroll-reveal from-bottom" style="transition-delay: 400ms">
+          <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 group h-full bg-surface-low">
+            <div class="aspect-video relative overflow-hidden">
+              <img loading="lazy" decoding="async" src="assets/images/pillar-supplements.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Q&A Sessions">
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <span class="inline-flex items-center gap-1.5 bg-secondary text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                  <span class="material-symbols-outlined text-sm">record_voice_over</span> Q&A
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-on-surface text-lg mb-2">Dedicated Q&A Sessions</h3>
+              <p class="text-on-surface-variant text-sm font-body leading-relaxed">
+                Regular live Q&A calls with all mentors. Get detailed, well explained answers to your fitness, nutrition, and business queries.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="scroll-reveal from-right" style="transition-delay: 500ms">
+          <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 group h-full bg-surface-low">
+            <div class="aspect-video relative overflow-hidden">
+              <img loading="lazy" decoding="async" src="assets/images/pillar-recovery.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Lifetime Access">
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <span class="inline-flex items-center gap-1.5 bg-white text-primary text-xs font-bold px-3 py-1.5 rounded-full">
+                  <span class="material-symbols-outlined text-sm">all_inclusive</span> Lifetime
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-on-surface text-lg mb-2">Lifetime Access & Updates</h3>
+              <p class="text-on-surface-variant text-sm font-body leading-relaxed">
+                Enroll once and get lifetime access to all current and future content. The curriculum evolves as new science emerges.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MID-PAGE CTA -->
+  <section class="bg-primary py-16">
+    <div class="max-w-4xl mx-auto px-4 md:px-8 text-center scroll-reveal from-bottom">
+      <div class="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-6">
+        <span class="material-symbols-outlined text-accent text-3xl">menu_book</span>
+      </div>
+      <h2 class="font-display text-3xl md:text-4xl font-extrabold text-white leading-tight mb-4">
+        Want the Complete Roadmap?
+      </h2>
+      <p class="text-white/70 text-lg font-body max-w-xl mx-auto mb-8">
+        Download the full course guide with detailed module breakdowns, faculty profiles, and the complete syllabus.
       </p>
+      <button class="open-guide-modal-btn bg-secondary text-white px-10 py-4 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-xl hover:shadow-secondary/30 transition-all font-body inline-flex items-center justify-center gap-2">
+        <span class="material-symbols-outlined">download</span> Download Course Guide
+      </button>
+    </div>
+  </section>
+
+  <!-- STUDENT VIDEO TESTIMONIALS -->
+  <section class="bg-surface-mid py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="text-center mb-14 scroll-reveal from-bottom">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Real Stories</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">Hear From Our Scholars</h2>
+        <p class="text-on-surface-variant text-lg font-body max-w-2xl mx-auto">
+          Watch how NCA has transformed the careers and knowledge of practicing coaches across India.
+        </p>
+      </div>
+      <div class="swiper video-swiper" style="padding-bottom:56px;">
+        <div class="swiper-wrapper items-stretch">
+          <!-- Video 1 -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 bg-white h-full">
+              <div class="aspect-[9/16] relative bg-black">
+                <video class="w-full h-full object-cover" poster="assets/videos/posters/Shivam%20Sharma.jpg" preload="none" controls playsinline>
+                  <source src="assets/videos/Shivam%20Sharma.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="p-5">
+                <h4 class="font-display font-bold text-on-surface text-base">Shivam Sharma</h4>
+                <p class="text-on-surface-variant text-sm font-body">NCA Scholar</p>
+              </div>
+            </div>
+          </div>
+          <!-- Video 2 -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 bg-white h-full">
+              <div class="aspect-[9/16] relative bg-black">
+                <video class="w-full h-full object-cover" poster="assets/videos/posters/Siddharth%20Rana.jpg" preload="none" controls playsinline>
+                  <source src="assets/videos/Siddharth%20Rana.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="p-5">
+                <h4 class="font-display font-bold text-on-surface text-base">Siddharth Rana</h4>
+                <p class="text-on-surface-variant text-sm font-body">NCA Scholar</p>
+              </div>
+            </div>
+          </div>
+          <!-- Video 3 -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 bg-white h-full">
+              <div class="aspect-[9/16] relative bg-black">
+                <video class="w-full h-full object-cover" poster="assets/videos/posters/Aman%20Chauhan.jpg" preload="none" controls playsinline>
+                  <source src="assets/videos/Aman%20Chauhan.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="p-5">
+                <h4 class="font-display font-bold text-on-surface text-base">Aman Chauhan</h4>
+                <p class="text-on-surface-variant text-sm font-body">NCA Scholar</p>
+              </div>
+            </div>
+          </div>
+          <!-- Video 4 -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 bg-white h-full">
+              <div class="aspect-[9/16] relative bg-black">
+                <video class="w-full h-full object-cover" poster="assets/videos/posters/Jimmy%20Khatter.jpg" preload="none" controls playsinline>
+                  <source src="assets/videos/Jimmy%20Khatter.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="p-5">
+                <h4 class="font-display font-bold text-on-surface text-base">Jimmy Khatter</h4>
+                <p class="text-on-surface-variant text-sm font-body">NCA Scholar</p>
+              </div>
+            </div>
+          </div>
+          <!-- Video 5 -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 bg-white h-full">
+              <div class="aspect-[9/16] relative bg-black">
+                <video class="w-full h-full object-cover" poster="assets/videos/posters/Mohammed%20Fayaz.jpg" preload="none" controls playsinline>
+                  <source src="assets/videos/Mohammed%20Fayaz.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="p-5">
+                <h4 class="font-display font-bold text-on-surface text-base">Mohammed Fayaz</h4>
+                <p class="text-on-surface-variant text-sm font-body">NCA Scholar</p>
+              </div>
+            </div>
+          </div>
+          <!-- Video 6 -->
+          <div class="swiper-slide" style="height:auto;">
+            <div class="rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 bg-white h-full">
+              <div class="aspect-[9/16] relative bg-black">
+                <video class="w-full h-full object-cover" poster="assets/videos/posters/Ritu%20Vijay_.jpg" preload="none" controls playsinline>
+                  <source src="assets/videos/Ritu%20Vijay_.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="p-5">
+                <h4 class="font-display font-bold text-on-surface text-base">Ritu Vijay</h4>
+                <p class="text-on-surface-variant text-sm font-body">NCA Scholar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination" style="bottom:8px;"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="bg-surface-low py-20">
-    <div class="max-w-4xl mx-auto px-4 md:px-8">
+  <section class="bg-surface-low py-20 md:py-28">
+    <div class="max-w-3xl mx-auto px-4 md:px-8">
       <div class="text-center mb-14 scroll-reveal from-bottom">
         <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Got Questions?</p>
         <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">Frequently Asked Questions</h2>
         <p class="text-on-surface-variant text-lg font-body max-w-xl mx-auto">Everything you need to know before joining Nutrition Codes Academy.</p>
       </div>
       <div class="space-y-4">
-        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left">
-          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
-            <span>Are the sessions live or pre-recorded?</span>
-            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+
+        <details class="group bg-white rounded-2xl border border-outline-variant/30 shadow-sm scroll-reveal from-bottom open:shadow-md transition-shadow">
+          <summary class="flex items-center gap-4 cursor-pointer p-6 list-none">
+            <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-sm font-extrabold flex-shrink-0">1</span>
+            <span class="font-display font-bold text-on-surface text-lg flex-1">Are the sessions live or pre recorded?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 flex-shrink-0">expand_more</span>
           </summary>
-          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+          <div class="px-6 pb-6 pl-14 text-on-surface-variant font-body leading-relaxed">
             All sessions are conducted live on Zoom, and recordings will be provided for later viewing and revision.
           </div>
         </details>
-        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:50ms">
-          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
-            <span>How will communication happen?</span>
-            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+
+        <details class="group bg-white rounded-2xl border border-outline-variant/30 shadow-sm scroll-reveal from-bottom open:shadow-md transition-shadow">
+          <summary class="flex items-center gap-4 cursor-pointer p-6 list-none">
+            <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-sm font-extrabold flex-shrink-0">2</span>
+            <span class="font-display font-bold text-on-surface text-lg flex-1">How will communication happen?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 flex-shrink-0">expand_more</span>
           </summary>
-          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+          <div class="px-6 pb-6 pl-14 text-on-surface-variant font-body leading-relaxed">
             Communication will primarily be through WhatsApp. There will be a community group for discussions, networking, and resolving queries, and an announcement group for important updates and reminders.
           </div>
         </details>
-        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:100ms">
-          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
-            <span>Will there be additional course materials?</span>
-            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+
+        <details class="group bg-white rounded-2xl border border-outline-variant/30 shadow-sm scroll-reveal from-bottom open:shadow-md transition-shadow">
+          <summary class="flex items-center gap-4 cursor-pointer p-6 list-none">
+            <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-sm font-extrabold flex-shrink-0">3</span>
+            <span class="font-display font-bold text-on-surface text-lg flex-1">Will there be additional course materials?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 flex-shrink-0">expand_more</span>
           </summary>
-          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+          <div class="px-6 pb-6 pl-14 text-on-surface-variant font-body leading-relaxed">
             Yes, you will receive revision notes for every lecture, special coaching templates, textbook recommendations to deepen your understanding, and additional resources to stay updated on fitness trends and practices.
           </div>
         </details>
-        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:150ms">
-          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
-            <span>Who is this program for?</span>
-            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+
+        <details class="group bg-white rounded-2xl border border-outline-variant/30 shadow-sm scroll-reveal from-bottom open:shadow-md transition-shadow">
+          <summary class="flex items-center gap-4 cursor-pointer p-6 list-none">
+            <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-sm font-extrabold flex-shrink-0">4</span>
+            <span class="font-display font-bold text-on-surface text-lg flex-1">Who is this program for?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 flex-shrink-0">expand_more</span>
           </summary>
-          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+          <div class="px-6 pb-6 pl-14 text-on-surface-variant font-body leading-relaxed">
             This program is suitable for everyone, from complete beginners to experienced fitness coaches. Whether you're looking to start your fitness journey, improve your knowledge, or advance your career, this course is designed to help you grow both personally and professionally.
           </div>
         </details>
-        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:200ms">
-          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
-            <span>What will I learn?</span>
-            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+
+        <details class="group bg-white rounded-2xl border border-outline-variant/30 shadow-sm scroll-reveal from-bottom open:shadow-md transition-shadow">
+          <summary class="flex items-center gap-4 cursor-pointer p-6 list-none">
+            <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-sm font-extrabold flex-shrink-0">5</span>
+            <span class="font-display font-bold text-on-surface text-lg flex-1">What will I learn?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 flex-shrink-0">expand_more</span>
           </summary>
-          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+          <div class="px-6 pb-6 pl-14 text-on-surface-variant font-body leading-relaxed">
             This program covers everything you need to excel in the fitness industry, including nutrition, exercise, coaching, business, social media, and research. You'll master topics like metabolism, specialized diets, and effective nutrition planning for various needs, such as hypertrophy and injury recovery. You'll gain expertise in anatomy, biomechanics, and training program design, along with injury management. The coaching module focuses on client communication, psychology, and business growth strategies. Social media lessons will teach you how to create impactful content, edit videos, and engage with your audience effectively. Finally, you'll learn how to analyze and apply research to stay at the forefront of the industry.
           </div>
         </details>
-        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:250ms">
-          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
-            <span>What if I have doubts?</span>
-            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+
+        <details class="group bg-white rounded-2xl border border-outline-variant/30 shadow-sm scroll-reveal from-bottom open:shadow-md transition-shadow">
+          <summary class="flex items-center gap-4 cursor-pointer p-6 list-none">
+            <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-sm font-extrabold flex-shrink-0">6</span>
+            <span class="font-display font-bold text-on-surface text-lg flex-1">What if I have doubts?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 flex-shrink-0">expand_more</span>
           </summary>
-          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+          <div class="px-6 pb-6 pl-14 text-on-surface-variant font-body leading-relaxed">
             You can ask your questions during live sessions, in the community group, or during dedicated Q&amp;A sessions. If needed, you can also schedule personal meetings with the faculty to resolve your doubts.
           </div>
         </details>
-        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:300ms">
-          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
-            <span>How much time will I need to grasp the topics?</span>
-            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+
+        <details class="group bg-white rounded-2xl border border-outline-variant/30 shadow-sm scroll-reveal from-bottom open:shadow-md transition-shadow">
+          <summary class="flex items-center gap-4 cursor-pointer p-6 list-none">
+            <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-sm font-extrabold flex-shrink-0">7</span>
+            <span class="font-display font-bold text-on-surface text-lg flex-1">How much time will I need to grasp the topics?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 flex-shrink-0">expand_more</span>
           </summary>
-          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
-            The program is self-paced, but dedicating three to six months with consistent effort should be enough to build a strong understanding, especially if you actively participate in lectures and discussions.
+          <div class="px-6 pb-6 pl-14 text-on-surface-variant font-body leading-relaxed">
+            The program is self paced, but dedicating three to six months with consistent effort should be enough to build a strong understanding, especially if you actively participate in lectures and discussions.
           </div>
         </details>
-        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:350ms">
-          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
-            <span>When are the sessions held?</span>
-            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+
+        <details class="group bg-white rounded-2xl border border-outline-variant/30 shadow-sm scroll-reveal from-bottom open:shadow-md transition-shadow">
+          <summary class="flex items-center gap-4 cursor-pointer p-6 list-none">
+            <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-sm font-extrabold flex-shrink-0">8</span>
+            <span class="font-display font-bold text-on-surface text-lg flex-1">When are the sessions held?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 flex-shrink-0">expand_more</span>
           </summary>
-          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+          <div class="px-6 pb-6 pl-14 text-on-surface-variant font-body leading-relaxed">
             Sessions are typically held on weekends at 2 PM. The timing may be adjusted based on student consensus. One lecture per week is planned to give students ample time to absorb and practice the material.
           </div>
         </details>
-        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:400ms">
-          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
-            <span>What language will the sessions be in?</span>
-            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+
+        <details class="group bg-white rounded-2xl border border-outline-variant/30 shadow-sm scroll-reveal from-bottom open:shadow-md transition-shadow">
+          <summary class="flex items-center gap-4 cursor-pointer p-6 list-none">
+            <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-sm font-extrabold flex-shrink-0">9</span>
+            <span class="font-display font-bold text-on-surface text-lg flex-1">What language will the sessions be in?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 flex-shrink-0">expand_more</span>
           </summary>
-          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+          <div class="px-6 pb-6 pl-14 text-on-surface-variant font-body leading-relaxed">
             The sessions will be conducted in both Hindi and English to ensure every student can easily follow and understand the content.
           </div>
         </details>
-        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:450ms">
-          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
-            <span>When can I join, and how long is the course?</span>
-            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+
+        <details class="group bg-white rounded-2xl border border-outline-variant/30 shadow-sm scroll-reveal from-bottom open:shadow-md transition-shadow">
+          <summary class="flex items-center gap-4 cursor-pointer p-6 list-none">
+            <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-sm font-extrabold flex-shrink-0">10</span>
+            <span class="font-display font-bold text-on-surface text-lg flex-1">When can I join, and how long is the course?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 flex-shrink-0">expand_more</span>
           </summary>
-          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+          <div class="px-6 pb-6 pl-14 text-on-surface-variant font-body leading-relaxed">
             You can join anytime, and you'll have lifetime access to all course materials, including past, current, and future content. We plan to keep the course running for as long as the students need to learn, grow, and excel as fitness professionals. The program is continually updated with new topics and lectures to ensure the learning process never stops.
           </div>
         </details>
-        <details class="group bg-surface-low rounded-2xl border border-outline-variant/40 scroll-reveal from-left" style="transition-delay:500ms">
-          <summary class="flex items-center justify-between cursor-pointer p-6 font-display font-bold text-on-surface text-lg list-none">
-            <span>How much time will it take to finish the curriculum?</span>
-            <span class="material-symbols-outlined text-secondary transition-transform group-open:rotate-180">expand_more</span>
+
+        <details class="group bg-white rounded-2xl border border-outline-variant/30 shadow-sm scroll-reveal from-bottom open:shadow-md transition-shadow">
+          <summary class="flex items-center gap-4 cursor-pointer p-6 list-none">
+            <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-sm font-extrabold flex-shrink-0">11</span>
+            <span class="font-display font-bold text-on-surface text-lg flex-1">How much time will it take to finish the curriculum?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 flex-shrink-0">expand_more</span>
           </summary>
-          <div class="px-6 pb-6 text-on-surface-variant font-body leading-relaxed">
+          <div class="px-6 pb-6 pl-14 text-on-surface-variant font-body leading-relaxed">
             The curriculum is designed to be completed over the course of one year, allowing you enough time to thoroughly understand, apply, and master each topic while balancing consistency and practical learning.
           </div>
         </details>
+
       </div>
     </div>
   </section>
@@ -630,23 +1243,28 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="bg-primary py-20 text-center">
-    <div class="max-w-4xl mx-auto px-4 md:px-8 space-y-6 scroll-reveal from-bottom">
+  <!-- FINAL CTA -->
+  <section class="bg-primary py-20 md:py-28 text-center relative overflow-hidden">
+    <div class="absolute inset-0 dna-pattern opacity-10"></div>
+    <div class="relative max-w-4xl mx-auto px-4 md:px-8 space-y-6 scroll-reveal from-bottom">
+      <p class="text-accent font-bold text-sm uppercase tracking-widest font-body">Time to Get Started</p>
       <h2 class="font-display text-4xl md:text-5xl font-extrabold text-white leading-tight">
-        Ready to Master the Science?
+        Become an Elite Coach Starting Today
       </h2>
       <p class="text-white/70 text-lg font-body max-w-xl mx-auto">
         Applications are reviewed individually. Limited cohort sizes ensure every scholar gets personalized mentorship attention.
       </p>
-      <div class="flex flex-wrap gap-4 justify-center pt-2">
+      <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center pt-4">
         <a href="contact.html" class="bg-secondary text-white px-10 py-4 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-xl hover:shadow-secondary/30 transition-all font-body">
           Enroll Now
         </a>
-        <a href="about.html" class="border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-base hover:bg-white hover:text-primary transition-all font-body">
-          View Syllabus
-        </a>
+        <button class="open-guide-modal-btn border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-base hover:bg-white hover:text-primary transition-all font-body inline-flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined">download</span> Get Course Guide
+        </button>
       </div>
+      <p class="text-white/40 text-sm font-body pt-2">
+        Not ready to enroll? Download the course guide and decide at your own pace.
+      </p>
     </div>
   </section>
 
@@ -655,7 +1273,7 @@
     <div class="max-w-7xl mx-auto px-6 md:px-8 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
       <div class="sm:col-span-2 md:col-span-1">
         <div class="text-lg font-bold text-[#40F39A] mb-4 font-display">Nutrition Codes Academy</div>
-        <p class="text-slate-300 text-sm leading-relaxed mb-6">Empowering the next generation of evidence-based health and fitness professionals in India and globally.</p>
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">Empowering the next generation of evidence based health and fitness professionals in India and globally.</p>
         <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[#40F39A] hover:text-white transition-colors text-sm">
           <span class="material-symbols-outlined text-lg">photo_camera</span> @nutritioncodes
         </a>
@@ -693,33 +1311,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const swiper = new Swiper('.pillars-swiper', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        mousewheel: {
-          forceToAxis: true,
-          sensitivity: 1,
-        },
-        coverflowEffect: {
-          rotate: 20,
-          stretch: 0,
-          depth: 350,
-          modifier: 1,
-          slideShadows: true,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-          dynamicBullets: true,
-        },
-      });
-    });
-  </script>
-
-  <script>
     // Scroll reveal observer
     const revealEls = document.querySelectorAll('.scroll-reveal');
     const revealObserver = new IntersectionObserver((entries) => {
@@ -732,8 +1323,34 @@
     }, { threshold: 0.15 });
     revealEls.forEach(el => revealObserver.observe(el));
   </script>
+  <script>
+    // Video testimonials swiper
+    const videoSwiper = new Swiper('.video-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      loop: true,
+      centeredSlides: false,
+      autoplay: { delay: 4000, disableOnInteraction: true, pauseOnMouseEnter: true },
+      pagination: { el: '.video-swiper .swiper-pagination', clickable: true },
+      navigation: { nextEl: '.video-swiper .swiper-button-next', prevEl: '.video-swiper .swiper-button-prev' },
+      breakpoints: {
+        640:  { slidesPerView: 2, spaceBetween: 16 },
+        1024: { slidesPerView: 3, spaceBetween: 20 },
+      }
+    });
+    // Pause videos when slide changes
+    videoSwiper.on('slideChange', function () {
+      document.querySelectorAll('.video-swiper video').forEach(v => v.pause());
+    });
+  </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Nutrition Codes Academy", "url": "https://nutritioncodes.com/", "logo": "https://nutritioncodes.com/assets/logos/primary01.svg", "sameAs": ["https://www.instagram.com/nutritioncodes/"], "description": "India's most rigorous nutrition and fitness education platform."}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Course", "name": "NCA Mastership Program", "description": "Comprehensive nutrition and fitness coaching certification covering metabolic coding, biomechanics, sleep science, supplementation, and business mastery.", "provider": {"@type": "Organization", "name": "Nutrition Codes Academy", "sameAs": "https://nutritioncodes.com/"}, "url": "https://nutritioncodes.com/curriculum.html"}</script>
+
+<button class="sticky-guide-btn open-guide-modal-btn" aria-label="Download Course Guide">
+  <span class="material-symbols-outlined">download</span>
+  <span class="hidden sm:inline">Get Course Guide</span>
+  <span class="sm:hidden">Get Course Guide</span>
+</button>
 
 <script src="js/tilt.js" defer></script>
 <script src="js/polish.js" defer></script>
