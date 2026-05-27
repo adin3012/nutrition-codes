@@ -203,7 +203,7 @@
         <span class="text-accent">Vitality</span>
       </h1>
       <p class="text-white/90 text-base md:text-xl leading-relaxed font-body mx-auto md:mx-0 max-w-sm md:max-w-xl hero-text-shadow">
-        India's most rigorous nutrition and fitness education platform. We don't teach trends — we decode the science behind lasting human performance.
+        India's most rigorous nutrition and fitness education platform. We don't teach trends. We decode the science behind lasting human performance.
       </p>
       <div class="flex flex-col sm:flex-row gap-3 md:gap-4 pt-1 items-center md:items-start">
         <a href="contact.html" class="w-full sm:w-auto bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/40 transition-all font-body text-center btn-glow">
@@ -507,7 +507,7 @@
         <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all tilt-3d scroll-reveal from-bottom" style="transition-delay:150ms">
           <div class="text-accent text-xl tracking-wide">★★★★★</div>
           <p class="text-on-surface leading-relaxed font-body italic">
-            "The coaching industry can be a lonely place. NCA is here to change that. Nutrition, exercise science, coaching best practices, mindset, business growth — pick any area of coaching and NCA has it covered. Join NCA. It's your path to lifelong learning and growth."
+            "The coaching industry can be a lonely place. NCA is here to change that. Nutrition, exercise science, coaching best practices, mindset, business growth: pick any area of coaching and NCA has it covered. Join NCA. It's your path to lifelong learning and growth."
           </p>
           <div class="flex items-center gap-4 pt-2">
             <img loading="lazy" decoding="async" src="assets/images/testimonials/karthik-nagarajan.png" alt="Karthik Nagarajan" class="w-12 h-12 rounded-full object-cover border-2 border-accent/30">
@@ -520,7 +520,7 @@
         <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all tilt-3d scroll-reveal from-right" style="transition-delay:300ms">
           <div class="text-accent text-xl tracking-wide">★★★★★</div>
           <p class="text-on-surface leading-relaxed font-body italic">
-            "NCA gave me what no other certification could — a framework that actually works for real people. The depth of science here is unlike anything else available in India. I came in as a trainer; I left as a coach who genuinely understands the human body."
+            "NCA gave me what no other certification could: a framework that actually works for real people. The depth of science here is unlike anything else available in India. I came in as a trainer; I left as a coach who genuinely understands the human body."
           </p>
           <div class="flex items-center gap-4 pt-2">
             <img loading="lazy" decoding="async" src="assets/images/testimonials/siddharth-rana.png" alt="Siddharth Rana" class="w-12 h-12 rounded-full object-cover border-2 border-accent/30">
@@ -653,7 +653,7 @@
     <div class="max-w-5xl mx-auto px-4 md:px-8 text-center relative z-10 scroll-reveal from-bottom">
       <div class="inline-flex items-center gap-2 bg-accent/20 border border-accent/30 text-accent px-4 py-2 rounded-full text-sm font-bold font-body tracking-widest mb-8">
         <span class="material-symbols-outlined text-base">rocket_launch</span>
-        LIMITED COHORTS — ENROL NOW
+        LIMITED COHORTS · ENROL NOW
       </div>
       <h2 class="font-display text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
         Ready to Decode<br class="hidden md:block"> Your Future?
@@ -668,6 +668,9 @@
         <a href="curriculum.html" class="border-2 border-white/40 text-white px-10 py-4 rounded-xl font-bold text-base hover:bg-white hover:text-on-surface transition-all font-body">
           View Curriculum
         </a>
+        <button class="open-guide-modal-btn border-2 border-white/40 text-white px-10 py-4 rounded-xl font-bold text-base hover:bg-white hover:text-on-surface transition-all font-body inline-flex items-center gap-2">
+          <span class="material-symbols-outlined">download</span> Download Course Guide
+        </button>
       </div>
       <div class="flex flex-wrap justify-center gap-8 text-white/50 text-sm font-body">
         <span class="flex items-center gap-2"><span class="material-symbols-outlined text-accent text-base">check_circle</span> Science-backed curriculum</span>
@@ -676,6 +679,127 @@
       </div>
     </div>
   </section>
+
+  <!-- COURSE GUIDE MODAL -->
+  <div id="guide-modal" class="fixed inset-0 z-[100] hidden" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="guide-modal-overlay"></div>
+    <div class="relative z-10 flex items-center justify-center min-h-screen px-4 py-8">
+      <div class="bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 relative">
+        <button id="close-guide-modal" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-surface-low flex items-center justify-center text-on-surface-variant hover:bg-surface-mid transition-colors" aria-label="Close">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="text-center mb-6">
+          <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+            <span class="material-symbols-outlined text-secondary text-3xl">menu_book</span>
+          </div>
+          <h3 class="font-display text-2xl font-extrabold text-on-surface mb-2">Download Course Guide</h3>
+          <p class="text-on-surface-variant text-sm font-body">Enter your details and we'll send the complete NCA course guide to your inbox.</p>
+        </div>
+        <form id="guide-form" action="https://formsubmit.co/ajax/nutritioncodes0@gmail.com" method="POST" class="space-y-4">
+          <input type="hidden" name="_subject" value="New Course Guide Download - Nutrition Codes">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="form_type" value="course_guide_download">
+          <input type="hidden" name="_autoresponse" value="Thank you for your interest in the NCA Course Guide! Your PDF should be downloading automatically. If it didn't start, please reply to this email and we'll send it to you directly. Questions? Email us at nutritioncodes0@gmail.com">
+          <div>
+            <label for="guide-name" class="block text-sm font-semibold text-on-surface font-body mb-1.5">Full Name</label>
+            <input type="text" id="guide-name" name="name" required placeholder="Your full name"
+              class="w-full border border-outline-variant rounded-xl px-4 py-3 text-on-surface font-body text-sm focus:outline-none focus:ring-2 focus:ring-secondary/30 focus:border-secondary transition-all bg-background placeholder:text-on-surface-variant/40">
+          </div>
+          <div>
+            <label for="guide-email" class="block text-sm font-semibold text-on-surface font-body mb-1.5">Email Address <span class="text-red-400">*</span></label>
+            <input type="email" id="guide-email" name="email" required placeholder="your@email.com"
+              class="w-full border border-outline-variant rounded-xl px-4 py-3 text-on-surface font-body text-sm focus:outline-none focus:ring-2 focus:ring-secondary/30 focus:border-secondary transition-all bg-background placeholder:text-on-surface-variant/40">
+          </div>
+          <div class="flex items-start gap-3">
+            <input type="checkbox" id="guide-consent" name="consent" required
+              class="mt-1 w-5 h-5 rounded border-outline-variant text-secondary focus:ring-secondary/30 cursor-pointer accent-secondary">
+            <label for="guide-consent" class="text-xs text-on-surface-variant font-body leading-relaxed cursor-pointer">
+              I consent to Nutrition Codes Academy collecting my name and email to send the course guide and related updates. I understand I can withdraw consent anytime. <span class="text-red-400">*</span>
+            </label>
+          </div>
+          <button type="submit" class="w-full bg-secondary text-white py-3.5 rounded-xl font-bold text-base hover:-translate-y-0.5 hover:shadow-lg hover:shadow-secondary/30 transition-all font-body flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-xl">download</span> Send Me The Guide
+          </button>
+          <div id="guide-form-status" class="text-sm font-medium hidden"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function() {
+    const modal = document.getElementById('guide-modal');
+    const openBtns = document.querySelectorAll('.open-guide-modal-btn');
+    const closeBtn = document.getElementById('close-guide-modal');
+    const overlay = document.getElementById('guide-modal-overlay');
+    const form = document.getElementById('guide-form');
+    const status = document.getElementById('guide-form-status');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      document.body.classList.add('modal-open');
+      modal.setAttribute('aria-hidden', 'false');
+    }
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+      document.body.classList.remove('modal-open');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    openBtns.forEach(function(btn) { btn.addEventListener('click', openModal); });
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', closeModal);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+    });
+
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = form.querySelector('[type="submit"]');
+        btn.disabled = true;
+        btn.innerHTML = '<span class="material-symbols-outlined text-xl">schedule</span> Sending…';
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(data),
+          });
+          if (res.ok) {
+            status.className = 'text-center text-sm font-medium text-green-600 bg-green-50 border border-green-200 rounded-xl px-4 py-3';
+            status.textContent = '✓ Your PDF is downloading now! Check your downloads folder.';
+            status.classList.remove('hidden');
+            form.reset();
+            setTimeout(function() {
+              const link = document.createElement('a');
+              link.href = 'NC%20Course%20Guide.pdf';
+              link.download = 'NCA_Course_Guide.pdf';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }, 800);
+            setTimeout(closeModal, 4000);
+          } else {
+            throw new Error('Network response was not ok');
+          }
+        } catch {
+          status.className = 'text-center text-sm font-medium text-red-600 bg-red-50 border border-red-200 rounded-xl px-4 py-3';
+          status.textContent = '✗ Something went wrong. Please email us at nutritioncodes0@gmail.com';
+          status.classList.remove('hidden');
+        } finally {
+          btn.disabled = false;
+          btn.innerHTML = '<span class="material-symbols-outlined text-xl">download</span> Send Me The Guide';
+        }
+      });
+    }
+  })();
+  </script>
 
   <!-- FOOTER -->
   <footer class="bg-[#2B467D] text-white font-body">
