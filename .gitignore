@@ -11,6 +11,10 @@ NC Testimonials.pdf
 # Videos are too large for GitHub (100 MB+ each) — host on CDN for production
 assets/videos/
 
+# Node
+node_modules/
+package-lock.json
+
 # Auto-generated graph files
 graphify-out/
 js/graphify-out/
