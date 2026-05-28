@@ -400,7 +400,17 @@
             })
           });
           if (!res.ok) throw new Error('Brevo error');
-          fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) }).catch(function(){});
+          // Admin notification to nutritioncodes0@gmail.com
+          fetch('https://api.brevo.com/v3/smtp/email', {
+            method: 'POST',
+            headers: { 'api-key': BREVO_API_KEY, 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              sender: { name: 'NCA Website', email: 'nutritioncodes0@gmail.com' },
+              to: [{ email: 'nutritioncodes0@gmail.com', name: 'NCA Admin' }],
+              subject: '📥 New Course Guide Request — ' + name,
+              htmlContent: '<div style="font-family:Arial,sans-serif;padding:24px;"><h2 style="color:#102f65;">New Course Guide Request</h2><p><strong>Name:</strong> ' + name + '</p><p><strong>Email:</strong> <a href="mailto:' + email + '">' + email + '</a></p><p style="color:#888;font-size:12px;margin-top:24px;">Sent from the NCA website course guide form.</p></div>'
+            })
+          }).catch(function(){});
           status.className = 'text-center text-sm font-medium text-green-600 bg-green-50 border border-green-200 rounded-xl px-4 py-3';
           status.textContent = '✓ Check your inbox! We\'ve emailed the course guide to you.';
           status.classList.remove('hidden');
