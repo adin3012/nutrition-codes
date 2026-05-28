@@ -79,6 +79,10 @@
     .vt-swiper .swiper-pagination-bullet-active { background: #4173F4; }
     .yt-thumb-wrap { cursor: pointer; position: relative; }
     .yt-thumb-wrap iframe { width: 100%; height: 100%; border: none; }
+    @media (max-width: 639px) {
+      .vt-swiper .vt-video-wrap { max-height: 60vh; }
+      .vt-swiper img { max-height: 60vh !important; width: 100%; object-fit: cover; }
+    }
 
     /* Scroll reveal animations */
     .scroll-reveal {
@@ -369,115 +373,156 @@
       <div class="swiper vt-swiper" style="padding-bottom:56px;">
         <div class="swiper-wrapper items-stretch">
 
-          <!-- Video: Hydar (NEW) -->
+          <!-- 1. Hydar -->
           <div class="swiper-slide scroll-reveal from-left" style="height:auto; transition-delay:0ms;">
             <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-              <img loading="lazy" decoding="async" src="assets/videos/posters/Hydar.svg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B1310;display:block;">
+              <div class="yt-thumb-wrap" data-yt="UNhoVGkX4hw" style="width:100%;aspect-ratio:9/16;overflow:hidden;position:relative;cursor:pointer;">
+                <img loading="lazy" decoding="async"
+                     src="https://img.youtube.com/vi/UNhoVGkX4hw/hqdefault.jpg"
+                     onerror="this.src='https://img.youtube.com/vi/UNhoVGkX4hw/mqdefault.jpg'"
+                     alt="Hydar testimonial"
+                     style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+              </div>
+              <div class="vt-info">
+                <span class="vt-name">Hydar</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video: Jimmy Khatter 2 (NEW) -->
+          <!-- 2. Mohammed Fayaz -->
           <div class="swiper-slide scroll-reveal from-left" style="height:auto; transition-delay:100ms;">
             <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-              <img loading="lazy" decoding="async" src="assets/videos/posters/Jimmy%20Khatter%202.svg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B1310;display:block;">
+              <div class="yt-thumb-wrap" data-yt="1Zx5M778M9g" style="width:100%;aspect-ratio:9/16;overflow:hidden;position:relative;cursor:pointer;">
+                <img loading="lazy" decoding="async"
+                     src="https://img.youtube.com/vi/1Zx5M778M9g/hqdefault.jpg"
+                     onerror="this.src='https://img.youtube.com/vi/1Zx5M778M9g/mqdefault.jpg'"
+                     alt="Mohammed Fayaz testimonial"
+                     style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+              </div>
+              <div class="vt-info">
+                <span class="vt-name">Mohammed Fayaz</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video: Meeth Jarecha (1) (NEW) -->
+          <!-- 3. Shivam Sharma -->
           <div class="swiper-slide scroll-reveal from-left" style="height:auto; transition-delay:200ms;">
             <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-              <img loading="lazy" decoding="async" src="assets/videos/posters/Meeth%20Jarecha%20(1).svg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B1310;display:block;">
+              <div class="yt-thumb-wrap" data-yt="8GeoDTqVDfs" style="width:100%;aspect-ratio:9/16;overflow:hidden;position:relative;cursor:pointer;">
+                <img loading="lazy" decoding="async"
+                     src="https://img.youtube.com/vi/8GeoDTqVDfs/hqdefault.jpg"
+                     onerror="this.src='https://img.youtube.com/vi/8GeoDTqVDfs/mqdefault.jpg'"
+                     alt="Shivam Sharma testimonial"
+                     style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+              </div>
+              <div class="vt-info">
+                <span class="vt-name">Shivam Sharma</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video: Mohammed Fayaz (NEW) -->
+          <!-- 4. Jimmy Khatter -->
           <div class="swiper-slide scroll-reveal from-left" style="height:auto; transition-delay:300ms;">
             <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-              <img loading="lazy" decoding="async" src="assets/videos/posters/Mohammed%20Fayaz.svg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B1310;display:block;">
+              <div class="yt-thumb-wrap" data-yt="oWEuwDAE0hY" style="width:100%;aspect-ratio:9/16;overflow:hidden;position:relative;cursor:pointer;">
+                <img loading="lazy" decoding="async"
+                     src="https://img.youtube.com/vi/oWEuwDAE0hY/hqdefault.jpg"
+                     onerror="this.src='https://img.youtube.com/vi/oWEuwDAE0hY/mqdefault.jpg'"
+                     alt="Jimmy Khatter testimonial"
+                     style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+              </div>
+              <div class="vt-info">
+                <span class="vt-name">Jimmy Khatter</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video: Shivam Sharma 2 (NEW) -->
+          <!-- 5. Ritu Vijay -->
           <div class="swiper-slide scroll-reveal from-left" style="height:auto; transition-delay:400ms;">
             <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-              <img loading="lazy" decoding="async" src="assets/videos/posters/Shivam%20Sharma%202.svg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B1310;display:block;">
+              <div class="yt-thumb-wrap" data-yt="_-IEE3taS34" style="width:100%;aspect-ratio:9/16;overflow:hidden;position:relative;cursor:pointer;">
+                <img loading="lazy" decoding="async"
+                     src="https://img.youtube.com/vi/_-IEE3taS34/hqdefault.jpg"
+                     onerror="this.src='https://img.youtube.com/vi/_-IEE3taS34/mqdefault.jpg'"
+                     alt="Ritu Vijay testimonial"
+                     style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+              </div>
+              <div class="vt-info">
+                <span class="vt-name">Ritu Vijay</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video: Aman Chauhan -->
+          <!-- 6. Siddharth Rana -->
           <div class="swiper-slide scroll-reveal from-left" style="height:auto; transition-delay:500ms;">
             <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-              <img loading="lazy" decoding="async" src="assets/videos/posters/Aman%20Chauhan.svg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B1310;display:block;">
+              <div class="yt-thumb-wrap" data-yt="tNhkB_UKxGM" style="width:100%;aspect-ratio:9/16;overflow:hidden;position:relative;cursor:pointer;">
+                <img loading="lazy" decoding="async"
+                     src="https://img.youtube.com/vi/tNhkB_UKxGM/hqdefault.jpg"
+                     onerror="this.src='https://img.youtube.com/vi/tNhkB_UKxGM/mqdefault.jpg'"
+                     alt="Siddharth Rana testimonial"
+                     style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+              </div>
+              <div class="vt-info">
+                <span class="vt-name">Siddharth Rana</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video: Jimmy Khatter -->
+          <!-- 7. Nazeer -->
           <div class="swiper-slide scroll-reveal from-left" style="height:auto; transition-delay:600ms;">
             <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-              <img loading="lazy" decoding="async" src="assets/videos/posters/Jimmy%20Khatter.svg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B1310;display:block;">
+              <div class="yt-thumb-wrap" data-yt="oq4BFYrI_MA" style="width:100%;aspect-ratio:9/16;overflow:hidden;position:relative;cursor:pointer;">
+                <img loading="lazy" decoding="async"
+                     src="https://img.youtube.com/vi/oq4BFYrI_MA/hqdefault.jpg"
+                     onerror="this.src='https://img.youtube.com/vi/oq4BFYrI_MA/mqdefault.jpg'"
+                     alt="Nazeer testimonial"
+                     style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+              </div>
+              <div class="vt-info">
+                <span class="vt-name">Nazeer</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video: Ritu Vijay -->
+          <!-- 8. Meeth Jarecha -->
           <div class="swiper-slide scroll-reveal from-left" style="height:auto; transition-delay:700ms;">
             <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-              <img loading="lazy" decoding="async" src="assets/videos/posters/Ritu%20Vijay_.svg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B1310;display:block;">
+              <div class="yt-thumb-wrap" data-yt="00V-HLWNwl8" style="width:100%;aspect-ratio:9/16;overflow:hidden;position:relative;cursor:pointer;">
+                <img loading="lazy" decoding="async"
+                     src="https://img.youtube.com/vi/00V-HLWNwl8/hqdefault.jpg"
+                     onerror="this.src='https://img.youtube.com/vi/00V-HLWNwl8/mqdefault.jpg'"
+                     alt="Meeth Jarecha testimonial"
+                     style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+              </div>
+              <div class="vt-info">
+                <span class="vt-name">Meeth Jarecha</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video: Siddharth Rana -->
+          <!-- 9. Shivam Mahajan -->
           <div class="swiper-slide scroll-reveal from-left" style="height:auto; transition-delay:800ms;">
             <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-              <img loading="lazy" decoding="async" src="assets/videos/posters/Siddharth%20Rana.svg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B1310;display:block;">
-            </div>
-          </div>
-
-          <!-- Video: Shivam Sharma -->
-          <div class="swiper-slide scroll-reveal from-left" style="height:auto; transition-delay:900ms;">
-            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-              <img loading="lazy" decoding="async" src="assets/videos/posters/Shivam%20Sharma.svg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B1310;display:block;">
-            </div>
-          </div>
-
-          <!-- Video: Mazhar Shaikh -->
-          <div class="swiper-slide scroll-reveal from-left" style="height:auto; transition-delay:1000ms;">
-            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-              <img loading="lazy" decoding="async" src="assets/videos/posters/Mazhar%20Shaikh.svg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B1310;display:block;">
-            </div>
-          </div>
-
-          <!-- Video: Meeth Jarecha -->
-          <div class="swiper-slide scroll-reveal from-left" style="height:auto; transition-delay:1100ms;">
-            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-              <img loading="lazy" decoding="async" src="assets/videos/posters/Meeth%20Jarecha.svg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B1310;display:block;">
-            </div>
-          </div>
-
-          <!-- Video: Nazeer -->
-          <div class="swiper-slide scroll-reveal from-left" style="height:auto; transition-delay:1200ms;">
-            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-              <img loading="lazy" decoding="async" src="assets/videos/posters/Nazeer.svg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B1310;display:block;">
-            </div>
-          </div>
-
-          <!-- Video: Shivam Mahajan -->
-          <div class="swiper-slide scroll-reveal from-left" style="height:auto; transition-delay:1300ms;">
-            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-              <img loading="lazy" decoding="async" src="assets/videos/posters/Shivam%20Mahajan.svg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B1310;display:block;">
-            </div>
-          </div>
-
-          <!-- Video: Himanshu Sharma Part 1 -->
-          <div class="swiper-slide scroll-reveal from-left" style="height:auto; transition-delay:1400ms;">
-            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-              <img loading="lazy" decoding="async" src="assets/videos/posters/Himanshu%20Sharma%20Part%201.svg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B1310;display:block;">
-            </div>
-          </div>
-
-          <!-- Video: Himanshu Sharma Part 2 -->
-          <div class="swiper-slide scroll-reveal from-left" style="height:auto; transition-delay:1500ms;">
-            <div class="vt-video-wrap hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300">
-              <img loading="lazy" decoding="async" src="assets/videos/posters/Himanshu%20Sharma%20Part%202.svg" style="width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B1310;display:block;">
+              <div class="yt-thumb-wrap" data-yt="v7eOko3q-54" style="width:100%;aspect-ratio:9/16;overflow:hidden;position:relative;cursor:pointer;">
+                <img loading="lazy" decoding="async"
+                     src="https://img.youtube.com/vi/v7eOko3q-54/hqdefault.jpg"
+                     onerror="this.src='https://img.youtube.com/vi/v7eOko3q-54/mqdefault.jpg'"
+                     alt="Shivam Mahajan testimonial"
+                     style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+              </div>
+              <div class="vt-info">
+                <span class="vt-name">Shivam Mahajan</span>
+                <span class="vt-badge">Scholar</span>
+              </div>
             </div>
           </div>
 
@@ -560,7 +605,7 @@
       wrap.appendChild(btn);
 
       const existingVideo = wrap.querySelector('video');
-      const posterImg = wrap.querySelector('img');
+      const posterImg = wrap.querySelector('.yt-thumb-wrap') ? null : wrap.querySelector('img');
 
       if (existingVideo) {
         // Direct video element (legacy)
@@ -672,6 +717,12 @@
         wrap.textContent = '';
         wrap.appendChild(iframe);
         wrap.style.cursor = 'default';
+        const videoWrap = wrap.closest('.vt-video-wrap');
+        if (videoWrap) {
+          videoWrap.classList.add('playing');
+          const info = videoWrap.querySelector('.vt-info');
+          if (info) info.style.display = 'none';
+        }
       });
     });
   </script>
