@@ -9,7 +9,10 @@ Testimonial images/
 NC Testimonials.pdf
 
 # Videos are too large for GitHub (100 MB+ each) — host on CDN for production
-assets/videos/
+assets/videos/*.mp4
+assets/videos/**/*.mp4
+# Allow SVG poster images
+!assets/videos/posters/*.svg
 
 # Node
 node_modules/
