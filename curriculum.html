@@ -313,7 +313,7 @@
           <input type="hidden" name="_subject" value="New Course Guide Download - Nutrition Codes">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="form_type" value="course_guide_download">
-          <input type="hidden" name="_autoresponse" value="Hi there, thank you for your interest in Nutrition Codes Academy! ABOUT NCA — Nutrition Codes Academy (NCA) is India's most rigorous nutrition and fitness education platform. We train coaches and scholars in evidence-based nutrition science, exercise physiology, clinical biochemistry, and coaching methodology. With 300+ scholars across 40+ countries, we are built on one principle: science first. Our faculty are active practitioners and researchers who teach from real-world experience. YOUR COURSE GUIDE — Download your NCA Course Guide here: https://nutritioncodes.com/NC%20Course%20Guide.pdf — The guide covers our 5 evidence-based learning domains, faculty credentials, course structure and format, and investment details. Questions? Reply to this email or reach us at nutritioncodes0@gmail.com — The NCA Team, www.nutritioncodes.com">
+          <input type="hidden" name="_autoresponse" value="Hi there, thank you for your interest in Nutrition Codes Academy! ABOUT NCA — Nutrition Codes Academy (NCA) is India's most rigorous nutrition and fitness education platform. We train coaches and scholars in evidence-based nutrition science, exercise physiology, clinical biochemistry, and coaching methodology. With 300+ scholars across 40+ countries, we are built on one principle: science first. Our faculty are active practitioners and researchers who teach from real-world experience. YOUR COURSE GUIDE — Download your NCA Course Guide here: https://raw.githubusercontent.com/adin3012/nutrition-codes/master/NC%20Course%20Guide.pdf — The guide covers our 5 evidence-based learning domains, faculty credentials, course structure and format, and investment details. Questions? Reply to this email or reach us at nutritioncodes0@gmail.com — The NCA Team, www.nutritioncodes.com">
           <div>
             <label for="guide-name" class="block text-sm font-semibold text-on-surface font-body mb-1.5">Full Name</label>
             <input type="text" id="guide-name" name="name" required placeholder="Your full name"
@@ -381,13 +381,12 @@
         btn.innerHTML = '<span class="material-symbols-outlined text-xl">schedule</span> Sending…';
 
         const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
 
         try {
           const res = await fetch(form.action, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify(data),
+            headers: { 'Accept': 'application/json' },
+            body: formData,
           });
           if (res.ok) {
             status.className = 'text-center text-sm font-medium text-green-600 bg-green-50 border border-green-200 rounded-xl px-4 py-3';

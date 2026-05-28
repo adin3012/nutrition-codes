@@ -16,16 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.textContent = 'Sending…';
 
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
 
     try {
       const res = await fetch(form.action, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(data),
+        headers: { 'Accept': 'application/json' },
+        body: formData,
       });
 
       if (res.ok) {
