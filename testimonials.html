@@ -9,7 +9,9 @@
   <meta property="og:description" content="See what 300+ scholars say about their transformation at Nutrition Codes Academy.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nutritioncodes.com/testimonials.html">
+  <meta property="og:image" content="https://nutritioncodes.com/assets/images/hero-testimonials.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nutritioncodes.com/assets/images/hero-testimonials.jpg">
   <meta name="twitter:title" content="Testimonials | Nutrition Codes Academy">
   <meta name="twitter:description" content="See what 300+ scholars say about their transformation at Nutrition Codes Academy.">
   <link rel="canonical" href="https://nutritioncodes.com/testimonials.html">
@@ -721,8 +723,10 @@
     const ytModal = document.getElementById('yt-modal');
     const ytModalInner = document.getElementById('yt-modal-inner');
     const ytModalClose = document.getElementById('yt-modal-close');
+    let _ytTrigger = null;
 
-    function openYtModal(id) {
+    function openYtModal(id, triggerEl) {
+      _ytTrigger = triggerEl || null;
       ytModalInner.innerHTML = '';
       const iframe = document.createElement('iframe');
       iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
@@ -733,12 +737,13 @@
       ytModalInner.appendChild(iframe);
       ytModal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
-      ytModal.focus();
+      ytModalClose.focus();
     }
     function closeYtModal() {
       ytModalInner.innerHTML = '';
       ytModal.classList.add('hidden');
       document.body.style.overflow = '';
+      if (_ytTrigger) { _ytTrigger.focus(); _ytTrigger = null; }
     }
 
     ytModalClose.addEventListener('click', closeYtModal);
@@ -747,9 +752,15 @@
       if (e.key === 'Escape' && !ytModal.classList.contains('hidden')) closeYtModal();
     });
 
-    // Carousel cards → open modal
+    // Carousel cards → open modal (keyboard accessible)
     document.querySelectorAll('.vt-swiper .yt-thumb-wrap').forEach(function(wrap) {
-      wrap.addEventListener('click', function() { openYtModal(wrap.dataset.yt); });
+      wrap.setAttribute('tabindex', '0');
+      wrap.setAttribute('role', 'button');
+      wrap.setAttribute('aria-label', 'Play video testimonial');
+      wrap.addEventListener('click', function() { openYtModal(wrap.dataset.yt, wrap); });
+      wrap.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openYtModal(wrap.dataset.yt, wrap); }
+      });
     });
 
     // Top hero video → in-place swap (16:9 landscape embed)
