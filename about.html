@@ -108,13 +108,11 @@
     /* Timeline animations */
     .timeline-card {
       opacity: 0;
-      transition: opacity 0.9s ease, transform 0.9s ease;
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
-    .timeline-card.from-left {
-      transform: translateX(-80px);
-    }
+    .timeline-card.from-left,
     .timeline-card.from-right {
-      transform: translateX(80px);
+      transform: translateY(16px);
     }
     .timeline-card.in-view {
       opacity: 1;
@@ -523,7 +521,7 @@
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="faculty-grid">
 
-        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg tilt-3d faculty-slide sm:flex sm:flex-col">
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg faculty-slide sm:flex sm:flex-col">
           <div class="aspect-square overflow-hidden">
             <img loading="lazy" decoding="async" src="assets/images/Amandeep_Updated_2.png" alt="Amandeep Singh Bindra" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
           </div>
@@ -541,7 +539,7 @@
           </div>
         </div>
 
-        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg tilt-3d faculty-slide sm:flex sm:flex-col">
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg faculty-slide sm:flex sm:flex-col">
           <div class="aspect-square overflow-hidden">
             <img loading="lazy" decoding="async" src="assets/images/Ashley.jpg" alt="Ashley Johnathan D'cruz" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
           </div>
@@ -559,7 +557,7 @@
           </div>
         </div>
 
-        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg tilt-3d faculty-slide sm:flex sm:flex-col">
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg faculty-slide sm:flex sm:flex-col">
           <div class="aspect-square overflow-hidden">
             <img loading="lazy" decoding="async" src="assets/images/Rishabh_Updated.png" alt="Rishabh Verma" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
           </div>
@@ -577,7 +575,7 @@
           </div>
         </div>
 
-        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg tilt-3d faculty-slide sm:flex sm:flex-col">
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg faculty-slide sm:flex sm:flex-col">
           <div class="aspect-square overflow-hidden">
             <img loading="lazy" decoding="async" src="assets/images/Siddhant.jpg" alt="Siddhant Prasad" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
           </div>
@@ -595,7 +593,7 @@
           </div>
         </div>
 
-        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg tilt-3d faculty-slide sm:flex sm:flex-col">
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg faculty-slide sm:flex sm:flex-col">
           <div class="aspect-square overflow-hidden">
             <img loading="lazy" decoding="async" src="assets/images/Dr_Saikiran.jpg" alt="Dr. Saikiran Dungi" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
           </div>
@@ -613,7 +611,7 @@
           </div>
         </div>
 
-        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg tilt-3d faculty-slide sm:flex sm:flex-col">
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/40 hover:-translate-y-2 transition-all hover:shadow-lg faculty-slide sm:flex sm:flex-col">
           <div class="aspect-square overflow-hidden">
             <img loading="lazy" decoding="async" src="assets/images/Himanshu.jpg" alt="Himanshu Sharma" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
           </div>
@@ -867,7 +865,6 @@
 
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Nutrition Codes Academy", "url": "https://nutritioncodes.com/", "logo": "https://nutritioncodes.com/assets/logos/primary01.svg", "sameAs": ["https://www.instagram.com/nutritioncodes/"], "description": "India's most rigorous nutrition and fitness education platform."}</script>
 
-<script src="js/tilt.js" defer></script>
 <script src="js/polish.js" defer></script>
 </body>
 </html>

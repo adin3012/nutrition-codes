@@ -91,16 +91,12 @@
     /* Scroll reveal animations */
     .scroll-reveal {
       opacity: 0;
-      transition: opacity 0.8s ease, transform 0.8s ease;
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
-    .scroll-reveal.from-left {
-      transform: translateX(-60px);
-    }
-    .scroll-reveal.from-right {
-      transform: translateX(60px);
-    }
+    .scroll-reveal.from-left,
+    .scroll-reveal.from-right,
     .scroll-reveal.from-bottom {
-      transform: translateY(40px);
+      transform: translateY(16px);
     }
     @media (prefers-reduced-motion: reduce) {
       .scroll-reveal {
@@ -930,7 +926,6 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Nutrition Codes Academy", "url": "https://nutritioncodes.com/", "logo": "https://nutritioncodes.com/assets/logos/primary01.svg", "sameAs": ["https://www.instagram.com/nutritioncodes/"], "description": "India's most rigorous nutrition and fitness education platform."}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Course", "name": "NCA Mentorship Program", "description": "Comprehensive nutrition and fitness coaching certification covering metabolic coding, biomechanics, sleep science, supplementation, and business mastery.", "provider": {"@type": "Organization", "name": "Nutrition Codes Academy", "sameAs": "https://nutritioncodes.com/"}, "url": "https://nutritioncodes.com/curriculum.html"}</script>
 
-<script src="js/tilt.js" defer></script>
 <script src="js/polish.js" defer></script>
 </body>
 </html>

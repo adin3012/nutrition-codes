@@ -121,16 +121,12 @@
     /* Scroll reveal animations */
     .scroll-reveal {
       opacity: 0;
-      transition: opacity 0.8s ease, transform 0.8s ease;
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
-    .scroll-reveal.from-left {
-      transform: translateX(-60px);
-    }
-    .scroll-reveal.from-right {
-      transform: translateX(60px);
-    }
+    .scroll-reveal.from-left,
+    .scroll-reveal.from-right,
     .scroll-reveal.from-bottom {
-      transform: translateY(40px);
+      transform: translateY(16px);
     }
     @media (prefers-reduced-motion: reduce) {
       .scroll-reveal {
@@ -203,24 +199,12 @@
         <span class="text-accent">Vitality</span>
       </h1>
       <p class="text-white/90 text-base md:text-xl leading-relaxed font-body mx-auto md:mx-0 max-w-sm md:max-w-xl hero-text-shadow">
-        India's most rigorous nutrition and fitness education platform. We decode the science behind lasting human performance.
+        India's most rigorous nutrition and fitness education platform.
       </p>
-      <div class="flex flex-col sm:flex-row gap-3 md:gap-4 pt-1 items-center md:items-start">
-        <a href="contact.html" class="w-full sm:w-auto bg-secondary text-white px-8 py-3.5 rounded-xl font-bold text-base hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/40 transition-all font-body text-center btn-glow">
+      <div class="flex pt-2 justify-center md:justify-start">
+        <a href="contact.html" class="w-full sm:w-auto bg-secondary text-white px-9 py-4 rounded-xl font-bold text-base hover:-translate-y-0.5 hover:shadow-lg transition-all font-body text-center">
           Enroll Now
         </a>
-        <a href="curriculum.html" class="w-full sm:w-auto border-2 border-accent text-accent px-8 py-3.5 rounded-xl font-bold text-base hover:bg-accent hover:text-primary transition-all font-body text-center">
-          View Courses
-        </a>
-      </div>
-      <div class="flex items-center gap-4 pt-1 justify-center md:justify-start">
-        <div class="flex -space-x-3">
-          <img loading="lazy" decoding="async" src="assets/images/testimonials/mahesh-giri.png" alt="" class="w-8 h-8 rounded-full border-2 border-white object-cover">
-          <img loading="lazy" decoding="async" src="assets/images/testimonials/karthik-nagarajan.png" alt="" class="w-8 h-8 rounded-full border-2 border-white object-cover">
-          <img loading="lazy" decoding="async" src="assets/images/testimonials/siddharth-rana.png" alt="" class="w-8 h-8 rounded-full border-2 border-white object-cover">
-          <div class="w-8 h-8 rounded-full border-2 border-white bg-secondary flex items-center justify-center text-white text-xs font-bold font-body">+</div>
-        </div>
-        <p class="text-xs md:text-sm text-white/70 font-body"><span class="font-bold text-white"><span class="count-up" data-target="300">0</span>+ scholars</span> transforming their careers</p>
       </div>
     </div>
   </section>
@@ -245,132 +229,50 @@
     </div>
   </section>
 
-  <!-- CORE PILLARS -->
-  <section class="bg-white py-24">
+  <!-- WHAT WE TEACH -->
+  <section class="bg-surface-low py-20 md:py-24">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
       <div class="text-center mb-16 scroll-reveal from-bottom">
         <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">What We Teach</p>
         <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">The 5 Subjects We Teach</h2>
         <p class="text-on-surface-variant text-lg font-body max-w-2xl mx-auto mt-3">Five evidence-based domains that form the NCA curriculum.</p>
-        <div class="section-divider mt-5"><span class="dot"></span></div>
       </div>
-      <!-- Bento Grid -->
-      <div class="grid grid-cols-12 gap-5">
-        <!-- Pillar 1 large -->
-        <div class="col-span-12 md:col-span-8 rounded-3xl bg-surface-low p-8 md:p-10 flex flex-col sm:flex-row gap-8 items-center border border-outline-variant/40 card-premium tilt-3d hover:shadow-lg scroll-reveal from-left" style="transition-delay:0ms">
-          <div class="flex-1 space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center">
-              <span class="material-symbols-outlined text-secondary text-3xl">nutrition</span>
-            </div>
-            <h3 class="font-display text-2xl md:text-3xl font-extrabold text-on-surface">Nutrition</h3>
-            <p class="text-on-surface-variant leading-relaxed font-body">Metabolism, clinical nutrition, specialized diets, and building nutrition plans for any client goal.</p>
-            <a href="curriculum.html" class="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body hover:gap-3 transition-all">
-              Explore Module <span class="material-symbols-outlined text-base">arrow_forward</span>
-            </a>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div class="bg-white rounded-2xl p-7 border border-outline-variant/40 scroll-reveal from-bottom">
+          <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-secondary text-2xl">nutrition</span>
           </div>
+          <h3 class="font-display text-xl font-bold text-on-surface mb-2">Nutrition</h3>
+          <p class="text-on-surface-variant leading-relaxed font-body text-sm">Metabolism, clinical nutrition, specialized diets, and client nutrition planning.</p>
         </div>
-        <!-- Pillar 2 -->
-        <div class="col-span-12 md:col-span-4 rounded-3xl bg-primary text-white p-8 space-y-4 card-premium tilt-3d hover:shadow-lg scroll-reveal from-right" style="transition-delay:150ms">
-          <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center">
-            <span class="material-symbols-outlined text-accent text-3xl">fitness_center</span>
+        <div class="bg-white rounded-2xl p-7 border border-outline-variant/40 scroll-reveal from-bottom">
+          <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-secondary text-2xl">fitness_center</span>
           </div>
-          <h3 class="font-display text-2xl font-extrabold">Exercise</h3>
-          <p class="text-white/70 leading-relaxed font-body text-sm">Anatomy, biomechanics, and designing effective, evidence-based training programs.</p>
-          <a href="curriculum.html" class="inline-flex items-center gap-2 text-accent font-bold text-sm font-body hover:gap-3 transition-all">
-            Explore Module <span class="material-symbols-outlined text-base">arrow_forward</span>
-          </a>
+          <h3 class="font-display text-xl font-bold text-on-surface mb-2">Exercise</h3>
+          <p class="text-on-surface-variant leading-relaxed font-body text-sm">Anatomy, biomechanics, and designing effective training programs.</p>
         </div>
-        <!-- Pillar 3 -->
-        <div class="col-span-12 md:col-span-4 rounded-3xl bg-surface-low p-8 space-y-4 border border-outline-variant/40 card-premium tilt-3d hover:shadow-lg scroll-reveal from-left" style="transition-delay:300ms">
-          <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center">
-            <span class="material-symbols-outlined text-accent text-3xl">groups</span>
+        <div class="bg-white rounded-2xl p-7 border border-outline-variant/40 scroll-reveal from-bottom">
+          <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-secondary text-2xl">groups</span>
           </div>
-          <h3 class="font-display text-xl font-extrabold text-on-surface">Coaching</h3>
-          <p class="text-on-surface-variant leading-relaxed font-body text-sm">Client communication, coaching psychology, and the business skills to grow your practice.</p>
-          <a href="curriculum.html" class="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body hover:gap-3 transition-all">
-            Explore Module <span class="material-symbols-outlined text-base">arrow_forward</span>
-          </a>
+          <h3 class="font-display text-xl font-bold text-on-surface mb-2">Coaching</h3>
+          <p class="text-on-surface-variant leading-relaxed font-body text-sm">Client communication, psychology, and building a coaching business.</p>
         </div>
-        <!-- Pillar 4 -->
-        <div class="col-span-12 md:col-span-4 rounded-3xl bg-primary-container text-white p-8 space-y-4 card-premium tilt-3d hover:shadow-lg scroll-reveal from-right" style="transition-delay:450ms">
-          <div class="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center">
-            <span class="material-symbols-outlined text-accent text-3xl">trending_up</span>
+        <div class="bg-white rounded-2xl p-7 border border-outline-variant/40 scroll-reveal from-bottom">
+          <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-secondary text-2xl">trending_up</span>
           </div>
-          <h3 class="font-display text-xl font-extrabold">Social Media</h3>
-          <p class="text-white/70 leading-relaxed font-body text-sm">Content creation, video editing, and growing an engaged online audience as a coach.</p>
-          <a href="curriculum.html" class="inline-flex items-center gap-2 text-accent font-bold text-sm font-body hover:gap-3 transition-all">
-            Explore Module <span class="material-symbols-outlined text-base">arrow_forward</span>
-          </a>
+          <h3 class="font-display text-xl font-bold text-on-surface mb-2">Social Media</h3>
+          <p class="text-on-surface-variant leading-relaxed font-body text-sm">Content creation, video editing, and growing an engaged audience.</p>
         </div>
-        <!-- Pillar 5 -->
-        <div class="col-span-12 md:col-span-4 rounded-3xl bg-surface-low p-8 space-y-4 border border-outline-variant/40 card-premium tilt-3d hover:shadow-lg scroll-reveal from-left" style="transition-delay:600ms">
-          <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center">
-            <span class="material-symbols-outlined text-secondary text-3xl">biotech</span>
+        <div class="bg-white rounded-2xl p-7 border border-outline-variant/40 scroll-reveal from-bottom">
+          <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-secondary text-2xl">biotech</span>
           </div>
-          <h3 class="font-display text-xl font-extrabold text-on-surface">Research</h3>
-          <p class="text-on-surface-variant leading-relaxed font-body text-sm">How to read studies critically and apply the latest science in your day-to-day coaching.</p>
-          <a href="curriculum.html" class="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body hover:gap-3 transition-all">
-            Explore Module <span class="material-symbols-outlined text-base">arrow_forward</span>
-          </a>
+          <h3 class="font-display text-xl font-bold text-on-surface mb-2">Research</h3>
+          <p class="text-on-surface-variant leading-relaxed font-body text-sm">Reading studies and applying the latest science in practice.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- SOCIAL PROOF -->
-  <section class="bg-white py-20">
-    <div class="max-w-7xl mx-auto px-4 md:px-8">
-      <div class="text-center mb-14 scroll-reveal from-bottom">
-        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Scholar Stories</p>
-        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface">Global Impact &amp; Recognition</h2>
-        <p class="text-on-surface-variant text-lg font-body max-w-xl mx-auto mt-3">300+ coaches across India, UAE, USA and beyond trust NCA to level up their practice.</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all tilt-3d scroll-reveal from-left">
-          <div class="text-accent text-xl tracking-wide">★★★★★</div>
-          <p class="text-on-surface leading-relaxed font-body italic">
-            "Being part of NC Academy has been one of the best decisions of my life. The knowledge, clarity, and mentorship here are unmatched. Aman Sir's no-nonsense teaching style makes even complex concepts easy, while Rishabh Sir's depth of knowledge and patience ensure complete understanding."
-          </p>
-          <div class="flex items-center gap-4 pt-2">
-            <img loading="lazy" decoding="async" src="assets/images/testimonials/mahesh-giri.png" alt="Mahesh Giri" class="w-12 h-12 rounded-full object-cover border-2 border-accent/30">
-            <div>
-              <p class="font-display font-bold text-on-surface">Mahesh Giri</p>
-              <p class="text-sm text-on-surface-variant font-body">Scholar · NCA</p>
-            </div>
-          </div>
-        </div>
-        <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all tilt-3d scroll-reveal from-bottom" style="transition-delay:150ms">
-          <div class="text-accent text-xl tracking-wide">★★★★★</div>
-          <p class="text-on-surface leading-relaxed font-body italic">
-            "The coaching industry can be a lonely place. NCA is here to change that. Nutrition, exercise science, coaching best practices, mindset, business growth: pick any area of coaching and NCA has it covered. Join NCA. It's your path to lifelong learning and growth."
-          </p>
-          <div class="flex items-center gap-4 pt-2">
-            <img loading="lazy" decoding="async" src="assets/images/testimonials/karthik-nagarajan.png" alt="Karthik Nagarajan" class="w-12 h-12 rounded-full object-cover border-2 border-accent/30">
-            <div>
-              <p class="font-display font-bold text-on-surface">Karthik Nagarajan</p>
-              <p class="text-sm text-on-surface-variant font-body">Scholar · NCA</p>
-            </div>
-          </div>
-        </div>
-        <div class="glass-card rounded-3xl p-8 space-y-5 hover:-translate-y-1 transition-all tilt-3d scroll-reveal from-right" style="transition-delay:300ms">
-          <div class="text-accent text-xl tracking-wide">★★★★★</div>
-          <p class="text-on-surface leading-relaxed font-body italic">
-            "NCA gave me what no other certification could: a framework that actually works for real people. The depth of science here is unlike anything else available in India. I came in as a trainer; I left as a coach who genuinely understands the human body."
-          </p>
-          <div class="flex items-center gap-4 pt-2">
-            <img loading="lazy" decoding="async" src="assets/images/testimonials/siddharth-rana.png" alt="Siddharth Rana" class="w-12 h-12 rounded-full object-cover border-2 border-accent/30">
-            <div>
-              <p class="font-display font-bold text-on-surface">Siddharth Rana</p>
-              <p class="text-sm text-on-surface-variant font-body">Scholar · NCA</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="text-center mt-10">
-        <a href="testimonials.html" class="inline-flex items-center gap-2 text-secondary font-bold font-body hover:gap-3 transition-all">
-          Read All Success Stories <span class="material-symbols-outlined text-base">arrow_forward</span>
-        </a>
       </div>
     </div>
   </section>
@@ -430,61 +332,6 @@
       <div class="text-center mt-10">
         <a href="about.html" class="inline-flex items-center gap-2 border-2 border-primary text-primary px-8 py-3 rounded-xl font-bold font-body hover:bg-primary hover:text-white transition-all">
           About Our Faculty <span class="material-symbols-outlined text-base">arrow_forward</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FREE PREVIEWS -->
-  <section class="bg-surface-low py-20">
-    <div class="max-w-6xl mx-auto px-4 md:px-8">
-      <div class="text-center mb-14 scroll-reveal from-bottom">
-        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Explore First</p>
-        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">Preview Our Content</h2>
-        <p class="text-on-surface-variant text-lg font-body max-w-xl mx-auto">Get a real taste of what NCA offers before you enroll. No sign-up required.</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Curriculum -->
-        <a href="https://docs.google.com/spreadsheets/d/1xajKMSz3KXCwDizIwl9UPUepRpcR5ogC_enhNMlDqx4/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer"
-           class="group bg-white rounded-3xl p-8 border border-outline-variant/40 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all flex flex-col gap-5 scroll-reveal from-left">
-          <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center">
-            <span class="material-symbols-outlined text-secondary text-3xl">table_chart</span>
-          </div>
-          <div class="flex-1">
-            <h3 class="font-display font-extrabold text-on-surface text-xl mb-2">Full Course Curriculum</h3>
-            <p class="text-on-surface-variant font-body text-sm leading-relaxed">See every module, topic, and lecture in our complete curriculum spreadsheet.</p>
-          </div>
-          <div class="inline-flex items-center gap-2 text-secondary font-bold font-body text-sm group-hover:gap-3 transition-all">
-            View Curriculum <span class="material-symbols-outlined text-base">arrow_forward</span>
-          </div>
-        </a>
-        <!-- Nutrition Lecture -->
-        <a href="https://drive.google.com/file/d/1w8THJ9v79oqfsGKYUQl-qVWD-jHZYg9K/view?usp=drivesdk" target="_blank" rel="noopener noreferrer"
-           class="group bg-white rounded-3xl p-8 border border-outline-variant/40 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all flex flex-col gap-5 scroll-reveal from-bottom" style="transition-delay:100ms">
-          <div class="w-14 h-14 rounded-2xl bg-accent/15 flex items-center justify-center">
-            <span class="material-symbols-outlined text-accent text-3xl">nutrition</span>
-          </div>
-          <div class="flex-1">
-            <h3 class="font-display font-extrabold text-on-surface text-xl mb-2">Free Nutrition Lecture</h3>
-            <p class="text-on-surface-variant font-body text-sm leading-relaxed">Watch a full nutrition lecture to experience our teaching style and depth of science.</p>
-          </div>
-          <div class="inline-flex items-center gap-2 text-accent font-bold font-body text-sm group-hover:gap-3 transition-all">
-            Watch Now <span class="material-symbols-outlined text-base">play_circle</span>
-          </div>
-        </a>
-        <!-- Exercise Lecture -->
-        <a href="https://youtu.be/s9XlY6nOfFY?si=EA59EGBlTkUL8kRD" target="_blank" rel="noopener noreferrer"
-           class="group bg-white rounded-3xl p-8 border border-outline-variant/40 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all flex flex-col gap-5 scroll-reveal from-right" style="transition-delay:200ms">
-          <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
-            <span class="material-symbols-outlined text-primary text-3xl">fitness_center</span>
-          </div>
-          <div class="flex-1">
-            <h3 class="font-display font-extrabold text-on-surface text-xl mb-2">Free Exercise Lecture</h3>
-            <p class="text-on-surface-variant font-body text-sm leading-relaxed">See how we break down complex exercise science topics in an accessible, rigorous way.</p>
-          </div>
-          <div class="inline-flex items-center gap-2 text-primary font-bold font-body text-sm group-hover:gap-3 transition-all">
-            Watch Now <span class="material-symbols-outlined text-base">play_circle</span>
-          </div>
         </a>
       </div>
     </div>
@@ -766,7 +613,6 @@
 
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Nutrition Codes Academy", "url": "https://nutritioncodes.com/", "logo": "https://nutritioncodes.com/assets/logos/primary01.svg", "sameAs": ["https://www.instagram.com/nutritioncodes/"], "description": "India's most rigorous nutrition and fitness education platform."}</script>
 
-<script src="js/tilt.js" defer></script>
 <script src="js/polish.js" defer></script>
 </body>
 </html>
