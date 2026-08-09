@@ -91,12 +91,12 @@
     /* Scroll reveal animations */
     .scroll-reveal {
       opacity: 0;
-      transition: opacity 0.5s ease, transform 0.5s ease;
+      transition: opacity 0.45s ease, transform 0.45s ease;
     }
     .scroll-reveal.from-left,
     .scroll-reveal.from-right,
     .scroll-reveal.from-bottom {
-      transform: translateY(16px);
+      transform: translateY(12px);
     }
     @media (prefers-reduced-motion: reduce) {
       .scroll-reveal {
@@ -136,13 +136,14 @@
       <a href="index.html"><img decoding="async" src="assets/logos/primary01.svg" alt="Nutrition Codes" class="h-8 md:h-9 brightness-0 invert"></a>
       <!-- Desktop links -->
       <div class="hidden md:flex items-center gap-10 font-body">
-        <a href="about.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">About Us</a>
+        <a href="index.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Home</a>
+        <a href="curriculum.html" class="text-white text-[15px] font-semibold">Courses</a>
         <a href="testimonials.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Testimonials</a>
-        <a href="curriculum.html" aria-current="page" class="text-accent border-b-2 border-accent pb-0.5 text-[15px] font-semibold hover:text-white transition-colors">Courses</a>
-        <a href="contact.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Contact Us</a>
+        <a href="about.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">About Us</a>
       </div>
       <!-- Right: transparent Instagram + hamburger -->
       <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden md:inline-flex items-center bg-accent text-on-surface px-5 py-2 rounded-lg font-bold text-sm hover:bg-accent/90 transition-colors font-body">Enroll</a>
         <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
            class="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center text-white hover:border-accent hover:text-accent hover:bg-white/5 transition-all">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -159,10 +160,11 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 font-body" style="background:#05101f;">
       <div class="px-5 py-3 space-y-0.5">
-        <a href="about.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">About Us</a>
-        <a href="testimonials.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">Testimonials</a>
-        <a href="curriculum.html" aria-current="page" class="block text-accent font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">Courses</a>
-        <a href="contact.html" class="block text-white/75 font-semibold hover:text-white py-3 text-[15px]">Contact Us</a>
+        <a href="index.html" class="text-white/75 hover:text-white block font-semibold py-3 border-b border-white/10 text-[15px]">Home</a>
+        <a href="curriculum.html" class="text-white block font-semibold py-3 border-b border-white/10 text-[15px]">Courses</a>
+        <a href="testimonials.html" class="text-white/75 hover:text-white block font-semibold py-3 border-b border-white/10 text-[15px]">Testimonials</a>
+        <a href="about.html" class="text-white/75 hover:text-white block font-semibold py-3 border-b border-white/10 text-[15px]">About Us</a>
+        <a href="contact.html" class="block text-center bg-accent text-on-surface font-bold py-3 mt-3 rounded-lg text-[15px]">Enroll</a>
       </div>
     </div>
   </nav>
@@ -242,8 +244,285 @@
             <h2 class="font-display text-3xl md:text-4xl font-extrabold text-on-surface leading-tight">What is the NCA Mentorship?</h2>
           </div>
           <p class="text-on-surface-variant font-body leading-relaxed">
-            A comprehensive, science-first certification for coaches who refuse to settle for bro-science. Built on five interconnected pillars, it transforms how you understand nutrition, exercise, recovery, and client psychology.
+            A comprehensive, science-first mentorship for coaches who refuse to settle for bro-science. Around 100 sessions across nutrition, exercise, coaching psychology and business — taught from mechanism upward, with the mentors staying reachable long after the lectures end.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- WHO THIS IS FOR -->
+  <section class="py-20 md:py-28 bg-surface-low">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="max-w-2xl mb-14 scroll-reveal">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Who It's For</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">Is this mentorship right for you?</h2>
+        <p class="text-on-surface-variant font-body leading-relaxed">The programme starts at the fundamentals and builds to advanced clinical application, so you do not need a prior qualification to keep up.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl border border-outline-variant/40 p-7 scroll-reveal">
+          <span class="material-symbols-outlined text-secondary text-3xl mb-4 block">rocket_launch</span>
+          <h3 class="font-display text-lg font-extrabold text-on-surface mb-2">Aspiring coaches</h3>
+          <p class="text-on-surface-variant font-body text-sm leading-relaxed">You want to start coaching professionally and need a foundation that holds up to scrutiny, not a weekend certificate.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/40 p-7 scroll-reveal">
+          <span class="material-symbols-outlined text-secondary text-3xl mb-4 block">trending_up</span>
+          <h3 class="font-display text-lg font-extrabold text-on-surface mb-2">Working coaches</h3>
+          <p class="text-on-surface-variant font-body text-sm leading-relaxed">You already have clients but hit limits with special populations, plateaus, or scaling your practice beyond word of mouth.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/40 p-7 scroll-reveal">
+          <span class="material-symbols-outlined text-secondary text-3xl mb-4 block">stethoscope</span>
+          <h3 class="font-display text-lg font-extrabold text-on-surface mb-2">Health professionals</h3>
+          <p class="text-on-surface-variant font-body text-sm leading-relaxed">Doctors, physiotherapists and dietitians who want a practical, applied view of nutrition and training alongside clinical training.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/40 p-7 scroll-reveal">
+          <span class="material-symbols-outlined text-secondary text-3xl mb-4 block">psychology</span>
+          <h3 class="font-display text-lg font-extrabold text-on-surface mb-2">Serious enthusiasts</h3>
+          <p class="text-on-surface-variant font-body text-sm leading-relaxed">You train, you read, and you want to understand the mechanisms behind the advice instead of following it on trust.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IT SOLVES -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-4 scroll-reveal">
+          <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">The Problem</p>
+          <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface leading-tight mb-5">What this mentorship fixes</h2>
+          <p class="text-on-surface-variant font-body leading-relaxed">The Indian fitness industry runs on confident misinformation. Most courses hand you a syllabus and disappear. These are the gaps we built NCA to close.</p>
+        </div>
+        <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
+          <div class="scroll-reveal">
+            <h3 class="font-display text-lg font-extrabold text-on-surface mb-2">Conflicting advice, no way to judge it</h3>
+            <p class="text-on-surface-variant font-body text-sm leading-relaxed">You learn to read research directly, so you can settle a claim yourself instead of picking whichever coach sounds most certain.</p>
+          </div>
+          <div class="scroll-reveal">
+            <h3 class="font-display text-lg font-extrabold text-on-surface mb-2">Knowing the what, not the why</h3>
+            <p class="text-on-surface-variant font-body text-sm leading-relaxed">Every topic is taught from mechanism upward — metabolism, biomechanics, hormones — so you can adapt when a client does not fit the template.</p>
+          </div>
+          <div class="scroll-reveal">
+            <h3 class="font-display text-lg font-extrabold text-on-surface mb-2">Freezing on real client cases</h3>
+            <p class="text-on-surface-variant font-body text-sm leading-relaxed">PCOS, diabetes, hypothyroidism, postpartum, disk herniation, osteoarthritis — covered as worked case studies, not footnotes.</p>
+          </div>
+          <div class="scroll-reveal">
+            <h3 class="font-display text-lg font-extrabold text-on-surface mb-2">Course ends, support ends</h3>
+            <p class="text-on-surface-variant font-body text-sm leading-relaxed">Mentorship continues after the lectures. You keep access to the mentors, the community, and every session added later.</p>
+          </div>
+          <div class="scroll-reveal">
+            <h3 class="font-display text-lg font-extrabold text-on-surface mb-2">Good coach, no clients</h3>
+            <p class="text-on-surface-variant font-body text-sm leading-relaxed">A full business track on positioning, content, sales conversations, pricing and retention — the part most education leaves out entirely.</p>
+          </div>
+          <div class="scroll-reveal">
+            <h3 class="font-display text-lg font-extrabold text-on-surface mb-2">Difficult conversations</h3>
+            <p class="text-on-surface-variant font-body text-sm leading-relaxed">Body image, disordered eating, denial about progress, refund requests — handled with the psychology behind them, not scripts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL CURRICULUM -->
+  <section id="curriculum" class="py-20 md:py-28 bg-surface-low">
+    <div class="max-w-5xl mx-auto px-4 md:px-8">
+      <div class="max-w-2xl mb-12 scroll-reveal">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">The Curriculum</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">Every session, listed in full</h2>
+        <p class="text-on-surface-variant font-body leading-relaxed">Around 100 recorded sessions across four roadmaps, each ordered from fundamentals to advanced application. New sessions are added on an ongoing basis and are included at no extra cost.</p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- Nutrition -->
+        <details class="group bg-white rounded-2xl border border-outline-variant/40 overflow-hidden" open>
+          <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none">
+            <div class="flex items-center gap-4">
+              <span class="material-symbols-outlined text-secondary text-2xl">nutrition</span>
+              <div>
+                <h3 class="font-display text-xl font-extrabold text-on-surface">Nutrition Roadmap</h3>
+                <p class="text-on-surface-variant font-body text-sm">Fundamentals, advanced application, and special populations</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-on-surface-variant transition-transform group-open:rotate-180 shrink-0">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 pt-0 space-y-6 border-t border-outline-variant/30 mt-1">
+            <div class="pt-5">
+              <h4 class="font-body text-xs font-bold uppercase tracking-widest text-secondary mb-3">Fundamentals</h4>
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm text-on-surface-variant font-body">
+                <li>Metabolism of Protein</li><li>Metabolism of Carbs &amp; Fats</li>
+                <li>Digestion, Absorption &amp; Excretion</li><li>Energy Balance &amp; Hunger Hormones</li>
+                <li>Metabolism — CICO, direct &amp; indirect calorimetry</li><li>Food &amp; Supplement Science</li>
+                <li>Electrolytes and Hydration</li><li>Dieting Strategies</li>
+                <li>How to Design Nutrition Plans for Fat Loss</li><li>Nutrition for Hypertrophy</li>
+                <li>Cooking Oils 101</li><li>Cooking Methods 101</li>
+                <li>All about Gut Health</li><li>Transformation Series Part 1</li>
+                <li>Basics of Research in Nutrition Science (Parts 1–3)</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-body text-xs font-bold uppercase tracking-widest text-secondary mb-3">Advanced</h4>
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm text-on-surface-variant font-body">
+                <li>Nutrition for Hypertrophy (Parts 1–3)</li><li>Fat Loss Mysteries — CICO</li>
+                <li>Fat Loss Mysteries — Hunger &amp; Satiety</li><li>Challenging the Indian RDA (Parts 1–2)</li>
+                <li>Transformation Series — Recomposition</li><li>Joint Health Supplementation</li>
+                <li>Are We Overconsuming Vitamins and Minerals?</li><li>Gut Microbiome &amp; Stool Test Reliability</li>
+                <li>Inflammation Is Not Always Undesirable (Parts 1–2)</li><li>Blood Work Analysis</li>
+                <li>Optimising Testosterone Health</li><li>Liver Health &amp; LFT Screening (Parts 1–2)</li>
+                <li>Can We Blame It All on Hormones?</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-body text-xs font-bold uppercase tracking-widest text-secondary mb-3">Special populations &amp; case studies</h4>
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm text-on-surface-variant font-body">
+                <li>Nutrition for PCOS</li><li>Nutrition for Hypothyroidism</li>
+                <li>Nutrition for Diabetes (Parts 1–2)</li><li>Managing Hypertension</li>
+                <li>Female Health: Nutrition + Supplementation</li><li>Eating Disorders</li>
+                <li>Immunity — Building a Resilient Body</li><li>Contest Prep Practical (Parts 1–2)</li>
+                <li>Case study — 4 months postpartum via C-section (Parts 1–2)</li>
+                <li>Case study — 30-year-old male, low testosterone &amp; high LDL</li>
+                <li>Case study — Metabolic syndrome, female physiology</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- Exercise -->
+        <details class="group bg-white rounded-2xl border border-outline-variant/40 overflow-hidden">
+          <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none">
+            <div class="flex items-center gap-4">
+              <span class="material-symbols-outlined text-secondary text-2xl">exercise</span>
+              <div>
+                <h3 class="font-display text-xl font-extrabold text-on-surface">Exercise Roadmap</h3>
+                <p class="text-on-surface-variant font-body text-sm">Anatomy and biomechanics through to injury and clinical programming</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-on-surface-variant transition-transform group-open:rotate-180 shrink-0">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 pt-0 space-y-6 border-t border-outline-variant/30 mt-1">
+            <div class="pt-5">
+              <h4 class="font-body text-xs font-bold uppercase tracking-widest text-secondary mb-3">Fundamentals</h4>
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm text-on-surface-variant font-body">
+                <li>Fundamentals of Anatomy</li><li>Introduction to Muscle Tissue</li>
+                <li>Muscle Mechanics</li><li>Muscle Fiber Physiology</li>
+                <li>Playing with the Forces</li><li>Musculoskeletal Levers</li>
+                <li>Determining Muscle Strength</li><li>Relationship between Force &amp; Torque</li>
+                <li>Centre of Mass &amp; Resultant Forces</li><li>Aerobic &amp; Anaerobic Systems Revisited</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-body text-xs font-bold uppercase tracking-widest text-secondary mb-3">Programming &amp; advanced</h4>
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm text-on-surface-variant font-body">
+                <li>Designing a Push Day</li><li>Designing a Pull Day</li>
+                <li>Designing a Leg Day (Parts 1–2)</li><li>Programming for Gen Pop Clients</li>
+                <li>Cardio vs Weight Training for Fat Loss</li><li>Stretching 101</li>
+                <li>Exercise Analysis Part 1 — optimal vs suboptimal selection</li>
+                <li>Exercise Analysis Part 2 — machines, bands &amp; kettlebells</li>
+                <li>Injury 101</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-body text-xs font-bold uppercase tracking-widest text-secondary mb-3">Special populations</h4>
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm text-on-surface-variant font-body">
+                <li>Managing Osteoarthritis (Parts 1–2)</li><li>Overcoming Disk Herniations + Sciatica</li>
+                <li>Managing Elbow Epicondylopathy</li><li>Marathon Programming (Parts 1–3)</li>
+                <li>Optimising Exercise for Clinical Conditions — diabetes, GERD, hypertension, COPD, DVT</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- Coaching -->
+        <details class="group bg-white rounded-2xl border border-outline-variant/40 overflow-hidden">
+          <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none">
+            <div class="flex items-center gap-4">
+              <span class="material-symbols-outlined text-secondary text-2xl">groups</span>
+              <div>
+                <h3 class="font-display text-xl font-extrabold text-on-surface">Coaching &amp; Client Psychology</h3>
+                <p class="text-on-surface-variant font-body text-sm">The skills that decide whether a good plan actually gets followed</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-on-surface-variant transition-transform group-open:rotate-180 shrink-0">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 pt-0 border-t border-outline-variant/30 mt-1">
+            <ul class="pt-5 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm text-on-surface-variant font-body">
+              <li>Coaching Process 101</li><li>Coach–Client Communication</li>
+              <li>Building Client Trust and Rapport</li><li>Case Studies &amp; Q&amp;A</li>
+              <li>Program Adherence &amp; Refunds</li><li>When Progress Meets Denial</li>
+              <li>Handling Challenging Clients and Situations</li>
+              <li>The Psychology Behind Weight Control: Body Image</li>
+              <li>Body Image &amp; Eating Disorders</li>
+              <li>Customer Loyalty &amp; Premium Coaching Experiences (Parts 1–2)</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Business -->
+        <details class="group bg-white rounded-2xl border border-outline-variant/40 overflow-hidden">
+          <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none">
+            <div class="flex items-center gap-4">
+              <span class="material-symbols-outlined text-secondary text-2xl">campaign</span>
+              <div>
+                <h3 class="font-display text-xl font-extrabold text-on-surface">Social Media &amp; Business</h3>
+                <p class="text-on-surface-variant font-body text-sm">Turning expertise into a practice that pays</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-on-surface-variant transition-transform group-open:rotate-180 shrink-0">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 pt-0 border-t border-outline-variant/30 mt-1">
+            <ul class="pt-5 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm text-on-surface-variant font-body">
+              <li>Social Media &amp; Attention</li><li>Content Creation 101</li>
+              <li>Content Strategy &amp; Sales</li><li>Video Editing Basics</li>
+              <li>Business &amp; Sales 101</li><li>Sales and Perception (Parts 1–2)</li>
+              <li>Coaching Sales and Pricing</li><li>Client Acquisition &amp; Retention</li>
+              <li>Online and Offline Coaching Presence</li>
+              <li>Journey of an Offline Coach to Online</li>
+              <li>Image Is Influence: Mastering Perception</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMAT & WHAT'S INCLUDED -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="max-w-2xl mb-14 scroll-reveal">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Format &amp; Support</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">How the learning works</h2>
+        <p class="text-on-surface-variant font-body leading-relaxed">Recorded depth you can revisit, paired with live access to the people who taught it.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-surface-low rounded-2xl p-7 scroll-reveal">
+          <span class="material-symbols-outlined text-secondary text-3xl mb-4 block">play_circle</span>
+          <h3 class="font-display text-lg font-extrabold text-on-surface mb-2">Live sessions, always recorded</h3>
+          <p class="text-on-surface-variant font-body text-sm leading-relaxed">Sessions run live on Zoom, roughly one a week, so you can ask questions as they happen. Every one is recorded, so missing a week costs you nothing.</p>
+        </div>
+        <div class="bg-surface-low rounded-2xl p-7 scroll-reveal">
+          <span class="material-symbols-outlined text-secondary text-3xl mb-4 block">description</span>
+          <h3 class="font-display text-lg font-extrabold text-on-surface mb-2">Structured notes</h3>
+          <p class="text-on-surface-variant font-body text-sm leading-relaxed">Each module comes with supporting notes, so you have something to reference without scrubbing back through a lecture.</p>
+        </div>
+        <div class="bg-surface-low rounded-2xl p-7 scroll-reveal">
+          <span class="material-symbols-outlined text-secondary text-3xl mb-4 block">videocam</span>
+          <h3 class="font-display text-lg font-extrabold text-on-surface mb-2">Live mentorship calls</h3>
+          <p class="text-on-surface-variant font-body text-sm leading-relaxed">Group sessions and Q&amp;A with the faculty, where real client problems get worked through rather than theorised about.</p>
+        </div>
+        <div class="bg-surface-low rounded-2xl p-7 scroll-reveal">
+          <span class="material-symbols-outlined text-secondary text-3xl mb-4 block">forum</span>
+          <h3 class="font-display text-lg font-extrabold text-on-surface mb-2">Community access</h3>
+          <p class="text-on-surface-variant font-body text-sm leading-relaxed">An active WhatsApp group where scholars and mentors discuss cases daily. Questions get answered by people who coach for a living.</p>
+        </div>
+        <div class="bg-surface-low rounded-2xl p-7 scroll-reveal">
+          <span class="material-symbols-outlined text-secondary text-3xl mb-4 block">all_inclusive</span>
+          <h3 class="font-display text-lg font-extrabold text-on-surface mb-2">Lifetime access</h3>
+          <p class="text-on-surface-variant font-body text-sm leading-relaxed">Access does not expire at the end of a batch. The material stays yours, and so does the mentorship.</p>
+        </div>
+        <div class="bg-surface-low rounded-2xl p-7 scroll-reveal">
+          <span class="material-symbols-outlined text-secondary text-3xl mb-4 block">update</span>
+          <h3 class="font-display text-lg font-extrabold text-on-surface mb-2">Continuous updates</h3>
+          <p class="text-on-surface-variant font-body text-sm leading-relaxed">New sessions are added as the evidence moves. They are announced in the group and included for existing scholars.</p>
         </div>
       </div>
     </div>
@@ -797,6 +1076,81 @@
           </div>
         </details>
 
+        <details class="group bg-white rounded-2xl border border-outline-variant/30 shadow-sm scroll-reveal from-bottom open:shadow-md transition-shadow">
+          <summary class="flex items-center gap-4 cursor-pointer p-6 list-none">
+            <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-sm font-extrabold flex-shrink-0">7</span>
+            <span class="font-display font-bold text-on-surface text-lg flex-1">Do I need a qualification or coaching experience to join?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 flex-shrink-0">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 pl-14 text-on-surface-variant font-body leading-relaxed">
+            No. Every roadmap starts at the fundamentals — metabolism, anatomy, the coaching process — before moving into advanced and clinical topics. Complete beginners, practising coaches and medical professionals all learn alongside each other.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-2xl border border-outline-variant/30 shadow-sm scroll-reveal from-bottom open:shadow-md transition-shadow">
+          <summary class="flex items-center gap-4 cursor-pointer p-6 list-none">
+            <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-sm font-extrabold flex-shrink-0">8</span>
+            <span class="font-display font-bold text-on-surface text-lg flex-1">How do I get my questions answered between sessions?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 flex-shrink-0">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 pl-14 text-on-surface-variant font-body leading-relaxed">
+            Through the scholar community. There's an active WhatsApp group where mentors and fellow scholars discuss real client cases daily, plus dedicated Q&amp;A and group mentorship calls. Scholars consistently say the mentors are approachable and non-judgemental about beginner questions.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-2xl border border-outline-variant/30 shadow-sm scroll-reveal from-bottom open:shadow-md transition-shadow">
+          <summary class="flex items-center gap-4 cursor-pointer p-6 list-none">
+            <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-sm font-extrabold flex-shrink-0">9</span>
+            <span class="font-display font-bold text-on-surface text-lg flex-1">Does this cover the business side of coaching?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 flex-shrink-0">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 pl-14 text-on-surface-variant font-body leading-relaxed">
+            Yes, and it's a full roadmap rather than an afterthought — content strategy, social media, sales conversations, pricing, client acquisition and retention, and the transition from offline to online coaching.
+          </div>
+        </details>
+
+        <details class="group bg-white rounded-2xl border border-outline-variant/30 shadow-sm scroll-reveal from-bottom open:shadow-md transition-shadow">
+          <summary class="flex items-center gap-4 cursor-pointer p-6 list-none">
+            <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary text-sm font-extrabold flex-shrink-0">10</span>
+            <span class="font-display font-bold text-on-surface text-lg flex-1">What does it cost, and how do I enrol?</span>
+            <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 flex-shrink-0">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 pl-14 text-on-surface-variant font-body leading-relaxed">
+            Send us an enquiry through the <a href="contact.html" class="text-secondary font-semibold underline underline-offset-2">contact form</a> and we'll walk you through current pricing, the intake schedule and anything else you want to know before deciding.
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SUCCESS STORIES -->
+  <section class="bg-white py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="max-w-2xl mb-14 scroll-reveal">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Success Stories</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">What scholars say after finishing</h2>
+        <p class="text-on-surface-variant font-body leading-relaxed">A few words from coaches, enthusiasts and doctors who went through the programme.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <figure class="bg-surface-low rounded-2xl p-7 flex flex-col scroll-reveal">
+          <blockquote class="text-on-surface-variant font-body text-sm leading-relaxed flex-1">"The curriculum goes beyond nutrition and fitness, covering psychology, research, and social media — essential for both online and offline coaching. What truly sets NCA apart is how they simplify complex topics."</blockquote>
+          <figcaption class="mt-5 pt-5 border-t border-outline-variant/40 font-display font-extrabold text-on-surface text-sm">Inamul Hasan</figcaption>
+        </figure>
+        <figure class="bg-surface-low rounded-2xl p-7 flex flex-col scroll-reveal">
+          <blockquote class="text-on-surface-variant font-body text-sm leading-relaxed flex-1">"Being a medical doctor, NCA has given me a perspective of health from a different aspect than what I traditionally studied in medical school. You can get a certificate by writing an exam in a course, but NCA is an experience."</blockquote>
+          <figcaption class="mt-5 pt-5 border-t border-outline-variant/40 font-display font-extrabold text-on-surface text-sm">Dr. Sai Kiran</figcaption>
+        </figure>
+        <figure class="bg-surface-low rounded-2xl p-7 flex flex-col scroll-reveal">
+          <blockquote class="text-on-surface-variant font-body text-sm leading-relaxed flex-1">"Becoming a successful coach requires more than just knowledge; you must also excel in client management and after-sales service. That's what I learned at NCA — a worthwhile investment that will yield lifelong returns."</blockquote>
+          <figcaption class="mt-5 pt-5 border-t border-outline-variant/40 font-display font-extrabold text-on-surface text-sm">Ritu Vijay</figcaption>
+        </figure>
+      </div>
+      <div class="mt-10 scroll-reveal">
+        <a href="testimonials.html" class="inline-flex items-center gap-2 text-secondary font-bold font-body hover:gap-3 transition-all">
+          Read all scholar stories
+          <span class="material-symbols-outlined text-lg">arrow_forward</span>
+        </a>
       </div>
     </div>
   </section>
@@ -877,8 +1231,7 @@
           <li><a href="index.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Home</a></li>
           <li><a href="curriculum.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Courses</a></li>
           <li><a href="about.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">About</a></li>
-          <li><a href="testimonials.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Results</a></li>
-          <li><a href="blog.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Blog</a></li>
+          <li><a href="testimonials.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Testimonials</a></li>
         </ul>
       </div>
       <div>

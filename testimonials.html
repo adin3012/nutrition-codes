@@ -89,16 +89,16 @@
     /* Scroll reveal animations */
     .scroll-reveal {
       opacity: 0;
-      transition: opacity 0.8s ease, transform 0.8s ease;
+      transition: opacity 0.45s ease, transform 0.45s ease;
     }
     .scroll-reveal.from-left {
-      transform: translateX(-60px);
+      transform: translateY(12px);
     }
     .scroll-reveal.from-right {
-      transform: translateX(60px);
+      transform: translateY(12px);
     }
     .scroll-reveal.from-bottom {
-      transform: translateY(40px);
+      transform: translateY(12px);
     }
     .scroll-reveal.in-view {
       opacity: 1;
@@ -159,13 +159,14 @@
       <a href="index.html"><img decoding="async" src="assets/logos/primary01.svg" alt="Nutrition Codes" class="h-8 md:h-9 brightness-0 invert"></a>
       <!-- Desktop links -->
       <div class="hidden md:flex items-center gap-10 font-body">
-        <a href="about.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">About Us</a>
-        <a href="testimonials.html" class="text-accent border-b-2 border-accent pb-0.5 text-[15px] font-semibold hover:text-white transition-colors">Testimonials</a>
+        <a href="index.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Home</a>
         <a href="curriculum.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Courses</a>
-        <a href="contact.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Contact Us</a>
+        <a href="testimonials.html" class="text-white text-[15px] font-semibold">Testimonials</a>
+        <a href="about.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">About Us</a>
       </div>
       <!-- Right: transparent Instagram + hamburger -->
       <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden md:inline-flex items-center bg-accent text-on-surface px-5 py-2 rounded-lg font-bold text-sm hover:bg-accent/90 transition-colors font-body">Enroll</a>
         <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
            class="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center text-white hover:border-accent hover:text-accent hover:bg-white/5 transition-all">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -182,10 +183,11 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 font-body" style="background:#05101f;">
       <div class="px-5 py-3 space-y-0.5">
-        <a href="about.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">About Us</a>
-        <a href="testimonials.html" aria-current="page" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">Testimonials</a>
-        <a href="curriculum.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">Courses</a>
-        <a href="contact.html" class="block text-white/75 font-semibold hover:text-white py-3 text-[15px]">Contact Us</a>
+        <a href="index.html" class="text-white/75 hover:text-white block font-semibold py-3 border-b border-white/10 text-[15px]">Home</a>
+        <a href="curriculum.html" class="text-white/75 hover:text-white block font-semibold py-3 border-b border-white/10 text-[15px]">Courses</a>
+        <a href="testimonials.html" class="text-white block font-semibold py-3 border-b border-white/10 text-[15px]">Testimonials</a>
+        <a href="about.html" class="text-white/75 hover:text-white block font-semibold py-3 border-b border-white/10 text-[15px]">About Us</a>
+        <a href="contact.html" class="block text-center bg-accent text-on-surface font-bold py-3 mt-3 rounded-lg text-[15px]">Enroll</a>
       </div>
     </div>
   </nav>
@@ -279,7 +281,7 @@
         <div class="swiper-wrapper items-stretch">
 
           <div class="swiper-slide" style="height:auto;">
-            <div class="bg-[#102f65] rounded-2xl p-6 shadow-sm h-full flex flex-col gap-4 tilt-3d" style="min-height:280px;">
+            <div class="bg-[#102f65] rounded-2xl p-6 shadow-sm h-full flex flex-col gap-4" style="min-height:280px;">
               <div class="text-yellow-400 text-sm tracking-wide">★★★★★</div>
               <p class="text-white/80 font-body text-sm leading-relaxed flex-1">"Being part of NC Academy has been one of the best decisions of my life. The knowledge, clarity, and mentorship here are unmatched."</p>
               <div class="flex items-center gap-3 pt-3 border-t border-white/10">
@@ -290,7 +292,7 @@
           </div>
 
           <div class="swiper-slide" style="height:auto;">
-            <div class="bg-[#102f65] rounded-2xl p-6 shadow-sm h-full flex flex-col gap-4 tilt-3d" style="min-height:280px;">
+            <div class="bg-[#102f65] rounded-2xl p-6 shadow-sm h-full flex flex-col gap-4" style="min-height:280px;">
               <div class="text-yellow-400 text-sm tracking-wide">★★★★★</div>
               <p class="text-white/80 font-body text-sm leading-relaxed flex-1">"Joining Nutrition Codes deepened my knowledge and taught me how to coach people more effectively and scale my fitness business. It is THE BEST!"</p>
               <div class="flex items-center gap-3 pt-3 border-t border-white/10">
@@ -301,7 +303,7 @@
           </div>
 
           <div class="swiper-slide" style="height:auto;">
-            <div class="bg-[#102f65] rounded-2xl p-6 shadow-sm h-full flex flex-col gap-4 tilt-3d" style="min-height:280px;">
+            <div class="bg-[#102f65] rounded-2xl p-6 shadow-sm h-full flex flex-col gap-4" style="min-height:280px;">
               <div class="text-yellow-400 text-sm tracking-wide">★★★★★</div>
               <p class="text-white/80 font-body text-sm leading-relaxed flex-1">"Beyond technical knowledge, NCA provides in-depth insights on business growth, social media, and mindset development, which are rare to find elsewhere."</p>
               <div class="flex items-center gap-3 pt-3 border-t border-white/10">
@@ -312,7 +314,7 @@
           </div>
 
           <div class="swiper-slide" style="height:auto;">
-            <div class="bg-[#102f65] rounded-2xl p-6 shadow-sm h-full flex flex-col gap-4 tilt-3d" style="min-height:280px;">
+            <div class="bg-[#102f65] rounded-2xl p-6 shadow-sm h-full flex flex-col gap-4" style="min-height:280px;">
               <div class="text-yellow-400 text-sm tracking-wide">★★★★★</div>
               <p class="text-white/80 font-body text-sm leading-relaxed flex-1">"Nutrition, exercise science, coaching best practices, mindset, business growth pick any area of coaching and NCA has it covered."</p>
               <div class="flex items-center gap-3 pt-3 border-t border-white/10">
@@ -323,7 +325,7 @@
           </div>
 
           <div class="swiper-slide" style="height:auto;">
-            <div class="bg-[#102f65] rounded-2xl p-6 shadow-sm h-full flex flex-col gap-4 tilt-3d" style="min-height:280px;">
+            <div class="bg-[#102f65] rounded-2xl p-6 shadow-sm h-full flex flex-col gap-4" style="min-height:280px;">
               <div class="text-yellow-400 text-sm tracking-wide">★★★★★</div>
               <p class="text-white/80 font-body text-sm leading-relaxed flex-1">"One-on-one mentorship, approachable coaches, a strong foundation with actionable insights. Being part of NCA has been a true privilege!"</p>
               <div class="flex items-center gap-3 pt-3 border-t border-white/10">
@@ -334,7 +336,7 @@
           </div>
 
           <div class="swiper-slide" style="height:auto;">
-            <div class="bg-[#102f65] rounded-2xl p-6 shadow-sm h-full flex flex-col gap-4 tilt-3d" style="min-height:280px;">
+            <div class="bg-[#102f65] rounded-2xl p-6 shadow-sm h-full flex flex-col gap-4" style="min-height:280px;">
               <div class="text-yellow-400 text-sm tracking-wide">★★★★★</div>
               <p class="text-white/80 font-body text-sm leading-relaxed flex-1">"The curriculum covers not just nutrition and exercise, but also coaching, business, and social media. An absolute beginner will have no problem understanding it."</p>
               <div class="flex items-center gap-3 pt-3 border-t border-white/10">
@@ -345,7 +347,7 @@
           </div>
 
           <div class="swiper-slide" style="height:auto;">
-            <div class="bg-[#102f65] rounded-2xl p-6 shadow-sm h-full flex flex-col gap-4 tilt-3d" style="min-height:280px;">
+            <div class="bg-[#102f65] rounded-2xl p-6 shadow-sm h-full flex flex-col gap-4" style="min-height:280px;">
               <div class="text-yellow-400 text-sm tracking-wide">★★★★★</div>
               <p class="text-white/80 font-body text-sm leading-relaxed flex-1">"Joining NCA gave me everything I needed practical nutrition knowledge, sales skills, social media strategy, and the confidence to build a full-time coaching career."</p>
               <div class="flex items-center gap-3 pt-3 border-t border-white/10">
@@ -551,6 +553,75 @@
     </div>
   </div>
 
+  <!-- IN THEIR OWN WORDS -->
+  <section class="bg-white py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="max-w-2xl mb-14 scroll-reveal">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">In Their Own Words</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">Full reviews from our scholars</h2>
+        <p class="text-on-surface-variant font-body leading-relaxed">Unedited feedback from coaches, doctors and career-changers who have been through the programme.</p>
+      </div>
+
+      <div class="masonry-col" style="column-gap:1.5rem;">
+
+        <figure class="masonry-item bg-surface-low rounded-2xl p-7 scroll-reveal">
+          <div class="text-yellow-500 text-sm tracking-wide mb-4">★★★★★</div>
+          <blockquote class="text-on-surface-variant font-body text-sm leading-relaxed">"I have been an active member of NCA within a year of its inception. Being a medical doctor, NCA has given me a perspective of health from a different aspect than what I traditionally studied in medical school. With a very dedicated and well-read team of professionals teaching the scholars and interacting with them regularly, NCA has been a treasure of knowledge for seekers like me. You can get a certificate by writing an exam in a course, but NCA is an experience."</blockquote>
+          <figcaption class="mt-5 pt-5 border-t border-outline-variant/40 flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-secondary/10 text-secondary font-display font-extrabold text-sm flex items-center justify-center flex-shrink-0">SK</span>
+            <span><span class="block font-display font-extrabold text-on-surface text-sm">Dr. Sai Kiran</span><span class="block text-xs text-on-surface-variant font-body">Medical doctor · Scholar</span></span>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item bg-surface-low rounded-2xl p-7 scroll-reveal">
+          <div class="text-yellow-500 text-sm tracking-wide mb-4">★★★★★</div>
+          <blockquote class="text-on-surface-variant font-body text-sm leading-relaxed">"I first joined Aman and the mentors' group in 2021, where I attended a few sessions and was impressed by their approach to addressing doubts. That led me to join NC Academy in 2022. Though I had done a few courses before, I soon realised there was still so much more to learn. The curriculum goes beyond nutrition and fitness, covering psychology, research, and social media — essential for both online and offline coaching. The mentors are incredibly supportive and non-judgemental, always putting in 100% effort to clarify our doubts."</blockquote>
+          <figcaption class="mt-5 pt-5 border-t border-outline-variant/40 flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-secondary/10 text-secondary font-display font-extrabold text-sm flex items-center justify-center flex-shrink-0">IH</span>
+            <span><span class="block font-display font-extrabold text-on-surface text-sm">Inamul Hasan</span><span class="block text-xs text-on-surface-variant font-body">Scholar since 2022</span></span>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item bg-surface-low rounded-2xl p-7 scroll-reveal">
+          <div class="text-yellow-500 text-sm tracking-wide mb-4">★★★★★</div>
+          <blockquote class="text-on-surface-variant font-body text-sm leading-relaxed">"Joining NCA has been one of the best investments I've made. I wanted guidance on building an online presence and mastering the practical aspects of working with clients. What sets this course apart is the one-on-one mentorship, which is truly exceptional. The coaches are always approachable, whether through calls or live sessions. This course isn't just theoretical — it provides a strong foundation with actionable insights."</blockquote>
+          <figcaption class="mt-5 pt-5 border-t border-outline-variant/40 flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-secondary/10 text-secondary font-display font-extrabold text-sm flex items-center justify-center flex-shrink-0">JA</span>
+            <span><span class="block font-display font-extrabold text-on-surface text-sm">Jatin Arya</span><span class="block text-xs text-on-surface-variant font-body">Scholar · NCA</span></span>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item bg-surface-low rounded-2xl p-7 scroll-reveal">
+          <div class="text-yellow-500 text-sm tracking-wide mb-4">★★★★★</div>
+          <blockquote class="text-on-surface-variant font-body text-sm leading-relaxed">"I joined primarily to learn about business, but I ended up gaining so much more. From in-depth knowledge about nutrition and client management to building valuable connections, the experience has been incredible. I also had the opportunity to meet amazing coaches who are thriving in the fitness industry. What stood out most was Aman Bindra's honesty and guidance — from day one he shared actionable insights on growing my business."</blockquote>
+          <figcaption class="mt-5 pt-5 border-t border-outline-variant/40 flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-secondary/10 text-secondary font-display font-extrabold text-sm flex items-center justify-center flex-shrink-0">AS</span>
+            <span><span class="block font-display font-extrabold text-on-surface text-sm">Akshmeet Singh</span><span class="block text-xs text-on-surface-variant font-body">Online fitness coach</span></span>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item bg-surface-low rounded-2xl p-7 scroll-reveal">
+          <div class="text-yellow-500 text-sm tracking-wide mb-4">★★★★★</div>
+          <blockquote class="text-on-surface-variant font-body text-sm leading-relaxed">"More than just fitness, Aman's lectures on business, mindset, transformation, and communication have been truly transformative. They've not only helped me become more confident but also equipped me with the skills to set clear goals for myself and my clients. This course also dives into personal and professional growth, which makes it an invaluable experience."</blockquote>
+          <figcaption class="mt-5 pt-5 border-t border-outline-variant/40 flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-secondary/10 text-secondary font-display font-extrabold text-sm flex items-center justify-center flex-shrink-0">RG</span>
+            <span><span class="block font-display font-extrabold text-on-surface text-sm">Rishita Gada</span><span class="block text-xs text-on-surface-variant font-body">Scholar · NCA</span></span>
+          </figcaption>
+        </figure>
+
+        <figure class="masonry-item bg-surface-low rounded-2xl p-7 scroll-reveal">
+          <div class="text-yellow-500 text-sm tracking-wide mb-4">★★★★★</div>
+          <blockquote class="text-on-surface-variant font-body text-sm leading-relaxed">"Being a scholar at Nutrition Codes has been an incredibly enriching experience. The program offers a comprehensive understanding of fitness, nutrition, and supplementation, along with practical lifestyle strategies. The well-structured courses and expert instructors provide science-based, real-life insights that have transformed my approach to health. The emphasis on holistic well-being has empowered me to make informed decisions and help others do the same."</blockquote>
+          <figcaption class="mt-5 pt-5 border-t border-outline-variant/40 flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-secondary/10 text-secondary font-display font-extrabold text-sm flex items-center justify-center flex-shrink-0">SM</span>
+            <span><span class="block font-display font-extrabold text-on-surface text-sm">Satya Muddena</span><span class="block text-xs text-on-surface-variant font-body">Scholar · NCA</span></span>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
   <!-- CTA STRIP -->
   <section class="bg-primary py-20">
     <div class="max-w-4xl mx-auto px-4 md:px-8 text-center space-y-6 scroll-reveal from-bottom">
@@ -583,8 +654,7 @@
           <li><a href="index.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Home</a></li>
           <li><a href="curriculum.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Courses</a></li>
           <li><a href="about.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">About</a></li>
-          <li><a href="testimonials.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Results</a></li>
-          <li><a href="blog.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Blog</a></li>
+          <li><a href="testimonials.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Testimonials</a></li>
         </ul>
       </div>
       <div>
@@ -823,8 +893,6 @@
   </script>
 
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Nutrition Codes Academy", "url": "https://nutritioncodes.com/", "logo": "https://nutritioncodes.com/assets/logos/primary01.svg", "sameAs": ["https://www.instagram.com/nutritioncodes/"], "description": "India's most rigorous nutrition and fitness education platform."}</script>
-
-<script src="js/tilt.js" defer></script>
 <script src="js/polish.js" defer></script>
 </body>
 </html>

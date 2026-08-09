@@ -106,13 +106,13 @@
     }
     .faculty-slide {
       opacity: 0;
-      transition: opacity 0.8s ease, transform 0.8s ease;
+      transition: opacity 0.45s ease, transform 0.45s ease;
     }
     .faculty-slide.from-left {
-      transform: translateX(-60px);
+      transform: translateY(12px);
     }
     .faculty-slide.from-right {
-      transform: translateX(60px);
+      transform: translateY(12px);
     }
     .faculty-slide.in-view {
       opacity: 1;
@@ -121,12 +121,12 @@
     /* Scroll reveal animations */
     .scroll-reveal {
       opacity: 0;
-      transition: opacity 0.5s ease, transform 0.5s ease;
+      transition: opacity 0.45s ease, transform 0.45s ease;
     }
     .scroll-reveal.from-left,
     .scroll-reveal.from-right,
     .scroll-reveal.from-bottom {
-      transform: translateY(16px);
+      transform: translateY(12px);
     }
     @media (prefers-reduced-motion: reduce) {
       .scroll-reveal {
@@ -153,13 +153,14 @@
       <a href="index.html"><img decoding="async" src="assets/logos/primary01.svg" alt="Nutrition Codes" class="h-8 md:h-9 brightness-0 invert"></a>
       <!-- Desktop links -->
       <div class="hidden md:flex items-center gap-10 font-body">
-        <a href="about.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">About Us</a>
-        <a href="testimonials.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Testimonials</a>
+        <a href="index.html" class="text-white text-[15px] font-semibold">Home</a>
         <a href="curriculum.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Courses</a>
-        <a href="contact.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Contact Us</a>
+        <a href="testimonials.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">Testimonials</a>
+        <a href="about.html" class="text-white/70 text-[15px] font-semibold hover:text-white transition-colors">About Us</a>
       </div>
       <!-- Right: transparent Instagram + hamburger -->
       <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden md:inline-flex items-center bg-accent text-on-surface px-5 py-2 rounded-lg font-bold text-sm hover:bg-accent/90 transition-colors font-body">Enroll</a>
         <a href="https://www.instagram.com/nutritioncodes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
            class="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center text-white hover:border-accent hover:text-accent hover:bg-white/5 transition-all">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -176,10 +177,11 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 font-body" style="background:#05101f;">
       <div class="px-5 py-3 space-y-0.5">
-        <a href="about.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">About Us</a>
-        <a href="testimonials.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">Testimonials</a>
-        <a href="curriculum.html" class="block text-white/75 font-semibold hover:text-white py-3 border-b border-white/10 text-[15px]">Courses</a>
-        <a href="contact.html" class="block text-white/75 font-semibold hover:text-white py-3 text-[15px]">Contact Us</a>
+        <a href="index.html" class="text-white block font-semibold py-3 border-b border-white/10 text-[15px]">Home</a>
+        <a href="curriculum.html" class="text-white/75 hover:text-white block font-semibold py-3 border-b border-white/10 text-[15px]">Courses</a>
+        <a href="testimonials.html" class="text-white/75 hover:text-white block font-semibold py-3 border-b border-white/10 text-[15px]">Testimonials</a>
+        <a href="about.html" class="text-white/75 hover:text-white block font-semibold py-3 border-b border-white/10 text-[15px]">About Us</a>
+        <a href="contact.html" class="block text-center bg-accent text-on-surface font-bold py-3 mt-3 rounded-lg text-[15px]">Enroll</a>
       </div>
     </div>
   </nav>
@@ -229,6 +231,37 @@
     </div>
   </section>
 
+  <!-- INTRODUCTION -->
+  <section class="bg-white py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div class="lg:col-span-7 scroll-reveal">
+          <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">What Is Nutrition Codes</p>
+          <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface leading-tight mb-6">A mentorship for coaches who want to know why.</h2>
+          <div class="space-y-4 text-on-surface-variant font-body leading-relaxed">
+            <p>Nutrition Codes Academy is a science-first mentorship programme for anyone who coaches, or wants to. We built it because the fitness industry is full of confident advice and short on people who can explain the reasoning behind it.</p>
+            <p>Around 100 sessions cover nutrition, exercise science, coaching psychology, and the business of running a practice — taught from mechanism upward, in Hindi and English, with mentors who stay reachable long after the lectures end.</p>
+          </div>
+          <a href="curriculum.html" class="inline-flex items-center gap-2 mt-7 text-secondary font-bold font-body hover:gap-3 transition-all">
+            See the full curriculum
+            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+          </a>
+        </div>
+        <div class="lg:col-span-5 lg:pl-6 scroll-reveal">
+          <div class="bg-surface-low rounded-2xl p-8 space-y-6">
+            <h3 class="font-display text-lg font-extrabold text-on-surface">Who it's for</h3>
+            <ul class="space-y-4 font-body text-sm text-on-surface-variant">
+              <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-xl shrink-0">check_circle</span><span>Aspiring coaches starting from zero — every roadmap begins at the fundamentals.</span></li>
+              <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-xl shrink-0">check_circle</span><span>Working coaches stuck on special populations or on growing their practice.</span></li>
+              <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-xl shrink-0">check_circle</span><span>Doctors, physios and dietitians wanting an applied view alongside clinical training.</span></li>
+              <li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-xl shrink-0">check_circle</span><span>Serious enthusiasts who want mechanisms, not rules to follow on trust.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- WHAT WE TEACH -->
   <section class="bg-surface-low py-20 md:py-24">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
@@ -272,6 +305,33 @@
           </div>
           <h3 class="font-display text-xl font-bold text-on-surface mb-2">Research</h3>
           <p class="text-on-surface-variant leading-relaxed font-body text-sm">Reading studies and applying the latest science in practice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE NCA -->
+  <section class="bg-background py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="max-w-2xl mb-14 scroll-reveal">
+        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Why Choose Us</p>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">What makes NCA different</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl border border-outline-variant/40 p-8 scroll-reveal">
+          <span class="material-symbols-outlined text-secondary text-3xl mb-4 block">psychology</span>
+          <h3 class="font-display text-xl font-extrabold text-on-surface mb-3">In-depth learning &amp; critical thinking</h3>
+          <p class="text-on-surface-variant font-body text-sm leading-relaxed">We go past the basics. Quizzes, discussion and research literacy are built in, so you can evaluate a new claim yourself instead of waiting to be told what to think.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/40 p-8 scroll-reveal">
+          <span class="material-symbols-outlined text-secondary text-3xl mb-4 block">supervisor_account</span>
+          <h3 class="font-display text-xl font-extrabold text-on-surface mb-3">Personalised mentorship &amp; support</h3>
+          <p class="text-on-surface-variant font-body text-sm leading-relaxed">Direct access to the faculty through live calls and an active scholar community, with one-on-one guidance when you need it. Beginner questions are genuinely welcome.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-outline-variant/40 p-8 scroll-reveal">
+          <span class="material-symbols-outlined text-secondary text-3xl mb-4 block">all_inclusive</span>
+          <h3 class="font-display text-xl font-extrabold text-on-surface mb-3">Lifetime access &amp; continuous updates</h3>
+          <p class="text-on-surface-variant font-body text-sm leading-relaxed">Learning does not stop when the batch does. Access never expires, and new sessions are added as the evidence moves — included, not sold again.</p>
         </div>
       </div>
     </div>
@@ -543,8 +603,7 @@
           <li><a href="index.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Home</a></li>
           <li><a href="curriculum.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Courses</a></li>
           <li><a href="about.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">About</a></li>
-          <li><a href="testimonials.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Results</a></li>
-          <li><a href="blog.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Blog</a></li>
+          <li><a href="testimonials.html" class="text-slate-300 hover:text-[#40F39A] transition-colors text-sm">Testimonials</a></li>
         </ul>
       </div>
       <div>

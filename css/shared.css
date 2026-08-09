@@ -69,43 +69,31 @@ html {
   }
 }
 
-/* ── Scroll Reveal Animations ── */
-.scroll-reveal {
-  opacity: 0;
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.scroll-reveal.from-left {
-  transform: translateX(-60px);
-}
-.scroll-reveal.from-right {
-  transform: translateX(60px);
-}
-.scroll-reveal.from-bottom {
-  transform: translateY(40px);
-}
-.scroll-reveal.in-view {
-  opacity: 1;
-  transform: translateX(0) translateY(0);
-}
-
-/* ── Faculty / Timeline slide animations ── */
+/* ── Scroll Reveal ──
+   One gentle fade-up for everything. Directional slides (from-left/right/bottom)
+   are intentionally no-ops: the brief calls for a calm, information-first page,
+   so the classes are kept for markup compatibility but do not move content. */
+.scroll-reveal,
 .faculty-slide,
 .timeline-card {
   opacity: 0;
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(12px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
 }
+.scroll-reveal.from-left,
+.scroll-reveal.from-right,
+.scroll-reveal.from-bottom,
 .faculty-slide.from-left,
-.timeline-card.from-left {
-  transform: translateX(-60px);
-}
 .faculty-slide.from-right,
+.timeline-card.from-left,
 .timeline-card.from-right {
-  transform: translateX(60px);
+  transform: translateY(12px);
 }
+.scroll-reveal.in-view,
 .faculty-slide.in-view,
 .timeline-card.in-view {
   opacity: 1;
-  transform: translateX(0);
+  transform: none;
 }
 
 /* ── Reduced motion preference ── */
