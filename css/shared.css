@@ -322,6 +322,15 @@ details[open] > div {
   opacity: 1;
 }
 
+/* Long curriculum panels: never clip. The 500px cap above was written for
+   short FAQ answers and was cutting the roadmaps off mid-list. */
+details.roadmap-panel > div {
+  transition: opacity 0.3s ease;
+}
+details.roadmap-panel[open] > div {
+  max-height: none;
+}
+
 /* ── Image zoom on card hover ── */
 .img-zoom {
   overflow: hidden;
@@ -440,4 +449,15 @@ details[open] > div {
     width: 26px;
     height: 26px;
   }
+}
+
+/* ── Typography: stop a single word dropping onto its own line ──
+   Reviewer flagged "Coach", "full" and "you?" sitting alone on line 2
+   across several sections. Balancing headings fixes it everywhere at
+   once rather than hand-tuning each container width. */
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
 }
