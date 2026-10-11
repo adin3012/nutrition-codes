@@ -21,3 +21,7 @@ package-lock.json
 # Auto-generated graph files
 graphify-out/
 js/graphify-out/
+
+# Raw photo drops from shoots. Originals are 6000x4000 and ~10MB each.
+# Resized copies live in assets/images/. Keep the originals local only.
+website more/
