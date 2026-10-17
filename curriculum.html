@@ -122,6 +122,7 @@
     .video-swiper .swiper-button-prev::after { font-size: 16px; font-weight: 800; }
     .video-swiper .swiper-pagination-bullet { background: #c4c6d1; opacity: 1; }
     .video-swiper .swiper-pagination-bullet-active { background: #4173F4; }
+      #free-lectures ::-webkit-scrollbar { display: none; }
   </style>
 </head>
 <body class="bg-background text-on-surface">
@@ -220,57 +221,45 @@
   <!-- WHAT IS NCA MENTORSHIP -->
   <section class="py-20 md:py-28 bg-white">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div class="scroll-reveal from-left">
-          <a href="https://youtu.be/s9XlY6nOfFY?si=EA59EGBlTkUL8kRD" target="_blank" rel="noopener noreferrer" class="block rounded-3xl overflow-hidden aspect-[4/3] relative group cursor-pointer">
-            <img loading="lazy" decoding="async" src="https://img.youtube.com/vi/s9XlY6nOfFY/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/s9XlY6nOfFY/hqdefault.jpg'" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Free Exercise Lecture NCA">
-            <div class="absolute inset-0 bg-gradient-to-tr from-primary/50 to-transparent group-hover:from-primary/40 transition-all"></div>
-            <!-- Play button -->
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                <span class="material-symbols-outlined text-primary text-3xl" style="margin-left:3px">play_arrow</span>
-              </div>
+      <!-- Free lectures, rendered from the FREE_LECTURES list further down the page -->
+      <div id="free-lectures" class="scroll-reveal from-bottom"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mt-16 md:mt-20 items-start">
+        <div class="lg:col-span-5 scroll-reveal from-left">
+            <div>
+              <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-4">The Program</p>
+              <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-on-surface leading-[1.05] tracking-tight">What is the NCA Mentorship?</h2>
             </div>
-            <div class="absolute bottom-6 left-6 right-6">
-              <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md border border-white/20 text-white text-xs font-bold px-4 py-2 rounded-full">
-                <span class="material-symbols-outlined text-sm">fitness_center</span> Watch Free Exercise Lecture
-              </div>
-            </div>
-          </a>
         </div>
-        <div class="scroll-reveal from-right space-y-7">
-          <div>
-            <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-4">The Program</p>
-            <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-on-surface leading-[1.05] tracking-tight">What is the NCA Mentorship?</h2>
-          </div>
-          <p class="text-on-surface-variant font-body text-lg leading-relaxed">
-            A comprehensive, science-first mentorship for coaches who refuse to settle for bro-science. Around 100 sessions across nutrition, exercise, coaching psychology and business, taught from mechanism upward, with the mentors staying reachable long after the lectures end.
-          </p>
+        <div class="lg:col-span-7 scroll-reveal from-right space-y-7">
+            <p class="text-on-surface-variant font-body text-lg leading-relaxed">
+              A comprehensive, science-first mentorship for coaches who refuse to settle for bro-science. Around 100 sessions across nutrition, exercise, coaching psychology and business, taught from mechanism upward, with the mentors staying reachable long after the lectures end.
+            </p>
 
-          <div class="grid grid-cols-3 gap-4 py-2">
-            <div>
-              <p class="font-display text-3xl md:text-4xl font-extrabold text-on-surface leading-none">100<span class="text-accent">+</span></p>
-              <p class="text-on-surface-variant font-body text-sm mt-1.5">Recorded sessions</p>
+            <div class="grid grid-cols-3 gap-4 py-2">
+              <div>
+                <p class="font-display text-3xl md:text-4xl font-extrabold text-on-surface leading-none">100<span class="text-accent">+</span></p>
+                <p class="text-on-surface-variant font-body text-sm mt-1.5">Recorded sessions</p>
+              </div>
+              <div>
+                <p class="font-display text-3xl md:text-4xl font-extrabold text-on-surface leading-none">4</p>
+                <p class="text-on-surface-variant font-body text-sm mt-1.5">Learning roadmaps</p>
+              </div>
+              <div>
+                <p class="font-display text-3xl md:text-4xl font-extrabold text-on-surface leading-none">5</p>
+                <p class="text-on-surface-variant font-body text-sm mt-1.5">Core subjects</p>
+              </div>
             </div>
-            <div>
-              <p class="font-display text-3xl md:text-4xl font-extrabold text-on-surface leading-none">4</p>
-              <p class="text-on-surface-variant font-body text-sm mt-1.5">Learning roadmaps</p>
-            </div>
-            <div>
-              <p class="font-display text-3xl md:text-4xl font-extrabold text-on-surface leading-none">5</p>
-              <p class="text-on-surface-variant font-body text-sm mt-1.5">Core subjects</p>
-            </div>
-          </div>
 
-          <div class="flex flex-col sm:flex-row gap-4 pt-1">
-            <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-accent text-on-surface px-8 py-4 rounded-xl font-bold text-base hover:bg-accent/90 transition-colors font-body">
-              Enroll Now
-              <span class="material-symbols-outlined text-xl">arrow_forward</span>
-            </a>
-            <a href="#curriculum" class="inline-flex items-center justify-center gap-2 border border-outline-variant text-on-surface px-8 py-4 rounded-xl font-bold text-base hover:bg-surface-low transition-colors font-body">
-              See the full curriculum
-            </a>
-          </div>
+            <div class="flex flex-col sm:flex-row gap-4 pt-1">
+              <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-accent text-on-surface px-8 py-4 rounded-xl font-bold text-base hover:bg-accent/90 transition-colors font-body">
+                Enroll Now
+                <span class="material-symbols-outlined text-xl">arrow_forward</span>
+              </a>
+              <a href="#curriculum" class="inline-flex items-center justify-center gap-2 border border-outline-variant text-on-surface px-8 py-4 rounded-xl font-bold text-base hover:bg-surface-low transition-colors font-body">
+                See the full curriculum
+              </a>
+            </div>
         </div>
       </div>
     </div>
@@ -1042,37 +1031,6 @@
     </div>
   </section>
 
-  <!-- FREE PREVIEWS -->
-  <section class="bg-surface-low py-20">
-    <div class="max-w-6xl mx-auto px-4 md:px-8">
-      <div class="text-center mb-12 scroll-reveal from-bottom">
-        <p class="text-secondary font-bold text-sm uppercase tracking-widest font-body mb-3">Explore First</p>
-        <h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-4">Watch before you enroll</h2>
-        <p class="text-on-surface-variant text-lg font-body max-w-2xl mx-auto">Full lectures from different mentors across different subjects. Watch how we actually teach, then decide.</p>
-      </div>
-
-      <!-- Lecture cards are rendered from the FREE_LECTURES list in the script below -->
-      <div id="free-lectures" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-
-      <div class="mt-12 text-center scroll-reveal from-bottom">
-        <a href="https://docs.google.com/spreadsheets/d/1xajKMSz3KXCwDizIwl9UPUepRpcR5ogC_enhNMlDqx4/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 text-secondary font-bold text-base font-body hover:gap-3 transition-all">
-          <span class="material-symbols-outlined text-xl">table_chart</span>
-          View the full curriculum spreadsheet
-          <span class="material-symbols-outlined text-base">open_in_new</span>
-        </a>
-      </div>
-
-      <div class="mt-12 md:mt-14 text-center scroll-reveal from-bottom">
-        <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-accent text-on-surface px-8 py-4 rounded-xl font-bold text-base hover:bg-accent/90 transition-colors font-body">
-          Enroll Now
-          <span class="material-symbols-outlined text-xl">arrow_forward</span>
-        </a>
-        <p class="text-on-surface-variant font-body text-sm mt-3">Liked what you saw? That is how every session is taught.</p>
-      </div>
-    </div>
-  </section>
-
   <script>
   /* ─────────────────────────────────────────────────────────────
      FREE LECTURES
@@ -1090,19 +1048,19 @@
   const FREE_LECTURES = [
     {
       subject: 'Exercise Science',
-      title: 'Muscle Gain Fundamentals',
-      mentor: 'What muscle growth actually needs, with lecture notes',
-      type: 'link',
-      url: 'https://drive.google.com/drive/folders/1hLeQJOr74Eg8QvbMj4SkkW77NfxCtVSZ',
-      thumb: 'assets/images/free-lectures/muscle-gain.jpg'
-    },
-    {
-      subject: 'Exercise Science',
       title: 'Biomechanics 101',
       mentor: 'Ashley, Phase 1 Lecture 3',
       type: 'link',
       url: 'https://drive.google.com/file/d/17O9_5fXdcSm7QK_fLPbNI_XjOqBBGexo/view?usp=drive_link',
       thumb: 'assets/images/free-lectures/biomechanics-101.jpg'
+    },
+    {
+      subject: 'Exercise Science',
+      title: 'Muscle Gain Fundamentals',
+      mentor: 'What muscle growth actually needs, with lecture notes',
+      type: 'link',
+      url: 'https://drive.google.com/drive/folders/1hLeQJOr74Eg8QvbMj4SkkW77NfxCtVSZ',
+      thumb: 'assets/images/free-lectures/muscle-gain.jpg'
     },
     {
       subject: 'Clinical Nutrition',
@@ -1120,40 +1078,51 @@
     const host = document.getElementById('free-lectures');
     if (!host) return;
 
-    host.innerHTML = FREE_LECTURES.map(function (l, i) {
-      const href = l.type === 'youtube' ? 'https://youtu.be/' + l.id : l.url;
-      const media = l.type === 'youtube'
-        ? '<img loading="lazy" decoding="async" src="https://img.youtube.com/vi/' + l.id + '/hqdefault.jpg"' +
-          ' onerror="this.src=\'https://img.youtube.com/vi/' + l.id + '/mqdefault.jpg\'"' +
-          ' alt="' + l.title + '" style="width:100%;height:100%;object-fit:cover;display:block;">'
-        : l.thumb
-        ? '<img loading="lazy" decoding="async" src="' + l.thumb + '" alt="' + l.title + '" style="width:100%;height:100%;object-fit:cover;display:block;">'
-        : '<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;' +
-          'background:linear-gradient(150deg,#0b1b36 0%,#102f65 100%);">' +
-          '<span class="material-symbols-outlined text-white" style="font-size:52px;opacity:.9;">play_lesson</span></div>';
+    function hrefOf(l) { return l.type === 'youtube' ? 'https://youtu.be/' + l.id : l.url; }
+    function mediaOf(l) {
+      const src = l.type === 'youtube' ? 'https://img.youtube.com/vi/' + l.id + '/hqdefault.jpg' : l.thumb;
+      if (!src) return '<div class="absolute inset-0" style="background:linear-gradient(150deg,#0b1b36 0%,#102f65 100%);"></div>';
+      return '<img loading="lazy" decoding="async" src="' + src + '" alt="' + l.title + '"' +
+             ' class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">';
+    }
+    function play(size) {
+      return '<span class="absolute inset-0 flex items-center justify-center">' +
+               '<span class="' + size + ' rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">' +
+                 '<span class="material-symbols-outlined text-primary" style="margin-left:2px">play_arrow</span>' +
+               '</span>' +
+             '</span>';
+    }
 
+    const cards = FREE_LECTURES.map(function (l) {
       return '' +
-      '<a href="' + href + '" target="_blank" rel="noopener noreferrer"' +
-      '   class="group bg-white rounded-2xl overflow-hidden border border-outline-variant/40 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all scroll-reveal from-bottom"' +
-      '   style="transition-delay:' + (i * 80) + 'ms">' +
-        '<div class="relative" style="aspect-ratio:16/9;background:#0b1b36;">' +
-          media +
-          '<div class="absolute inset-0 flex items-center justify-center">' +
-            '<span class="w-14 h-14 rounded-full bg-white/95 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">' +
-              '<span class="material-symbols-outlined text-primary text-3xl" style="margin-left:3px">play_arrow</span>' +
-            '</span>' +
-          '</div>' +
-        '</div>' +
-        '<div class="p-6">' +
-          '<p class="text-secondary font-bold text-xs uppercase tracking-widest font-body mb-2">' + l.subject + '</p>' +
-          '<h3 class="font-display font-extrabold text-on-surface text-lg mb-2 leading-snug group-hover:text-secondary transition-colors">' + l.title + '</h3>' +
-          '<p class="text-on-surface-variant text-sm font-body leading-relaxed mb-4">' + l.mentor + '</p>' +
-          '<span class="inline-flex items-center gap-1 text-secondary font-bold text-sm font-body group-hover:gap-2 transition-all">' +
-            'Watch free <span class="material-symbols-outlined text-base">open_in_new</span>' +
+      '<a href="' + hrefOf(l) + '" target="_blank" rel="noopener noreferrer"' +
+      ' class="group flex flex-col shrink-0 w-[80%] snap-start sm:w-auto bg-white rounded-2xl overflow-hidden border border-outline-variant/40 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">' +
+        '<span class="relative block aspect-video bg-[#0b1b36] overflow-hidden">' +
+          mediaOf(l) +
+          '<span class="absolute inset-0 bg-[#05101f]/10 group-hover:bg-transparent transition-colors"></span>' +
+          play('w-12 h-12 md:w-14 md:h-14 text-3xl') +
+        '</span>' +
+        '<span class="flex flex-col flex-1 p-4 md:p-6">' +
+          '<span class="block text-secondary text-[11px] font-bold uppercase tracking-widest font-body mb-1.5">' + l.subject + '</span>' +
+          '<span class="block font-display text-on-surface text-base md:text-lg font-extrabold leading-snug group-hover:text-secondary transition-colors">' + l.title + '</span>' +
+          '<span class="block text-on-surface-variant text-sm font-body mt-1.5 flex-1">' + l.mentor + '</span>' +
+          '<span class="inline-flex items-center gap-1 text-secondary font-bold text-sm font-body mt-4 group-hover:gap-2 transition-all">' +
+            'Watch free <span class="material-symbols-outlined text-base">arrow_outward</span>' +
           '</span>' +
-        '</div>' +
+        '</span>' +
       '</a>';
     }).join('');
+
+    host.innerHTML = '' +
+      '<div class="text-center mb-6 md:mb-10">' +
+        '<span class="inline-flex items-center gap-2 bg-accent/15 text-on-surface font-bold text-sm font-body px-4 py-1.5 rounded-full">' +
+          '<span class="w-2 h-2 rounded-full bg-accent"></span>' + FREE_LECTURES.length + ' free lectures' +
+        '</span>' +
+        '<h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-on-surface mt-3 md:mt-4 tracking-tight">Watch before you enroll</h2>' +
+        '<p class="text-on-surface-variant font-body text-sm md:text-lg mt-2 max-w-2xl mx-auto">Full lectures from our mentors. See how we actually teach, then decide.</p>' +
+      '</div>' +
+      '<div class="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 overflow-x-auto sm:overflow-visible snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0 pb-3 sm:pb-0" style="scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-padding-inline:16px;">' + cards + '</div>' +
+      '<p class="sm:hidden text-center text-on-surface-variant text-xs font-body mt-2 inline-flex w-full items-center justify-center gap-1">Swipe to see all ' + FREE_LECTURES.length + ' <span class="material-symbols-outlined text-sm">arrow_forward</span></p>';
 
     // These cards are built after the reveal observer has already run, so show them.
     host.querySelectorAll('.scroll-reveal').forEach(function (el) { el.classList.add('in-view'); });
