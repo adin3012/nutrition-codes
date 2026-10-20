@@ -1052,7 +1052,7 @@
       mentor: 'Ashley, Phase 1 Lecture 3',
       type: 'link',
       url: 'https://drive.google.com/file/d/17O9_5fXdcSm7QK_fLPbNI_XjOqBBGexo/view?usp=drive_link',
-      thumb: 'assets/images/free-lectures/biomechanics-101.jpg'
+      thumb: 'assets/images/free-lectures/biomechanics-101-cover.jpg'
     },
     {
       subject: 'Exercise Science',
@@ -1060,7 +1060,7 @@
       mentor: 'What muscle growth actually needs, with lecture notes',
       type: 'link',
       url: 'https://drive.google.com/drive/folders/1hLeQJOr74Eg8QvbMj4SkkW77NfxCtVSZ',
-      thumb: 'assets/images/free-lectures/muscle-gain.jpg'
+      thumb: 'assets/images/free-lectures/muscle-gain-cover.jpg'
     },
     {
       subject: 'Clinical Nutrition',
@@ -1068,7 +1068,7 @@
       mentor: 'Dr. Saikiran, gut axes, microbiome and fibre',
       type: 'link',
       url: 'https://drive.google.com/file/d/1ijfuCPZ3dQ8m1rgNk99ijyCGmx0ZxbOp/view?usp=drive_link',
-      thumb: 'assets/images/free-lectures/gut-microbiome.jpg'
+      thumb: 'assets/images/free-lectures/gut-microbiome-cover.jpg'
     }
     // Add the next free lecture here, e.g.
     // ,{ subject:'Coaching Psychology', title:'...', mentor:'...', type:'youtube', id:'...' }
@@ -1086,7 +1086,7 @@
              ' class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">';
     }
     function play(size) {
-      return '<span class="absolute inset-0 flex items-center justify-center">' +
+      return '<span class="absolute right-3 bottom-3 flex">' +
                '<span class="' + size + ' rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">' +
                  '<span class="material-symbols-outlined text-primary" style="margin-left:2px">play_arrow</span>' +
                '</span>' +
@@ -1100,7 +1100,7 @@
         '<span class="relative block aspect-video bg-[#0b1b36] overflow-hidden">' +
           mediaOf(l) +
           '<span class="absolute inset-0 bg-[#05101f]/10 group-hover:bg-transparent transition-colors"></span>' +
-          play('w-12 h-12 md:w-14 md:h-14 text-3xl') +
+          play('w-11 h-11 md:w-12 md:h-12 text-2xl') +
         '</span>' +
         '<span class="flex flex-col flex-1 p-4 md:p-6">' +
           '<span class="block text-secondary text-[11px] font-bold uppercase tracking-widest font-body mb-1.5">' + l.subject + '</span>' +
