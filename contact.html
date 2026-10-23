@@ -153,10 +153,46 @@
       <div class="col-span-12 lg:col-span-7 bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-outline-variant/40">
         <h2 class="font-display text-2xl font-extrabold text-on-surface mb-2">Send an enquiry</h2>
         <p class="text-on-surface-variant font-body text-sm mb-6">No commitment, just the first step. Tell us where you’re starting from and what you want from coaching.</p>
-        <div class="rounded-2xl overflow-hidden border border-outline-variant/40 bg-surface-low">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScVo6oWd8Aido-bVVMezAMzX0CQ8NeRJ9uXDavwgrE9rltkFA/viewform?embedded=true" title="NC Enquiry Form" loading="lazy" class="w-full block" style="height:1180px;border:0;" referrerpolicy="no-referrer">Loading the enquiry form…</iframe>
-        </div>
-        <p class="text-on-surface-variant font-body text-xs mt-4">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLScVo6oWd8Aido-bVVMezAMzX0CQ8NeRJ9uXDavwgrE9rltkFA/viewform" target="_blank" rel="noopener noreferrer" class="text-secondary font-bold underline">Open it in a new tab</a>.</p>
+        <form id="contact-form" class="space-y-5" novalidate>
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-sm font-semibold text-on-surface font-body mb-2">Full Name <span class="text-red-400">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" required placeholder="Your full name" class="w-full border border-outline-variant rounded-xl px-4 py-3 text-on-surface font-body text-sm focus:outline-none focus:ring-2 focus:ring-secondary/30 focus:border-secondary transition-all bg-background placeholder:text-on-surface-variant/40" maxlength="80">
+            </div>
+            <div>
+              <label for="age" class="block text-sm font-semibold text-on-surface font-body mb-2">Age <span class="text-red-400">*</span></label>
+              <input type="number" id="age" name="age" autocomplete="off" required placeholder="e.g. 26" class="w-full border border-outline-variant rounded-xl px-4 py-3 text-on-surface font-body text-sm focus:outline-none focus:ring-2 focus:ring-secondary/30 focus:border-secondary transition-all bg-background placeholder:text-on-surface-variant/40" min="14" max="99" inputmode="numeric">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="email" class="block text-sm font-semibold text-on-surface font-body mb-2">Email Address <span class="text-red-400">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required placeholder="your@email.com" class="w-full border border-outline-variant rounded-xl px-4 py-3 text-on-surface font-body text-sm focus:outline-none focus:ring-2 focus:ring-secondary/30 focus:border-secondary transition-all bg-background placeholder:text-on-surface-variant/40">
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-semibold text-on-surface font-body mb-2">WhatsApp Number <span class="text-red-400">*</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required placeholder="+91 98765 43210" class="w-full border border-outline-variant rounded-xl px-4 py-3 text-on-surface font-body text-sm focus:outline-none focus:ring-2 focus:ring-secondary/30 focus:border-secondary transition-all bg-background placeholder:text-on-surface-variant/40" maxlength="20">
+            </div>
+          </div>
+          <fieldset>
+            <legend class="block text-sm font-semibold text-on-surface font-body mb-2">Gender <span class="text-red-400">*</span></legend>
+            <div class="flex flex-wrap gap-3">
+              <label class="flex items-center gap-2 border border-outline-variant rounded-xl px-4 py-2.5 cursor-pointer text-sm font-body text-on-surface has-[:checked]:border-secondary has-[:checked]:bg-secondary/5"><input type="radio" name="gender" value="Male" required class="accent-[#4173F4]"> Male</label>
+              <label class="flex items-center gap-2 border border-outline-variant rounded-xl px-4 py-2.5 cursor-pointer text-sm font-body text-on-surface has-[:checked]:border-secondary has-[:checked]:bg-secondary/5"><input type="radio" name="gender" value="Female" class="accent-[#4173F4]"> Female</label>
+              <label class="flex items-center gap-2 border border-outline-variant rounded-xl px-4 py-2.5 cursor-pointer text-sm font-body text-on-surface has-[:checked]:border-secondary has-[:checked]:bg-secondary/5"><input type="radio" name="gender" value="Other" class="accent-[#4173F4]"> Other</label>
+            </div>
+          </fieldset>
+          <div>
+            <label for="message" class="block text-sm font-semibold text-on-surface font-body mb-2">Why are you reaching out? <span class="text-red-400">*</span></label>
+            <textarea id="message" name="message" required rows="5" maxlength="2000" placeholder="Tell us about your goals, background, or any questions you have..." class="w-full border border-outline-variant rounded-xl px-4 py-3 text-on-surface font-body text-sm focus:outline-none focus:ring-2 focus:ring-secondary/30 focus:border-secondary transition-all bg-background placeholder:text-on-surface-variant/40 resize-none"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-secondary text-white py-4 rounded-xl font-bold text-base hover:-translate-y-0.5 hover:shadow-lg hover:shadow-secondary/30 transition-all font-body flex items-center justify-center gap-2 disabled:opacity-60">
+            <span class="material-symbols-outlined text-xl">send</span>
+            Send enquiry
+          </button>
+          <div id="form-status" class="text-sm font-medium hidden" role="status" aria-live="polite"></div>
+        </form>
       </div>
 
       <!-- Right Panel: col-span-5 -->
@@ -364,5 +400,49 @@
 
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Nutrition Codes Academy", "url": "https://nutritioncodes.com/", "logo": "https://nutritioncodes.com/assets/logos/primary01.svg", "sameAs": ["https://www.instagram.com/nutritioncodes/"], "description": "India's most rigorous nutrition and fitness education platform."}</script>
 <script src="js/polish.js" defer></script>
+  <script>
+  /* Enquiries post straight into the NC Enquiry Google Form, so they land in
+     its responses sheet. Google does not allow reading the reply (no-cors),
+     so the fields are checked here before sending. */
+  (function () {
+    var ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLScVo6oWd8Aido-bVVMezAMzX0CQ8NeRJ9uXDavwgrE9rltkFA/formResponse';
+    var FIELDS = { name: 'entry.1335441493', age: 'entry.360629968', email: 'entry.690711565', phone: 'entry.1993530683', gender: 'entry.1775032720', message: 'entry.1229258491' };
+    var form = document.getElementById('contact-form');
+    var status = document.getElementById('form-status');
+    if (!form) return;
+
+    function show(kind, text) {
+      status.className = 'form-status ' + kind;
+      status.textContent = text;
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.website.value) return;
+      var data = new FormData(form);
+      var v = {};
+      Object.keys(FIELDS).forEach(function (k) { v[k] = String(data.get(k) || '').trim(); });
+
+      if (!v.name || !v.age || !v.email || !v.phone || !v.gender || !v.message) return show('error', 'Please fill in every field.');
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email)) return show('error', 'That email address does not look right.');
+      if (v.phone.replace(/\D/g, '').length < 8) return show('error', 'Please enter a WhatsApp number we can reach.');
+
+      var body = new URLSearchParams();
+      Object.keys(FIELDS).forEach(function (k) { body.append(FIELDS[k], v[k]); });
+
+      var btn = form.querySelector('[type="submit"]');
+      btn.disabled = true;
+      fetch(ACTION, { method: 'POST', mode: 'no-cors', body: body })
+        .then(function () {
+          form.reset();
+          show('success', 'Thank you! Your enquiry is in. We will reach out on WhatsApp or email within 24 hours.');
+        })
+        .catch(function () {
+          show('error', 'Could not send right now. Please try again, or email nutritioncodes0@gmail.com.');
+        })
+        .finally(function () { btn.disabled = false; });
+    });
+  })();
+  </script>
 </body>
 </html>
