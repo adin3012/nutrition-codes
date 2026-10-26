@@ -57,7 +57,7 @@
     '<div class="nca-ep-panel" role="document">' +
       '<button type="button" class="nca-ep-close" data-ep-dismiss aria-label="Close">&#10005;</button>' +
       '<p class="nca-ep-eyebrow">NCA Mentorship</p>' +
-      '<h2 id="nca-ep-title">Thinking of joining the next batch?</h2>' +
+      '<h2 id="nca-ep-title">Thinking of joining Nutrition Codes Academy?</h2>' +
       '<p class="nca-ep-sub">Send us a quick enquiry and a real person will reach out within 24 hours to answer your questions.</p>' +
       '<ul class="nca-ep-points">' +
         '<li>Walk through the curriculum and fee</li>' +
