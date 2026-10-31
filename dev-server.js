@@ -3,7 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 const PORT = 3000;
-const ROOT = __dirname;
+const HOST = '127.0.0.1';
+const ROOT = path.resolve(__dirname);
 
 const MIME_TYPES = {
   '.html': 'text/html',
@@ -22,8 +23,25 @@ const MIME_TYPES = {
 };
 
 const server = http.createServer((req, res) => {
-  const pathname = new URL(req.url, 'http://localhost').pathname;
-  let filePath = path.join(ROOT, decodeURIComponent(pathname === '/' ? 'index.html' : pathname));
+  let decoded;
+  try {
+    const pathname = new URL(req.url, 'http://localhost').pathname;
+    decoded = decodeURIComponent(pathname === '/' ? '/index.html' : pathname);
+  } catch (e) {
+    res.writeHead(400, { 'Content-Type': 'text/plain' });
+    res.end('Bad Request');
+    return;
+  }
+
+  // Encoded slashes (%2F) survive URL parsing, so check the final path
+  // stays inside ROOT after decoding.
+  let filePath = path.resolve(ROOT, '.' + path.sep + decoded);
+  if (decoded.includes('\0') || (filePath !== ROOT && !filePath.startsWith(ROOT + path.sep))) {
+    res.writeHead(403, { 'Content-Type': 'text/plain' });
+    res.end('Forbidden');
+    return;
+  }
+
   let ext = path.extname(filePath).toLowerCase();
 
   if (!ext) {
@@ -59,6 +77,6 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, HOST, () => {
   console.log(`Server running at http://localhost:${PORT}/`);
 });
